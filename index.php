@@ -29,8 +29,6 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
     <link rel="stylesheet" href="./css/index.css?v=<?= time(); ?>" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -159,7 +157,7 @@
                     </div>
                 </div>
                 
-                <div class="swiper similar-to-search-swiper">
+                <div class="swiper swiper-hidden similar-to-search-swiper">
                     
                     <div class="ads-block swiper-wrapper">
                         
@@ -555,7 +553,7 @@
                 
                 <div class="additional-services-container">
                     <div class="additional-services">
-                        <div class="swiper additional-services-swiper">
+                        <div class="swiper swiper-hidden additional-services-swiper">
                             <div class="ads-block swiper-wrapper">
                                 <a href="#" class="ad-container swiper-slide">
                                     <div class="ad-part1">
@@ -889,7 +887,7 @@
                             </div>
                         </div>
                         
-                        <div class="swiper additional-services-swiper">
+                        <div class="swiper swiper-hidden additional-services-swiper">
                             <div class="ads-block swiper-wrapper">
                                 <a href="#" class="ad-container swiper-slide">
                                     <div class="ad-part1">
@@ -1450,5 +1448,7 @@
 </body>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="./js/jQuery/jquery-3.5.1.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 <script src="./js/index.js?v=<?= time(); ?>"></script>
+    
 </html>
