@@ -90,6 +90,10 @@ header{
     color: #a2a2a2;
     border: 0;
     padding-right: 119px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .logo-and-search-block .search-button-container{
@@ -618,6 +622,10 @@ footer{
 
 .ads-block.swiper-wrapper{
     gap: 0;
+}
+
+.swiper-hidden{
+    display: none !important;
 }
 
 .ad-container{
