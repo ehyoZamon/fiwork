@@ -10,10 +10,6 @@ window.onload=function(){
       nextEl: '.btn-next',
       prevEl: '.btn-prev',
     },
-    autoplay: {
-      delay: 3000, 
-      disableOnInteraction: false, 
-    },
     breakpoints: {
       640: {
         slidesPerView: 3,
@@ -60,6 +56,8 @@ window.onload=function(){
         }
       }
     });
+    
+    $(".swiper-hidden").removeClass("swiper-hidden");
 
     $(".registration-and-login-block .register-button").on("click",function(){
        $(".fiwork-register-modal-container").removeClass("hidden"); 
