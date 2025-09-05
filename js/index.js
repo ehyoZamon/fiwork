@@ -11,10 +11,13 @@ window.onload=function(){
       prevEl: '.btn-prev',
     },
     breakpoints: {
-      640: {
+      400: {
+          slidesPerView: 2,
+      },
+      830: {
         slidesPerView: 3,
       },
-      870: {
+      1100: {
         slidesPerView: 4,
       },
       1400: {
@@ -34,8 +37,9 @@ window.onload=function(){
         prevEl: '.prev-carousel-button',
       },
       breakpoints: {
-        640: { slidesPerView: 3 },
-        870: { slidesPerView: 4 },
+        400: { slidesPerView: 2,},
+        830: { slidesPerView: 3 },
+        1100: { slidesPerView: 4 },
         1400: { slidesPerView: 5 },
       },
       on: {
@@ -59,7 +63,7 @@ window.onload=function(){
     
     $(".swiper-hidden").removeClass("swiper-hidden");
 
-    $(".registration-and-login-block .register-button").on("click",function(){
+    $(".registration-and-login-block .register-button, .mobile-menu-register-button").on("click",function(){
        $(".fiwork-register-modal-container").removeClass("hidden"); 
     });
 
@@ -87,6 +91,29 @@ window.onload=function(){
         $(".cookies-policy-container").fadeOut({duration: 1000});
     });
     
+    $(".go-to-register-link").on("click",function(){
+        $(".fiwork-register-modal-container").removeClass("hidden");
+        $(".fiwork-login-modal-container").addClass("hidden");
+    });
+    
+    $(".go-to-login-link").on("click",function(){
+        $(".fiwork-register-modal-container").addClass("hidden");
+        $(".fiwork-login-modal-container").addClass("hidden");
+    });
+    
+    $(".mobile-login-link").on("click",function(){
+        $(".fiwork-login-modal-container").removeClass("hidden"); 
+    });
+    
+    $(".phone-header .burger-icon").on("click",function(){
+        $(".phone-header").addClass("menu-activated"); 
+        openMenu('menu-main'); 
+    });
+    
+    $(".phone-header .close-menu-icon").on("click",function(){
+        $(".phone-header").removeClass("menu-activated"); 
+    });
+    
     $(".search-service-input").on("input", function () {
         if ($(this).val().trim().length > 0) {
             $(".search-button-container").removeClass("hidden");
@@ -99,6 +126,7 @@ window.onload=function(){
         $(".search-button-container").addClass("hidden");
         $(".search-service-input").val('');  
     }); 
+
     
     /*Check-register-modal logic*/
     const inputs = document.querySelectorAll('.check-register-modal-container .code-input');
@@ -244,4 +272,19 @@ window.onload=function(){
     });
     
     /*End of check-register-modal logic*/
+    
+    /*accordion*/
+      document.querySelectorAll('.accordion-header').forEach(header => {
+        header.addEventListener('click', () => {
+          header.classList.toggle('active');
+    
+          const body = header.nextElementSibling;
+          if (header.classList.contains('active')) {
+            body.style.display = 'flex';
+          } else {
+            body.style.display = 'none';
+          }
+        });
+      });
+    /*end of accordion*/
 }

@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+}
+
+.mobile-navigation-menu .menu {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: white;
+  width: 100%;
+  transition: all 0.3s ease;
+  overflow-y: auto;
+}
+
+.mobile-navigation-menu .hidden {
+  display: none;
+}
+
+.mobile-navigation-menu button, .mobile-navigation-menu .mobile-menu-nav-link{
+    padding: 15px;
+    padding-left: 0;
+    border: 0;
+    text-align: left;
+    cursor: pointer;
+    font-family: var(--font6);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #62646a;
+    background: #fff;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mobile-navigation-menu .menu-icon{
+    width: 16px;
+}
+
+.mobile-navigation-menu .menu-icon.back{
+    width: 30px;
+    background: none;
+}
+
+.mobile-navigation-menu .mobile-menu-register-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.mobile-navigation-menu .back {
+  font-weight: bold;
+  background-color: #eaeaea;
+}
+
+.mobile-navigation-menu .header {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-navigation-menu .header h3{
+    width: 100%;
+    text-align: center;
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 133%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #111;
+}
+
+.phone-header.menu-activated{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 100;
+    background: #fff;
+}
+
+.phone-header .close-menu-icon{
+    display: none;
+}
+
+.phone-header.menu-activated .close-menu-icon{
+    display: block;
+}
+
+.phone-header.menu-activated .burger-icon{
+    display: none;
+}
+
+.phone-header .mobile-navigation-menu{
+    display: none;
+}
+
+.phone-header.menu-activated .mobile-navigation-menu{
+    display: block;
+}
+
+.phone-header.menu-activated .mobile-search-block{
+    display: none;
+}

@@ -1,51 +1,53 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <title>Портфолио веб-разработчика Мирзобахтиёра Рахматова</title>
+    <title>Fiwork – Фриланс-услуги: Дизайн, Разработка, IT и многое другое</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,7,9,10,chrome=1"> 
-    <meta name="keywords" content="веб-разработка, создание сайтов, портфолио, фронтенд, бэкенд,  веб-дизайн, Таджикистан">
-    <meta name="description" content="Портфолио веб-разработчика Мирзобахтиёра Рахматова: создание современных сайтов и веб-приложений.">
-    <meta name="author" content="Мирзобахтиёр Рахматов">
-    <meta property="og:title" content="Портфолио – Веб-разработчик Мирзобахтиёр Рахматов">
-    <meta property="og:description" content="Создаю адаптивные сайты и веб-приложения. HTML, CSS, JavaScript.">
-    <meta name="robots" content="index, follow">
-    <meta name="copyright" content="© 2025 Мирзобахтиёр Рахматов">
-    <meta name="og:title" content="Портфолио – Веб-разработчик. Создание сайтов">
-    <meta property="og:description" content="Портфолио веб-разработчика: создание современных сайтов и веб-приложений."/>
-    <meta name="og:image" content="https://ehyo.tj/images/m-logo-400.png"/>
-    <meta property="og:image:alt" content="Логотип портфолио"/>
-    <meta property="og:site_name" content="Портфолио Мирзобахтиёра Рахматова" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="keywords" content="фриланс, веб-разработка, веб-дизайн, мобильный дизайн, логотипы, брендинг, разработка приложений, IT-услуги, SEO, переводы, блокчейн, нейросети, Таджикистан" />
+    <meta name="description" content="Fiwork – платформа для заказа фриланс-услуг: веб-разработка, дизайн, IT, переводы, блокчейн и многое другое. Найдите исполнителя или начните зарабатывать!" />
+    <meta name="author" content="Fiwork Team" />
+    <meta name="robots" content="index, follow" />
+    <meta name="copyright" content="© 2025 Fiwork" />
+    <meta property="og:title" content="Fiwork – Фриланс-услуги: Дизайн, Разработка, IT" />
+    <meta property="og:description" content="Платформа для заказа услуг фрилансеров: веб-дизайн, разработка сайтов и приложений, SEO, переводы, блокчейн и многое другое." />
+    <meta property="og:image" content="https://ehyo.tj/images/m-logo-400.png" />
+    <meta property="og:image:alt" content="Логотип Fiwork" />
+    <meta property="og:site_name" content="Fiwork" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="ru_RU" />
-    <meta property="article:author" content="Mirzobakhtiyor Rahmatov" /> 
-    <meta property="article:publisher" content="Ehyo" />
-    
+    <meta property="article:publisher" content="Fiwork" />
     <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="expires" content="0" />
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/index.css?v=<?= time(); ?>" />
+    <link rel="stylesheet" href="./css/accordion.css?v=<?= time(); ?>" />
+    <link rel="stylesheet" href="./css/mobile-navigation-menu.css?v=<?= time(); ?>" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Tajawal:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header class="computer-header">
         <div class="nav-part1-container">
             <div class="nav-part1">
                 <div class="logo-and-search-block">
-                    <div class="logo-container">
+                    <a href="#" class="logo-container">
                         <img src="./img/logo.svg" alt="logo" class="header-logo"/>
-                    </div>
+                    </a>
                     <div class="search-container">
-                        <input type="text" placeholder="  Найти услуги" class="search-service-input" name="search-service">
+                        <hr class="search-button-stick"><input type="text" placeholder="  Найти услуги" class="search-service-input" name="search-service">
                         <div class="search-button-container hidden">
                             <img src="/img/icons/bold-x-close.svg" alt="x-close" class="clear-search-icon"/>
                             <input type="button" value="Найти" class="search-content-button"/>
@@ -62,22 +64,183 @@
         
         <div class="nav-part2-container">
             <div class="nav-part2">
-                <a href="#">Дизайн & Графика</a>
-                <a href="#">Разработка и IT</a>
-                <a href="#">Тексты и переводы</a>
-                <a href="#">SEO и трафик</a>
-                <a href="#">Аудио, видео, съемка</a>
-                <a href="#">Бизнес и жизнь</a>
-                <a href="#">Блокчейн и крипто</a>
-                <a href="#">Нейросети</a>
+                <ul>
+                    <li>
+                        <a href="#">Дизайн & Графика</a>
+                        <div class="mega-menu">
+                            <div class="mega-menu-column">
+                              <h4>Логотип и брендинг</h4>
+                              <a href="#">Логотипы <img src="/img/icons/fire.svg" alt="fire icon" class="fire-icon"/></a>
+                              <a href="#">Фирменный стиль</a>
+                              <a href="#">Визитки</a>
+                              <a href="#">Брендирование и сувенирка</a>
+                              
+                              <h4>Презентации и инфографика</h4>
+                              <a href="#">Презентации</a>
+                              <a href="#">Инфографика</a>
+                              <a href="#">Карта и схема</a>
+                              
+                              <h4>Арт и иллюстрации</h4>
+                              <a href="#">Портрет, шарж, карикатура</a>
+                              <a href="#">Иллюстрации и рисунки</a>
+                              <a href="#">Дизайн игр</a>
+                              <a href="#">Тату, принты</a>
+                              <a href="#">Стикеры</a>
+                              <a href="#">NFT арт</a>
+                              <a href="#">Готовые шаблоны и рисунки</a>
+                            </div>
+                            
+                            <div class="mega-menu-column with-border">
+                              <h4>Веб и мобильный дизайн</h4>
+                              <a href="#">Веб-дизайн <img src="/img/icons/fire.svg" alt="fire icon" class="fire-icon"/></a>
+                              <a href="#">Мобильный дизайн</a>
+                              <a href="#">Email-дизайн</a>
+                              <a href="#">Баннеры и иконки <img src="/img/icons/fire.svg" alt="fire icon" class="fire-icon"/></a>
+                              <a href="#">Юзабилити-аудит</a>
+                              
+                              <h4>Маркетплейсы и соцсети</h4>
+                              <a href="#">Дизайн в соцсетях <img src="/img/icons/fire.svg" alt="fire icon" class="fire-icon"/></a>
+                              <a href="#">Дизайн для маркетплейсов</a>
+                              
+                              <h4>Интерьер и экстерьер</h4>
+                              <a href="#">Интерьер</a>
+                              <a href="#">Дизайн домов и сооружений</a>
+                              <a href="#">Ландшафтный дизайн</a>
+                              <a href="#">Дизайн мебели</a>
+                              
+                              <h4>Обработка и редактирование</h4>
+                              <a href="#">Отрисовка в векторе</a>
+                              <a href="#">Фотомонтаж и обработка <img src="/img/icons/fire.svg" alt="fire icon" class="fire-icon"/></a>
+                              <a href="#">3D-графика <img src="/img/icons/fire.svg" alt="fire icon" class="fire-icon"/></a>
+                            </div>
+                            
+                            <div class="mega-menu-column with-border">
+                              <h4>Полиграфия</h4>
+                              <a href="#">Брошюра и буклет</a>
+                              <a href="#">Листовки и флаер</a>
+                              <a href="#">Плакат и афиша</a>
+                              <a href="#">Календарь и открытка</a>
+                              <a href="#">Каталог, меню, книга</a>
+                              <a href="#">Грамота и сертификат</a>
+                              
+                              <h4>Промышленный дизайн</h4>
+                              <a href="#">Электроника и устройства</a>
+                              <a href="#">Предметы и аксессуары</a>
+                              <a href="#">Упаковка и этикетка</a>
+                              
+                              <h4>Наружная реклама</h4>
+                              <a href="#">Билборды и стенды</a>
+                              <a href="#">Витрины и вывески</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                    <a href="#">Разработка и IT</a>
+                    </li>
+                    <li>
+                        <a href="#">Тексты и переводы</a>
+                    </li>
+                    <li>
+                        <a href="#">SEO и трафик</a>
+                    </li>
+                    <li>
+                        <a href="#">Аудио, видео, съемка</a>
+                    </li>
+                    <li>
+                        <a href="#">Бизнес и жизнь</a>
+                    </li>
+                    <li>
+                        <a href="#">Блокчейн и крипто</a>
+                    </li>
+                    <li>
+                        <a href="#">Нейросети</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </header>
     
+
+    <header class="phone-header">
+        <div class="logo-burger-login-block">
+            <div class="burger-container">
+                <img src="/img/icons/burger.svg" alt="burger" class="burger-icon"/>
+                <img src="/img/icons/mobile-menu-icons/close-menu-icon.svg" alt="close-menu" class="close-menu-icon"/>
+            </div>
+            <a href="#" class="mobile-logo-link">
+                <img src="/img/logo.svg" alt="burger" class="mobile-logo-icon"/>
+            </a>
+            <div class="mobile-login-link">
+                Войти
+            </div>
+        </div>
+        
+        <div class="mobile-navigation-menu">
+            <!-- Главное меню -->
+            <div class="menu" id="menu-main">
+                <button onclick="openMenu('menu-categories')">Каталог услуг <img src="/img/icons/mobile-menu-icons/open-submenu-icon.svg" alt="menu-icon" class="menu-icon"/></button>
+                <button>Полезное <img src="/img/icons/mobile-menu-icons/open-submenu-icon.svg" alt="menu-icon" class="menu-icon"/></button>
+                <a href="#" class="mobile-menu-nav-link">Помощь <img src="/img/icons/mobile-menu-icons/help-icon.svg" alt="menu-icon" class="menu-icon"/></a>
+                <a href="#" class="mobile-menu-nav-link">Начать зарабатывать <img src="/img/icons/mobile-menu-icons/money-icon.svg" alt="menu-icon" class="menu-icon"/></a>
+                <a href="#" class="mobile-menu-nav-link">Switch to English <img src="/img/icons/mobile-menu-icons/world-icon.svg" alt="menu-icon" class="menu-icon"/></a>
+                <button style="background-color: #007bff; color: white; font-weight: bold;" class="mobile-menu-register-button">Регистрация</button>
+                <div class="change-login-option">
+                    <p>Уже зарегистрированы? <a class='go-to-login-link'>Войти</a></p>
+                </div>
+            </div>
+            
+            <!-- Категории -->
+            <div class="menu hidden" id="menu-categories">
+                <div class="header"><img src="/img/icons/mobile-menu-icons/back-icon.svg" alt="menu-icon" class="menu-icon back" onclick="openMenu('menu-main')"/><h3>Категории</h3></div>
+                <button onclick="openMenu('menu-design')">Дизайн <img src="/img/icons/mobile-menu-icons/open-submenu-icon.svg" alt="menu-icon" class="menu-icon"/></button>
+                <button>Разработка и IT <img src="/img/icons/mobile-menu-icons/open-submenu-icon.svg" alt="menu-icon" class="menu-icon"/></button>
+                <button>Тексты и переводы <img src="/img/icons/mobile-menu-icons/open-submenu-icon.svg" alt="menu-icon" class="menu-icon"/></button>
+                <button>SEO и трафик <img src="/img/icons/mobile-menu-icons/open-submenu-icon.svg" alt="menu-icon" class="menu-icon"/></button>
+                <button>Соцсети и маркетинг <img src="/img/icons/mobile-menu-icons/open-submenu-icon.svg" alt="menu-icon" class="menu-icon"/></button>
+                <button>Аудио, видео, съёмка <img src="/img/icons/mobile-menu-icons/open-submenu-icon.svg" alt="menu-icon" class="menu-icon"/></button>
+                <button>Бизнес и жизнь <img src="/img/icons/mobile-menu-icons/open-submenu-icon.svg" alt="menu-icon" class="menu-icon"/></button>
+            </div>
+            
+            <!-- Подкатегория: Дизайн -->
+            <div class="menu hidden" id="menu-design">
+                <div class="header"><img src="/img/icons/mobile-menu-icons/back-icon.svg" alt="menu-icon" class="menu-icon back" onclick="openMenu('menu-main')"/><h3>Дизайн</h3></div>
+                <button onclick="openMenu('menu-branding')">Логотипы и брендинг <img src="/img/icons/mobile-menu-icons/open-submenu-icon.svg" alt="menu-icon" class="menu-icon"/></button>
+                <button>Презентации и инфографика <img src="/img/icons/mobile-menu-icons/open-submenu-icon.svg" alt="menu-icon" class="menu-icon"/></button>
+                <button>Арт и иллюстрации <img src="/img/icons/mobile-menu-icons/open-submenu-icon.svg" alt="menu-icon" class="menu-icon"/></button>
+                <button>Веб и мобильный дизайн <img src="/img/icons/mobile-menu-icons/open-submenu-icon.svg" alt="menu-icon" class="menu-icon"/></button>
+                <button>Интерьер и экстерьер <img src="/img/icons/mobile-menu-icons/open-submenu-icon.svg" alt="menu-icon" class="menu-icon"/></button>
+                <button>Обработка и редактирование <img src="/img/icons/mobile-menu-icons/open-submenu-icon.svg" alt="menu-icon" class="menu-icon"/></button>
+                <button>Полиграфия <img src="/img/icons/mobile-menu-icons/open-submenu-icon.svg" alt="menu-icon" class="menu-icon"/></button>
+                <button>Промышленный дизайн <img src="/img/icons/mobile-menu-icons/open-submenu-icon.svg" alt="menu-icon" class="menu-icon"/></button>
+                <button>Наружная реклама <img src="/img/icons/mobile-menu-icons/open-submenu-icon.svg" alt="menu-icon" class="menu-icon"/></button>
+                <button>ИИ-генерация изображений <img src="/img/icons/mobile-menu-icons/open-submenu-icon.svg" alt="menu-icon" class="menu-icon"/></button>
+            </div>
+            
+            <!-- Подкатегория: Логотипы и брендинг -->
+            <div class="menu hidden" id="menu-branding">
+                <div class="header"><img src="/img/icons/mobile-menu-icons/back-icon.svg" alt="menu-icon" class="menu-icon back" onclick="openMenu('menu-main')"/><h3>Логотипы и брендинг</h3></div>
+                <button>Логотипы <img src="/img/icons/mobile-menu-icons/fire-icon.svg" alt="menu-icon" class="menu-icon"/></button>
+                <a href="#" class="mobile-menu-nav-link">Фирменный стиль</a>
+                <a href="#" class="mobile-menu-nav-link">Визитки</a>
+                <a href="#" class="mobile-menu-nav-link">Брендирование и сувенирка</a>
+            </div>
+        </div>
+        
+        <form class="mobile-search-block">
+            <h3>Покупайте фриланс-услуги в один клик</h3>
+            <div class="mobile-search-input-container">
+                <img src="/img/icons/search-icon.svg" alt="mobile-search-icon" class="mobile-search-icon"/>
+                <input type="text" placeholder="Создать сайт на wix" class="mobile-search-input"/>
+            </div>
+            <input type="submit" value="Найти" class="search-input-submit"/>
+        </form>
+    </header>
+        
+    
     <div class="main-block">
         <div class="main-container">
             
-            <div class="services-nav-block">
+            <div class="services-nav-block computer-version">
                 <div class="services-nav-container1">
                     <div class="row1">
                         <a href="#" class="logo-service service-nav-elem">
@@ -107,7 +270,7 @@
                             <span>Нейминг</span>
                         </a>
                         <a href="#" class="figma-design-service service-nav-elem">
-                            <span>Figma дизайн</span>
+                            <span>Figma<br>дизайн</span>
                         </a>
                         
                         <a href="#" class="reels-making-service service-nav-elem">
@@ -123,7 +286,7 @@
                             <span>Сонграйтинг</span>
                         </a>
                         <a href="#" class="social-sites-service service-nav-elem">
-                            <span>Оформить соц-сети</span>
+                            <span>Оформить<br> соц-сети</span>
                         </a>
                     </div>
                 </div>
@@ -141,7 +304,7 @@
                 </div>
             </div>
             
-            <div class="similar-to-search-block">
+            <div class="similar-to-search-block computer-version">
                 <div class="shadow"></div>
                 <div class="similar-to-search-header-container">
                     <a href="#" class="similar-to-search-header">
@@ -494,7 +657,234 @@
                 </div>
             </div>
             
-            <div class="start-earning-block">
+            <div class="mobile-categories-block mobile">
+                <div class="mobile-categories-header">
+                    <h2>Категории</h2>
+                    <a href="#">Смотреть все</a>
+                </div>
+                
+                <div class="mobile-categories-container">
+                    <a href="#">
+                        <div class="img-container">
+                            <img src="/img/icons/category-icons/design-and-graphics.svg" alt="design-and-graphics" class="mobile-category-icon"/>
+                        </div>
+                        <p>Дизайн и графика</p>
+                    </a>
+                    <a href="#">
+                        <div class="img-container">
+                            <img src="/img/icons/category-icons/development-and-it.svg" alt="development-and-it" class="mobile-category-icon"/>
+                        </div>
+                        <p>Разработка и IT</p>
+                    </a>
+                    <a href="#">
+                        <div class="img-container">
+                            <img src="/img/icons/category-icons/social-sites-and-ads.svg" alt="social-sites-and-adds" class="mobile-category-icon"/>
+                        </div>
+                        <p>Cоцсети и реклама</p>
+                    </a>
+                    <a href="#">
+                        <div class="img-container">
+                            <img src="/img/icons/category-icons/video-and-animation.svg" alt="video-and-animation" class="mobile-category-icon"/>
+                        </div>
+                        <p>Видео & анимация</p>
+                    </a>
+                    
+                    <a href="#">
+                        <div class="img-container">
+                            <img src="/img/icons/category-icons/music-and-audio.svg" alt="music-and-audio" class="mobile-category-icon"/>
+                        </div>
+                        <p>Музыка и аудио</p>
+                    </a>
+                    <a href="#">
+                        <div class="img-container">
+                            <img src="/img/icons/category-icons/photo-edit.svg" alt="photo-edit" class="mobile-category-icon"/>
+                        </div>
+                        <p>Фото и обработка</p>
+                    </a>
+                    <a href="#">
+                        <div class="img-container">
+                            <img src="/img/icons/category-icons/text-and-translations.svg" alt="texts-and-translations" class="mobile-category-icon"/>
+                        </div>
+                        <p>Тексты и переводы</p>
+                    </a>
+                    <a href="#">
+                        <div class="img-container">
+                            <img src="/img/icons/category-icons/blockchain-and-crypto.svg" alt="blockchain-and-crypto" class="mobile-category-icon"/>
+                        </div>
+                        <p>Блокчейн и крипто</p>
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mobile-popular-services-block mobile">
+        <div class="mobile-popular-services-header">
+            <h2>Популярные услуги</h2>
+            <a href="#">
+                Смотреть все
+            </a>
+        </div>
+        
+        <div class="mobile-popular-services-container">
+            <div class="mobile-popular-services-wrapper">
+                <div class="mobile-popular-service-elem">
+                    <div class="mobile-popular-service-banner">
+                        <img src="/img/ads/mobile-templ.webp" alt="mobile-templ" class="mobile-popular-service-img"/> 
+                    </div> 
+                    <div class="mobile-popular-service-content">
+                        <div class="mobile-service-freelancer-row">
+                            <div class="mobile-service-freelancer-data">
+                                <div class="mobile-freelancer-img-container">
+                                    <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="mobile-freelancer-avatar"/>
+                                </div>
+                                <p class="mobile-freelancer-name">Smith Duo</p>
+                                <img src="/img/icons/verified.svg" alt="verified" class="mobile-verified-freelancer-icon"/>
+                            </div>
+                            <img src="/img/icons/like.svg" alt="like-icon" class="like-icon"/>
+                        </div>
+                        <p class="mobile-popular-service-description">
+                            Защита от ботов на сайте. Поведенческие боты. 
+                        </p>
+                        <div class="mobile-popular-service-details">
+                            <div class="mobile-popular-service-rating">
+                                <img src="/img/icons/yellow-star.svg" alt="yellow-star" class="mobile-yellow-star-icon"/>
+                                <p>5.0 <span class="special-text">(570)</span></p>
+                            </div>
+                            <div class="mobile-popular-service-price">
+                                от 10 408 ₽
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mobile-popular-service-elem">
+                    <div class="mobile-popular-service-banner">
+                        <img src="/img/ads/mobile-templ.webp" alt="mobile-templ" class="mobile-popular-service-img"/> 
+                    </div> 
+                    <div class="mobile-popular-service-content">
+                        <div class="mobile-service-freelancer-row">
+                            <div class="mobile-service-freelancer-data">
+                                <div class="mobile-freelancer-img-container">
+                                    <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="mobile-freelancer-avatar"/>
+                                </div>
+                                <p class="mobile-freelancer-name">Smith Duo</p>
+                                <img src="/img/icons/verified.svg" alt="verified" class="mobile-verified-freelancer-icon"/>
+                            </div>
+                            <img src="/img/icons/like.svg" alt="like-icon" class="like-icon"/>
+                        </div>
+                        <p class="mobile-popular-service-description">
+                            Защита от ботов на сайте. Поведенческие боты. 
+                        </p>
+                        <div class="mobile-popular-service-details">
+                            <div class="mobile-popular-service-rating">
+                                <img src="/img/icons/yellow-star.svg" alt="yellow-star" class="mobile-yellow-star-icon"/>
+                                <p>5.0 <span class="special-text">(570)</span></p>
+                            </div>
+                            <div class="mobile-popular-service-price">
+                                от 10 408 ₽
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mobile-popular-service-elem">
+                    <div class="mobile-popular-service-banner">
+                        <img src="/img/ads/mobile-templ.webp" alt="mobile-templ" class="mobile-popular-service-img"/> 
+                    </div> 
+                    <div class="mobile-popular-service-content">
+                        <div class="mobile-service-freelancer-row">
+                            <div class="mobile-service-freelancer-data">
+                                <div class="mobile-freelancer-img-container">
+                                    <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="mobile-freelancer-avatar"/>
+                                </div>
+                                <p class="mobile-freelancer-name">Smith Duo</p>
+                                <img src="/img/icons/verified.svg" alt="verified" class="mobile-verified-freelancer-icon"/>
+                            </div>
+                            <img src="/img/icons/like.svg" alt="like-icon" class="like-icon"/>
+                        </div>
+                        <p class="mobile-popular-service-description">
+                            Защита от ботов на сайте. Поведенческие боты. 
+                        </p>
+                        <div class="mobile-popular-service-details">
+                            <div class="mobile-popular-service-rating">
+                                <img src="/img/icons/yellow-star.svg" alt="yellow-star" class="mobile-yellow-star-icon"/>
+                                <p>5.0 <span class="special-text">(570)</span></p>
+                            </div>
+                            <div class="mobile-popular-service-price">
+                                от 10 408 ₽
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mobile-popular-service-elem">
+                    <div class="mobile-popular-service-banner">
+                        <img src="/img/ads/mobile-templ.webp" alt="mobile-templ" class="mobile-popular-service-img"/> 
+                    </div> 
+                    <div class="mobile-popular-service-content">
+                        <div class="mobile-service-freelancer-row">
+                            <div class="mobile-service-freelancer-data">
+                                <div class="mobile-freelancer-img-container">
+                                    <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="mobile-freelancer-avatar"/>
+                                </div>
+                                <p class="mobile-freelancer-name">Smith Duo</p>
+                                <img src="/img/icons/verified.svg" alt="verified" class="mobile-verified-freelancer-icon"/>
+                            </div>
+                            <img src="/img/icons/like.svg" alt="like-icon" class="like-icon"/>
+                        </div>
+                        <p class="mobile-popular-service-description">
+                            Защита от ботов на сайте. Поведенческие боты. 
+                        </p>
+                        <div class="mobile-popular-service-details">
+                            <div class="mobile-popular-service-rating">
+                                <img src="/img/icons/yellow-star.svg" alt="yellow-star" class="mobile-yellow-star-icon"/>
+                                <p>5.0 <span class="special-text">(570)</span></p>
+                            </div>
+                            <div class="mobile-popular-service-price">
+                                от 10 408 ₽
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mobile-popular-service-elem">
+                    <div class="mobile-popular-service-banner">
+                        <img src="/img/ads/mobile-templ.webp" alt="mobile-templ" class="mobile-popular-service-img"/> 
+                    </div> 
+                    <div class="mobile-popular-service-content">
+                        <div class="mobile-service-freelancer-row">
+                            <div class="mobile-service-freelancer-data">
+                                <div class="mobile-freelancer-img-container">
+                                    <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="mobile-freelancer-avatar"/>
+                                </div>
+                                <p class="mobile-freelancer-name">Smith Duo</p>
+                                <img src="/img/icons/verified.svg" alt="verified" class="mobile-verified-freelancer-icon"/>
+                            </div>
+                            <img src="/img/icons/like.svg" alt="like-icon" class="like-icon"/>
+                        </div>
+                        <p class="mobile-popular-service-description">
+                            Защита от ботов на сайте. Поведенческие боты. 
+                        </p>
+                        <div class="mobile-popular-service-details">
+                            <div class="mobile-popular-service-rating">
+                                <img src="/img/icons/yellow-star.svg" alt="yellow-star" class="mobile-yellow-star-icon"/>
+                                <p>5.0 <span class="special-text">(570)</span></p>
+                            </div>
+                            <div class="mobile-popular-service-price">
+                                от 10 408 ₽
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="main-container">
+        <div class="content-block">    
+            <div class="start-earning-block" class="computer-version">
                 <div class="start-earning-banner-container">
                     <div class="start-earning-banner-text">
                         <h2>Начните зарабатывать</h2>
@@ -540,7 +930,7 @@
                 </div>
             </div>
             
-            <div class="additional-services-block">
+            <div class="additional-services-block computer-version">
                 <div class="additional-services-header">
                     <h2>
                         Возможно вам понадобится
@@ -1226,7 +1616,7 @@
             </div>
             
             
-            <div class="additional-apps-block">
+            <div class="additional-apps-block computer-version">
                 <div class="additional-apps-content">
                     <img src="/img/fiwork-banner.webp" alt="fiwork" class="fiwork-banner"/>
                     <div class="additional-apps-text">
@@ -1255,7 +1645,7 @@
     </div>
     
     <footer>
-        <div class="footer-container">
+        <div class="footer-container computer-version">
             <div class="footer-col1">
                 <img src="./img/grey-logo.svg" alt="grey logo" class="footer-logo"/>
                 <p>
@@ -1263,11 +1653,11 @@
                 </p>
                 
                 <div class="social-sites-container">
-                    <a href="#" target="_blank"><img src="./img/icons/colorful-twitter.webp" class="twitter-icon" alt="twitter icon"/></a>
-                    <a href="#" target="_blank"><img src="./img/icons/colorful-vk.webp" class="twitter-icon" alt="twitter icon"/></a>
-                    <a href="#" target="_blank"><img src="./img/icons/colorful-dzen.webp" class="twitter-icon" alt="twitter icon"/></a>
-                    <a href="#" target="_blank"><img src="./img/icons/colorful-telegram.webp" class="twitter-icon" alt="twitter icon"/></a>
-                    <a href="#" target="_blank"><img src="./img/icons/colorful-skolkovo.webp" class="twitter-icon" alt="twitter icon"/></a>
+                    <a href="#" target="_blank"><img src="./img/icons/twitter.svg" class="twitter-icon grey-icon" alt="twitter icon"/><img src="./img/icons/colorful-twitter.webp" class="twitter-icon colorful-icon" alt="twitter icon"/></a>
+                    <a href="#" target="_blank"><img src="./img/icons/vk.svg" class="vk-icon grey-icon" alt="vk icon"/><img src="./img/icons/colorful-vk.webp" class="vk-icon colorful-icon" alt="vk icon"/></a>
+                    <a href="#" target="_blank"><img src="./img/icons/dzen.svg" class="dzen-icon grey-icon" alt="dzen icon"/><img src="./img/icons/colorful-dzen.webp" class="dzen-icon colorful-icon" alt="dzen icon"/></a>
+                    <a href="#" target="_blank"><img src="./img/icons/telegram.svg" class="telegram-icon grey-icon" alt="telegram icon"/><img src="./img/icons/colorful-telegram.webp" class="telegram-icon  colorful-icon" alt="telegram icon"/></a>
+                    <a href="#" target="_blank"><img src="./img/icons/skolkovo.svg" class="skolkovo-icon grey-icon" alt="skolkovo icon"/><img src="./img/icons/colorful-skolkovo.webp" class="skolkovo-icon  colorful-icon" alt="skolkovo icon"/></a>
                 </div>
             </div>
             
@@ -1294,6 +1684,64 @@
                 <a href="#" target="_blank">Мобильное приложение</a>
                 <a href="#" target="_blank">Способы вывода</a>
             </div>
+        </div>
+        
+        <div class="mobile-footer-container mobile">
+            <div class="footer-accordion-nav footer-accordion-block">
+                <div class="accordion">
+                    <div class="accordion-item">
+                      <button class="accordion-header">
+                         Компания
+                        <span class="plus"><img src="/img/icons/open.svg" class="open-icon" alt="open-icon"></span>
+                      </button>
+                      <div class="accordion-body">
+                            <a href="#" target="_blank">О проекте</a>
+                            <a href="#" target="_blank">Вакансии</a>
+                            <a href="#" target="_blank">Документация</a>
+                            <a href="#" target="_blank">Частые вопросы</a>
+                      </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                      <button class="accordion-header">
+                         Заказчикам
+                        <span class="plus"><img src="/img/icons/open.svg" class="open-icon" alt="open-icon"></span>
+                      </button>
+                      <div class="accordion-body">
+                            <a href="#" target="_blank">Как заказать услуги</a>
+                            <a href="#" target="_blank">Способы оплаты</a>
+                            <a href="#" target="_blank">Начать покупки</a>
+                            <a href="#" target="_blank">Кейсы</a>
+                      </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                      <button class="accordion-header">
+                         Исполнителям
+                        <span class="plus"><img src="/img/icons/open.svg" class="open-icon" alt="open-icon"></span>
+                      </button>
+                      <div class="accordion-body">
+                            <a href="#" target="_blank">Как зарабатывать на Fiwork</a>
+                            <a href="#" target="_blank">Мобильное приложение</a>
+                            <a href="#" target="_blank">Способы вывода</a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mobile-additional-apps-block">
+                <div class="mobile-additional-apps-container">
+                    <div class="mobile-additional-apps-links">
+                        <a href="#"><img src="/img/fiwork-on-google-play.svg" class="fiwork-on-google-play" alt="fiwork-google-play"/></a>
+                        <a href="#"><img src="/img/fiwork-on-appstore.svg" class="fiwork-on-appstore" alt="fiwork-on-appstore"/></a>
+                    </div>
+                    <div class="social-sites-enter-links">
+                        <a href="#" target="_blank"><img src="./img/icons/vk.svg" class="vk-icon grey-icon" alt="vk icon"/><img src="./img/icons/colorful-vk.webp" class="vk-icon colorful-icon" alt="vk icon"/></a>
+                        <a href="#" target="_blank"><img src="./img/icons/dzen.svg" class="dzen-icon grey-icon" alt="dzen icon"/><img src="./img/icons/colorful-dzen.webp" class="dzen-icon colorful-icon" alt="dzen icon"/></a>
+                        <a href="#" target="_blank"><img src="./img/icons/telegram.svg" class="telegram-icon grey-icon" alt="telegram icon"/><img src="./img/icons/colorful-telegram.webp" class="telegram-icon  colorful-icon" alt="telegram icon"/></a>
+                    </div>
+                </div>
+            </div> 
         </div>
     </footer>
 
@@ -1335,6 +1783,10 @@
                 </a>
             </fieldset>
         </form>
+    
+        <div class="change-login-option">
+            <p>Уже зарегистрированы? <a class='go-to-login-link'>Войти</a></p>
+        </div>
     </div>
 </div>
 
@@ -1372,14 +1824,20 @@
             <input type="button" value="Войти" class="login-modal-form-next-button"/>
             <div class="social-sites-enter-links">
                 <a href="#">
-                    <img src="/img/icons/vk-grey.svg" alt="vk-grey" class="vk-grey-icon"/>
+                    <img src="/img/icons/vk-grey.svg" alt="vk-grey" class="vk-grey-icon grey-icon"/>
+                    <img src="/img/icons/vk-square-blue.svg" alt="vk-square-blue" class="vk-square-blue-icon colorful-icon"/>
                 </a>
                 <a href="#">
-                    <img src="/img/icons/yandex-grey.svg" alt="yandex-grey" class="yandex-grey-icon"/>
+                    <img src="/img/icons/yandex-grey.svg" alt="yandex-grey" class="yandex-grey-icon grey-icon"/>
+                    <img src="/img/icons/yandex-square-red.svg" alt="yandex-red-icon" class="yandex-square-red-icon colorful-icon"/>
                 </a>
                 <a href="#">
-                    <img src="/img/icons/telegram-grey.svg" alt="telegram-grey" class="telegram-grey-icon"/>
+                    <img src="/img/icons/telegram-grey.svg" alt="telegram-grey" class="telegram-grey-icon grey-icon"/>
+                    <img src="/img/icons/telegram-square-blue.svg" alt="telegram-square-blue" class="telegram-square-blue-icon colorful-icon"/>
                 </a>
+            </div>
+            <div class="change-login-option">
+                <p>Нет аккаунта? <a class='go-to-register-link'>Зарегистрироваться</a></p>
             </div>
         </form>
     </div>
@@ -1432,6 +1890,7 @@
                 <input type="text" maxlength="1" class="code-input" />
                 <input type="text" maxlength="1" class="code-input" />
             </div>
+            
             <p class="resend">
               Не пришел код? <a href="#" id="resendBtn" class="disabled">Отправить повторно</a>
               <span id="timer"></span>
@@ -1448,7 +1907,6 @@
 </body>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="./js/jQuery/jquery-3.5.1.min.js"></script>
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 <script src="./js/index.js?v=<?= time(); ?>"></script>
-    
+<script src="./js/mobile-navigation-menu.js?v=<?= time(); ?>"></script>    
 </html>
