@@ -23,7 +23,6 @@
     <meta http-equiv="expires" content="0" />
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/index.css?v=<?= time(); ?>" />
     <link rel="stylesheet" href="./css/accordion.css?v=<?= time(); ?>" />
     <link rel="stylesheet" href="./css/mobile-navigation-menu.css?v=<?= time(); ?>" />
@@ -322,7 +321,7 @@
                 
                 <div class="swiper swiper-hidden similar-to-search-swiper">
                     
-                    <div class="ads-block swiper-wrapper">
+                    <div class="service-card-block swiper-wrapper">
                         
                         <a href="#" class="ad-container swiper-slide">
                             <div class="ad-part1">
@@ -944,7 +943,7 @@
                 <div class="additional-services-container">
                     <div class="additional-services">
                         <div class="swiper swiper-hidden additional-services-swiper">
-                            <div class="ads-block swiper-wrapper">
+                            <div class="service-card-block swiper-wrapper">
                                 <a href="#" class="ad-container swiper-slide">
                                     <div class="ad-part1">
                                         <div class="ad-banner">
@@ -1278,7 +1277,7 @@
                         </div>
                         
                         <div class="swiper swiper-hidden additional-services-swiper">
-                            <div class="ads-block swiper-wrapper">
+                            <div class="service-card-block swiper-wrapper">
                                 <a href="#" class="ad-container swiper-slide">
                                     <div class="ad-part1">
                                         <div class="ad-banner">
@@ -1909,4 +1908,5 @@
 <script src="./js/jQuery/jquery-3.5.1.min.js"></script>
 <script src="./js/index.js?v=<?= time(); ?>"></script>
 <script src="./js/mobile-navigation-menu.js?v=<?= time(); ?>"></script>    
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </html>
