@@ -61,7 +61,7 @@ window.onload=function(){
       }
     });
     
-    $(".swiper-hidden").removeClass("swiper-hidden");
+    /*$(".swiper-hidden").removeClass("swiper-hidden");*/
 
     $(".registration-and-login-block .register-button, .mobile-menu-register-button").on("click",function(){
        $(".fiwork-register-modal-container").removeClass("hidden"); 
