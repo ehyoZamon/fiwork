@@ -29,369 +29,655 @@ require_once "../modules/base.php";
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     <link rel="stylesheet" href="/css/test.css?v=<?= time(); ?>" />
     <link rel="stylesheet" href="/css/accordion.css?v=<?= time(); ?>" />
+    <link rel="stylesheet" href="/css/mobile-navigation-menu.css?v=<?= time(); ?>" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&family=Manrope&family=DM+Sans&family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Text&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
 </head>
 <body>
     <?=$header;?>
-
-    <!-- Мобильное меню (появляется на мобильных устройствах) -->
-    <div class="mobile-nav-toggle">
-        <span class="hamburger"></span>
-    </div>
-    <div class="mobile-nav">
-        <div class="mobile-nav-content">
-            <h3>Документация компании</h3>
-            <a href="#">Пользовательское соглашение</a>
-            <a href="#">Политика конфиденциальности</a>
-            <a href="#">Правила оказания услуг</a>
-            <a href="#">Коммерческая политика</a>
-            <a href="#">Реквизиты компании</a>
-            <a href="#">Товарный знак</a>
-            <a href="#">Способы оплаты</a>
-        </div>
-    </div>
-
+    
+    <div class="mobile-overlay"></div>
     <div class="main-block">
         <div class="main-container">
-            <div class="terms-of-service-block">
-                <div class="terms-of-service-content">
-                    <h2>Пользовательское соглашение</h2>
-                    <p>Добро пожаловать на Fiwork!</p>
-                    
-                    <p>
-                        <b>Настоящее Пользовательское соглашение сервиса Fiwork</b> (далее также <b>"Соглашение"</b>) заключается между компанией <b>Общество с ограниченной ответственностью “Файворк”</b>,
-                        зарегистрированной под номером 315201
-                        Ван Чаи, 114-118 Локхарт-роуд, Коммерческое здание Гейлорд, 21/Ф, Комната A, в лице Директора Лабонте Элисана Мария-Антуанетта, действующей на основании Устава, и лицом, 
-                        успешно прошедшим регистрацию на сайте Kwork.ru и начавшим использование Сервиса Kwork.<br>
-                        
-                        <b>Пожалуйста, внимательно изучите текст настоящего Соглашения.</b> Принятие настоящего Соглашения путём успешного прохождения регистрации на сайте Kwork.ru и начала использования сервиса означает 
-                        <b>полное и безоговорочное принятие условий настоящего Соглашения</b> и всех иных документов, ссылки на которые приведены в настоящем Соглашении (далее – <b>"Связанные документы"</b>).
-                    </p>
-                    
-                    <!-- Содержимое пользовательского соглашения остается без изменений -->
-                    <p>
-                        <b>Настоящее соглашение не является возмездным договором оказания услуг, передачей прав на использование Сервиса Kwork, лицензионным договором или иным договором, предполагающим оплату
-                    услуг RemoteFirst Group Limited, или вознаграждения RemoteFirst Group Limited</b>, а представляет собой свод общих правил и требований, регулирующих использование Сервиса Пользователем.</br>
-                        Принимая условия настоящего Соглашения и создавая Личный Кабинет в Сервисе Kwork, Вы соглашаетесь выполнять и соблюдать все правила и требования по использованию Сервиса Kwork, условия Связанных Документов,
-                        соглашаетесь с правилами и ценами оплаты услуг третьих лиц и правилами осуществления платежей в рамках Сервиса, а <b>RemoteFirst Group Limited</b> предоставляет Вам доступ к Сервису на условиях настоящего Соглашения и
-                        Связанных Документов.
-                    </p>
-                    
-                    <p>
-                        В соответствии с условиями, изложенными в настоящем документе, Kwork может по своему усмотрению вносить
-                        изменения в настоящее Пользовательское соглашение и любые другие соглашения, входящие в состав
-                        Пользовательского соглашения, в любое время, опубликовав измененную версию на Сайте. Любые изменения
-                        Пользовательского соглашения вступают в силу с указанной даты последнего обновления («Дата последнего
-                        обновления»).
-                    </p>
-                    
-                    <p>
-                        Вы должны прочитать, согласиться и принять все условия, содержащиеся в настоящем Пользовательском соглашении,
-                        а также в Связанных документах, чтобы использовать Сервис Kwork. Использование вами Сервиса Kwork
-                        подтверждает ваше согласие с Пользовательским соглашением и Связанными документами. Вы соглашаетесь не
-                        нарушать Правила и условия Связанных документов при использовании сервиса Kwork. Если вы не принимаете
-                        настоящее Пользовательское соглашение или Связанные документы, вы не должны использовать Сервис Kwork после
-                        даты последнего обновления документа. Для получения более подробной информации о правилах, касающихся
-                        использования Сайта, обратитесь к соответствующим разделам настоящего документа.
-                    </p>
-                    
-                    <p>
-                        Ни при каких условиях, Пользователю не предоставляются какие-либо имущественные интеллектуальные права в
-                        отношении Сервиса, его программного обеспечения.
-                    </p>
-                    
-                    <p>
-                        Дата последнего обновления: 17 июля 2022 г.
-                    </p>
-                    
-                    <p>
-                        Вы можете связаться с нашей Службой поддержки 24/7, если у вас есть какие-либо вопросы относительно Сервиса
-                        Kwork или Пользовательского соглашения. Вам ответят в порядке очереди. Вы можете связаться с нашей Службой
-                        поддержки по <a href="#">ссылке.</a>
-                    </p>
-                    
-                    <p>
-                        Kwork гарантирует, что обладает всеми правами, необходимыми для предоставления Пользователю возможности
-                        использования Сервиса Kwork по настоящему Соглашению.
-                    </p>
-                    
-                    <p>
-                        Настоящее Соглашение вступает в силу в момент принятия его условий Пользователем, и продолжает действовать в
-                        полной силе до момента прекращения использования Сервиса Kwork Пользователем.<br>
-                        Kwork вправе прекратить действие настоящего Соглашения в одностороннем порядке в любой момент времени, по
-                        единоличному усмотрению Kwork, в том числе в случае нарушения Пользователем любого положения Соглашения,
-                        либо любого положения любого из Связанных Документов.
-                    </p>
-                    
-                    <h2>УСЛОВИЯ ИСПОЛЬЗОВАНИЯ</h2>
-                    
-                    <ul>
-                        <li>
-                            Пользователи должны быть совершеннолетними по закону государства, из которого они ведут бизнес, чтобы
-                            использовать Сервис Kwork. 
-                        </li>
-                        
-                        <li>
-                            Чтобы создать или заказать кворк, вы должны зарегистрироваться, используя действующий адрес электронной
-                            почты или учетную запись в социальной сети.
-                        </li>
-                        
-                        <li>
-                            Каждый Пользователь может создать только одну учетную запись. Kwork оставляет за собой право удалять
-                            дублирующие учетные записи.
-                        </li>
-                        
-                        <li>
-                            Пользователь имеет право удалить свою Учетную запись в любое время только после того, как все заказы в его
-                            учетной записи будут выполнены и завершены. Если Пользователь решит удалить свою Учетную запись, он
-                            соглашается на окончательное удаление такой Учетной записи. Аккаунты, удаленные по ошибке, можно восстановить
-                            в течение 30 дней, обратившись в Службу поддержки Kwork. Если у Пользователя есть средства на балансе перед
-                            удалением его Учетной записи, он должен вывести все средства до такого удаления. Пользователь не сможет удалить
-                            свою Учетную запись, пока не будут выведены все средства.
-                        </li>
-                        
-                        <li>
-                            Ни при каких обстоятельствах Пользователь не сможет создать новую учетную запись, используя тот же адрес
-                            электронной почты, использовать платежные реквизиты, которые использовались в ранее удаленной учетной записи.
-                        </li>
-                        
-                        <li>
-                            Пользователь может привязать к своей учетной записи номер телефона, который использовался в ранее удаленной
-                            учетной записи, но не чаще одного раза в год и только через два месяца после добавления этого номера телефона в
-                            аккаунт. Одновременно один номер телефона может быть привязан только к одному аккаунту.
-                        </li>
-                        
-                        <li>
-                            Пользователи не имеют права продавать, покупать, дарить учетные записи Kwork и передавать их данные третьим лицам.
-                        </li>
-                        
-                        <li>
-                            При регистрации Пользователи должны создать подходящий логин, который будет виден другим Пользователям.
-                            Логин может содержать латинские буквы, цифры, дефисы и символы подчеркивания. Запрещены логины, содержащие
-                            номера телефонов, слова, зарезервированные для сотрудников Kwork, ненормативная лексика, а также
-                            оскорбительные выражения. Kwork оставляет за собой право изменить любой логин, который нарушает эти условия.
-                        </li>
-                        
-                        <li>
-                            Пользователи несут ответственность за защиту своих регистрационных данных от злонамеренного использования
-                            Сервиса третьими лицами, и должны незамедлительно <a href="#">уведомить Kwork</a> о злоупотреблении использования сервиса.
-                        </li>
-                        
-                        <li>
-                            Пользователи несут личную ответственность за весь контент, размещенный на Kwork, включая, помимо прочего,
-                            кворки, изображения, видео, отзывы и комментарии. Создавая учетную запись на Kwork, Пользователи подтверждают,
-                            что они понимают и согласны с этими условиями, а также соглашаются возместить любые расходы, понесенные Kwork,
-                            в случае предъявления претензии в отношении авторских прав против Kwork.
-                        </li>
-                        
-                        <li>
-                            Пользователь не является работником, сотрудником или агентом Kwork, и не имеет права представлять себя
-                            таковым.
-                        </li>
-                        
-                        <li>
-                            Пользователь не вправе передавать свои права и обязанности по настоящему Соглашению полностью или
-                            частично. Kwork может передать свои права и обязанности по настоящему Соглашению или любые свои права и
-                            обязанности по настоящему Соглашению без согласия Пользователя в любое время.
-                        </li>
-                        
-                        <li>
-                            Запрещены ненормативная лексика, грубое общение, пошлость, несанкционированная реклама, а также
-                            размещение информации и материалов, негативно влияющих на имидж бренда Kwork. Полный список запрещенного
-                            контента можно найти <a href="#">здесь.</a>
-                        </li>
-                        
-                        <li>
-                            Kwork оставляет за собой право удалять любые материалы, размещенные на Сервисе Kwork, включая, помимо
-                            прочего, кворки, отзывы, комментарии и т. д., а также приостанавливать работу или удалять Учетные записи
-                            Пользователей без объяснения причин. В случае подозрения на несанкционированный доступ к Учетной записи, спам
-                            или другие подозрительные действия в вашей Учетной записи Kwork может временно приостановить действие
-                            Учетной записи до тех пор, пока учетная запись снова не будет считаться безопасной. В случае блокировки Учетной
-                            записи, Пользователь может выполнить активные заказы, но не может начинать работу над новыми заказами.
-                            Пользователь может вывести деньги со своего баланса на кредитную/дебетовую карту или другим способом,
-                            доступным на странице <a href="#">Баланса.</a> Заблокированные Пользователи могут связываться только со Службой поддержки, а
-                            общение и чаты с другими пользователями будут недоступны.
-                        </li>
-                        
-                        <li>
-                            Спорные ситуации и другие проблемы, включая финансовые вопросы, можно решить, обратившись в Службу
-                            поддержки Kwork по электронной почте или <a href="#">отправив запрос</a> на Kwork.ru. Служба поддержки рассмотрит обращение и
-                            примет меры для решения проблемы. Уникальные проблемы без применимых или регулирующих правил будут
-                            решаться по усмотрению Службы поддержки Kwork.
-                        </li>
-                        
-                        <li>
-                            Вы не можете разглашать информацию, полученную во время работы на Kwork, включая, помимо прочего,
-                            спецификации и условия заказов, а также личную переписку с другими пользователями и представителями Kwork. Вы
-                            можете раскрывать информацию о своих кворках, доходе на Kwork и другую информацию, связанную с вашей учетной
-                            записью, если эта информация не нарушает конфиденциальность других пользователей.
-                        </li>
-                        
-                        <li>
-                            Все продавцы, которые получают доход, предлагая услуги и выполняя заказы с использованием Сервиса Kwork,
-                            несут единоличную ответственность за соблюдение ими местных правил и законов, включая, помимо прочего,
-                            регистрацию в качестве юридического лица, ИП или самозанятого, положения лицензировании и налоговом
-                            законодательстве.
-                        </li>
-                        
-                        <li>
-                            Пользователи не могут использовать неэтичные или недобросовестные рекламные методы для продвижения
-                            партнерских ссылок Kwork, копировать Сервис Kwork полностью или частично, а также использовать брендинг или
-                            дизайн Kwork для введения других в заблуждение. Для получения дополнительной информации см. <a href="#">Правила партнерской программы</a>
-                        </li>
-                        
-                        <li>
-                            По своему собственному усмотрению Kwork имеет право в одностороннем порядке прекратить действие
-                            настоящего Пользовательского соглашения в любой момент, в том числе в случае нарушения Пользователем любого
-                            положения настоящего Соглашения или любого положения любого из Связанных документов. В случае блокировки
-                            пользователя за нарушение Соглашения, если это возможно, средства оставшиеся на балансе будут возвращены на
-                            карту, с которой было пополнение или будет осуществлено перечисление средств на предоставленные пользователем
-                            реквизиты. Если произвести перечисление будет невозможно, средства останутся на балансе пользователя.
-                        </li>
-                        
-                        <li>
-                            В случае возникновения у Kwork подозрений, что истинной целью регистрации пользователя на Kwork, а также,
-                            создания пользователем на Kwork заказа/проекта, является рассылка спам-сообщений со стороны пользователя, Kwork
-                            оставляет за собой право временно заблокировать аккаунт такого пользователя на время проведения расследования.
-                            В случае подтверждения рассылки спам-сообщений, в том числе посредством функционала Сервиса Kwork, Kwork
-                            вправе бессрочно заблокировать аккаунт пользователя, и не осуществлять возврат сервисного сбора Kwork.
-                        </li>
-                        
-                        <li>
-                            В этом документе под «Связанными документами» подразумеваются <a href="#">Защита авторских прав, Запрещенные услуги</a>,
-                           <a href="#"> Модерация кворков</a>, <a href="#">Политика конфиденциальности</a> и <a href="#">Политика разрешения споров.</a>
-                        </li>
-                        
-                        <li>
-                            Kwork.ru и мобильное приложение, включая их общий вид, внешний вид, дизайн, информацию, контент и другие
-                            материалы, доступные в них, являются исключительной собственностью владельца и защищены законами об
-                            авторском праве, товарных знаках и другими законами об интеллектуальной собственности.
-                        </li>
-                        
-                        <li>
-                            Услуги, представляемые на <a href="#">kwork.ru</a>, также доступны на <a href="#">bestkwork.com.</a>
-                        </li>
-                        
-                        <li>
-                            Баланс Kwork не предназначен для бесконечно длительного хранения средств. Если аккаунт Kwork не активен в
-                            течение 2 лет или более, для данного аккаунта может быть подключена услуга “Архивное обслуживание”. Абонплата за
-                            обслуживание аккаунта, неактивного 2 года по услуге “Архивное обслуживание” составляет 450 рублей в месяц. Для
-                            аккаунта, неактивного три года и более - 4500 рублей в месяц.
-                        </li>
-                    </ul>
-                    
-                    <h2>ПОЛИТИКА ОБРАБОТКИ ДАННЫХ</h2>
-                    <ul>
-                        <li>
-                            Регистрируясь на Kwork, вы соглашаетесь на хранение и обработку введенных вами данных и на получение
-                            информации от Kwork технического (оповещения, связанные с работой Сервиса) и маркетингового характера в виде
-                            рассылки на указанный вами при регистрации адрес электронной почты.
-                        </li>
-                        
-                        <li>
-                            Kwork может собирать, хранить и обрабатывать такие данные, как файлы cookie, идентификаторы (логин и пароль),
-                            иную обезличенную информацию по мере необходимости для работы веб-сайта, эффективной реализации
-                            партнерской программы и в рекламных целях.
-                        </li>
-                        
-                        <li>
-                            Kwork не собирает, не хранит и не обрабатывает персональные данные пользователей, кроме случаев-исключений.
-                            Такие случаи, цели обработки и объем обрабатываемых персональных данных в этих случаях будут указаны в
-                            <a href="#">Политике конфиденциальности.</a>
-                        </li>
-                        
-                        <li>
-                            Kwork может контролировать личную переписку между Пользователями для обеспечения соблюдения Правил
-                            сервиса и Связанных документов. Это включает в себя право Kwork просматривать содержание личной переписки.
-                        </li>
-                        
-                        <li>На Kwork применяются <a href="#">рекомендательные технологии.</a></li>
-                    </ul>
-                    
-                    <h2>ПРАВИЛА СЕРВИСА KWORK</h2>
-                    <h3>ОБЩИЕ УСЛОВИЯ</h3> 
-                    
-                    <ul>
-                        <li>
-                            <b>Kwork</b> — это цифровой онлайн-маркетплейс, где компании и физические лица могут покупать и продавать
-                            фриланс-услуги.
-                        </li>
-                        
-                        <li>
-                            <b>Покупатели</b> — это Пользователи, приобретающие фриланс-услуги на Kwork. Они разделены на семь уровней:
-                            «Начинающий», «Освоившийся», «Опытный», «Мощный», «Очень мощный», «Профи-эксперт» и «Топовый».
-                        </li>
-                        
-                        <li>
-                            <b>Продавцы</b> — это Пользователи, которые продают фриланс-услуги на Kwork. Они разделены на три уровня:
-                            «Новичок», «Продвинутый», «Профессионал».
-                        </li>
-                    </ul>
+            <div class="messenger-block">
+                <div class="messenger-header">
+                    Сообщения
                 </div>
-                <div class="terms-of-service-navigation desktop-only">
-                    <div class="terms-of-service-nav-container">
-                        <h3>Документация компании</h3> 
-                        <div class="terms-of-service-nav-content">
-                            <a href="#">Пользовательское соглашение</a>
-                            <a href="#">Политика конфиденциальности</a>
-                            <a href="#">Правила оказания услуг</a>
-                            <a href="#">Коммерческая политика</a>
-                            <a href="#">Реквизиты компании</a>
-                            <a href="#">Товарный знак</a>
-                            <a href="#">Способы оплаты</a>
+                <div class="messenger-aside">
+                    <div class="search-in-message-block">
+                        <div class="search-in-message-container">
+                            <img src="/img/icons/search-icon.svg" alt="search-icon" class="search-icon svg-icon"/>
+                            <input type="text" placeholder="Поиск..." class="search-in-message-input"/>
                         </div>
-                        <label for="docs-search-input">Поиск по документу</label>
-                        <input type="text" id="docs-search-input" class="search-input"/>
+                    </div>
+                    <div class="contacts-block">
+                        <div class="contact-container egorov5-messages">
+                            <div class="avatar-container">
+                                <img src="/img/user-avatars/user-avatar6.webp" alt="user-avatar" class="user-avatar"/>
+                            </div>
+                            <div class="contact-info">
+                                <div class="contact-name-last-date">
+                                    <h4>egorov5</h4>
+                                    <span>10 декабря</span>
+                                </div>
+                                <div class="contact-last-message">
+                                    Здравствуйте. Напишите основную тему
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-container egorov5-messages">
+                            <div class="avatar-container">
+                                <img src="/img/user-avatars/user-avatar6.webp" alt="user-avatar" class="user-avatar"/>
+                            </div>
+                            <div class="contact-info">
+                                <div class="contact-name-last-date">
+                                    <h4>egorov5</h4>
+                                    <span>10 декабря</span>
+                                </div>
+                                <div class="contact-last-message">
+                                    Здравствуйте. Напишите основную тему
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-container egorov5-messages">
+                            <div class="avatar-container">
+                                <img src="/img/user-avatars/user-avatar6.webp" alt="user-avatar" class="user-avatar"/>
+                            </div>
+                            <div class="contact-info">
+                                <div class="contact-name-last-date">
+                                    <h4>egorov5</h4>
+                                    <span>10 декабря</span>
+                                </div>
+                                <div class="contact-last-message">
+                                    Здравствуйте. Напишите основную тему
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-container egorov5-messages">
+                            <div class="avatar-container">
+                                <img src="/img/user-avatars/user-avatar6.webp" alt="user-avatar" class="user-avatar"/>
+                            </div>
+                            <div class="contact-info">
+                                <div class="contact-name-last-date">
+                                    <h4>egorov5</h4>
+                                    <span>10 декабря</span>
+                                </div>
+                                <div class="contact-last-message">
+                                    Здравствуйте. Напишите основную тему
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-container admin-contact">
+                            <div class="avatar-container">
+                                <img src="/img/user-avatars/user-avatar7.webp" alt="user-avatar" class="user-avatar"/>
+                            </div>
+                            <div class="contact-info">
+                                <div class="contact-name-last-date">
+                                    <h4>admin</h4>
+                                    <span>12:36 PM</span>
+                                </div>
+                                <div class="contact-last-message">
+                                    yo man, food dey house?
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-container egorov5-messages">
+                            <div class="avatar-container">
+                                <img src="/img/user-avatars/user-avatar6.webp" alt="user-avatar" class="user-avatar"/>
+                            </div>
+                            <div class="contact-info">
+                                <div class="contact-name-last-date">
+                                    <h4>egorov5</h4>
+                                    <span>10 декабря</span>
+                                </div>
+                                <div class="contact-last-message">
+                                    Здравствуйте. Напишите основную тему
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-container egorov5-messages">
+                            <div class="avatar-container">
+                                <img src="/img/user-avatars/user-avatar6.webp" alt="user-avatar" class="user-avatar"/>
+                            </div>
+                            <div class="contact-info">
+                                <div class="contact-name-last-date">
+                                    <h4>egorov5</h4>
+                                    <span>10 декабря</span>
+                                </div>
+                                <div class="contact-last-message">
+                                    Здравствуйте. Напишите основную тему
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-container egorov5-messages">
+                            <div class="avatar-container">
+                                <img src="/img/user-avatars/user-avatar6.webp" alt="user-avatar" class="user-avatar"/>
+                            </div>
+                            <div class="contact-info">
+                                <div class="contact-name-last-date">
+                                    <h4>egorov5</h4>
+                                    <span>10 декабря</span>
+                                </div>
+                                <div class="contact-last-message">
+                                    Здравствуйте. Напишите основную тему
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-container egorov5-messages">
+                            <div class="avatar-container">
+                                <img src="/img/user-avatars/user-avatar6.webp" alt="user-avatar" class="user-avatar"/>
+                            </div>
+                            <div class="contact-info">
+                                <div class="contact-name-last-date">
+                                    <h4>egorov5</h4>
+                                    <span>10 декабря</span>
+                                </div>
+                                <div class="contact-last-message">
+                                    Здравствуйте. Напишите основную тему
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="messenger-container">
+                    <div class="welcome-screen messenger-screen">
+                        <div class="welcome-modal">
+                            <h3>Выберите сообщение</h3>
+                            <p>
+                                Выберите нужный чат, соблюдайте правила чата и не используйте оскорбления это может привести к блокировке в сервисе.
+                            </p>
+                            <img src="/img/icons/messenger-page/hi-hand-icon.svg" alt="hi-hand" class="hi-hand-icon svg-icon"/>
+                        </div>
                     </div>
                     
-                    <div class="we-help-customers-block">
-                        <h2>Мы помогаем <br> заказчикам</h2>
-                        <img src="/img/ads/help-round.png" class="round-help" alt="round-help"/>
-                        <h3 class="price-num">787 897 ₽</h3>
-                        <p class="price-description">заказчики сэкономили на проектах благодаря нашей помощи</p>
+                    <div class="messenger-content messenger-screen hidden">
+                        <div class="message-content-header">
+                            <div class="contact-info">
+                                <div class="contact-avatar">
+                                    <img src="/img/user-avatars/user-avatar7.webp" alt="contact-avatar" class="contact-avatar"/>
+                                </div>
+                                <div class="contact-details">
+                                    <div class="contact-username"><h4>admin</h4><span>&#9789; 23:29</span></div>
+                                    <div class="active-time"><span class="last-seen-text">Офлайн 16 часов</span><span class="writing-text hidden">печатает...</span></div>
+                                </div>
+                            </div>
+                            <div class="contact-functional-panel">
+                                <div class="search-button img-button">
+                                    <img src="/img/icons/search-icon.svg" alt="search-icon icon" class="search-icon svg-icon"/>
+                                </div>
+                                <div class="phone-button img-button">
+                                    <img src="/img/icons/messenger-page/phone.svg" alt="phone-icon icon" class="phone-icon open-phone-modal-block svg-icon"/>
+                                </div>
+                                <div class="three-dots-button img-button">
+                                    <img src="/img/icons/messenger-page/three-dots.svg" alt="three-dots-icon icon" class="three-dots-icon svg-icon"/>
+                                </div>
+                                <div class="new-order">
+                                    <img src="/img/icons/messenger-page/round-green-plus.svg" alt="green-plus icon" class="green-plus-icon"/>
+                                    Предложение
+                                </div>
+                            </div>
+                        </div>
                         
-                        <p class="contact-our-support-block">
-                            Проблемы с исполнителем?
-                            Обращайтесь,
-                            постараемся помочь
-                        </p>
+                        <div class="messages-container">
+                            <div class="messages-wrapper">
+                                <div class="time-message-container">
+                                    <hr class="custom-line">
+                                    <div class="time-message">Сегодня</div>
+                                    <hr class="custom-line">
+                                </div>
+                                
+                                <div class="custom-message">
+                                    <div class="cm-avatar-container">
+                                        <img src="/img/user-avatars/user-avatar5.jpg" alt="user-avatar" class="cm-user-avatar"/>
+                                    </div>
+                                    <div class="cm-username-and-message">
+                                        <h4 class="cm-username">andycodes</h4>
+                                        <div class="cm-message">Добрый день. Тема: форк <a href="#">"Вёрстка страниц, frontend, React, webpack, jquery, javascript".</a></div>
+                                    </div>
+                                    <div class="cm-time">
+                                        <img src="/img/icons/messenger-page/seen.svg" alt="seen" class="seen-icon svg-icon"/>
+                                        <span class="sent-time">00:38</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="custom-message">
+                                    <div class="cm-avatar-container">
+                                        <img src="/img/user-avatars/user-avatar7.webp" alt="user-avatar" class="cm-user-avatar"/>
+                                    </div>
+                                    <div class="cm-username-and-message">
+                                        <h4 class="cm-username">admin</h4>
+                                        <div class="cm-message">Добрый день</div>
+                                    </div>
+                                    <div class="cm-time">
+                                        <span class="sent-time">08:55</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="custom-message">
+                                    <div class="cm-avatar-container">
+                                        <img src="/img/user-avatars/user-avatar5.jpg" alt="user-avatar" class="cm-user-avatar"/>
+                                    </div>
+                                    <div class="cm-username-and-message">
+                                        <h4 class="cm-username">andycodes</h4>
+                                        <div class="cm-message">Добрый день, подскажите какая стоимость будет верстки вот такой страницы</div>
+                                    </div>
+                                    <div class="cm-time">
+                                        <img src="/img/icons/messenger-page/sent.svg" alt="seen" class="seen-icon svg-icon"/>
+                                        <span class="sent-time">16:45</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="custom-message">
+                                    <div class="cm-avatar-container">
+                                        <img src="/img/user-avatars/user-avatar5.jpg" alt="user-avatar" class="cm-user-avatar"/>
+                                    </div>
+                                    <div class="cm-username-and-message">
+                                        <h4 class="cm-username">andycodes</h4>
+                                        <div class="cm-message"><a>https://www.figma.com/design/qMAWM9W0GywlmgTIjAJUt4/Untitled?node-id=0-1&t=NCH0GSt4Hf7DaUe5-1</a></div>
+                                    </div>
+                                    <div class="cm-time">
+                                        <img src="/img/icons/messenger-page/sent.svg" alt="seen" class="seen-icon svg-icon"/>
+                                        <span class="sent-time">16:45</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="custom-message">
+                                    <div class="cm-avatar-container">
+                                        <img src="/img/user-avatars/user-avatar5.jpg" alt="user-avatar" class="cm-user-avatar"/>
+                                    </div>
+                                    <div class="cm-username-and-message">
+                                        <h4 class="cm-username">andycodes</h4>
+                                        <div class="cm-message">На реакте</div>
+                                    </div>
+                                    <div class="cm-time">
+                                        <img src="/img/icons/messenger-page/sent.svg" alt="seen" class="seen-icon svg-icon"/>
+                                        <span class="sent-time">16:45</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="custom-message">
+                                    <div class="cm-avatar-container">
+                                        <img src="/img/user-avatars/user-avatar5.jpg" alt="user-avatar" class="cm-user-avatar"/>
+                                    </div>
+                                    <div class="cm-username-and-message">
+                                        <h4 class="cm-username">andycodes</h4>
+                                        <div class="cm-message"><img src="/img/icons/messenger-page/stickers/in-love-1.webp" class="in-love-sticker" alt="in-love-sticker"/></div>
+                                    </div>
+                                    <div class="cm-time">
+                                        <img src="/img/icons/messenger-page/sent.svg" alt="seen" class="seen-icon svg-icon"/>
+                                        <span class="sent-time">16:45</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         
-                        <a class="go-by-link" href="#">
-                            Перейти <img src="/img/icons/round-right-blue-chevron.svg" alt="blue-right-chevron" class="blue-right-chevron"/>
-                        </a>
-                    </div> 
+                        <div class="control-panel">
+                            <div class="attach-container">
+                                <img src="/img/icons/messenger-page/attach.svg" alt="attach-icon" class="attach-icon svg-icon"/>
+                            </div>
+                            <textarea placeholder="Напишите что-нибудь..."></textarea>
+                            <div class="control-panel-buttons">
+                                <div class="cp-button">
+                                    <img src="/img/icons/messenger-page/smile.svg" alt="smile-icon" class="smile-icon cp-icon svg-icon"/>
+                                </div>
+                                <div class="cp-button open-stickers-block">
+                                    <img src="/img/icons/messenger-page/sticker.svg" alt="sticker-icon" class="sticker-icon cp-icon svg-icon"/>
+                                    <div class="stickers-block">
+                                        <div class="stickers-container">
+                                            <h3>Стикеры: Фил</h3>
+                                            <div class="stickers-wrapper">
+                                                <img src="/img/icons/messenger-page/stickers/in-love-1.webp" alt="sticker" class="fil-sticker"/>
+                                                <img src="/img/icons/messenger-page/stickers/in-love-2.webp" alt="sticker" class="fil-sticker"/>
+                                                <img src="/img/icons/messenger-page/stickers/in-love-3.webp" alt="sticker" class="fil-sticker"/>
+                                                <img src="/img/icons/messenger-page/stickers/in-love-4.webp" alt="sticker" class="fil-sticker"/>
+                                                <img src="/img/icons/messenger-page/stickers/in-love-5.webp" alt="sticker" class="fil-sticker"/>
+                                                <img src="/img/icons/messenger-page/stickers/in-love-6.webp" alt="sticker" class="fil-sticker"/>
+                                                <img src="/img/icons/messenger-page/stickers/in-love-7.webp" alt="sticker" class="fil-sticker"/>
+                                                <img src="/img/icons/messenger-page/stickers/in-love-8.webp" alt="sticker" class="fil-sticker"/>
+                                                <img src="/img/icons/messenger-page/stickers/in-love-9.webp" alt="sticker" class="fil-sticker"/>
+                                                <img src="/img/icons/messenger-page/stickers/in-love-10.webp" alt="sticker" class="fil-sticker"/>
+                                                <img src="/img/icons/messenger-page/stickers/in-love-11.webp" alt="sticker" class="fil-sticker"/>
+                                                <img src="/img/icons/messenger-page/stickers/in-love-12.webp" alt="sticker" class="fil-sticker"/>
+                                                <img src="/img/icons/messenger-page/stickers/in-love-13.webp" alt="sticker" class="fil-sticker"/>
+                                                <img src="/img/icons/messenger-page/stickers/in-love-14.webp" alt="sticker" class="fil-sticker"/>
+                                                <img src="/img/icons/messenger-page/stickers/in-love-15.webp" alt="sticker" class="fil-sticker"/>
+                                                <img src="/img/icons/messenger-page/stickers/in-love-16.webp" alt="sticker" class="fil-sticker"/>
+                                                <img src="/img/icons/messenger-page/stickers/in-love-17.webp" alt="sticker" class="fil-sticker"/>
+                                                <img src="/img/icons/messenger-page/stickers/in-love-18.webp" alt="sticker" class="fil-sticker"/>
+                                                <img src="/img/icons/messenger-page/stickers/in-love-19.webp" alt="sticker" class="fil-sticker"/>
+                                                <img src="/img/icons/messenger-page/stickers/in-love-20.webp" alt="sticker" class="fil-sticker"/>
+                                                <img src="/img/icons/messenger-page/stickers/in-love-21.webp" alt="sticker" class="fil-sticker"/>
+                                                <img src="/img/icons/messenger-page/stickers/in-love-22.webp" alt="sticker" class="fil-sticker"/>
+                                                <img src="/img/icons/messenger-page/stickers/in-love-23.webp" alt="sticker" class="fil-sticker"/>
+                                                <img src="/img/icons/messenger-page/stickers/in-love-24.webp" alt="sticker" class="fil-sticker"/>
+                                                <img src="/img/icons/messenger-page/stickers/in-love-25.webp" alt="sticker" class="fil-sticker"/>
+                                                <img src="/img/icons/messenger-page/stickers/in-love-26.webp" alt="sticker" class="fil-sticker"/>
+                                                <img src="/img/icons/messenger-page/stickers/in-love-27.webp" alt="sticker" class="fil-sticker"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cp-button">
+                                    <img src="/img/icons/messenger-page/microphone.svg" alt="microphone-icon" class="microphone-icon cp-icon svg-icon"/>
+                                </div>
+                                <div class="send-message-button">
+                                    <img src="/img/icons/messenger-page/arrow-top-green.svg" alt="arrow-top-icon" class="arrow-top-green-icon"/>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="messaging-blocked hidden">
+                            Этот диалог сейчас недоступен
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     
-    <?=$footer;?>
     <?=$modalWindows;?>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="/js/jQuery/jquery-3.5.1.min.js"></script>
-    <script src="/js/index.js?v=<?= time(); ?>"></script>
-    <script src="/js/mobile-navigation-menu.js?v=<?= time(); ?>"></script>
-    <script>
-        $(document).ready(function() {
-    $('.mobile-nav-toggle').click(function() {
-        $('.mobile-nav').toggleClass('active');
-        $('.hamburger').toggleClass('open');
+<div class="order-suggestion-modal-block messenger-modal-block hidden">
+    <form class="order-suggestion-modal-container">
+        <div class="order-suggestion-header">
+            <h3>Предложение заказа</h3>
+            <img src="/img/icons/x-close.svg" alt="x-close-icon" class="x-close-icon close-order-suggestion-modal-block svg-icon"/>
+        </div>
+        <div class="order-suggestion-description">
+            <p>Вы можете отправить покупателю индивидуальное предложение своих услуг.</p>
+            <p>Опишите свой релевантный опыт. Как именно вы собираетесь выполнять эту задачу.</p>
+            <p>Почему предлагаемый кворк подходит для покупателя.</p>
+        </div>
         
-        if ($('.hamburger').hasClass('open')) {
-            $('.hamburger::before').css('transform', 'rotate(45deg) translate(5px, 5px)');
-            $('.hamburger span').css('opacity', '0');
-            $('.hamburger::after').css('transform', 'rotate(-45deg) translate(7px, -7px)');
-        } else {
-            $('.hamburger::before').css('transform', 'none');
-            $('.hamburger span').css('opacity', '1');
-            $('.hamburger::after').css('transform', 'none');
+        <div class="order-suggestion-text-container">
+            <label for="order-suggestion-text">Описание</label>
+            <textarea id="order-suggestion-text" maxlength="2000" placeholder="Напишите, как вы будете решать задачу клиента"></textarea>
+            <div class="order-suggestion-text-length"><span class="num">0</span> из 2000 символов</div>
+        </div>
+        
+        <div class="select-service-and-num-container">
+            <div class="select-service-container">
+                <label for="select-service">Выберите услугу</label>
+                <select id="select-service">
+                    <option value="" disabled selected>Выберите услугу</option>
+                    <option value="service1">Услуга 1</option>
+                    <option value="service2">Услуга 2</option>
+                    <option value="service3">Услуга 3</option>
+                </select>
+            </div>
+            <div class="select-num-container">
+                <label for="input-service-num">Количество</label>
+                <input id="input-service-num" type="number" placeholder="1" min="1" max="100" step="1"/>
+            </div>
+        </div>
+        
+        <input type="submit" value="Предложить" class="submit-order-suggestion-modal"/>
+    
+        <div class="modal-footer">
+            Создать&nbsp;<a href="#" class="open-individual-order-suggestion-modal-block">индивидуальное предложение</a>&nbsp;для покупателя
+        </div>
+    </form>
+</div>
+
+<div class="individual-order-suggestion-modal-block messenger-modal-block hidden">
+    <form class="individual-order-suggestion-modal-container">
+        <div class="individual-order-suggestion-header">
+            <h3>Индивидуальное предложение</h3>
+            <img src="/img/icons/x-close.svg" alt="x-close-icon" class="x-close-icon close-individual-order-suggestion-modal-block svg-icon"/>
+        </div>
+        <div class="individual-order-suggestion-description">
+            <p>Вы можете отправить покупателю индивидуальное предложение своих услуг.</p>
+            <p>Укажите, какие услуги и в каком объеме будут предоставлены покупателю.</p>
+            <p>Опишите свой релевантный опыт. Продемонстрируйте 1-3 примера выполнения похожей работы.</p>
+        </div>
+        
+        <div class="individual-order-suggestion-text-container">
+            <label for="individual-order-suggestion-text">Описание</label>
+            <textarea id="individual-order-suggestion-text" maxlength="2000" placeholder="Напишите, как вы будете решать задачу клиента"></textarea>
+            <div class="individual-order-suggestion-text-length"><span class="num">0</span> из 2000 символов</div>
+        </div>
+        
+        <div class="modal-form-inputs">
+            <div class="modal-form-input-container">
+                <label for="select-section">Рубрика</label>
+                <select id="select-section">
+                    <option value="" disabled selected>Выберите рубрику</option>
+                    <option value="section1">Рубрика 1</option>
+                    <option value="section2">Рубрика 2</option>
+                    <option value="section3">Рубрика 3</option>
+                </select>
+            </div>
+            <div class="modal-form-input-container">
+                <label for="enter-price">Cтоимость</label>
+                <div id="enter-price" class="input-with-icon-container">
+                    <img src="/img/icons/messenger-page/grey-ruble.svg" alt="ruble-icon" class="ruble-icon svg-icon"/>
+                    <input type="text" placeholder="500 - 2 000 000" class="enter-price-input"/>
+                </div>
+            </div>
+            
+            <div class="modal-form-input-container">
+                <label for="completion-time">Срок выполнения <img src="/img/icons/round-question-icon.svg" alt="round-question-icon" class="round-question-icon svg-icon"/></label>
+                <div id="completion-time" class="input-with-icon-container">
+                    <img src="/img/icons/messenger-page/grey-clock.svg" alt="grey-clock-icon" class="grey-clock-icon svg-icon"/>
+                    <select id="select-deadline">
+                        <option value="" disabled selected>Срок выполнения</option>
+                        <option value="1-day">1 день</option>
+                        <option value="2-days">2 дня</option>
+                        <option value="3-days">3 дня</option>
+                        <option value="5-days">5 дней</option>
+                    </select>
+                </div>
+            </div>
+            
+        </div>
+        
+        <input type="submit" value="Предложить" class="submit-individual-order-suggestion-modal"/>
+    
+        <div class="modal-footer">
+            Также вы можете &nbsp;<a href="#" class="open-order-suggestion-modal-block">предложить покупателю</a>&nbsp; одину из своих активных услуг
+        </div>
+    </form>
+</div>
+
+<div class="phone-modal-block hidden">
+    <div class="modal-overlay">
+      <div class="modal">
+        <div class="modal-header-icons">
+            <img src="/img/icons/messenger-page/green-shield.svg" alt="green-shield" class="green-shield-icon svg-icon"/>
+            <img src="/img/icons/x-close.svg" alt="x-close-icon" class="x-close-icon close-phone-modal-block svg-icon"/>
+        </div>
+        <div class="modal-header">
+          <h3>Звонки доступны в Google Meet</h3>
+        </div>
+        <p>
+          Сейчас мы разрабатываем свою систему звонков, но чтобы оставаться на связи с клиентами и заказчиками мы поддерживаем связь в Google Meet, рекомендуем быть внимательными чтобы не попасться на уловки мошенников.
+        </p>
+        
+        <p><b>Ознакомьтесь с правилами:</b></p>
+        
+        <div class="rules">
+          <label><input type="checkbox"> Я не буду переходить в Telegram</label>
+          <label><input type="checkbox"> Я не буду отправлять деньги вне Fiwork</label>
+          <label><input type="checkbox"> Я не буду оскорблять собеседника</label>
+          <label><input type="checkbox"> Я не буду обсуждать запрещенные темы</label>
+        </div>
+    
+        <div class="buttons">
+          <button class="btn btn-cancel close-phone-modal-block">Отменить</button>
+          <button class="btn btn-accept">Принимаю</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script src="/js/jQuery/jquery-3.5.1.min.js"></script>
+<script src="/js/index.js?v=<?= time(); ?>"></script>
+<script src="/js/mobile-navigation-menu.js?v=<?= time(); ?>"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<script>
+    $(".admin-contact").on("click",function(){
+        $(".messenger-screen").addClass("hidden");
+        $(".messenger-content").removeClass("hidden");
+        $(".control-panel").removeClass("hidden");
+        $(".messaging-blocked").addClass("hidden");
+        $(".writing-text").addClass("hidden");
+        $(".last-seen-text").removeClass("hidden");
+       scrollMessageContainerToBottom();
+    });
+    
+    $(".egorov5-messages").on("click",function(){
+        $(".messenger-screen").addClass("hidden");
+        $(".messenger-content").removeClass("hidden");
+        $(".control-panel").addClass("hidden");
+        $(".messaging-blocked").removeClass("hidden");
+        $(".writing-text").removeClass("hidden");
+        $(".last-seen-text").addClass("hidden");
+        scrollMessageContainerToBottom();
+    });
+    
+    $(".contact-functional-panel .new-order").on("click",function(){
+        $(".order-suggestion-modal-block").removeClass("hidden");
+    });
+    
+    $(".close-order-suggestion-modal-block").on("click",function(){
+        $(".order-suggestion-modal-block").addClass("hidden"); 
+    });
+    
+    $(".open-individual-order-suggestion-modal-block").on("click",function(){
+        $(".messenger-modal-block").addClass("hidden");
+        $(".individual-order-suggestion-modal-block").removeClass("hidden");
+    });
+    
+    $(".open-order-suggestion-modal-block").on("click",function(){
+        $(".messenger-modal-block").addClass("hidden");
+        $(".order-suggestion-modal-block").removeClass("hidden");
+    });
+    
+    $(".open-phone-modal-block").on("click",function(){
+        $(".phone-modal-block").removeClass("hidden");
+    }); 
+    
+    $(".close-individual-order-suggestion-modal-block").on("click",function(){
+        $(".individual-order-suggestion-modal-block").addClass("hidden"); 
+    });
+    
+    $(".close-phone-modal-block").on("click",function(){
+        $(".phone-modal-block").addClass("hidden");
+    });
+    
+    function scrollMessageContainerToBottom(){
+        const container = document.querySelector('.messages-container');
+        container.scrollTop = container.scrollHeight;
+    }
+    
+    scrollMessageContainerToBottom();
+</script>
+<script>
+    // Функция для определения мобильного устройства
+function isMobileDevice() {
+    return window.innerWidth <= 768;
+}
+
+// Обработчик для кнопки назад в мобильной версии
+$(document).on('click', '.back-to-contacts', function(){
+    $(".messenger-screen").addClass("hidden");
+    $(".welcome-screen").removeClass("hidden");
+    $(".messenger-aside").addClass("active");
+});
+
+// Обработчик для кнопки меню в мобильной версии
+$(document).on('click', '.mobile-menu-toggle', function(){
+    $(".messenger-aside").toggleClass("active");
+});
+
+// Обработчик для контактов в мобильной версии
+$(document).on('click', '.contact-container', function(){
+    if (isMobileDevice()) {
+        $(".messenger-aside").removeClass("active");
+    }
+});
+
+// Адаптация модальных окон для мобильных
+function adaptModalsForMobile() {
+    if (isMobileDevice()) {
+        $('.order-suggestion-modal-block, .individual-order-suggestion-modal-block').css('padding', '10px');
+        $('.phone-modal-block .modal').css('width', '95%');
+    }
+}
+
+// Обработчик изменения размера окна
+$(window).on('resize', function() {
+    adaptModalsForMobile();
+});
+
+// Инициализация при загрузке
+$(document).ready(function() {
+    // Добавляем кнопки для мобильной версии
+    if (isMobileDevice()) {
+        // Добавляем кнопку меню в заголовок
+        $('.messenger-header').html(`
+            <div class="mobile-menu-toggle">
+                <img src="/img/icons/menu.svg" alt="menu-icon" class="menu-icon svg-icon"/>
+            </div>
+            <div>Сообщения</div>
+            <div style="width: 40px;"></div>
+        `);
+        
+        // Добавляем кнопку назад в заголовок чата
+        $('.message-content-header .contact-info').before(`
+            <div class="back-to-contacts">
+                <img src="/img/icons/arrow-left.svg" alt="back-icon" class="back-icon svg-icon"/>
+            </div>
+        `);
+    }
+    
+    adaptModalsForMobile();
+    
+    // Закрытие меню контактов при клике вне его области на мобильных
+    $(document).on('click', function(e) {
+        if (isMobileDevice() && 
+            $('.messenger-aside').hasClass('active') &&
+            !$(e.target).closest('.messenger-aside').length &&
+            !$(e.target).closest('.mobile-menu-toggle').length) {
+            $('.messenger-aside').removeClass('active');
         }
     });
+    
+    // Предотвращаем закрытие при клике внутри меню
+    $('.messenger-aside').on('click', function(e) {
+        e.stopPropagation();
+    });
 });
-    </script>
-</body>
+
+// Оптимизация для сенсорных устройств
+document.addEventListener('touchstart', function() {}, {passive: true});
+
+// Улучшение производительности на мобильных устройствах
+if (isMobileDevice()) {
+    // Отключаем некоторые эффекты для улучшения производительности
+    $('*').css('transition', 'none');
+}
+</script>
 </html>

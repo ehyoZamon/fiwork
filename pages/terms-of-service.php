@@ -29,6 +29,8 @@ require_once "../modules/base.php";
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     <link rel="stylesheet" href="/css/terms-of-service.css?v=<?= time(); ?>" />
     <link rel="stylesheet" href="/css/accordion.css?v=<?= time(); ?>" />
+    
+    <link rel="stylesheet" href="/css/mobile-navigation-menu.css?v=<?= time(); ?>" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     
