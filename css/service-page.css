@@ -1,0 +1,701 @@
+:root {
+  --font-family: "Inter", sans-serif;
+  --second-family: "Open Sans", sans-serif;
+  --third-family: "Plus Jakarta Sans", sans-serif;
+  --font3: "Manrope", sans-serif;
+  --font4: "Helvetica Neue", sans-serif;
+  --font5: "Roboto", sans-serif;
+  --font6: "Tajawal", sans-serif;
+  --font7: "Fira Sans", sans-serif;
+  --font8: "SF UI Text", sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    transition-duration: 0.1s;
+    transition-property: all;
+    transition-timing-function: linear;
+}
+
+
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+input:hover,
+input:focus,
+input:active,
+input:valid {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.main-block{ 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.main-container{
+    max-width: 1400px;
+    overflow: hidden;
+    width: 100%;
+}
+
+
+.services-block{
+    margin-top: 50px;
+}
+
+
+.services-container{
+    display: grid;
+    grid-template-columns: 273px 1fr;
+    gap: 20px;
+}
+
+.services-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.services-header .mini-nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.services-header .mini-nav img{
+    width: 12px;
+}
+
+.services-header .mini-nav a{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+    color: #446ee7;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.services-header .services-num-block{
+    display: flex;
+    align-items: center;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 143%;
+    letter-spacing: -0.01em;
+    color: #4e5566;
+    gap: 10px;
+}
+
+.services-header .services-num-block .service-num{
+    font-weight: 500;
+    color: #1d2026;
+}
+
+.services-filter-container{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    gap: 24px;
+}
+
+.filter-block{
+    width: 100%;
+    border: 1px solid #e9eaf0;
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-header{
+    padding: 20px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #1d2026;
+    text-align: left;
+    border-bottom: 1px solid #e9eaf0;
+    width: 100%;
+}
+
+.filter-params{
+    padding: 20px;
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+
+/* Скрываем стандартный чекбокс */
+.filter-param-container input[type="checkbox"] {
+    display: none;
+}
+
+/* Стилизуем сам label и его псевдоэлемент */
+.filter-param-container label {
+    display: inline-block;
+    position: relative; /* <--- Добавляем позиционирование */
+    cursor: pointer;
+    padding-left: 28px; /* Добавляем отступ для "квадрата" */
+}
+
+/* Стилизуем псевдоэлемент-квадрат */
+.filter-param-container label::before {
+    content: '';
+    position: absolute; /* <--- Делаем его абсолютно позиционированным */
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); /* Центрируем по вертикали */
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ced1d9;
+}
+
+/* Стилизуем состояние "отмечено" */
+.filter-param-container input[type="checkbox"]:checked + label::before {
+    background-color: #3498db;
+    border-color: #3498db;
+}
+
+/* Добавляем иконку (галочку) */
+.filter-param-container input[type="checkbox"]:checked + label::after {
+    content: '\2713'; /* Символ галочки */
+    font-size: 16px;
+    color: #fff;
+    position: absolute;
+    left: 4px; /* <--- Подбираем позицию */
+    top: 50%;
+    transform: translateY(-50%); /* Центрируем по вертикали */
+}
+
+.filter-param-container label{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    letter-spacing: -0.01em;
+    color: #4e5566;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.filter-param-container input[type='checkbox']:checked + label{
+    color: #177de5;
+}
+
+.filter-params-container label img{
+    width: 16px;
+    aspect-ratio: 1/1;
+}
+
+/*Ads block*/
+
+.similar-to-search-block{
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.service-card-block{
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column; /* Элементы размещаются в одной строке */
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    position: relative;
+    gap: 10px; 
+}
+
+.ad-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e4e5e7;
+    background: #fff;
+    text-decoration: none;
+    max-width: 300px !important;
+}
+
+.ad-container .ad-part1{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.ad-container .ad-banner{
+    width: 100%;
+    aspect-ratio: 2.6/1.73;
+    overflow: hidden;
+}
+
+.ad-container .ad-banner img{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    object-fit: cover;
+    position: relative;
+}
+
+.ad-container h3{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 137%;
+    color: #222325;
+    text-align: left;
+    margin: 0;
+    padding: 5px 15px;
+}
+
+.ad-container .freelancer-container{
+    padding: 5px 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 7px;
+    margin-bottom: 10px;
+}
+
+.freelancer-container .freelancer-avatar{
+    width: 24px;
+    height: 24px;
+    position: relative;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.freelancer-container .freelancer-avatar .freelancer-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: inline-block;
+    position: relative;
+    border-radius: 100%;
+}
+
+.freelancer-container .freelancer-avatar .freelancer-status{
+    width: 14px;
+    position: absolute;
+    bottom: -7px;
+}
+
+
+.freelancer-container .freelancer-avatar .freelancer-status.hidden{
+    display: none;
+}
+
+.freelancer-container .freelancer-username{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 129%;
+    color: #222325;
+    padding: 0;
+    margin: 0;
+}
+
+.freelancer-container img.verified-freelancer{
+    width: 12.5px;
+}
+
+
+.freelancer-container img.verified-freelancer.hidden{
+    display: none;
+}
+
+.ad-container .service-data-container{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 15px;
+    gap: 10px; 
+    border-top: 1px solid #efeff0;
+}
+
+.service-rating .rating-stars{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.service-rating .rating-stars p{
+    font-family: var(--font-family);
+    font-size: 12px;
+    line-height: 175%;
+    color: #b5b6ba;
+    text-align: left;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+.service-rating .rating-stars .yellow-text{
+    color: #ffbe5b;
+    font-weight: 700;
+}
+
+.service-rating .rating-text{
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 200%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #ffbe5b;
+}
+
+.service-price .service-price-text{
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 200%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-align: right;
+    color: #74767e;
+}
+
+.service-price .service-price-num{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 118%;
+    text-align: right;
+    color: #04b70a;
+}
+/*End of ads block*/
+
+
+/*price filter slider*/
+.price-filter-slider-block{
+    position: relative;
+}
+
+.price-filter-slider-block .price-filter {
+  width: 100%;
+  margin: auto;
+}
+
+/* Контейнер ползунков */
+.price-filter-slider-block .slider-container {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  margin-bottom: 15px;
+}
+
+/* Обе линии ползунков */
+.price-filter-slider-block input[type="range"] {
+  position: absolute;
+  width: 100%;
+  height: 6px;
+  top: 5px;
+  pointer-events: none;
+  appearance: none;
+  background: transparent;
+  z-index: 2;
+}
+
+/* Круглый бегунок (ползунок) */
+.price-filter-slider-block input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  pointer-events: all;
+  width: 16px;
+  height: 16px;
+  background: white;
+  border: 2px solid #007bff;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -5px; /* Центрирует по линии */
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Для Firefox */
+.price-filter-slider-block input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: white;
+  border: 2px solid #007bff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Серый фон всей линии */
+.price-filter-slider-block .slider-track {
+  position: absolute;
+  height: 6px;
+  top: 5px;
+  width: 100%;
+  background: #d0e2ff;
+  border-radius: 5px;
+  z-index: 0;
+}
+
+/* Синяя заливка между ползунками */
+.price-filter-slider-block .slider-fill {
+  position: absolute;
+  height: 6px;
+  top: 5px;
+  background: #007bff;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+/* Блоки ввода "от" и "до" */
+.price-filter-slider-block .inputs {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+/* Каждое поле */
+.price-filter-slider-block .input-box {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px;
+  border: 1px solid #e9eaf0;
+}
+
+/* Надпись "от" / "до" */
+.price-filter-slider-block .input-box p {
+    background: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    justify-content: flex-start;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #8c94a3;
+    margin: 0;
+    padding: 0;
+}
+
+.price-filter-slider-block .input-box .currency{
+    color: #1d2026;
+}
+
+/* Сами поля ввода */
+.price-filter-slider-block .input-box input {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.price-filter-slider-block input[type='number']::-webkit-outer-spin-button,
+.price-filter-slider-block input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/*end of price filter slider*/
+
+/* Mobile filter toggle styles */
+.mobile-filter-toggle {
+    display: none; /* Hidden on desktop */
+    width: 100%;
+    background: #fff;
+    border: 1px solid #e9eaf0;
+    padding: 15px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+}
+
+.mobile-filter-toggle .plus {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.mobile-filter-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+}
+
+@media (max-width: 1370px){
+    .similar-to-search-block{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    
+    .ad-container{
+        max-width: 100% !important;
+    }
+}
+
+@media (max-width: 1110px){
+    .similar-to-search-block{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 850px){
+    
+}
+
+@media (max-width: 768px){
+    .main-block {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .services-block {
+        margin-top: 30px;
+    }
+
+    .services-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .services-header .mini-nav {
+        flex-wrap: wrap;
+    }
+
+    .services-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Show mobile toggle and hide content by default */
+    .mobile-filter-toggle {
+        display: block;
+    }
+
+    .mobile-filter-content {
+        display: none; /* Collapsed by default on mobile */
+    }
+
+    /* When active, show content */
+    .mobile-filter-toggle.active + .mobile-filter-content {
+        display: flex;
+    }
+
+    .filter-header {
+        padding: 15px;
+        font-size: 13px;
+    }
+
+    .filter-params {
+        padding: 15px;
+    }
+
+    .filter-param-container label {
+        font-size: 13px;
+    }
+
+    .similar-to-search-block {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .ad-container h3 {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+    .ad-container .freelancer-container {
+        padding: 5px 10px;
+    }
+
+    .service-data-container {
+        padding: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .service-price .service-price-num {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .similar-to-search-block {
+        grid-template-columns: 1fr; /* Single column on very small screens */
+        gap: 10px;
+    }
+
+    .mobile-filter-toggle {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .price-filter-slider-block .inputs {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .input-box {
+        padding: 8px;
+    }
+
+    .input-box p {
+        font-size: 13px;
+    }
+
+    .input-box input {
+        font-size: 13px;
+    }
+}
