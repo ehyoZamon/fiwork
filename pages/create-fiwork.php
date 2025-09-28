@@ -1741,11 +1741,9 @@ require_once "../modules/base.php";
     }
     
     function indicateWorkCount(){
-        console.log("working");
         const workCount=0;
         const addWorkElemLength=$(".fiwork-portfolio-form .add-works-container .add-work-elem-loaded-container.hidden").length;
         const loadedElemLength=$(".fiwork-portfolio-form .add-works-container .add-work-elem").length;
-        console.log(addWorkElemLength,loadedElemLength);
         if(addWorkElemLength==5){
             $(".fiwork-portfolio-block .required-to-do").show();
             $(".fiwork-portfolio-header p.success").hide();

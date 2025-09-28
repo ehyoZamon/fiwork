@@ -823,6 +823,7 @@ textarea:focus, input:focus, select:focus{
     padding-top: 30px;
     border-top: 1px solid #e8e8e8;
     width: 100%;
+    overflow-x: auto;
 }
 
 .create-fiwork-step-content .fiwork-price-and-options-table-wrapper{
@@ -2311,8 +2312,170 @@ textarea:focus, input:focus, select:focus{
     height: 100%;
 }
 
+@media (max-width: 1350px){
+    .create-fiwork-aside-container{
+        display: none;
+    }
+}
 
+@media (max-width: 1150px){
+    .create-fiwork-container{
+        grid-template-columns: 880px;
+    }
+    
+    .user-header .user-header-nav{
+        display: none !important;
+    }
+    
+    
+    .step-stage-form-description-modal{
+        display: none !important;
+    }
+}
 
+@media (max-width: 950px){
+    .create-fiwork-container{
+        grid-template-columns: 100%;
+    }
+    
+    .fiwork-price-and-options-table-wrapper{
+        width: 790px !important;
+        max-width: auto !important;
+    }
+}
+
+@media (max-width: 860px){
+    .create-fiwork-step-select-section .step-stage-form .select-container{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start; 
+    }
+    
+    .create-fiwork-step-upload-cover .upload-cover-container{
+        width: 100%;
+    }    
+}
+
+@media (max-width: 768px){
+    .add-work-modal-block .add-works-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width: 676px){
+    .create-fiwork-form-container{
+        padding: 20px;
+    }
+    
+    .fiwork-portfolio-container .add-works-container{
+        grid-template-columns: repeat(2,1fr);
+        gap: 15px;
+    }
+    
+    .create-fiwork-step-stage{
+        grid-template-columns: 1fr;
+    }
+    
+    .fiwork-price-and-options-form .create-fiwork-step-header{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    
+    .fiwork-portfolio-container .fiwork-portfolio-header{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 5px;
+    }
+    
+    .fiwork-details-form .create-fiwork-step-enter-name .textarea-container textarea{
+        font-size: 24px;
+    }
+    
+        
+    .add-work-modal-block .loaded-cover-block{
+        gap: 10px;
+        padding-right: 0;
+    }
+
+}
+
+@media (max-width: 550px){
+    .create-fiwork-step-stage .step-stage-form.two-cols{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        width: 100%;
+        gap: 10px;
+    }
+    
+    .add-work-modal-block .add-works-container .add-work-elem{
+        width: 100%;
+        aspect-ratio: auto;
+    }
+    
+    
+    .add-work-modal-block .loaded-cover-block{
+        grid-template-columns: 100%;
+        gap: 20px;
+    }
+    
+    .loaded-cover-block .loaded-cover-resize{
+        width: 100%;
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 476px){
+    .fiwork-portfolio-container .add-works-container{
+        grid-template-columns: 48% 48%;
+        gap: 4%;
+        margin-bottom: 40px;
+    } 
+    
+    .create-fiwork-form-container{
+        padding: 0;
+    }
+    
+    .fiwork-details-form .create-fiwork-step-enter-name .textarea-container textarea{
+        font-size: 20px;
+    }
+    
+    
+    .create-fiwork-step-upload-cover .upload-cover-container{
+        gap: 5px;
+    }
+    
+    
+    .create-fiwork-step-upload-cover .upload-cover-container .round-plus-icon{
+        width: 30px !important;
+    }
+    
+    .create-fiwork-step-header{
+        font-size: 20px;
+    }
+    
+    .option-name-and-price-container .option-price-and-day-container{
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 450px){
+    .add-work-modal-block .add-works-container{
+        grid-template-columns: 1fr;
+    }
+    
+    .add-work-modal-block .add-work-name-label-container,
+    .add-work-modal-block .load-works-header{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 5px;
+    }
+}
 
 /*end of add-work-modal-block*/
 /*end of modal-blocks*/
