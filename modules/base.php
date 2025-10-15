@@ -200,6 +200,262 @@ $header=<<<EOT
     </header>
 EOT;
 
+$userHeader=<<<EOT
+    <link rel="stylesheet" href="/css/mobile-navigation-menu.css" />
+    <link rel="stylesheet" href="/css/base.css"/>
+    <header class="computer-header">
+        <div class="nav-part1-container">
+            <div class="nav-part1">
+                <div class="logo-and-search-block">
+                    <a href="#" class="logo-container">
+                        <img src="/img/logo.svg" alt="logo" class="header-logo"/>
+                    </a>
+                    <div class="search-container">
+                        <hr class="search-button-stick"><input type="text" placeholder="  Найти услуги" class="search-service-input" name="search-service">
+                        <div class="search-button-container hidden">
+                            <img src="/img/icons/bold-x-close.svg" alt="x-close" class="clear-search-icon"/>
+                            <input type="button" value="Найти" class="search-content-button"/>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="user-header">
+                    <div class="user-header-nav">
+                        <a href="#">Услуги</a>
+                        <a href="#">Заказы</a>
+                        <a href="#">Биржа</a>
+                        <a href="#">Портфолио</a>
+                        <a href="#" class="chat active">Чат<img src="/img/icons/red-dot.svg" alt="red-dot" class="red-dot"/></a>
+                    </div>
+                    
+                    <div class="balance">
+                        <div class="current-balance">900 ₽</div>
+                        <div class="vertical-line"></div>
+                        <div class="balance-text">Баланс</div>
+                    </div>
+                    <img src="/img/icons/user-header-burger.svg" alt="burder" class="user-header-burger"/>
+                    <div class="user-header-avatar active">
+                        <div class="img-container">
+                            <img src="/img/user-avatars/user-avatar8.png" alt="user-avatar" class="user-avatar"/>
+                        </div>
+                        <div class="user-avatar-status">
+                        </div>
+                    </div>
+                    
+                    <div class="user-header-menu hidden">
+                        <div class="part1">
+                            <div class="premium-container active"><img src="/img/icons/grey-diamond.svg" alt="grey-diamond" class="grey-diamond"/><img src="/img/icons/blue-diamond.svg" alt="blue-diamond" class="blue-diamond"/>Premium</div>
+                            <div class="user-name">Андрей Иванов</div>
+                            <div class="user-username">andreycode <img src="/img/icons/copy.svg" alt="copy-icon" class="copy-icon"/></div>
+                            <div class="receive-orders active">
+                                <div class="receive-orders-text"><span class="not-working receive-order-text active">Не работаю</span><span class="receiving-orders receive-order-text">Принимаю заказы</span> 
+                                <img src="/img/icons/round-question-icon.svg" alt="round-question" class="round-question-icon"/>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="part2">
+                            <div class="user-type-block">
+                                <div class="orderer-user-type user-type">
+                                    Я покупатель
+                                </div>
+                                <div class="freelancer-user-type user-type selected">
+                                    Я продавец
+                                </div>
+                            </div>
+                            <div class="user-header-menu-nav">
+                                <a href="#"><img src="/img/icons/user-header-menu/user-settings.svg" alt="profile-icon"/>Профиль</a>
+                                <a href="#"><img src="/img/icons/user-header-menu/settings.svg" alt="profile-icon"/>Настройки</a>
+                                <a href="#"><img src="/img/icons/user-header-menu/help.svg" alt="profile-icon"/>Помощь</a>
+                                <a href="#"><img src="/img/icons/user-header-menu/quit.svg" alt="profile-icon"/>Выйти</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="nav-part2-container">
+            <div class="nav-part2">
+                <ul>
+                    <li>
+                        <a href="#">Дизайн & Графика</a>
+                        <div class="mega-menu">
+                            <div class="mega-menu-column">
+                              <h4>Логотип и брендинг</h4>
+                              <a href="#">Логотипы <img src="/img/icons/fire.svg" alt="fire icon" class="fire-icon"/></a>
+                              <a href="#">Фирменный стиль</a>
+                              <a href="#">Визитки</a>
+                              <a href="#">Брендирование и сувенирка</a>
+                              
+                              <h4>Презентации и инфографика</h4>
+                              <a href="#">Презентации</a>
+                              <a href="#">Инфографика</a>
+                              <a href="#">Карта и схема</a>
+                              
+                              <h4>Арт и иллюстрации</h4>
+                              <a href="#">Портрет, шарж, карикатура</a>
+                              <a href="#">Иллюстрации и рисунки</a>
+                              <a href="#">Дизайн игр</a>
+                              <a href="#">Тату, принты</a>
+                              <a href="#">Стикеры</a>
+                              <a href="#">NFT арт</a>
+                              <a href="#">Готовые шаблоны и рисунки</a>
+                            </div>
+                            
+                            <div class="mega-menu-column with-border">
+                              <h4>Веб и мобильный дизайн</h4>
+                              <a href="#">Веб-дизайн <img src="/img/icons/fire.svg" alt="fire icon" class="fire-icon"/></a>
+                              <a href="#">Мобильный дизайн</a>
+                              <a href="#">Email-дизайн</a>
+                              <a href="#">Баннеры и иконки <img src="/img/icons/fire.svg" alt="fire icon" class="fire-icon"/></a>
+                              <a href="#">Юзабилити-аудит</a>
+                              
+                              <h4>Маркетплейсы и соцсети</h4>
+                              <a href="#">Дизайн в соцсетях <img src="/img/icons/fire.svg" alt="fire icon" class="fire-icon"/></a>
+                              <a href="#">Дизайн для маркетплейсов</a>
+                              
+                              <h4>Интерьер и экстерьер</h4>
+                              <a href="#">Интерьер</a>
+                              <a href="#">Дизайн домов и сооружений</a>
+                              <a href="#">Ландшафтный дизайн</a>
+                              <a href="#">Дизайн мебели</a>
+                              
+                              <h4>Обработка и редактирование</h4>
+                              <a href="#">Отрисовка в векторе</a>
+                              <a href="#">Фотомонтаж и обработка <img src="/img/icons/fire.svg" alt="fire icon" class="fire-icon"/></a>
+                              <a href="#">3D-графика <img src="/img/icons/fire.svg" alt="fire icon" class="fire-icon"/></a>
+                            </div>
+                            
+                            <div class="mega-menu-column with-border">
+                              <h4>Полиграфия</h4>
+                              <a href="#">Брошюра и буклет</a>
+                              <a href="#">Листовки и флаер</a>
+                              <a href="#">Плакат и афиша</a>
+                              <a href="#">Календарь и открытка</a>
+                              <a href="#">Каталог, меню, книга</a>
+                              <a href="#">Грамота и сертификат</a>
+                              
+                              <h4>Промышленный дизайн</h4>
+                              <a href="#">Электроника и устройства</a>
+                              <a href="#">Предметы и аксессуары</a>
+                              <a href="#">Упаковка и этикетка</a>
+                              
+                              <h4>Наружная реклама</h4>
+                              <a href="#">Билборды и стенды</a>
+                              <a href="#">Витрины и вывески</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                    <a href="#">Разработка и IT</a>
+                    </li>
+                    <li>
+                        <a href="#">Тексты и переводы</a>
+                    </li>
+                    <li>
+                        <a href="#">SEO и трафик</a>
+                    </li>
+                    <li>
+                        <a href="#">Аудио, видео, съемка</a>
+                    </li>
+                    <li>
+                        <a href="#">Бизнес и жизнь</a>
+                    </li>
+                    <li>
+                        <a href="#">Блокчейн и крипто</a>
+                    </li>
+                    <li>
+                        <a href="#">Нейросети</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+
+    <header class="phone-header">
+        <div class="logo-burger-login-block">
+            <div class="burger-container">
+                <img src="/img/icons/burger.svg" alt="burger" class="burger-icon"/>
+                <img src="/img/icons/mobile-menu-icons/close-menu-icon.svg" alt="close-menu" class="close-menu-icon"/>
+            </div>
+            <a href="#" class="mobile-logo-link">
+                <img src="/img/logo.svg" alt="burger" class="mobile-logo-icon"/>
+            </a>
+            <div class="mobile-login-link">
+                Войти
+            </div>
+        </div>
+        
+        <div class="mobile-navigation-menu">
+            <!-- Главное меню -->
+            <div class="menu" id="menu-main">
+                <button onclick="openMenu('menu-categories')">Каталог услуг <img src="/img/icons/mobile-menu-icons/open-submenu-icon.svg" alt="menu-icon" class="menu-icon"/></button>
+                <button>Полезное <img src="/img/icons/mobile-menu-icons/open-submenu-icon.svg" alt="menu-icon" class="menu-icon"/></button>
+                <a href="#" class="mobile-menu-nav-link">Помощь <img src="/img/icons/mobile-menu-icons/help-icon.svg" alt="menu-icon" class="menu-icon"/></a>
+                <a href="#" class="mobile-menu-nav-link">Начать зарабатывать <img src="/img/icons/mobile-menu-icons/money-icon.svg" alt="menu-icon" class="menu-icon"/></a>
+                <a href="#" class="mobile-menu-nav-link">Switch to English <img src="/img/icons/mobile-menu-icons/world-icon.svg" alt="menu-icon" class="menu-icon"/></a>
+                <button style="background-color: #007bff; color: white; font-weight: bold;" class="mobile-menu-register-button">Регистрация</button>
+                <div class="change-login-option">
+                    <p>Уже зарегистрированы? <a class='go-to-login-link'>Войти</a></p>
+                </div>
+            </div>
+            
+            <!-- Категории -->
+            <div class="menu hidden" id="menu-categories">
+                <div class="header"><img src="/img/icons/mobile-menu-icons/back-icon.svg" alt="menu-icon" class="menu-icon back" onclick="openMenu('menu-main')"/><h3>Категории</h3></div>
+                <button onclick="openMenu('menu-design')">Дизайн <img src="/img/icons/mobile-menu-icons/open-submenu-icon.svg" alt="menu-icon" class="menu-icon"/></button>
+                <button>Разработка и IT <img src="/img/icons/mobile-menu-icons/open-submenu-icon.svg" alt="menu-icon" class="menu-icon"/></button>
+                <button>Тексты и переводы <img src="/img/icons/mobile-menu-icons/open-submenu-icon.svg" alt="menu-icon" class="menu-icon"/></button>
+                <button>SEO и трафик <img src="/img/icons/mobile-menu-icons/open-submenu-icon.svg" alt="menu-icon" class="menu-icon"/></button>
+                <button>Соцсети и маркетинг <img src="/img/icons/mobile-menu-icons/open-submenu-icon.svg" alt="menu-icon" class="menu-icon"/></button>
+                <button>Аудио, видео, съёмка <img src="/img/icons/mobile-menu-icons/open-submenu-icon.svg" alt="menu-icon" class="menu-icon"/></button>
+                <button>Бизнес и жизнь <img src="/img/icons/mobile-menu-icons/open-submenu-icon.svg" alt="menu-icon" class="menu-icon"/></button>
+            </div>
+            
+            <!-- Подкатегория: Дизайн -->
+            <div class="menu hidden" id="menu-design">
+                <div class="header"><img src="/img/icons/mobile-menu-icons/back-icon.svg" alt="menu-icon" class="menu-icon back" onclick="openMenu('menu-main')"/><h3>Дизайн</h3></div>
+                <button onclick="openMenu('menu-branding')">Логотипы и брендинг <img src="/img/icons/mobile-menu-icons/open-submenu-icon.svg" alt="menu-icon" class="menu-icon"/></button>
+                <button>Презентации и инфографика <img src="/img/icons/mobile-menu-icons/open-submenu-icon.svg" alt="menu-icon" class="menu-icon"/></button>
+                <button>Арт и иллюстрации <img src="/img/icons/mobile-menu-icons/open-submenu-icon.svg" alt="menu-icon" class="menu-icon"/></button>
+                <button>Веб и мобильный дизайн <img src="/img/icons/mobile-menu-icons/open-submenu-icon.svg" alt="menu-icon" class="menu-icon"/></button>
+                <button>Интерьер и экстерьер <img src="/img/icons/mobile-menu-icons/open-submenu-icon.svg" alt="menu-icon" class="menu-icon"/></button>
+                <button>Обработка и редактирование <img src="/img/icons/mobile-menu-icons/open-submenu-icon.svg" alt="menu-icon" class="menu-icon"/></button>
+                <button>Полиграфия <img src="/img/icons/mobile-menu-icons/open-submenu-icon.svg" alt="menu-icon" class="menu-icon"/></button>
+                <button>Промышленный дизайн <img src="/img/icons/mobile-menu-icons/open-submenu-icon.svg" alt="menu-icon" class="menu-icon"/></button>
+                <button>Наружная реклама <img src="/img/icons/mobile-menu-icons/open-submenu-icon.svg" alt="menu-icon" class="menu-icon"/></button>
+                <button>ИИ-генерация изображений <img src="/img/icons/mobile-menu-icons/open-submenu-icon.svg" alt="menu-icon" class="menu-icon"/></button>
+            </div>
+            
+            <!-- Подкатегория: Логотипы и брендинг -->
+            <div class="menu hidden" id="menu-branding">
+                <div class="header"><img src="/img/icons/mobile-menu-icons/back-icon.svg" alt="menu-icon" class="menu-icon back" onclick="openMenu('menu-main')"/><h3>Логотипы и брендинг</h3></div>
+                <button>Логотипы <img src="/img/icons/mobile-menu-icons/fire-icon.svg" alt="menu-icon" class="menu-icon"/></button>
+                <a href="#" class="mobile-menu-nav-link">Фирменный стиль</a>
+                <a href="#" class="mobile-menu-nav-link">Визитки</a>
+                <a href="#" class="mobile-menu-nav-link">Брендирование и сувенирка</a>
+            </div>
+        </div>
+        
+        <form class="mobile-search-block">
+            <h3>Покупайте фриланс-услуги в один клик</h3>
+            <div class="mobile-search-input-container">
+                <img src="/img/icons/search-icon.svg" alt="mobile-search-icon" class="mobile-search-icon"/>
+                <input type="text" placeholder="Создать сайт на wix" class="mobile-search-input"/>
+            </div>
+            <input type="submit" value="Найти" class="search-input-submit"/>
+        </form>
+    </header>
+EOT;
+
 $footer=<<<EOT
 <footer>
         <div class="footer-container computer-version">

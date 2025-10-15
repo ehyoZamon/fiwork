@@ -91,6 +91,18 @@ window.onload=function(){
         $(".cookies-policy-container").fadeOut({duration: 1000});
     });
     
+    $(".user-header-menu .orderer-user-type").on("click",function(){
+        $(".user-header-menu .user-type").removeClass("selected");
+        $(this).addClass("selected");
+        $(".user-header-menu .receive-orders").removeClass("active");
+    });
+    
+    $(".user-header-menu .freelancer-user-type").on("click",function(){
+        $(".user-header-menu .user-type").removeClass("selected");
+        $(this).addClass("selected");
+        $(".user-header-menu .receive-orders").addClass("active");
+    });
+    
     $(".go-to-register-link").on("click",function(){
         $(".fiwork-register-modal-container").removeClass("hidden");
         $(".fiwork-login-modal-container").addClass("hidden");
@@ -112,6 +124,29 @@ window.onload=function(){
     
     $(".phone-header .close-menu-icon").on("click",function(){
         $(".phone-header").removeClass("menu-activated"); 
+    });
+    
+    $(".user-header-avatar, .user-header-burger").on("click",function(e){
+        e.stopPropagation();
+        $(".user-header-menu").toggleClass("hidden");
+    });
+    
+    $("body").on("click",function(){
+        $(".user-header-menu").addClass("hidden");
+    });
+    
+    $(".user-header-menu").on("click",function(e){
+        e.stopPropagation();
+    });
+    
+    $(".user-header-menu .switch input").on("change", function() {
+        $(".user-header-menu .receive-orders-text .receive-order-text").removeClass("active");
+        
+        if ($(this).is(":checked")) {
+            $(".user-header-menu .receive-orders-text .receiving-orders").addClass("active"); 
+        } else {
+            $(".user-header-menu .receive-orders-text .not-working").addClass("active");
+        }
     });
     
     $(".search-service-input").on("input", function () {

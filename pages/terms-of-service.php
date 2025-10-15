@@ -48,7 +48,7 @@ require_once "../modules/base.php";
     <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
 </head>
 <body>
-    <?=$header;?>
+    <?=$userHeader;?>
     
     <div class="main-block">
         <div class="main-container">
