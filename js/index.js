@@ -12,16 +12,16 @@ window.onload=function(){
     },
     breakpoints: {
       600: {
-          slidesPerView: 2,
+            slidesPerView: 2,
       },
       830: {
-        slidesPerView: 3,
+            slidesPerView: 3,
       },
       1100: {
-        slidesPerView: 4,
+            slidesPerView: 4,
       },
       1400: {
-        slidesPerView: 5,
+            slidesPerView: 5,
       }
     },
   });

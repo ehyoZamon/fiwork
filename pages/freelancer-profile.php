@@ -169,10 +169,11 @@ require_once "../modules/base.php";
                             </figcaption>
                         </figure>
                         
-                        <figure>
-                            <img src="/img/icons/freelancer-profile-page/clients-icon.svg" alt="clients" class="activity-icon"/>
+                        <figure class="radar-figure">
+                            <span class="new">Новое!</span>
+                            <img src="/img/icons/freelancer-profile-page/radar.svg" alt="radar" class="radar"/>
                             <figcaption> 
-                                Клиенты
+                                Радар
                             </figcaption>
                         </figure>
                         
@@ -631,6 +632,557 @@ require_once "../modules/base.php";
     <?=$footer;?>
     <?=$modalWindows;?>
 
+<div class="fast-executor-search-modal radar-search-description hidden">
+    <div class="fast-executor-search-modal-block">
+        <div class="fast-executor-search-header">
+            <img src="/img/icons/freelancer-profile-page/radar2.svg" alt="radar-icon" class="radar-icon"/>
+            <h2>Быстрый поиск исполнителя</h2>
+            <img src="/img/icons/x-close.svg" alt="close-icon" class="close-icon"/>
+        </div>
+        <div class="fast-executor-search-wrapper">
+            <div class="fast-executor-search-container">
+                <p>
+                    Функция «Радар» помогает находить исполнителя за считанные минуты, в подборе участвуют только исполнители которые готовы принять заказ сразу же после обсуждения.
+                </p>
+                <img src="/img/icons/freelancer-profile-page/executors.webp" alt="executors" class="executors"/>
+                <input type="button" class="continue-button" value="Продолжить">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="fast-executor-search-modal radar-search-parameters hidden">
+    <div class="fast-executor-search-modal-block">
+        <div class="fast-executor-search-header">
+            <img src="/img/icons/freelancer-profile-page/radar2.svg" alt="radar-icon" class="radar-icon"/>
+            <h2>Выберите нужные параметры</h2>
+            <img src="/img/icons/x-close.svg" alt="close-icon" class="close-icon"/>
+        </div>
+        <div class="fast-executor-search-wrapper">
+            <div class="fast-executor-search-container">
+                <div class="search-fiwork-step-stages">
+                    <div class="search-fiwork-step-stage search-fiwork-step-select-section">
+                        
+                        <div class="step-stage-name">
+                            Рубрика
+                        </div>
+                        <div class="step-stage-form">
+                            <div class="select-container">
+                                <select id="select-section" name="fiwork-section" required>
+                                    <option value="" disabled>Выберите рубрику</option>
+                                    <option value="design">Дизайн</option>
+                                    <option value="it-development" selected>Разработка и ИТ</option>
+                                </select>
+                                
+                                <select id="select-subcategory" name="fiwork-subcategory" required>
+                                    <option value="" disabled>Выберите рубрику</option>
+                                    <option value="logo-and-branding" class="design select-section-option" value="logo-and-branding">Логотип и брендинг</option>
+                                    <option value="website-dev" class="it-development select-section-option" value="website-dev" selected>Создание сайта</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="search-fiwork-step-stage search-fiwork-step-type hidden search-fiwork-step-stage2 logo-and-branding">
+                        <div class="step-stage-name">
+                            Тип
+                        </div>
+                        <div class="step-stage-form">
+                            <div class="fiwork-type-container selecе-type-container">
+                                <input type="radio" required  id="fiwork-type1" name="fiwork-type" value="logos" />
+                                <label for="fiwork-type1">Логотипы</label>
+                            </div>
+                            
+                            <div class="fiwork-type-container">
+                                <input type="radio" required  id="fiwork-type2" name="fiwork-type" value="identity" />
+                                <label for="fiwork-type2">Фирменный стиль</label>
+                            </div>
+                            
+                            <div class="fiwork-type-container">
+                                <input type="radio" required  id="fiwork-type3" name="fiwork-type" value="business-cards" />
+                                <label for="fiwork-type3">Визитки</label>
+                            </div>
+                            
+                            <div class="fiwork-type-container">
+                                <input type="radio" required  id="fiwork-type4" name="fiwork-type" value="branding" />
+                                <label for="fiwork-type4">Брендирование и сувенирка</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="search-fiwork-step-stage search-fiwork-step-type hidden search-fiwork-step-stage2 website-dev">
+                        <div class="step-stage-name">
+                            Тип
+                        </div>
+                        <div class="step-stage-form">
+                            <div class="fiwork-type-container selecе-type-container">
+                                <input type="radio" required  id="fiwork-type5" name="fiwork-type" value="logos" />
+                                <label for="fiwork-type5">Новый сайт</label>
+                            </div>
+                            
+                            <div class="fiwork-type-container">
+                                <input type="radio" required  id="fiwork-type6" name="fiwork-type" value="identity" />
+                                <label for="fiwork-type6">Копия сайта</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="search-fiwork-step-stage search-fiwork-step-type select-subtype-container hidden search-fiwork-step-stage2 logo-and-branding">
+                        <div class="step-stage-name">
+                            Вид
+                        </div>
+                        <div class="step-stage-form">
+                            <div class="fiwork-type-container">
+                                <input type="radio" required  id="fiwork-subtype1" name="fiwork-subtype" value="new-logo" />
+                                <label for="fiwork-subtype1">Новый логотип</label>
+                            </div>
+                            
+                            <div class="fiwork-type-container">
+                                <input type="radio" required  id="fiwork-subtype2" name="fiwork-subtype" value="logo-revision" />
+                                <label for="fiwork-subtype2">Доработка логотипа</label>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="search-fiwork-step-stage search-fiwork-step-type select-subtype-container hidden search-fiwork-step-stage2 website-dev">
+                        <div class="step-stage-name">
+                            Вид
+                        </div>
+                        <div class="step-stage-form">
+                            <div class="fiwork-type-container">
+                                <input type="radio" required  id="fiwork-subtype3" name="fiwork-subtype"/>
+                                <label for="fiwork-subtype3">Лендинг</label>
+                            </div>
+                            
+                            <div class="fiwork-type-container">
+                                <input type="radio" required  id="fiwork-subtype4" name="fiwork-subtype"/>
+                                <label for="fiwork-subtype4">Интернет-магазин</label>
+                            </div>
+                            
+                            <div class="fiwork-type-container">
+                                <input type="radio" required  id="fiwork-subtype5" name="fiwork-subtype"/>
+                                <label for="fiwork-subtype5">Инфосайт</label>
+                            </div>
+                            
+                            <div class="fiwork-type-container">
+                                <input type="radio" required  id="fiwork-subtype6" name="fiwork-subtype"/>
+                                <label for="fiwork-subtype6">Визитка</label>
+                            </div>
+                            
+                            <div class="fiwork-type-container">
+                                <input type="radio" required  id="fiwork-subtype7" name="fiwork-subtype"/>
+                                <label for="fiwork-subtype7">Интернет-сервис</label>
+                            </div>
+                            
+                            <div class="fiwork-type-container">
+                                <input type="radio" required  id="fiwork-subtype8" name="fiwork-subtype"/>
+                                <label for="fiwork-subtype8">Блог</label>
+                            </div>
+                            
+                            <div class="fiwork-type-container">
+                                <input type="radio" required  id="fiwork-subtype9" name="fiwork-subtype"/>
+                                <label for="fiwork-subtype9">Форум</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="search-fiwork-step-stage search-fiwork-step-type select-style-container hidden search-fiwork-step-stage2 logo-and-branding">
+                        <div class="step-stage-name">
+                            Cтиль
+                        </div>
+                        <div class="step-stage-form">
+                            <div class="fiwork-type-container">
+                                <input type="radio" required  id="fiwork-style1" name="fiwork-style" />
+                                <label for="fiwork-style1">Винтаж/ретро</label>
+                            </div>
+                            
+                            <div class="fiwork-type-container">
+                                <input type="radio" required  id="fiwork-style2" name="fiwork-style"/>
+                                <label for="fiwork-style2">3D</label>
+                            </div>
+                            
+                            <div class="fiwork-type-container">
+                                <input type="radio" required  id="fiwork-style3" name="fiwork-style"/>
+                                <label for="fiwork-style3">Плоский</label>
+                            </div>
+                            
+                            <div class="fiwork-type-container">
+                                <input type="radio" required  id="fiwork-style4" name="fiwork-style"/>
+                                <label for="fiwork-style4">Шрифтовый</label>
+                            </div>
+                            
+                            <div class="fiwork-type-container">
+                                <input type="radio" required  id="fiwork-style5" name="fiwork-style"/>
+                                <label for="fiwork-style5">Геральдический</label>
+                            </div>
+                            
+                            <div class="fiwork-type-container">
+                                <input type="radio" required  id="fiwork-style6" name="fiwork-style"/>
+                                <label for="fiwork-style6">Рисованный от руки</label>
+                            </div>
+                            
+                            <div class="fiwork-type-container">
+                                <input type="radio" required  id="fiwork-style7" name="fiwork-style"/>
+                                <label for="fiwork-style7">Акварельный</label>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="search-fiwork-step-stage search-fiwork-step-type select-subtype-container hidden search-fiwork-step-stage2 logo-and-branding">
+                        <div class="step-stage-name">
+                            Cоздание логотипа
+                        </div>
+                        <div class="step-stage-form">
+                            <div class="fiwork-type-container">
+                                <input type="radio" required  id="fiwork-creating-logo1" name="fiwork-creating-logo"/>
+                                <label for="fiwork-creating-logo1">По эскизу</label>
+                            </div>
+                            
+                            <div class="fiwork-type-container">
+                                <input type="radio" required  id="fiwork-creating-logo2" name="fiwork-creating-logo"/>
+                                <label for="fiwork-creating-logo2">С нуля</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="search-fiwork-step-stage search-fiwork-step-type select-subtype-container hidden search-fiwork-step-stage2 website-dev">
+                        <div class="step-stage-name">
+                            CMS
+                        </div>
+                        <div class="step-stage-form two-cols">
+                            <div class="step-stage-form-col">
+                                <div class="fiwork-type-container">
+                                    <input type="checkbox"  id="fiwork-cms-use1" name="fiwork-cms-use"/>
+                                    <label for="fiwork-cms-use1">Wordpress</label>
+                                </div>
+                                <div class="fiwork-type-container">
+                                    <input type="checkbox"  id="fiwork-cms-use2" name="fiwork-cms-use"/>
+                                    <label for="fiwork-cms-use2">Opencart</label>
+                                </div>
+                                <div class="fiwork-type-container">
+                                    <input type="checkbox"  id="fiwork-cms-use3" name="fiwork-cms-use"/>
+                                    <label for="fiwork-cms-use3">Ucoz</label>
+                                </div>
+                                <div class="fiwork-type-container">
+                                    <input type="checkbox"  id="fiwork-cms-use4" name="fiwork-cms-use"/>
+                                    <label for="fiwork-cms-use4">ModX</label>
+                                </div>
+                                <div class="fiwork-type-container">
+                                    <input type="checkbox"  id="fiwork-cms-use5" name="fiwork-cms-use"/>
+                                    <label for="fiwork-cms-use5">HTML</label>
+                                </div>
+                                <div class="fiwork-type-container">
+                                    <input type="checkbox"  id="fiwork-cms-use6" name="fiwork-cms-use"/>
+                                    <label for="fiwork-cms-use6">Tilda</label>
+                                </div>
+                                <div class="fiwork-type-container">
+                                    <input type="checkbox"  id="fiwork-cms-use7" name="fiwork-cms-use"/>
+                                    <label for="fiwork-cms-use7">Самописная</label>
+                                </div>
+                            </div>
+                            <div class="step-stage-form-col">
+                                <div class="fiwork-type-container">
+                                    <input type="checkbox"  id="fiwork-cms-use8" name="fiwork-cms-use"/>
+                                    <label for="fiwork-cms-use8">Joomla</label>
+                                </div>
+                                <div class="fiwork-type-container">
+                                    <input type="checkbox"  id="fiwork-cms-use9" name="fiwork-cms-use"/>
+                                    <label for="fiwork-cms-use9">Drupal</label>
+                                </div>
+                                <div class="fiwork-type-container">
+                                    <input type="checkbox"  id="fiwork-cms-use10" name="fiwork-cms-use"/>
+                                    <label for="fiwork-cms-use10">Битрикс</label>
+                                </div>
+                                <div class="fiwork-type-container">
+                                    <input type="checkbox"  id="fiwork-cms-use11" name="fiwork-cms-use"/>
+                                    <label for="fiwork-cms-use11">Wix</label>
+                                </div>
+                                <div class="fiwork-type-container">
+                                    <input type="checkbox"  id="fiwork-cms-use12" name="fiwork-cms-use"/>
+                                    <label for="fiwork-cms-use12">Adobe Muse</label>
+                                </div>
+                                <div class="fiwork-type-container">
+                                    <input type="checkbox"  id="fiwork-cms-use13" name="fiwork-cms-use"/>
+                                    <label for="fiwork-cms-use13">Textolite</label>
+                                </div>
+                            </div>
+                            <div class="add-own-variant">Добавить свой вариант</div> 
+                        </div>
+                    </div>
+                    
+                    <div class="search-fiwork-step-stage search-fiwork-step-type select-subtype-container hidden search-fiwork-step-stage2 website-dev">
+                        <div class="step-stage-name">
+                            Языки
+                        </div>
+                        <div class="step-stage-form two-cols">
+                            <div class="step-stage-form-col">
+                                <div class="fiwork-type-container">
+                                    <input type="checkbox"  id="fiwork-proglang-use1" name="fiwork-proglang-use"/>
+                                    <label for="fiwork-proglang-use1">C, C++</label>
+                                </div>
+                                <div class="fiwork-type-container">
+                                    <input type="checkbox"  id="fiwork-proglang-use2" name="fiwork-proglang-use"/>
+                                    <label for="fiwork-proglang-use2">Go</label>
+                                </div>
+                                <div class="fiwork-type-container">
+                                    <input type="checkbox"  id="fiwork-proglang-use3" name="fiwork-proglang-use"/>
+                                    <label for="fiwork-proglang-use3">PHP</label>
+                                </div>
+                                <div class="fiwork-type-container">
+                                    <input type="checkbox"  id="fiwork-proglang-use4" name="fiwork-proglang-use"/>
+                                    <label for="fiwork-proglang-use4">Ruby</label>
+                                </div>
+                                
+                            </div>
+                            <div class="step-stage-form-col">
+                                <div class="fiwork-type-container">
+                                    <input type="checkbox"  id="fiwork-proglang-use5" name="fiwork-proglang-use"/>
+                                    <label for="fiwork-proglang-use5">C#</label>
+                                </div>
+                                <div class="fiwork-type-container">
+                                    <input type="checkbox"  id="fiwork-proglang-use6" name="fiwork-proglang-use"/>
+                                    <label for="fiwork-proglang-use6">Java</label>
+                                </div>
+                                <div class="fiwork-type-container">
+                                    <input type="checkbox"  id="fiwork-proglang-use7" name="fiwork-proglang-use"/>
+                                    <label for="fiwork-proglang-use7">Python</label>
+                                </div>
+                                <div class="fiwork-type-container">
+                                    <input type="checkbox"  id="fiwork-proglang-use8" name="fiwork-proglang-use"/>
+                                    <label for="fiwork-proglang-use8">Swift</label>
+                                </div>
+                            </div>
+                            <div class="add-own-variant">Добавить свой вариант</div>
+                        </div>
+                    </div>
+                    
+                    <div class="search-fiwork-step-stage search-fiwork-step-type select-subtype-container hidden search-fiwork-step-stage2 website-dev">
+                        <div class="step-stage-name">
+                            Интерфейс на JavaScript
+                        </div>
+                        <div class="step-stage-form">
+                            <div class="fiwork-type-container">
+                                <input type="radio" required  id="fiwork-js-interface1" name="fiwork-js-interface"/>
+                                <label for="fiwork-js-interface1">Да</label>
+                            </div>
+                            <div class="fiwork-type-container">
+                                <input type="radio" required  id="fiwork-js-interface2" name="fiwork-js-interface"/>
+                                <label for="fiwork-js-interface2">Нет</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="search-fiwork-step-stage search-fiwork-step-type select-subtype-container hidden search-fiwork-step-stage2 website-dev">
+                        <div class="step-stage-name">
+                            Используется<br>CSS
+                        </div>
+                        <div class="step-stage-form">
+                            <div class="fiwork-type-container">
+                                <input type="radio" required  id="fiwork-css-use1" name="fiwork-css-use"/>
+                                <label for="fiwork-css-use1">Да</label>
+                            </div>
+                            <div class="fiwork-type-container">
+                                <input type="radio" required  id="fiwork-css-use2" name="fiwork-css-use"/>
+                                <label for="fiwork-css-use2">Нет</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="search-fiwork-step-stage search-fiwork-step-type select-subtype-container hidden search-fiwork-step-stage2 website-dev">
+                        <div class="step-stage-name">
+                            База данных
+                        </div>
+                        <div class="step-stage-form">
+                            <div class="fiwork-type-container">
+                                <input type="radio" required  id="fiwork-db-use1" name="fiwork-db-use"/>
+                                <label for="fiwork-db-use1">Да</label>
+                            </div>
+                            <div class="fiwork-type-container">
+                                <input type="radio" required  id="fiwork-db-use2" name="fiwork-db-use"/>
+                                <label for="fiwork-db-use2">Нет</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <input type="button" class="start-search-button" value="Начать поиск">
+            </div>
+                                
+        </div>
+        
+    </div>
+</div>
+
+<div class="fast-executor-search-modal radar-search-result hidden">
+    <div class="fast-executor-search-modal-block">
+        <div class="fast-executor-search-header">
+            <img src="/img/icons/freelancer-profile-page/radar2.svg" alt="radar-icon" class="radar-icon"/>
+            <h2>Нашли исполнителя!</h2>
+            <img src="/img/icons/x-close.svg" alt="close-icon" class="close-icon"/>
+        </div>
+        <div class="fast-executor-search-wrapper">
+            <div class="fast-executor-search-container">
+                <div class="freelancer-main-info">
+                    <div class="freelancer-info-content1">
+                        <div class="freelancer-avatar-container">
+                            <img src="/img/freelancer-avatars/freelancer3.webp" alt="freelancer-avatar" class="freelancer-avatar-img">
+                        </div>
+                        <div class="freelancer-info">
+                            <div class="freelancer-name-container">
+                                <div class="freelancer-name-wrapper">
+                                    <h3 class="freelancer-name">Андрей 
+                                        <div class="verified-user">
+                                            <img src="/img/icons/verified.svg" alt="verified" class="verified-icon">
+                                            <div class="about-verified">
+                                                <img src="/img/icons/freelancer-profile-page/galochka.svg" alt="galochka" class="galochka"/>
+                                                <div class="about-verified-description">
+                                                    <h3>Верифицированная страница</h3>
+                                                    <p>Страница Андрея подтверждена администрацией.</p>
+                                                    <p class="special-color">Узнайте больше о верификации</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </h3>
+                                    <a href="#" class="freelancer-username">@umairshafiq101</a>
+                                </div>
+                                <div class="freelancer-rating-wrapper">
+                                    <h3>РЕЙТИНГ</h3>
+                                    <div class="freelancer-rating-content">
+                                        <img src="/img/icons/yellow-star.svg" alt="yellow-star" class="yellow-star">
+                                        <p><span class="rating-num">5.0</span> (39 отзывов)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="freelancer-position">Ui-mobile &amp; Web developer</p>
+                            <div class="freelancer-trophies-container">
+                                <div class="trophy">
+                                    <img src="/img/icons/medal1.svg" alt="trophy" class="trohpy-icon">
+                                    <div class="about-trophy" style="left: 0;">
+                                        <div class="about-trophy-header">За помощь в улучшении сервиса</div>
+                                        <div class="about-trophy-description">Начисляется после успешного прохождения опроса</div>
+                                    </div>
+                                </div>
+                                <div class="trophy">
+                                    <img src="/img/icons/medal2.svg" alt="trophy" class="trohpy-icon">
+                                    <div class="about-trophy" style="left: -40px;">
+                                        <div class="about-trophy-header">За помощь в улучшении сервиса</div>
+                                        <div class="about-trophy-description">Начисляется после успешного прохождения опроса</div>
+                                    </div>
+                                </div>
+                                <div class="trophy">
+                                    <img src="/img/icons/medal3.svg" alt="trophy" class="trohpy-icon">
+                                    <div class="about-trophy" style="left: -60px;">
+                                        <div class="about-trophy-header">За помощь в улучшении сервиса</div>
+                                        <div class="about-trophy-description">Начисляется после успешного прохождения опроса</div>
+                                    </div>
+                                </div>
+                                <div class="trophy">
+                                    <img src="/img/icons/medal4.svg" alt="trophy" class="trohpy-icon">
+                                    <div class="about-trophy"  style="right: -60px;">
+                                        <div class="about-trophy-header">За помощь в улучшении сервиса</div>
+                                        <div class="about-trophy-description">Начисляется после успешного прохождения опроса</div>
+                                    </div>
+                                </div>
+                                <div class="trophy">
+                                    <img src="/img/icons/medal5.svg" alt="trophy" class="trohpy-icon">
+                                    <div class="about-trophy"  style="right: -40px;">
+                                        <div class="about-trophy-header">За помощь в улучшении сервиса</div>
+                                        <div class="about-trophy-description">Начисляется после успешного прохождения опроса</div>
+                                    </div>
+                                </div>
+                                <div class="trophy">
+                                    <img src="/img/icons/medal6.svg" alt="trophy" class="trohpy-icon">
+                                    <div class="about-trophy"  style="right: 0;">
+                                        <div class="about-trophy-header">За помощь в улучшении сервиса</div>
+                                        <div class="about-trophy-description">Начисляется после успешного прохождения опроса</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-freelancer-container">
+                        <h2>Навыки</h2>
+                        <div class="freelancer-skills">
+                            <span>Kotlin</span> <span>Java</span> <span>Frontend</span> <span>Vue</span> <span>Androd studio</span> <span>Backend</span>
+                            <span>HTML &amp; CSS</span> <span>Xcode</span> <span>Flutter</span> <span>Dart</span> <span>Figma</span> <span>swift</span>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="about-freelancer-container">
+                        <h2>Портфолио</h2>
+                        
+                        <div class="swiper freelancer-portfolio-wrapper myPortfolioSwiper">
+                            <div class="next-button"><img src="/img/icons/ArrowLeft.svg" alt="ArrowLeft"></div>
+                            <div class="prev-button"><img src="/img/icons/ArrowRight.svg" alt="ArrowRight"></div>
+                
+                            <div class="swiper-wrapper freelancer-portfolio">
+                                    <div class="portfolio-elem swiper-slide">
+                                        <img src="/img/ads/portfolio-template.jpg" class="portfolio-template" alt="portfolio-template 1"/>
+                                    </div>
+                        
+                                    <div class="portfolio-elem swiper-slide">
+                                        <img src="/img/ads/portfolio-template.jpg" class="portfolio-template" alt="portfolio-template 2"/>
+                                    </div>
+                        
+                                    <div class="portfolio-elem swiper-slide">
+                                        <img src="/img/ads/portfolio-template.jpg" class="portfolio-template" alt="portfolio-template 2"/>
+                                    </div>
+                            
+                                    <div class="portfolio-elem swiper-slide">
+                                        <img src="/img/ads/portfolio-template.jpg" class="portfolio-template" alt="portfolio-template 2"/>
+                                    </div>
+                        
+                                    <div class="portfolio-elem swiper-slide">
+                                        <img src="/img/ads/portfolio-template.jpg" class="portfolio-template" alt="portfolio-template 2"/>
+                                    </div>
+                            </div>
+                        </div>
+                        
+                        <div class="services-price">
+                            <h3>СТОИМОСТЬ УСЛУГ</h3>
+                            <p>от 10 408 ₽</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="buttons">
+                    <div class="repeat-search">Повторить поиск <img src="/img/icons/freelancer-profile-page/rotateIcon.svg" alt="rotateIcon" class="rotateIcon"/></div>
+                    <div class="go-to-profile">Перейти в профиль <img src="/img/icons/freelancer-profile-page/arrow-right.svg" class="arrow-right" alt="arrow-right"/></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="banned-modal">
+    <div class="banned-modal-block">    
+        <img src="/img/icons/freelancer-profile-page/alert.svg" class="alert" alt="alert-icon"/>
+        <h3>Аккаунт заблокирован 🚫️</h3>
+        <p>
+            Ваш доступ временно ограничен из-за нарушения правил или подозрительной активности. Если вы считаете, что это ошибка, вы можете подать запрос на восстановление доступа.
+            <br><br>
+            <b>Причина:</b> Подозрительные операции
+        </p>
+        <div class="buttons">
+            <div class="exit-button">
+                Выйти
+            </div>
+            <div class="write-button">
+                Написать
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="/js/jQuery/jquery-3.5.1.min.js"></script>
@@ -645,5 +1197,105 @@ require_once "../modules/base.php";
       const level = Math.floor(Math.random() * 3);  
       squares.insertAdjacentHTML('beforeend', `<li data-level="${level}"></li>`);
     }
+    
+    $(".fast-executor-search-modal .close-icon").on("click",function(){
+        $(".fast-executor-search-modal").addClass("hidden"); 
+    });
+    
+    $(".radar-figure").on('click',function(){
+       $(".radar-search-description").removeClass('hidden'); 
+    });
+    
+    $(".radar-search-description .continue-button").on("click",function(){
+        $(".radar-search-description").addClass("hidden");
+        $(".radar-search-parameters").removeClass("hidden");
+    });
+    
+    $(".radar-search-parameters .start-search-button").on("click",function(){
+        $(".radar-search-parameters").addClass("hidden");
+        $(".radar-search-result").removeClass("hidden");
+    });
+    
+    $(".radar-search-result .repeat-search").on("click",function(){
+        $(".radar-search-result").addClass("hidden");
+        $(".radar-search-parameters").removeClass("hidden");
+    });
+
+    
+    /*search-fiwork-step-stages*/
+    $(".search-fiwork-step-select-section #select-section").on("change",function(){
+       $(".search-fiwork-step-select-section .select-section-option").hide();
+       $(".search-fiwork-step-select-section").find("."+$(this).val()).show();
+       $(".search-fiwork-step-select-section #select-subcategory").removeClass("hidden");
+       
+       $(".search-fiwork-step-stage2").addClass("hidden");
+       $(".search-fiwork-step-select-section #select-subcategory").val("");
+       
+       if($(this).val()=="design"){
+            closeOthersAndShow('similar-to-selection','none')
+       }else{
+           closeOthersAndShow('none','similar-to-selection');
+       }
+       
+    });
+    
+    $(".search-fiwork-step-select-section #select-subcategory").on("change",function(){
+        closeOthersAndShow("search-fiwork-step-stage2."+$(this).val(),"search-fiwork-step-stage2");
+    });
+    
+    function closeOthersAndShow(openBlock,closeBlock){
+        if(closeBlock!='none'){
+            $("."+closeBlock).addClass("hidden");
+        }
+        
+        if(openBlock!='none'){
+            $("."+openBlock).removeClass("hidden");
+        }
+        
+        const $container = $(`.fiwork-details-form`);
+        // Enable inputs in visible sections (where the hidden class is NOT present)
+        $container.find('.search-fiwork-step-stage:not(.hidden) input, .search-fiwork-step-stage:not(.hidden) select, .search-fiwork-step-stage:not(.hidden) textarea').prop('disabled', false);
+    
+        // Disable inputs in hidden sections
+        $container.find('.search-fiwork-step-stage.hidden input, .search-fiwork-step-stage.hidden select, .search-fiwork-step-stage.hidden textarea').prop('disabled', true);
+        $(".continue-to-next-step.submit-fiwork-details input").show();
+    }
+    
+    $(".website-dev").removeClass("hidden");
+    
+    $(".banned-modal-block, .fast-executor-search-modal-block").on("click",function(e){
+          e.stopPropagation();
+    });
+    
+    $(".banned-modal, .fast-executor-search-modal").on("click",function(){
+        $(this).addClass("hidden");
+    });
+    
+    $(".banned-modal .exit-button").on("click",function(){
+        $(".banned-modal").addClass("hidden"); 
+    });
+    /*end of search-fiwork-step-stages*/
+</script>
+<script>
+    var portfolioSwiper = new Swiper(".myPortfolioSwiper", {
+        // Настройки, которые мы будем использовать
+        slidesPerView: 1,
+        spaceBetween: 15,
+        loop: true, 
+        observer: true, // Watch for DOM changes
+        observeParents: true, // Watch parent elements too
+        navigation: {
+            nextEl: ".prev-button",
+            prevEl: ".next-button",
+        },
+        breakpoints: {
+          450: {
+                slidesPerView: 2,
+          },
+          700: {
+                slidesPerView: 3,
+          }
+        }
+    });
 </script>
 </html>
