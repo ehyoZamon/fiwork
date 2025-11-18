@@ -181,6 +181,45 @@ input:valid{
     cursor: pointer;
 }
 
+
+.tooltip-container {
+    position: relative; /* Создаем контекст для абсолютного позиционирования подсказки */
+    cursor: help; /* Меняем курсор на знак вопроса */
+}
+
+.tooltip-text {
+    visibility: hidden;
+    opacity: 0; 
+    position: absolute;
+    z-index: 10;
+    top: 30px;
+    right: 0;
+    width: 200px; 
+    background-color: #fefefe;
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.06);
+    color: #111;
+    text-align: left;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    white-space: normal;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip-text h4,
+.tooltip-text p{
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+
+
 .my-services-nav-part2 .vertical-line{
     border-left: 1px solid #e2e2e2;
     height: 28px;;
@@ -234,6 +273,11 @@ input:valid{
     line-height: 157%;
     text-align: center;
     color: #fff;
+    cursor: pointer;
+}
+
+.my-services-container .aside-container .add-new-service:hover{
+    background: #03a609;
 }
 
 .my-services-by-category{
@@ -250,11 +294,16 @@ input:valid{
     align-items: center;
     justify-content: flex-start;
     border-bottom: 1px solid #e9eaf0;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 100%;
+    color: #1d2026;
 }
 
 .my-services-by-category-container{
     padding: 20px;
-    max-width: 272px;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -268,6 +317,7 @@ input:valid{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
 } 
 
 .category-elem p{
@@ -327,25 +377,71 @@ input:valid{
     max-width: 100%;
 }
 
-.aside-container .platforms{
-    width: 270px;
-    max-width: 100%;
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    gap: 15px;
+
+ .import-from-other-platforms{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 10px;
+    position: relative;
 }
 
-.aside-container .platforms .platform{
-    width: 100%;
-    aspect-ratio: 1/1;
-    padding: 7px;
+ .import-from-other-platforms .platform{
+    width: 43px;
+    height: 43px;
+    padding 10px;
     display: flex;
     align-items: center;
-    justify-content: center; 
-    background: #fff;
-    border: 1px solid #f3f2f1;
-    border-radius: 43px;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid #e8e8e8;
+}
+
+ .import-from-other-platforms .platform:hover{
+    border: 1px solid #2a5885;
     cursor: pointer;
+} 
+
+ .import-from-other-platforms .import-platform-description{
+    width: 100%;
+    position: absolute;
+    border-radius: 0 8px 8px 8px;
+    padding: 10px;
+    min-height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 115%;
+    letter-spacing: -0.01em;
+    color: #2a5885;
+    bottom: -130%; 
+    background: #fff;
+    box-shadow: 0 3px 8px -2px rgba(92, 93, 164, 0.06), 0 4px 32px -4px rgba(111, 108, 143, 0.12);
+    left: 1%;
+    z-index: 10;
+    display: none;
+}
+
+ .import-from-other-platforms .platform:hover .import-platform-description{
+    display: flex;
+}
+
+ .import-from-other-platforms .platform .pointer-icon{
+    height: 15px;
+    bottom: -35%;
+    position: absolute;
+    z-index: 11;
+    display: none;
+}
+
+ .import-from-other-platforms .platform:hover .pointer-icon{
+    display: block;
 }
 
 .my-services-wrapper{
@@ -397,6 +493,7 @@ input:valid{
     justify-content: flex-start;
     gap: 5px;
     padding: 10px;
+    cursor: pointer;
 }
 
 .my-services-wrapper-nav-elem .elem-count{
@@ -458,6 +555,12 @@ input:valid{
     display: grid;
     grid-template-columns: 192px 1fr;
     gap: 10px;
+}
+
+
+.my-services-wrapper-container .my-service-container:hover{
+    box-shadow: 0 2px 3px -2px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
 }
 
 .my-services-wrapper-container .my-service-container .img-container{
@@ -715,6 +818,9 @@ input:valid{
         justify-content: flex-end;
     }
     
+    .tooltip-container{
+        display: none;
+    }
 }
 
 @media(max-width: 630px){

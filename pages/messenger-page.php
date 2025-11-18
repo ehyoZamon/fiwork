@@ -62,6 +62,7 @@ require_once "../modules/base.php";
                             <input type="text" placeholder="Поиск..." class="search-in-message-input"/>
                         </div>
                     </div>
+                    
                     <div class="contacts-block">
                         <div class="contact-container egorov5-messages">
                             <div class="avatar-container">
@@ -70,25 +71,15 @@ require_once "../modules/base.php";
                             <div class="contact-info">
                                 <div class="contact-name-last-date">
                                     <h4>egorov5</h4>
-                                    <span>10 декабря</span>
+                                    <span>10 декабря <span class="star-container"><img src="/img/icons/yellow-star.svg" alt="yellow-star" class="yellow-star"/> 
+                                                    <img src="/img/icons/empty-star.svg" alt="empty-star" class="empty-star"/></span>
+                                    </span>
                                 </div>
-                                <div class="contact-last-message">
-                                    Здравствуйте. Напишите основную тему
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-container egorov5-messages">
-                            <div class="avatar-container">
-                                <img src="/img/user-avatars/user-avatar6.webp" alt="user-avatar" class="user-avatar"/>
-                            </div>
-                            <div class="contact-info">
-                                <div class="contact-name-last-date">
-                                    <h4>egorov5</h4>
-                                    <span>10 декабря</span>
-                                </div>
-                                <div class="contact-last-message">
-                                    Здравствуйте. Напишите основную тему
+                                <div class="contact-messages">
+                                    <div class="contact-last-message">
+                                        Здравствуйте. Напишите основную тему
+                                    </div>
+                                    <span class="unread-messages">2</span>
                                 </div>
                             </div>
                         </div>
@@ -100,10 +91,36 @@ require_once "../modules/base.php";
                             <div class="contact-info">
                                 <div class="contact-name-last-date">
                                     <h4>egorov5</h4>
-                                    <span>10 декабря</span>
+                                    <span>10 декабря <span class="star-container"><img src="/img/icons/yellow-star.svg" alt="yellow-star" class="yellow-star"/> 
+                                                    <img src="/img/icons/empty-star.svg" alt="empty-star" class="empty-star"/></span>
+                                    </span>
                                 </div>
-                                <div class="contact-last-message">
-                                    Здравствуйте. Напишите основную тему
+                                <div class="contact-messages">
+                                    <div class="contact-last-message">
+                                        Здравствуйте. Напишите основную тему
+                                    </div>
+                                    <span class="unread-messages">4</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-container egorov5-messages">
+                            <div class="avatar-container">
+                                <img src="/img/user-avatars/user-avatar6.webp" alt="user-avatar" class="user-avatar"/>
+                            </div>
+                            <div class="contact-info">
+                                <div class="contact-name-last-date">
+                                    <h4>egorov5</h4>
+                                    <span>10 декабря <span class="star-container active"><img src="/img/icons/yellow-star.svg" alt="yellow-star" class="yellow-star"/> 
+                                                    <img src="/img/icons/empty-star.svg" alt="empty-star" class="empty-star"/></span>
+                                    </span>
+                                </div>
+                                
+                                <div class="contact-messages">
+                                    <div class="contact-last-message">
+                                        Здравствуйте. Напишите основную тему
+                                    </div>
+                                    <span class="unread-messages">1</span>
                                 </div>
                             </div>
                         </div>
@@ -114,10 +131,16 @@ require_once "../modules/base.php";
                             <div class="contact-info">
                                 <div class="contact-name-last-date">
                                     <h4>egorov5</h4>
-                                    <span>10 декабря</span>
+                                    <span>10 декабря <span class="star-container"><img src="/img/icons/yellow-star.svg" alt="yellow-star" class="yellow-star"/> 
+                                                    <img src="/img/icons/empty-star.svg" alt="empty-star" class="empty-star"/></span>
+                                    </span>
                                 </div>
-                                <div class="contact-last-message">
-                                    Здравствуйте. Напишите основную тему
+                                
+                                <div class="contact-messages">
+                                    <div class="contact-last-message">
+                                        Здравствуйте. Напишите основную тему
+                                    </div>
+                                    <span class="unread-messages">5</span>
                                 </div>
                             </div>
                         </div>
@@ -129,25 +152,16 @@ require_once "../modules/base.php";
                             <div class="contact-info">
                                 <div class="contact-name-last-date">
                                     <h4>admin</h4>
-                                    <span>12:36 PM</span>
+                                    <span>12:36 PM <span class="star-container"><img src="/img/icons/yellow-star.svg" alt="yellow-star" class="yellow-star"/> 
+                                                    <img src="/img/icons/empty-star.svg" alt="empty-star" class="empty-star"/></span>
+                                    </span>
                                 </div>
-                                <div class="contact-last-message">
-                                    yo man, food dey house?
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-container egorov5-messages">
-                            <div class="avatar-container">
-                                <img src="/img/user-avatars/user-avatar6.webp" alt="user-avatar" class="user-avatar"/>
-                            </div>
-                            <div class="contact-info">
-                                <div class="contact-name-last-date">
-                                    <h4>egorov5</h4>
-                                    <span>10 декабря</span>
-                                </div>
-                                <div class="contact-last-message">
-                                    Здравствуйте. Напишите основную тему
+                                
+                                <div class="contact-messages">
+                                    <div class="contact-last-message">
+                                        yo man, food dey house?
+                                    </div>
+                                    <span class="unread-messages">2</span>
                                 </div>
                             </div>
                         </div>
@@ -159,25 +173,16 @@ require_once "../modules/base.php";
                             <div class="contact-info">
                                 <div class="contact-name-last-date">
                                     <h4>egorov5</h4>
-                                    <span>10 декабря</span>
+                                    <span>10 декабря <span class="star-container"><img src="/img/icons/yellow-star.svg" alt="yellow-star" class="yellow-star"/> 
+                                                    <img src="/img/icons/empty-star.svg" alt="empty-star" class="empty-star"/></span>
+                                    </span>
                                 </div>
-                                <div class="contact-last-message">
-                                    Здравствуйте. Напишите основную тему
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-container egorov5-messages">
-                            <div class="avatar-container">
-                                <img src="/img/user-avatars/user-avatar6.webp" alt="user-avatar" class="user-avatar"/>
-                            </div>
-                            <div class="contact-info">
-                                <div class="contact-name-last-date">
-                                    <h4>egorov5</h4>
-                                    <span>10 декабря</span>
-                                </div>
-                                <div class="contact-last-message">
-                                    Здравствуйте. Напишите основную тему
+                                
+                                <div class="contact-messages">
+                                    <div class="contact-last-message">
+                                        yo man, food dey house?
+                                    </div>
+                                    <span class="unread-messages">2</span>
                                 </div>
                             </div>
                         </div>
@@ -189,13 +194,81 @@ require_once "../modules/base.php";
                             <div class="contact-info">
                                 <div class="contact-name-last-date">
                                     <h4>egorov5</h4>
-                                    <span>10 декабря</span>
+                                    <span>10 декабря <span class="star-container"><img src="/img/icons/yellow-star.svg" alt="yellow-star" class="yellow-star"/> 
+                                                    <img src="/img/icons/empty-star.svg" alt="empty-star" class="empty-star"/></span>
+                                    </span>
                                 </div>
-                                <div class="contact-last-message">
-                                    Здравствуйте. Напишите основную тему
+                                <div class="contact-messages">
+                                    <div class="contact-last-message">
+                                        Здравствуйте. Напишите основную тему
+                                    </div>
+                                    <span class="unread-messages">2</span>
                                 </div>
                             </div>
                         </div>
+                        
+                        <div class="contact-container egorov5-messages">
+                            <div class="avatar-container">
+                                <img src="/img/user-avatars/user-avatar6.webp" alt="user-avatar" class="user-avatar"/>
+                            </div>
+                            <div class="contact-info">
+                                <div class="contact-name-last-date">
+                                    <h4>egorov5</h4>
+                                    <span>10 декабря <span class="star-container"><img src="/img/icons/yellow-star.svg" alt="yellow-star" class="yellow-star"/> 
+                                                    <img src="/img/icons/empty-star.svg" alt="empty-star" class="empty-star"/></span>
+                                    </span>
+                                </div>
+                                
+                                <div class="contact-messages">
+                                    <div class="contact-last-message">
+                                        Здравствуйте. Напишите основную тему
+                                    </div>
+                                    <span class="unread-messages">2</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-container egorov5-messages">
+                            <div class="avatar-container">
+                                <img src="/img/user-avatars/user-avatar6.webp" alt="user-avatar" class="user-avatar"/>
+                            </div>
+                            <div class="contact-info">
+                                <div class="contact-name-last-date">
+                                    <h4>egorov5</h4>
+                                    <span>10 декабря <span class="star-container active"><img src="/img/icons/yellow-star.svg" alt="yellow-star" class="yellow-star"/> 
+                                                    <img src="/img/icons/empty-star.svg" alt="empty-star" class="empty-star"/></span>
+                                    </span>
+                                </div>
+                                
+                                <div class="contact-messages">
+                                    <div class="contact-last-message">
+                                        Здравствуйте. Напишите основную тему
+                                    </div>
+                                    <span class="unread-messages">2</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-container admin-contact">
+                            <div class="avatar-container">
+                                <img src="/img/user-avatars/user-avatar7.webp" alt="user-avatar" class="user-avatar"/>
+                            </div>
+                            <div class="contact-info">
+                                <div class="contact-name-last-date">
+                                    <h4>admin</h4>
+                                    <span>12:36 PM <span class="star-container active"><img src="/img/icons/yellow-star.svg" alt="yellow-star" class="yellow-star"/> 
+                                                    <img src="/img/icons/empty-star.svg" alt="empty-star" class="empty-star"/></span>
+                                    </span>
+                                </div>
+                                
+                                <div class="contact-messages">
+                                    <div class="contact-last-message">
+                                        yo man, food dey house?
+                                    </div>
+                                    <span class="unread-messages">2</span>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
                 <div class="messenger-container">
@@ -220,7 +293,7 @@ require_once "../modules/base.php";
                                     <div class="active-time"><span class="last-seen-text">Офлайн 16 часов</span><span class="writing-text hidden">печатает...</span></div>
                                 </div>
                             </div>
-                            <div class="contact-functional-panel">
+                            <!--<div class="contact-functional-panel">
                                 <div class="search-button img-button">
                                     <img src="/img/icons/search-icon.svg" alt="search-icon icon" class="search-icon svg-icon"/>
                                 </div>
@@ -229,6 +302,25 @@ require_once "../modules/base.php";
                                 </div>
                                 <div class="three-dots-button img-button">
                                     <img src="/img/icons/messenger-page/three-dots.svg" alt="three-dots-icon icon" class="three-dots-icon svg-icon"/>
+                                </div>
+                                <div class="new-order">
+                                    <img src="/img/icons/messenger-page/round-green-plus.svg" alt="green-plus icon" class="green-plus-icon"/>
+                                    Предложение
+                                </div>
+                            </div>-->
+                            <div class="contact-functional-panel">
+                                <div class="search-button img-button">
+                                    <img src="/img/icons/search-icon.svg" alt="search-icon" class="search-icon svg-icon"/>
+                                </div>
+                                <div class="chat-search-container hidden">
+                                    <input type="text" placeholder="Поиск в диалоге..." class="chat-search-input" autocomplete="off"/>
+                                    <img src="/img/icons/x-close.svg" alt="close" class="close-chat-search svg-icon"/>
+                                </div>
+                                <div class="phone-button img-button">
+                                    <img src="/img/icons/messenger-page/phone.svg" alt="phone-icon" class="phone-icon open-phone-modal-block svg-icon"/>
+                                </div>
+                                <div class="three-dots-button img-button">
+                                    <img src="/img/icons/messenger-page/three-dots.svg" alt="three-dots-icon" class="three-dots-icon svg-icon"/>
                                 </div>
                                 <div class="new-order">
                                     <img src="/img/icons/messenger-page/round-green-plus.svg" alt="green-plus icon" class="green-plus-icon"/>
@@ -408,10 +500,21 @@ require_once "../modules/base.php";
             <p>Почему предлагаемый кворк подходит для покупателя.</p>
         </div>
         
+        <!-- === ВЛОЖЕНИЯ В "ПРЕДЛОЖЕНИЕ ЗАКАЗА" === -->
         <div class="order-suggestion-text-container">
             <label for="order-suggestion-text">Описание</label>
             <textarea id="order-suggestion-text" maxlength="2000" placeholder="Напишите, как вы будете решать задачу клиента"></textarea>
-            <div class="order-suggestion-text-length"><span class="num">0</span> из 2000 символов</div>
+            <div class="order-suggestion-text-length"><span class="num">0</span>&nbsp;из 2000 символов</div>
+        
+            <!-- Блок вложений -->
+            <div class="attachments-block">
+                <label class="attach-file-label">
+                    <input type="file" multiple class="attach-file-input" data-target="order-suggestion-attachments">
+                    <img src="/img/icons/messenger-page/attach.svg" alt="attach" class="attach-icon svg-icon">
+                    <span>Прикрепить файл</span>
+                </label>
+                <div class="attachments-list" id="order-suggestion-attachments"></div>
+            </div>
         </div>
         
         <div class="select-service-and-num-container">
@@ -450,10 +553,21 @@ require_once "../modules/base.php";
             <p>Опишите свой релевантный опыт. Продемонстрируйте 1-3 примера выполнения похожей работы.</p>
         </div>
         
+        <!-- === ВЛОЖЕНИЯ В "ИНДИВИДУАЛЬНОЕ ПРЕДЛОЖЕНИЕ" === -->
         <div class="individual-order-suggestion-text-container">
             <label for="individual-order-suggestion-text">Описание</label>
             <textarea id="individual-order-suggestion-text" maxlength="2000" placeholder="Напишите, как вы будете решать задачу клиента"></textarea>
-            <div class="individual-order-suggestion-text-length"><span class="num">0</span> из 2000 символов</div>
+            <div class="individual-order-suggestion-text-length"><span class="num">0</span>&nbsp;из 2000 символов</div>
+        
+            <!-- Блок вложений -->
+            <div class="attachments-block">
+                <label class="attach-file-label">
+                    <input type="file" multiple class="attach-file-input" data-target="individual-order-attachments">
+                    <img src="/img/icons/messenger-page/attach.svg" alt="attach" class="attach-icon svg-icon">
+                    <span>Прикрепить файл</span>
+                </label>
+                <div class="attachments-list" id="individual-order-attachments"></div>
+            </div>
         </div>
         
         <div class="modal-form-inputs">
@@ -522,8 +636,8 @@ require_once "../modules/base.php";
         </div>
     
         <div class="buttons">
-          <button class="btn btn-cancel close-phone-modal-block">Отменить</button>
-          <button class="btn btn-accept">Принимаю</button>
+            <button class="btn btn-cancel close-phone-modal-block">Отменить</button>
+            <button class="btn btn-accept" disabled>Принимаю</button>
         </div>
       </div>
     </div>
@@ -544,6 +658,15 @@ require_once "../modules/base.php";
         $(".writing-text").addClass("hidden");
         $(".last-seen-text").removeClass("hidden");
        scrollMessageContainerToBottom();
+    });
+    
+    $("#order-suggestion-text").on("input change",function(){
+        $(".order-suggestion-text-length .num").text($(this).val().length); 
+    });
+    
+    
+    $("#individual-order-suggestion-text").on("input change",function(){
+        $(".individual-order-suggestion-text-length .num").text($(this).val().length); 
     });
     
     $(".egorov5-messages").on("click",function(){
@@ -592,5 +715,479 @@ require_once "../modules/base.php";
     }
     
     scrollMessageContainerToBottom();
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const searchInput = document.querySelector(".search-in-message-input");
+    const contacts = document.querySelectorAll(".contact-container");
+
+    searchInput.addEventListener("input", function () {
+        const query = this.value.trim().toLowerCase();
+
+        contacts.forEach(contact => {
+            const username = contact.querySelector("h4").textContent.toLowerCase();
+            const lastMessage = contact.querySelector(".contact-last-message").textContent.toLowerCase();
+
+            const matches = query.split(' ').every(word => 
+                username.includes(word) || lastMessage.includes(word)
+            );
+
+            if (query === "" || matches) {
+                contact.classList.remove("hidden");
+            } else {
+                contact.classList.add("hidden");
+            }
+        });
+    });
+
+    // Очистка при фокусе (опционально)
+    searchInput.addEventListener("blur", function () {
+        if (this.value === "") {
+            contacts.forEach(c => c.classList.remove("hidden"));
+        }
+    });
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const searchButton = document.querySelector(".contact-functional-panel .search-button");
+    const searchContainer = document.querySelector(".chat-search-container");
+    const searchInput = document.querySelector(".chat-search-input");
+    const closeSearch = document.querySelector(".close-chat-search");
+    let currentHighlight = null;
+
+    // Открытие поиска
+    searchButton.addEventListener("click", function () {
+        searchButton.classList.add("active");
+        searchContainer.classList.remove("hidden");
+        searchInput.focus();
+    });
+
+    // Закрытие по крестику
+    closeSearch.addEventListener("click", function () {
+        closeSearchFunc();
+    });
+
+    // Закрытие при клике вне
+    document.addEventListener("click", function (e) {
+        if (!searchContainer.contains(e.target) && !searchButton.contains(e.target)) {
+            if (!searchContainer.classList.contains("hidden")) {
+                closeSearchFunc();
+            }
+        }
+    });
+
+    // Функция закрытия
+    function closeSearchFunc() {
+        searchButton.classList.remove("active");
+        searchContainer.classList.add("hidden");
+        searchInput.value = "";
+        clearHighlights();
+    }
+
+    // Поиск в реальном времени
+    searchInput.addEventListener("input", function () {
+        const query = this.value.trim().toLowerCase();
+        clearHighlights();
+
+        if (query === "") return;
+
+        const messages = document.querySelectorAll(".custom-message .cm-message");
+        let found = false;
+
+        messages.forEach(message => {
+            const text = message.textContent.toLowerCase();
+            if (text.includes(query)) {
+                found = true;
+                highlightText(message, query);
+            }
+        });
+
+        // Прокрутка к первому совпадению (опционально)
+        if (found && !currentHighlight) {
+            const first = document.querySelector(".search-highlight");
+            if (first) {
+                first.scrollIntoView({ behavior: "smooth", block: "center" });
+            }
+        }
+    });
+
+    // Подсветка текста
+    function highlightText(element, query) {
+        const innerHTML = element.innerHTML;
+        const regex = new RegExp(`(${escapeRegExp(query)})`, "gi");
+        const newHTML = innerHTML.replace(regex, '<span class="search-highlight">$1</span>');
+        element.innerHTML = newHTML;
+    }
+
+    // Очистка подсветки
+    function clearHighlights() {
+        document.querySelectorAll(".search-highlight").forEach(span => {
+            const parent = span.parentNode;
+            parent.replaceChild(document.createTextNode(span.textContent), span);
+            parent.normalize();
+        });
+    }
+
+    // Экранирование спецсимволов
+    function escapeRegExp(string) {
+        return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const phoneModal = document.querySelector('.phone-modal-block');
+    const openPhoneBtn = document.querySelector('.open-phone-modal-block');
+    const closePhoneBtns = document.querySelectorAll('.close-phone-modal-block');
+    const acceptBtn = document.querySelector('.btn-accept');
+    const checkboxes = document.querySelectorAll('.rules input[type="checkbox"]');
+
+    // Открытие модалки
+    openPhoneBtn.addEventListener('click', function () {
+        phoneModal.classList.remove('hidden');
+        resetCheckboxes(); // Сброс при открытии
+        updateAcceptButton();
+    });
+
+    // Закрытие модалки
+    closePhoneBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+            phoneModal.classList.add('hidden');
+        });
+    });
+
+    // Закрытие при клике вне модалки
+    phoneModal.addEventListener('click', function (e) {
+        if (e.target === phoneModal) {
+            phoneModal.classList.add('hidden');
+        }
+    });
+
+    // Отслеживание чекбоксов
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', updateAcceptButton);
+    });
+
+    // Функция обновления кнопки "Принимаю"
+    function updateAcceptButton() {
+        const allChecked = Array.from(checkboxes).every(cb => cb.checked);
+        if (allChecked) {
+            acceptBtn.disabled = false;
+            acceptBtn.style.opacity = '1';
+            acceptBtn.style.cursor = 'pointer';
+            acceptBtn.classList.remove('btn-accept-disabled');
+        } else {
+            acceptBtn.disabled = true;
+            acceptBtn.style.opacity = '0.6';
+            acceptBtn.style.cursor = 'not-allowed';
+            acceptBtn.classList.add('btn-accept-disabled');
+        }
+    }
+
+    // Сброс чекбоксов
+    function resetCheckboxes() {
+        checkboxes.forEach(cb => cb.checked = false);
+    }
+
+    // Клик по "Принимаю" — открытие Google Meet
+    acceptBtn.addEventListener('click', function () {
+        if (!acceptBtn.disabled) {
+            // Генерируем случайную комнату Google Meet
+            const meetId = Math.random().toString(36).substring(2, 12);
+            const meetUrl = `https://meet.google.com/${meetId}`;
+            window.open(meetUrl, '_blank');
+            phoneModal.classList.add('hidden');
+        }
+    });
+
+    // Инициализация: кнопка неактивна при загрузке
+    updateAcceptButton();
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    // Обработка загрузки файлов
+    document.querySelectorAll('.attach-file-input').forEach(input => {
+        input.addEventListener('change', function () {
+            const targetId = this.dataset.target;
+            const container = document.getElementById(targetId);
+            const files = Array.from(this.files);
+
+            files.forEach(file => {
+                // Проверка размера (макс 10 МБ)
+                if (file.size > 10 * 1024 * 1024) {
+                    alert(`Файл "${file.name}" слишком большой. Максимум 10 МБ.`);
+                    return;
+                }
+
+                const item = document.createElement('div');
+                item.className = 'attachment-item';
+                item.dataset.filename = file.name;
+
+                const nameSpan = document.createElement('span');
+                nameSpan.className = 'attachment-name';
+                nameSpan.textContent = file.name;
+
+                const sizeSpan = document.createElement('span');
+                sizeSpan.className = 'attachment-size';
+                sizeSpan.textContent = formatFileSize(file.size);
+
+                const removeBtn = document.createElement('img');
+                removeBtn.src = '/img/icons/x-close.svg';
+                removeBtn.alt = 'remove';
+                removeBtn.className = 'remove-attachment svg-icon';
+
+                // Удаление
+                removeBtn.addEventListener('click', () => {
+                    item.remove();
+                    // Удаляем из input (обновляем FileList через DataTransfer)
+                    updateFileInput(input, targetId);
+                });
+
+                item.appendChild(nameSpan);
+                item.appendChild(sizeSpan);
+                item.appendChild(removeBtn);
+                container.appendChild(item);
+            });
+
+            // Сбрасываем input, чтобы можно было загрузить тот же файл снова
+            this.value = '';
+        });
+    });
+
+    // Форматирование размера
+    function formatFileSize(bytes) {
+        if (bytes === 0) return '0 B';
+        const k = 1024;
+        const sizes = ['B', 'KB', 'MB'];
+        const i = Math.floor(Math.log(bytes) / Math.log(k));
+        return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
+    }
+
+    // Обновление FileList в input после удаления
+    function updateFileInput(input, containerId) {
+        const container = document.getElementById(containerId);
+        const items = container.querySelectorAll('.attachment-item');
+        const dt = new DataTransfer();
+
+        items.forEach(item => {
+            const filename = item.dataset.filename;
+            // Находим оригинальный файл (если он ещё в памяти)
+            // Внимание: FileList нельзя редактировать напрямую — нужен обход
+            // Поэтому храним файлы в data-атрибуте или глобально
+        });
+
+        // Простое решение: храним файлы в data
+        if (!window.attachmentsData) window.attachmentsData = {};
+        if (!window.attachmentsData[containerId]) window.attachmentsData[containerId] = [];
+
+        // Пересобираем
+        const newFiles = [];
+        items.forEach(item => {
+            const name = item.dataset.filename;
+            const saved = window.attachmentsData[containerId].find(f => f.name === name);
+            if (saved) newFiles.push(saved.file);
+        });
+
+        window.attachmentsData[containerId] = newFiles.map((file, idx) => ({
+            name: items[idx].dataset.filename,
+            file: file
+        }));
+
+        const newDt = new DataTransfer();
+        newFiles.forEach(f => newDt.items.add(f));
+        input.files = newDt.files;
+    }
+
+    // Сохранение файлов при добавлении
+    document.querySelectorAll('.attach-file-input').forEach(input => {
+        input.addEventListener('change', function () {
+            const targetId = this.dataset.target;
+            if (!window.attachmentsData) window.attachmentsData = {};
+            if (!window.attachmentsData[targetId]) window.attachmentsData[targetId] = [];
+
+            Array.from(this.files).forEach(file => {
+                if (file.size <= 10 * 1024 * 1024) {
+                    window.attachmentsData[targetId].push({ name: file.name, file: file });
+                }
+            });
+        });
+    });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    // === КОНФИГУРАЦИЯ ЗАПРЕЩЁННЫХ СЛОВ И ПРЕДУПРЕЖДЕНИЙ ===
+    const forbiddenWords = [
+        {
+            words: ["telegram", "телеграм", "tg", "тг"],
+            message: "Звать клиента в Telegram не соответствует правилам сервиса."
+        },
+        {
+            words: ["whatsapp", "ватсап", "вотсап", "watsap", "вацап"],
+            message: "Переход в WhatsApp запрещён. Общайтесь только через Fiwork."
+        },
+        {
+            words: ["vk", "вк", "вконтакте", "вконтакте"],
+            message: "Обсуждение в VK запрещено. Используйте только чат Fiwork."
+        },
+        {
+            words: ["email", "почта", "e-mail", "@"],
+            message: "Передача email запрещена. Используйте только чат платформы."
+        },
+        {
+            words: ["телефон", "номер", "позвони", "позвонить", "+7", "8("],
+            message: "Передача телефона запрещена. Используйте Google Meet через кнопку звонка."
+        }
+    ];
+
+    // === ЦЕЛЕВЫЕ TEXTAREA ===
+    const textareas = [
+        document.getElementById("order-suggestion-text"),
+        document.getElementById("individual-order-suggestion-text")
+    ].filter(Boolean);
+
+    textareas.forEach(textarea => {
+        let warningDiv = null;
+
+        const checkText = () => {
+            const text = textarea.value.toLowerCase();
+            let hasForbidden = false;
+
+            // Удаляем старое предупреждение
+            if (warningDiv) {
+                warningDiv.remove();
+                warningDiv = null;
+            }
+
+            // Проверяем каждую группу слов
+            for (const rule of forbiddenWords) {
+                const found = rule.words.some(word => text.includes(word.toLowerCase()));
+                if (found) {
+                    showWarning(rule.message);
+                    hasForbidden = true;
+                    break; // Показываем только первое совпадение
+                }
+            }
+
+            // Если нет запрещённых слов — убираем предупреждение
+            if (!hasForbidden && warningDiv) {
+                warningDiv.remove();
+                warningDiv = null;
+            }
+        };
+
+        const showWarning = (message) => {
+            if (warningDiv) return;
+
+            warningDiv = document.createElement("div");
+            warningDiv.className = "forbidden-word-warning";
+            warningDiv.innerHTML = `
+                <img src="/img/icons/warning.png" alt="warning" class="warning-icon">
+                <span>${message}</span>
+            `;
+            textarea.parentNode.insertBefore(warningDiv, textarea);
+        };
+
+        // События ввода
+        textarea.addEventListener("input", checkText);
+        textarea.addEventListener("paste", () => setTimeout(checkText, 0));
+    });
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const textarea = document.querySelector(".control-panel textarea");
+    const sendButton = document.querySelector(".send-message-button");
+    const messagesWrapper = document.querySelector(".messages-wrapper");
+    const currentUserAvatar = "/img/user-avatars/user-avatar5.jpg"; // Аватар текущего пользователя
+    const currentUserName = "Вы"; // Имя текущего пользователя
+
+    // === ФУНКЦИЯ ОТПРАВКИ СООБЩЕНИЯ (текст или стикер) ===
+    function sendMessage(content = "") {
+        const messageText = content.trim();
+        if (!messageText) return;
+
+        const messageDiv = document.createElement("div");
+        messageDiv.className = "custom-message";
+
+        const now = new Date();
+        const hours = now.getHours().toString().padStart(2, '0');
+        const minutes = now.getMinutes().toString().padStart(2, '0');
+        const timeStr = `${hours}:${minutes}`;
+
+        messageDiv.innerHTML = `
+            <div class="cm-avatar-container">
+                <img src="${currentUserAvatar}" alt="user-avatar" class="cm-user-avatar"/>
+            </div>
+            <div class="cm-username-and-message">
+                <h4 class="cm-username">${currentUserName}</h4>
+                <div class="cm-message">${messageText}</div>
+            </div>
+            <div class="cm-time">
+                <img src="/img/icons/messenger-page/sent.svg" alt="sent" class="seen-icon svg-icon"/>
+                <span class="sent-time">${timeStr}</span>
+            </div>
+        `;
+
+        messagesWrapper.appendChild(messageDiv);
+        textarea.value = "";
+        textarea.style.height = "auto";
+        scrollMessageContainerToBottom();
+
+        // === ОТПРАВКА НА СЕРВЕР (если нужно) ===
+        // fetch("/send-message.php", {
+        //     method: "POST",
+        //     body: JSON.stringify({ to: "admin", message: messageText })
+        // });
+    }
+
+    // === ОТПРАВКА ТЕКСТОВОГО СООБЩЕНИЯ ===
+    sendButton.addEventListener("click", () => {
+        sendMessage(textarea.value);
+    });
+
+    textarea.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" && !e.shiftKey) {
+            e.preventDefault();
+            sendMessage(textarea.value);
+        }
+    });
+
+    textarea.addEventListener("input", function () {
+        this.style.height = "auto";
+        this.style.height = (this.scrollHeight) + "px";
+    });
+
+    // === ОТПРАВКА СТИКЕРА ПО КЛИКУ ===
+    document.querySelectorAll(".fil-sticker").forEach(sticker => {
+        sticker.addEventListener("click", function () {
+            const stickerSrc = this.src;
+            const stickerHtml = `<img src="${stickerSrc}" class="in-love-sticker" alt="sticker" style="width: 80px; height: 80px;"/>`;
+            sendMessage(stickerHtml);
+
+            // Закрываем панель стикеров после выбора (опционально)
+            //document.querySelector(".stickers-block").style.display = "none";
+        });
+    });
+
+    // === ПРОКРУТКА ВНИЗ ===
+    function scrollMessageContainerToBottom() {
+        const container = document.querySelector('.messages-container');
+        container.scrollTop = container.scrollHeight;
+    }
+
+    // === ЭКРАНИРОВАНИЕ HTML (для текста) ===
+    function escapeHtml(text) {
+        const div = document.createElement("div");
+        div.textContent = text;
+        return div.innerHTML.replace(/\n/g, "<br>");
+    }
+});
 </script>
 </html>

@@ -191,6 +191,10 @@ require_once "../modules/base.php";
                                         активен до 20 декабря
                                     </div>
                                 </div>
+                                
+                                <div class="offer-service-button-container">
+                                    <a href="#" class="offer-service-button">Предложить услугу</a>
+                                </div>
                             </div>
                             
                         </div>

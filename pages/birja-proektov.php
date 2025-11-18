@@ -51,7 +51,10 @@ require_once "../modules/base.php";
                 <div class="aside-container">
                     <div class="aside-header">
                         <h2>Биржа проектов</h2>
-                        <img src="/img/icons/round-question-icon.svg" alt="round-question-icon" class="round-question-icon"/>
+                        <span class="question-and-description tooltip-container">
+                            <img src="/img/icons/round-question-icon.svg" alt="round-question-icon" class="round-question-icon tooltip-question"/>
+                            <span class="tooltip-text">Это процентное соотношение означает долю проектов, по которым покупатель нанимал исполнителей.</span>
+                        </span>
                     </div>
                     
                     <div class="select-menu">
@@ -113,13 +116,23 @@ require_once "../modules/base.php";
                         </div>
                         
                         <div class="menu-section">
-                            <label class="header-label">Нанято, % <img src="/img/icons/round-question-icon.svg"/></label>
+                            <label class="header-label">Нанято, % 
+                            <span class="question-and-description tooltip-container">
+                                <img src="/img/icons/round-question-icon.svg" alt="round-question-icon" class="tooltip-question"/>
+                                <span class="tooltip-text" style="font-weight: 400;">Это процентное соотношение означает долю проектов, по которым покупатель нанимал исполнителей.</span>
+                            </span>
+                            </label>
                             <input type="number" class="hired-percentage" name="hired-percentage" placeholder="От">
                         </div>
                         
                         
                         <div class="menu-section">
-                            <label class="header-label">Ключевые слова <img src="/img/icons/round-question-icon.svg"/></label>
+                            <label class="header-label">Ключевые слова 
+                            <span class="question-and-description tooltip-container">
+                                <img src="/img/icons/round-question-icon.svg" alt="round-question-icon" class="tooltip-question"/>
+                                <span class="tooltip-text" style="font-weight: 400;">Это процентное соотношение означает долю проектов, по которым покупатель нанимал исполнителей.</span>
+                            </span>
+                            </label>
                             <input type="text" class="special-keywords" name="special-keywords">
                         </div>
                         
@@ -159,7 +172,15 @@ require_once "../modules/base.php";
                             Проектов&nbsp;<span>– Всего 14 888 (154 790 250 ₽)</span>
                         </div>
                         <div class="select-offers-container">
-                            Показать:&nbsp;<div class="select-offer">все предложения <img src="/img/birja-proektov/arrow-bottom.svg" alt="arrow-bottom" class="arrow-bottom"/></div>
+                            Показать:&nbsp;
+                            <div class="select-offer">
+                                <div class="select-offer-wrap"><span class="select-offer-text">все предложения</span><img src="/img/birja-proektov/arrow-bottom.svg" alt="arrow-bottom" class="arrow-bottom"/></div>
+                                <div class="select-offer-options">
+                                    <div class="offer-option all-offers active">все предложения</div>
+                                    <div class="offer-option seen-offers">просмотренные</div>
+                                    <div class="offer-option new-offers">новые</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
@@ -170,9 +191,12 @@ require_once "../modules/base.php";
                                     <h3 class="project-offer-header">
                                         Senior MERN-разработчик. Доработка и код-ревью команды
                                     </h3>
-                                    <p>
-                                        Ищем опытного Senior-программиста в нашу дружную команду!<br>
-                                        Наша платформа уже имеет значительный...<span class="show-full-text">Показать полностью</span>
+                                    <p class="project-to-do-description">
+                                        <span class="sliced-text description-text">Ищем опытного Senior-программиста в нашу дружную команду!<br>
+                                        Наша платформа уже имеет значительный...</span>
+                                        <span class="full-text description-text hidden-text">Ищем опытного Senior-программиста в нашу дружную команду! Наша платформа уже имеет значительный вес на рынке и активно развивается. Мы предлагаем тебе стать ключевым игроком в этом процессе, работая над сложными и интересными задачами, связанными с масштабированием, оптимизацией и внедрением новых, современных технологий.</span> 
+                                        <span class="show-full-text show" onclick="showFullText(this);">Показать полностью</span>
+                                        <span class="show-full-text hide hidden-button" onclick="showSlicedText(this);">Скрыть</span>
                                     </p>
                                 </div>
                                 <div class="preferred-budget-container">
@@ -193,7 +217,12 @@ require_once "../modules/base.php";
                                         Размещено проектов на бирже: &nbsp<span class="project-put-count">7</span>&nbsp;·&nbsp;<a href="#">Смотреть открытые (3)</a>
                                     </div>
                                     <div class="customer-detail">
-                                        Нанято: 43% <img src="/img/icons/round-question-icon.svg" alt="round-question-icon" class="round-question-icon"/>
+                                        Нанято: 43% 
+                                        <span class="question-and-description tooltip-container">
+                                            <img src="/img/icons/round-question-icon.svg" alt="round-question-icon" class="tooltip-question"/>
+                                            <span class="tooltip-text" style="font-weight: 400;">Это процентное соотношение означает долю проектов, по которым покупатель нанимал исполнителей.</span>
+                                        </span>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -207,7 +236,7 @@ require_once "../modules/base.php";
                                         Предложений:&nbsp;<span class="offer-count">0</span>
                                     </div>
                                 </div>
-                                
+                                <input type="button" class="feedback-button" value="Оставить отзыв">
                                 <input type="button" class="offer-service-button" value="Предложить услугу">
                             </div>
                         </div>
@@ -218,9 +247,12 @@ require_once "../modules/base.php";
                                     <h3 class="project-offer-header">
                                         Телеграмм бот, формат мини игры
                                     </h3>
-                                    <p>
-                                        Создание бота который будет взаимодействовать с разными
-                                        экономическими данными, брать оттуда...<span class="show-full-text">Показать полностью</span>
+                                    <p class="project-to-do-description">
+                                        <span class="sliced-text description-text">Создание бота который будет взаимодействовать с разными
+                                        экономическими данными, брать оттуда...</span>
+                                        <span class="full-text description-text hidden-text">Создание бота, который будет взаимодействовать с разными экономическими данными, брать оттуда ключевые показатели, анализировать их, выявлять тренды и аномалии, а затем автоматически генерировать отчеты или принимать решения (например, о покупке/продаже активов, корректировке инвестиционного портфеля или формировании прогнозов).</span>
+                                        <span class="show-full-text show" onclick="showFullText(this);">Показать полностью</span>
+                                        <span class="show-full-text hide hidden-button" onclick="showSlicedText(this);">Скрыть</span>
                                     </p>
                                 </div>
                                 <div class="preferred-budget-container">
@@ -241,7 +273,11 @@ require_once "../modules/base.php";
                                         Размещено проектов на бирже:&nbsp<span class="project-put-count">7</span>
                                     </div>
                                     <div class="customer-detail">
-                                        Нанято: 40% <img src="/img/icons/round-question-icon.svg" alt="round-question-icon" class="round-question-icon"/>
+                                        Нанято: 40% 
+                                        <span class="question-and-description tooltip-container">
+                                            <img src="/img/icons/round-question-icon.svg" alt="round-question-icon" class="tooltip-question"/>
+                                            <span class="tooltip-text" style="font-weight: 400;">Это процентное соотношение означает долю проектов, по которым покупатель нанимал исполнителей.</span>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -255,7 +291,7 @@ require_once "../modules/base.php";
                                         Предложений:&nbsp;<span class="offer-count">2</span>
                                     </div>
                                 </div>
-                                
+                                <input type="button" class="feedback-button" value="Оставить отзыв">
                                 <input type="button" class="offer-service-button" value="Предложить услугу">
                             </div>
                         </div>
@@ -266,9 +302,16 @@ require_once "../modules/base.php";
                                     <h3 class="project-offer-header">
                                         Создание игрового стола в Tabletop Simulator
                                     </h3>
-                                    <p>
+                                    <p class="project-to-do-description">
+                                        <span class="description-text sliced-text">
                                         Техническое задание на создание стола в Tabletop Simulator для игры
-                                        LikeSpeaker находится в...<span class="show-full-text">Показать полностью</span>
+                                        LikeSpeaker находится в...
+                                        </span>
+                                        <span class="description-text full-text hidden-text">
+                                            Техническое задание на создание стола в Tabletop Simulator для игры "LikeSpeaker" находится в стадии детальной проработки и должно обеспечить максимально комфортный и аутентичный игровой опыт, полностью соответствующий физической версии.
+                                        </span>
+                                        <span class="show-full-text show" onclick="showFullText(this);">Показать полностью</span>
+                                        <span class="show-full-text hide hidden-button" onclick="showSlicedText(this);">Показать полностью</span>
                                     </p>
                                 </div>
                                 <div class="preferred-budget-container">
@@ -289,7 +332,11 @@ require_once "../modules/base.php";
                                         Размещено проектов на бирже:&nbsp<span class="project-put-count">19</span>
                                     </div>
                                     <div class="customer-detail">
-                                        Нанято: 85% <img src="/img/icons/round-question-icon.svg" alt="round-question-icon" class="round-question-icon"/>
+                                        Нанято: 85% 
+                                        <span class="question-and-description tooltip-container">
+                                            <img src="/img/icons/round-question-icon.svg" alt="round-question-icon" class="tooltip-question"/>
+                                            <span class="tooltip-text" style="font-weight: 400;">Это процентное соотношение означает долю проектов, по которым покупатель нанимал исполнителей.</span>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -303,7 +350,7 @@ require_once "../modules/base.php";
                                         Предложений:&nbsp;<span class="offer-count">0</span>
                                     </div>
                                 </div>
-                                
+                                <input type="button" class="feedback-button" value="Оставить отзыв">
                                 <input type="button" class="offer-service-button" value="Предложить услугу">
                             </div>
                         </div>
@@ -314,9 +361,19 @@ require_once "../modules/base.php";
                                     <h3 class="project-offer-header">
                                         Выстроить диалог с Учебными Заведениями
                                     </h3>
-                                    <p>
+                                    <p class="project-to-do-description">
+                                        <span class="description-text sliced-text">
                                         Базы Университетов, которые меня интересуют -<a href="#">https://disk.yandex.ru/d/O365sYmJ1…</a><br>
-                                        1. Их две,...<span class="show-full-text">Показать полностью</span>
+                                        - Первая база...
+                                        </span>
+                                        <span class="description-text full-text hidden-text">
+                                        Базы Университетов, которые меня интересуют -<a href="#">https://disk.yandex.ru/d/O365sYmJ1…</a><br>
+                                        - Первая база (предположительно, файл с общим списком) содержит общие сведения о вузах: названия, местоположение, контактные данные и ссылки на официальные сайты.
+                                        <br>
+                                        - Вторая база (более детализированный файл) фокусируется на конкретных образовательных программах и содержит детали: коды специальностей, количество бюджетных мест, проходные баллы за последние три года и информацию о стоимости обучения на коммерческой основе.
+                                        </span>
+                                        <span class="show-full-text show" onclick="showFullText(this);">Показать полностью</span>
+                                        <span class="show-full-text hide hidden-button" onclick="showSlicedText(this);">Скрыть</span>
                                     </p>
                                 </div>
                                 <div class="preferred-budget-container">
@@ -337,7 +394,11 @@ require_once "../modules/base.php";
                                         Размещено проектов на бирже:&nbsp<span class="project-put-count">41</span>&nbsp;·&nbsp;<a href="#">Смотреть открытые (3)</a>
                                     </div>
                                     <div class="customer-detail">
-                                        Нанято: 63% <img src="/img/icons/round-question-icon.svg" alt="round-question-icon" class="round-question-icon"/>
+                                        Нанято: 63% 
+                                        <span class="question-and-description tooltip-container">
+                                            <img src="/img/icons/round-question-icon.svg" alt="round-question-icon" class="tooltip-question"/>
+                                            <span class="tooltip-text" style="font-weight: 400;">Это процентное соотношение означает долю проектов, по которым покупатель нанимал исполнителей.</span>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -351,7 +412,7 @@ require_once "../modules/base.php";
                                         Предложений:&nbsp;<span class="offer-count">2</span>
                                     </div>
                                 </div>
-                                
+                                <input type="button" class="feedback-button" value="Оставить отзыв">
                                 <input type="button" class="offer-service-button" value="Предложить услугу">
                             </div>
                         </div>
@@ -362,11 +423,19 @@ require_once "../modules/base.php";
                                     <h3 class="project-offer-header">
                                         Доработка сайта на битрикс 1C
                                     </h3>
-                                    <p>
-                                        Необходимо выполнить 2 задачи:<br>
+                                    <p class="project-to-do-description">
+                                        <span class="description-text sliced-text">Необходимо выполнить 2 задачи:<br>
                                         - Адаптация блога + ЧПУ<br>
                                         - Корзина + формы обратной связи<br>
-                                        Просьба...<span class="show-full-text">Показать полностью</span>
+                                        Просьба...
+                                        </span>
+                                        <span class="description-text full-text hidden-text">Необходимо выполнить 2 задачи:<br>
+                                        - Адаптация блога + ЧПУ<br>
+                                        - Корзина + формы обратной связи<br>
+                                        Просьба предоставить подробную оценку сроков и стоимости выполнения каждой из этих задач по отдельности, а также указать, какие именно технологии/фреймворки будут использоваться для реализации. Желательно получить ответ до конца текущего рабочего дня.    
+                                        </span>
+                                        <span class="show-full-text show" onclick="showFullText(this);">Показать полностью</span>
+                                        <span class="show-full-text hide hidden-button" onclick="showSlicedText(this);">Скрыть</span>
                                     </p>
                                 </div>
                                 <div class="preferred-budget-container">
@@ -387,7 +456,11 @@ require_once "../modules/base.php";
                                         Размещено проектов на бирже:&nbsp<span class="project-put-count">107</span>
                                     </div>
                                     <div class="customer-detail">
-                                        Нанято: 60% <img src="/img/icons/round-question-icon.svg" alt="round-question-icon" class="round-question-icon"/>
+                                        Нанято: 60% 
+                                        <span class="question-and-description tooltip-container">
+                                            <img src="/img/icons/round-question-icon.svg" alt="round-question-icon" class="tooltip-question"/>
+                                            <span class="tooltip-text" style="font-weight: 400;">Это процентное соотношение означает долю проектов, по которым покупатель нанимал исполнителей.</span>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -401,18 +474,31 @@ require_once "../modules/base.php";
                                         Предложений:&nbsp;<span class="offer-count">2</span>
                                     </div>
                                 </div>
-                                
+                                <input type="button" class="feedback-button" value="Оставить отзыв">
                                 <input type="button" class="offer-service-button" value="Предложить услугу">
                             </div>
                         </div>
                         
                     </div>
+                    
+
+                    <nav class="pagination-container" aria-label="Пагинация">
+                        <div class="pagination-item">
+                            <a href="#" class="page-link arrow-link" id="prev"><img src="/img/icons/chevron-right.svg" style="transform: rotateY(180deg); cursor: pointer;" alt="chevron-left" class="chevron-left"/></a>
+                        </div>
+                
+                        <div id="page-numbers"></div>
+                
+                        <div class="pagination-item">
+                            <a href="#" class="page-link arrow-link" id="next"><img src="/img/icons/chevron-right.svg" style="cursor: pointer;" alt="chevron-right" class="chevron-right"/></a>
+                        </div>
+                    </nav>
                 </div>
             </div>
         </div>
     </div>
 
-<div class="give-feedback-modal-block">
+<div class="give-feedback-modal-block hidden">
     <form class="give-feedback-modal-container">
         <div class="header-controls">
             <img src="/img/birja-proektov/green-shield.svg" alt="green-shield" class="green-shield-icon"/>
@@ -464,6 +550,119 @@ require_once "../modules/base.php";
     
     $(".give-feedback-modal-container .close-icon, .give-feedback-modal-container .cancel-button").on("click",function(){
         $(".give-feedback-modal-block").addClass("hidden"); 
+    });
+    
+    $(".select-offer-options .offer-option").on("click",function(){
+        $(".select-offer-wrap .select-offer-text").text($(this).text());
+        $(".select-offer-options .offer-option.active").removeClass("active");
+        $(this).addClass("active"); 
+    });
+    
+    function showFullText(elem){
+        $(elem).parent().find(".full-text").removeClass("hidden-text");
+        $(elem).parent().find(".sliced-text").addClass("hidden-text");
+        $(elem).parent().find(".show-full-text.show").addClass("hidden-button");
+        $(elem).parent().find(".show-full-text.hide").removeClass("hidden-button");
+    }
+    
+    
+    function showSlicedText(elem){
+        $(elem).parent().find(".sliced-text").removeClass("hidden-text");
+        $(elem).parent().find(".full-text").addClass("hidden-text");
+        $(elem).parent().find(".show-full-text.hide").addClass("hidden-button");
+        $(elem).parent().find(".show-full-text.show").removeClass("hidden-button");
+    }
+</script>
+<script>
+        const totalPages = 18;
+        const visibleCount = 3; // сколько страниц видно одновременно
+        let currentPage = 1;
+
+        const pageNumbersContainer = document.getElementById('page-numbers');
+        const prev = document.getElementById('prev');
+        const next = document.getElementById('next');
+
+        function renderPagination() {
+            pageNumbersContainer.innerHTML = '';
+
+            // Вычисляем диапазон отображаемых страниц
+            let start = Math.max(1, currentPage - 1);
+            let end = Math.min(start + visibleCount - 1, totalPages - 1);
+
+            if (end >= totalPages - 1) {
+                start = totalPages - visibleCount;
+                if (start < 1) start = 1;
+            }
+
+            // Создаём элементы страниц
+            for (let i = start; i <= end; i++) {
+                const div = document.createElement('div');
+                div.className = 'pagination-item';
+                const a = document.createElement('a');
+                a.textContent = i;
+                a.href = '#';
+                a.className = 'page-link' + (i === currentPage ? ' active' : '');
+                a.addEventListener('click', e => {
+                    e.preventDefault();
+                    currentPage = i;
+                    renderPagination();
+                });
+                div.appendChild(a);
+                pageNumbersContainer.appendChild(div);
+            }
+
+            // Добавляем многоточие и последнюю страницу
+            if (end < totalPages - 1) {
+                const dots = document.createElement('div');
+                dots.className = 'pagination-item';
+                dots.innerHTML = '<span class="ellipsis">...</span>';
+                pageNumbersContainer.appendChild(dots);
+            }
+
+            const last = document.createElement('div');
+            last.className = 'pagination-item';
+            const aLast = document.createElement('a');
+            aLast.textContent = totalPages;
+            aLast.href = '#';
+            aLast.className = 'page-link' + (currentPage === totalPages ? ' active' : '');
+            aLast.addEventListener('click', e => {
+                e.preventDefault();
+                currentPage = totalPages;
+                renderPagination();
+            });
+            last.appendChild(aLast);
+            pageNumbersContainer.appendChild(last);
+        }
+
+        // Стрелка "вперёд"
+        next.addEventListener('click', e => {
+            e.preventDefault();
+            if (currentPage < totalPages) {
+                currentPage++;
+                renderPagination();
+            }
+        });
+
+        // Стрелка "назад"
+        prev.addEventListener('click', e => {
+            e.preventDefault();
+            if (currentPage > 1) {
+                currentPage--;
+                renderPagination();
+            }
+        });
+
+        renderPagination();
+    </script>
+<script>
+    // Открытие модального окна "Оставить отзыв"
+    $(document).on('click', '.feedback-button', function() {
+        $(".give-feedback-modal-block").removeClass("hidden");
+    });
+
+    // Закрытие модалки (уже есть, но на всякий случай)
+    $(".give-feedback-modal-container .close-icon, .give-feedback-modal-container .cancel-button").on("click", function() {
+        $(".give-feedback-modal-block").addClass("hidden");
     });
 </script>
 </html>

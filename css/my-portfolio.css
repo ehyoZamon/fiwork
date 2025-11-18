@@ -375,6 +375,9 @@ input:valid{
     box-shadow: 0 -50px 50px -20px rgba(0, 0, 0, 0.5) inset;
 }
 
+
+
+
 .my-portfolio-content-wrapper .portfolio-elem .portfolio-details-container .attach-icon,
 .my-portfolio-content-wrapper .portfolio-elem .portfolio-details-container .delete-icon,
 .my-portfolio-content-wrapper .portfolio-elem .portfolio-details-container .edit-icon{
@@ -387,6 +390,14 @@ input:valid{
     background: #fff;
     border-radius: 30%;
     cursor: pointer;
+    display: none;
+}
+
+
+.my-portfolio-content-wrapper .portfolio-elem:hover .portfolio-details-container .attach-icon,
+.my-portfolio-content-wrapper .portfolio-elem:hover .portfolio-details-container .delete-icon,
+.my-portfolio-content-wrapper .portfolio-elem:hover .portfolio-details-container .edit-icon{
+    display: inline-block;
 }
 
 .my-portfolio-content-wrapper .portfolio-elem .portfolio-details-container .edit-icon{

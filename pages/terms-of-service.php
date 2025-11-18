@@ -372,4 +372,45 @@ require_once "../modules/base.php";
 <script src="/js/index.js?v=<?= time(); ?>"></script>
 <script src="/js/mobile-navigation-menu.js?v=<?= time(); ?>"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<!-- Подключаем mark.js для подсветки -->
+<script src="https://cdn.jsdelivr.net/npm/mark.js@8.11.1/dist/mark.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const searchInput = document.getElementById("docs-search-input");
+    const content = document.querySelector(".terms-of-service-content");
+    let markInstance = new Mark(content);
+
+    searchInput.addEventListener("input", function () {
+        const query = this.value.trim();
+
+        // Убираем предыдущую подсветку
+        markInstance.unmark();
+
+        if (query.length > 0) {
+            markInstance.mark(query, {
+                "accuracy": "partially",           // частичное совпадение
+                "separateWordSearch": false,      // ищем как фразу
+                "ignoreJoiners": true,            // игнорируем дефисы и пробелы
+                "acrossElements": true,           // через границы элементов
+                "caseSensitive": false,           // нечувствительно к регистру
+                "wildcards": "disabled",
+                "each": function(node) {
+                    // Прокручиваем к первому найденному элементу
+                    if (node === content.querySelector("mark")) {
+                        node.scrollIntoView({ behavior: "smooth", block: "center" });
+                    }
+                }
+            });
+        }
+    });
+
+    // Очистка при фокусе (опционально)
+    searchInput.addEventListener("blur", function () {
+        if (this.value === "") {
+            markInstance.unmark();
+        }
+    });
+});
+</script>
 </html>

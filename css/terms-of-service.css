@@ -294,7 +294,7 @@ input:valid {
     min-width: 127px;
     min-height: 48px;
     padding-left: 12px;
-    background: #0177ff;
+    color: #0177ff;
     font-family: var(--second-family);
     font-weight: 600;
     font-size: 14px;
@@ -305,13 +305,27 @@ input:valid {
 }
 
 .we-help-customers-block .go-by-link:hover{
-    color: #177de5;;
+    color: #177de5;
 }
 
 .go-by-link img{
     width: 32px;
 }
 
+/* Стили для подсветки (как в браузере) */
+mark {
+    background: #ffeb3b !important;
+    color: #000 !important;
+    padding: 0 2px;
+    border-radius: 2px;
+    font-weight: 500;
+}
+
+/* Активное совпадение (опционально) */
+mark.current {
+    background: #ff9800 !important;
+    color: white !important;
+}
 
 @media (max-width: 1000px){
     .terms-of-service-block{

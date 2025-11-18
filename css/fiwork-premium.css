@@ -320,8 +320,18 @@ input:valid {
     line-height: 183%;
     color: #170f49;
 }
+/* Анимация плавного перелива */
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
 
-.premium-possibilities-details .connect-now-button{
+/* Кнопка */
+.premium-possibilities-details .connect-now-button {
     width: 100%;
     text-align: center;
     display: flex;
@@ -330,21 +340,35 @@ input:valid {
     min-height: 72px;
     border-radius: 96px;
     padding: 26px 38px;
-    background: #0177ff;
+    background: linear-gradient(
+        110deg,
+        #0177ff 0%,
+        #0282ff 25%,
+        #4db4ff 50%,
+        #0282ff 75%,
+        #0177ff 100%
+    );
+    background-size: 250% auto;
     border: 0;
     font-family: var(--font5);
     font-weight: 700;
     font-size: 18px;
     line-height: 111%;
-    text-align: center;
     color: #fff;
     margin-top: 20px;
     cursor: pointer;
+
+    /* Делаем движение медленным */
+    animation: shimmer 2.8s ease-out infinite;
+    animation-delay: 3.5s;
 }
 
+/* Hover */
 .premium-possibilities-details .connect-now-button:hover{
     background: #0188ff;
+    animation: none;
 }
+
 
 .premium-possibilities-advantages .exclusive-container{
     width: 100%;
@@ -519,7 +543,7 @@ input:valid {
 .users-supporting-project-container{
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(4,1fr);
     gap: 25px;
 }
 

@@ -302,7 +302,8 @@ input:valid{
 }
 
 .aside-block .additional-settings-container .setting-values-list ul,
-.specialty-input .specialty-values-list ul{
+.specialty-input .specialty-values-list ul,
+.country-input .country-values-list ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -315,12 +316,14 @@ input:valid{
     background: #fff;
 }
 
-.specialty-input .specialty-values-list ul{
+.specialty-input .specialty-values-list ul,
+.country-input .country-values-list ul{
     width: 100%;
 }
 
 .aside-block .additional-settings-container .setting-values-list li,
-.specialty-input .specialty-values-list li{
+.specialty-input .specialty-values-list li,
+.country-input .country-values-list li{
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 14px;
@@ -332,7 +335,8 @@ input:valid{
 }
 
 .aside-block .additional-settings-container .setting-values-list .active,
-.specialty-input .specialty-values-list .active{
+.specialty-input .specialty-values-list .active,
+.country-input .country-values-list .active{
     background: #f6f6f6;
     color: #177de5;
 }
@@ -402,20 +406,25 @@ input:valid{
 }
 
 
-.settings-part2 .specialty-input{
+.settings-part2 .specialty-input,
+.settings-part2 .country-input{
    width: 100%; 
+   position: relative;
 }
 
-.specialty-input .specialty-values-list{
+.specialty-input .specialty-values-list,
+.country-input .country-values-list{
     position: absolute;
     left: 0;
     padding-top: 22px;
     top: 50%;
     z-index: 100;
     display: none;
+    width: 100%;
 }
 
-.specialty-input:hover .specialty-values-list{
+.specialty-input:hover .specialty-values-list,
+.country-input:hover .country-values-list{
     display: block;
 }
 
@@ -1008,6 +1017,11 @@ textarea::-webkit-scrollbar-track{
     margin-top: 10px;
 }
 
+
+.skills-container .add-skill:hover{
+    color: #03a609;
+}
+
 .skills-container .add-skill img{
     width: 24px;
 }
@@ -1019,6 +1033,7 @@ textarea::-webkit-scrollbar-track{
     align-items: flex-end;
     justify-content: space-between;
     margin-top: 20px;
+    cursor: pointer;
 }
 
 .routine-and-submit-button input[type='submit']{
@@ -1038,6 +1053,7 @@ textarea::-webkit-scrollbar-track{
     line-height: 71%;
     text-align: center;
     color: #fff;
+    cursor: pointer;
 }
 
 .routine-container .routine-header{
@@ -1071,6 +1087,45 @@ textarea::-webkit-scrollbar-track{
     bottom: 100%;
     right: 70px;
 }
+
+
+.tooltip-container {
+    position: relative; /* Создаем контекст для абсолютного позиционирования подсказки */
+    cursor: help; /* Меняем курсор на знак вопроса */
+}
+
+.tooltip-text {
+    visibility: hidden;
+    opacity: 0; 
+    position: absolute;
+    z-index: 10;
+    top: 30px;
+    right: 0;
+    width: 200px; 
+    background-color: #fefefe;
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.06);
+    color: #111;
+    text-align: left;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    white-space: normal;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip-text h4,
+.tooltip-text p{
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+
 
 .routine-header{
     position: relative;
@@ -1362,6 +1417,12 @@ textarea::-webkit-scrollbar-track{
     cursor: pointer;
 }
 
+input[type='submit']:hover{
+    background: #03a609;
+}
+
+
+
 
 .settings-part3 .upload-cover-container img{
     width: 48px;
@@ -1563,6 +1624,7 @@ textarea::-webkit-scrollbar-track{
     line-height: 71%;
     text-align: center;
     color: #fff;
+    cursor: pointer;
 }
 
 .finances-block .finances-details .wallet-number-input{
@@ -1809,9 +1871,403 @@ textarea::-webkit-scrollbar-track{
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 /*end of control-notifications*/
 
+/* Модальное окно */
+.phone-modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(3px);
+}
+
+.phone-modal {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    width: 420px;
+    max-width: 92%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    font-family: var(--font-family);
+}
+
+.phone-modal h3 {
+    margin: 0 0 16px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #111;
+    text-align: center;
+}
+
+.modal-phone-input input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1.5px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Roboto', monospace;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.modal-phone-input input:focus {
+    border-color: #04b70a;
+    box-shadow: 0 0 0 3px rgba(4, 183, 10, 0.1);
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.modal-buttons button {
+    padding: 11px 22px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    min-width: 100px;
+    transition: all 0.2s;
+}
+
+#save-phone-btn {
+    background: #04b70a;
+    color: white;
+    border: 1px solid #04b70a;
+}
+
+#save-phone-btn:hover {
+    background: #039b09;
+}
+
+#cancel-phone-btn {
+    background: #f8f8f8;
+    color: #555;
+    border: 1px solid #ddd;
+}
+
+#cancel-phone-btn:hover {
+    background: #eee;
+}
+
+/* Карандаш */
+.phone-input .edit-icon {
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.phone-input .edit-icon:hover {
+    opacity: 1;
+}
+
+#user-phone-display {
+    cursor: default;
+    user-select: none;
+    border: 0;
+}
+
+/* Модальное окно удаления */
+.delete-modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.2s ease-out;
+}
+
+.delete-modal {
+    background: #fff;
+    border-radius: 16px;
+    padding: 32px;
+    width: 440px;
+    max-width: 92%;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    font-family: var(--font-family);
+    animation: scaleIn 0.25s ease-out;
+}
+
+.delete-modal-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 16px;
+    background: #ffebeb;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.warning-icon {
+    width: 36px;
+    height: 36px;
+}
+
+.delete-modal h3 {
+    margin: 0 0 12px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #111;
+}
+
+.delete-modal p {
+    margin: 0 0 24px;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.delete-modal-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.delete-modal-buttons button {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    min-width: 110px;
+    transition: all 0.2s;
+}
+
+#confirm-delete-btn {
+    background: #f15b5b;
+    color: white;
+    border: 1px solid #f15b5b;
+}
+
+#confirm-delete-btn:hover {
+    background: #e03e3e;
+}
+
+#cancel-delete-btn {
+    background: #f8f8f8;
+    color: #555;
+    border: 1px solid #ddd;
+}
+
+#cancel-delete-btn:hover {
+    background: #eee;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Стили для выбора времени */
+.time-range-container {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.time-input-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.time-input-group span {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    color: #111;
+}
+
+.time-select-from,
+.time-select-to {
+    background: #fff;
+    border: 1px solid #a5a5a5;
+    border-radius: 4px;
+    min-height: 36px;
+    padding: 5px 8px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    color: #111;
+    min-width: 100px;
+}
+
+.overall-time {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    color: #04b70a;
+    margin-top: 4px;
+}
+
+#total-hours {
+    font-weight: 600;
+}
+
+/* Превью аватара при загрузке */
+.img-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.img-container img {
+    transition: opacity 0.3s ease;
+}
+
+.img-container .avatar-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.4);
+    color: white;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.img-container:hover .avatar-overlay {
+    opacity: 1;
+}
+
+/* Стили кнопок */
+.controls-container input[type="button"] {
+    background: transparent;
+    outline: none;
+    border: 0;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    text-align: center;
+    color: #177de5;
+    cursor: pointer;
+    width: min-content;
+    padding: 0;
+    margin: 0 8px;
+}
+
+#delete-avatar-btn {
+    color: #f15b5b;
+}
+
+#delete-avatar-btn:hover {
+    color: #e03e3e;
+}
+
+/* Модальное окно выхода */
+.logout-modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.2s ease-out;
+}
+
+.logout-modal {
+    background: #fff;
+    border-radius: 16px;
+    padding: 32px;
+    width: 420px;
+    max-width: 92%;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    font-family: var(--font-family);
+    animation: scaleIn 0.25s ease-out;
+}
+
+.logout-modal-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 16px;
+    background: #fff3e0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logout-icon {
+    width: 36px;
+    height: 36px;
+}
+
+.logout-modal h3 {
+    margin: 0 0 12px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #111;
+}
+
+.logout-modal p {
+    margin: 0 0 24px;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.logout-modal-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.logout-modal-buttons button {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    min-width: 110px;
+    transition: all 0.2s;
+}
+
+#confirm-logout-btn {
+    background: #f15b5b;
+    color: white;
+    border: 1px solid #f15b5b;
+}
+
+#confirm-logout-btn:hover {
+    background: #e03e3e;
+}
+
+#cancel-logout-btn {
+    background: #f8f8f8;
+    color: #555;
+    border: 1px solid #ddd;
+}
+
+#cancel-logout-btn:hover {
+    background: #eee;
+}
 
 @media(max-width: 1360px){
     .profile-settings-container{

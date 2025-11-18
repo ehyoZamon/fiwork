@@ -40,6 +40,7 @@ require_once "./modules/base.php";
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
 </head>
 <body>
     <?=$header;?>
@@ -68,7 +69,7 @@ require_once "./modules/base.php";
                         <a href="#" class="ozvuchka-service service-nav-elem">
                             <span>Озвучка</span>
                         </a>
-                        <a href="#" class="html-markup-service service-nav-elem">
+                        <a style="display: none;" href="#" class="html-markup-service service-nav-elem">
                             <span>Верстка&nbsp;по<br>макету</span>
                         </a>
                     </div>
@@ -92,7 +93,7 @@ require_once "./modules/base.php";
                         <a href="#" class="songwriting-service service-nav-elem">
                             <span>Сонграйтинг</span>
                         </a>
-                        <a href="#" class="social-sites-service service-nav-elem">
+                        <a href="#" style="display: none;" class="social-sites-service service-nav-elem">
                             <span>Оформить<br> соц-сети</span>
                         </a>
                     </div>
@@ -463,6 +464,33 @@ require_once "./modules/base.php";
                     </div>
                 </div>
             </div>
+            
+            <div class="introduce-logos">
+                    <div class="logo-container">
+                    <img src="/img/introduce-page/takie-dela.svg" alt="takie-dela" class="takie-dela"/>
+                    </div>
+                    <div class="logo-container">
+                    <img src="/img/introduce-page/tacc.svg" alt="tacc" class="tacc"/>
+                    </div>
+                    <div class="logo-container">
+                    <img src="/img/introduce-page/forbes.svg" alt="forbes" class="forbes"/>
+                    </div>
+                    <div class="logo-container">
+                    <img src="/img/introduce-page/rbk.svg" alt="rbk" class="rbk"/>
+                    </div>
+                    <div class="logo-container">
+                    <img src="/img/introduce-page/kommersant.svg" alt="kommersant" class="kommersant"/>
+                    </div>
+                    <div class="logo-container">
+                    <img src="/img/introduce-page/ria-novost.svg" alt="ria-novosti" class="ria-novosti"/>
+                    </div>
+                    <div class="logo-container">
+                    <img src="/img/introduce-page/delovoy-peterburg.svg" alt="delovoy-peterburg" class="delovoy-peterburg"/>
+                    </div>
+                    <div class="logo-container">
+                    <img src="/img/introduce-page/vc-ru.svg" alt="vc-ru" class="vc-ru"/>
+                    </div>
+                </div>
             
             <div class="mobile-categories-block mobile">
                 <div class="mobile-categories-header">
@@ -1458,9 +1486,9 @@ require_once "./modules/base.php";
     <?=$modalWindows;?>
 
 </body>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="./js/jQuery/jquery-3.5.1.min.js"></script>
+<script src="/js/swiper.js"></script>
 <script src="./js/index.js?v=<?= time(); ?>"></script>
 <script src="./js/mobile-navigation-menu.js?v=<?= time(); ?>"></script>    
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<link rel="stylesheet" href="/css/swiper.css" />
 </html>

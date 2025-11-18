@@ -145,7 +145,7 @@ require_once "../modules/base.php";
                                         </h3>
                                         
                                         <p class="project-to-do-description">
-                                            Необходимо реализовать mobile-first для Telegram игру, в которой пользователи сражаются за...<span class="show-full-text">Показать полностью</span>
+                                            Необходимо реализовать mobile-first для Telegram игру, в которой пользователи сражаются за контроль над виртуальными территориями, используя коллекционные карточки NFT с уникальными персонажами и способностями.
                                         </p>
                                     </div>
                                     <div class="preferred-budget-container">
@@ -165,7 +165,11 @@ require_once "../modules/base.php";
                                             Размещено проектов на бирже:&nbsp<span class="project-put-count">9</span>
                                         </div>
                                         <div class="customer-detail">
-                                            Нанято: 67% <img src="/img/icons/round-question-icon.svg" alt="round-question-icon" class="round-question-icon"/>
+                                            Нанято: 67% 
+                                            <span class="question-and-description tooltip-container">
+                                                <img src="/img/icons/round-question-icon.svg" alt="round-question-icon" class="round-question-icon tooltip-question"/>
+                                                <span class="tooltip-text">Это процентное соотношение означает долю проектов, по которым покупатель нанимал исполнителей.</span>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -181,13 +185,13 @@ require_once "../modules/base.php";
                                             </div>
                                         </div>
                                         <div class="offer-service-data-wrapper">
-                                            <div class="offer-service-data">
+                                            <a href="#" class="offer-service-data">
                                                 Разработка и IT
-                                            </div>
+                                            </a>
                                             <img src="/img/icons/chevron-right.svg" alt="chevron-right" class="chevron-right"/>
-                                            <div class="offer-service-data">
+                                            <a href="#" class="offer-service-data">
                                                 Игры
-                                            </div>
+                                            </a>
                                         </div>
                                     </div>
                                     <div class="active-until">
@@ -205,7 +209,13 @@ require_once "../modules/base.php";
                                 Портфолио автоматически будет подгружено к отклику.</p> 
                                 <p>&nbsp;&nbsp;&nbsp;Укажите, как именно вы собираетесь выполнять это задание. Опишите ключевые моменты.</p>
                                 <p>&nbsp;&nbsp;&nbsp;Составляйте уникальные отклики, которые покажут вашу компетентность и заинтересованность в проекте. 
-                                Не используйте <a href="#">шаблонные тексты</a><img src="/img/icons/round-question-icon.svg" alt="round-question-icon" class="round-question-icon"></p>
+                                Не используйте <a href="#">шаблонные тексты</a>
+                                <span class="question-and-description tooltip-container">
+                                    <img src="/img/icons/round-question-icon.svg" alt="round-question-icon" class="round-question-icon tooltip-question"/>
+                                    <span class="tooltip-text">Это процентное соотношение означает долю проектов, по которым покупатель нанимал исполнителей.</span>
+                                </span>
+                                
+                                </p>
                                 <p>Пройдите <a href="#">урок по работе на Бирже</a>, научитесь писать продающие отклики и увеличьте свои шансы на получение заказа!</p>
                             
                                 <div class="service-offer-description">
@@ -225,7 +235,12 @@ require_once "../modules/base.php";
                                 </div>
                                 
                                 <div class="service-offer-payment">
-                                    <div class="service-offer-payment-header">Желаемый порядок оплаты <img src="/img/icons/round-question-icon.svg"/></div>
+                                    <div class="service-offer-payment-header">Желаемый порядок оплаты 
+                                    <span class="question-and-description tooltip-container">
+                                        <img src="/img/icons/round-question-icon.svg" alt="round-question-icon" class="round-question-icon tooltip-question"/>
+                                        <span class="tooltip-text">Это процентное соотношение означает долю проектов, по которым покупатель нанимал исполнителей.</span>
+                                    </span>
+                                    </div>
                                     <div class="service-offer-payment-options">
                                         <div class="service-offer-payment-option">
                                             <div class="service-offer-payment-option-header">
@@ -279,29 +294,29 @@ require_once "../modules/base.php";
                                     </div>
                                     <div class="service-offer-portfolio-select">
                                         <select id="service-offer-portfolio-select-input">
-                                            <option value="all" selected>Срок выполнения</option>
-                                            <option value="design">1 день</option>
-                                            <option value="it-development">2 дня</option>
+                                            <option value="all" selected>Все рубрики</option>
+                                            <option value="design">Дизайн</option>
+                                            <option value="it-development">Разработка IT</option>
                                         </select>
                                     </div>
 
                                     <div class="service-offer-portfolio-container">
-                                        <div class="portfolio-elem">
+                                        <div class="portfolio-elem all design">
                                             <img src="/img/birja-proektov/portfolio-banner1.png" alt="banner" class="banner"/>
                                         </div>
-                                        <div class="portfolio-elem">
+                                        <div class="portfolio-elem all design">
                                             <img src="/img/birja-proektov/portfolio-banner2.png" alt="banner" class="banner"/>
                                         </div>
-                                        <div class="portfolio-elem">
+                                        <div class="portfolio-elem all design">
                                             <img src="/img/birja-proektov/portfolio-banner3.png" alt="banner" class="banner"/>
                                         </div>
-                                        <div class="portfolio-elem">
+                                        <div class="portfolio-elem all it-development">
                                             <img src="/img/birja-proektov/portfolio-banner4.png" alt="banner" class="banner"/>
                                         </div>
-                                        <div class="portfolio-elem">
+                                        <div class="portfolio-elem all it-development">
                                             <img src="/img/birja-proektov/portfolio-banner5.png" alt="banner" class="banner"/>
                                         </div>
-                                        <div class="portfolio-elem">
+                                        <div class="portfolio-elem all it-development">
                                             <img src="/img/birja-proektov/portfolio-banner6.png" alt="banner" class="banner"/>
                                         </div>
                                     </div>
@@ -333,5 +348,64 @@ require_once "../modules/base.php";
     $("#service-offer-description-textarea").on("input change", function() {
         $(".service-offer-description-count").text($(this).val().length);
     });
+    
+    var fullText;
+    var textPart;
+    function removeTextAfterLastSpace(text) {
+        if (typeof text !== 'string') {
+            return '';
+        }
+    
+        // 1. Находим индекс последнего пробела
+        const lastSpaceIndex = text.lastIndexOf(' ');
+    
+        // 2. Проверяем, был ли найден пробел
+        if (lastSpaceIndex === -1) {
+            // Если пробела нет, возвращаем исходную строку
+            return text;
+        }
+    
+        // 3. Используем метод slice() для возврата подстроки до найденного индекса
+        // (исключая сам пробел и последующий текст)
+        return text.slice(0, lastSpaceIndex);
+    }
+    window.onload=function(){
+        fullText=$(".project-to-do-description").text();
+        textPart=fullText.slice(0,160);
+        textPart=removeTextAfterLastSpace(textPart)+"...";
+        if(fullText.length>180){
+            $(".project-to-do-description").html(textPart+'<span class="show-full-text show" onclick="showFullText();">Показать полностью</span>')
+        }else{
+            $(".project-to-do-description").html(fullText);
+        }
+        
+        $(".tooltip-container").hover(
+            function() {
+                $(this).find(".tooltip-text").addClass('active');
+            }, 
+            function() {
+                $(this).find(".tooltip-text").removeClass('active');
+            }
+        );
+    }
+        
+    function showFullText(){
+        $(".project-to-do-description").html(fullText+'<span class="show-full-text hide" onclick="hideFullText();">Скрыть</span>');
+    }
+    
+    function hideFullText(){
+        $(".project-to-do-description").html(textPart+'<span class="show-full-text show" onclick="showFullText();">Показать полностью</span>')
+    }
+    
+    $("#service-offer-portfolio-select-input").on("change", function() {
+        var selectedPortfolio = $(this).val();
+        console.log(selectedPortfolio); 
+        $(".portfolio-elem").hide();
+    
+        if (selectedPortfolio) {
+            $(".portfolio-elem." + selectedPortfolio).show(); 
+        }
+    });
+    
 </script>
 </html>

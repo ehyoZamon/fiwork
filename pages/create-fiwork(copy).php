@@ -1193,7 +1193,7 @@ require_once "../modules/base.php";
                                 <input type="button" value="Продолжить" class="continue-to-next-step-button submit-fiwork-price-and-options" onclick="submitForm('fiwork-price-and-options-form');"/> 
                             </div>
                             
-                            <form class="create-fiwork-step fiwork-portfolio-form active">
+                            <form class="create-fiwork-step fiwork-portfolio-form hidden">
                                 <div class="create-fiwork-step-header">
                                     <div class="create-fiwork-step-num-container">
                                         4
@@ -1225,7 +1225,7 @@ require_once "../modules/base.php";
                                             </div>
                                             
                                             <div class="add-works-container">
-                                                <div class="add-work-elem" data-work-index="0">
+                                                <div class="add-work-elem">
                                                     <img src="/img/icons/green-round-plus.svg" alt="round-plus-icon" class="green-round-plus"/>
                                                     <span>Добавить работу</span>
                                                     <div class="add-work-elem-loaded-container hidden">
@@ -1234,8 +1234,10 @@ require_once "../modules/base.php";
                                                         <img src="/img/icons/delete.svg" alt="delete-icon" class="delete-icon" onclick="hideParentElem(this);"/>
                                                         <img src="/img/icons/edit-pencil.svg" onclick="editLoadedContent(this);" alt="edit-icon" class="edit-icon"/>
                                                     </div>
+                                                    <div class="loaded-modal-content">
+                                                    </div>
                                                 </div>
-                                                <div class="add-work-elem" data-work-index="1">
+                                                <div class="add-work-elem">
                                                     <img src="/img/icons/green-round-plus.svg" alt="round-plus-icon" class="green-round-plus"/>
                                                     <span>Добавить работу</span>
                                                     <div class="add-work-elem-loaded-container hidden">
@@ -1245,8 +1247,10 @@ require_once "../modules/base.php";
                                                         <img src="/img/icons/edit-pencil.svg" onclick="editLoadedContent(this);" alt="edit-icon" class="edit-icon"/>
                                                     </div>
                                                     
+                                                    <div class="loaded-modal-content">
+                                                    </div>
                                                 </div>
-                                                <div class="add-work-elem" data-work-index="2">
+                                                <div class="add-work-elem">
                                                     <img src="/img/icons/green-round-plus.svg" alt="round-plus-icon" class="green-round-plus"/>
                                                     <span>Добавить работу</span>
                                                     <div class="add-work-elem-loaded-container hidden">
@@ -1256,8 +1260,10 @@ require_once "../modules/base.php";
                                                         <img src="/img/icons/edit-pencil.svg" onclick="editLoadedContent(this);" alt="edit-icon" class="edit-icon"/>
                                                     </div>
                                                     
+                                                    <div class="loaded-modal-content">
+                                                    </div>
                                                 </div>
-                                                <div class="add-work-elem" data-work-index="3">
+                                                <div class="add-work-elem">
                                                     <img src="/img/icons/green-round-plus.svg" alt="round-plus-icon" class="green-round-plus"/>
                                                     <span>Добавить работу</span>
                                                     <div class="add-work-elem-loaded-container hidden">
@@ -1267,8 +1273,10 @@ require_once "../modules/base.php";
                                                         <img src="/img/icons/edit-pencil.svg" onclick="editLoadedContent(this);" alt="edit-icon" class="edit-icon"/>
                                                     </div>
                                                     
+                                                    <div class="loaded-modal-content">
+                                                    </div>
                                                 </div>
-                                                <div class="add-work-elem" data-work-index="4">
+                                                <div class="add-work-elem">
                                                     <img src="/img/icons/green-round-plus.svg" alt="round-plus-icon" class="green-round-plus"/>
                                                     <span>Добавить работу</span>
                                                     <div class="add-work-elem-loaded-container hidden">
@@ -1278,6 +1286,8 @@ require_once "../modules/base.php";
                                                         <img src="/img/icons/edit-pencil.svg" onclick="editLoadedContent(this);" alt="edit-icon" class="edit-icon"/>
                                                     </div>
                                                     
+                                                    <div class="loaded-modal-content">
+                                                    </div>
                                                 </div>
                                                 
                                                 <div class="step-stage-form-description-modal">
@@ -1520,7 +1530,6 @@ require_once "../modules/base.php";
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 <script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
 <script>
     var widthIndicator1=$(".width-indicator1").width();
     var widthIndicator2=$(".width-indicator2").width();
@@ -1593,8 +1602,8 @@ require_once "../modules/base.php";
     });
     
     $(".add-work-modal-block .x-close-icon").on("click",function(){
-         resetWorkModal();
        $(".add-work-modal-block").addClass("hidden");
+       $(".editingWorkElem").removeClass("editingWorkElem");
     });
     
     $(".add-work-elem .edit-icon, .add-work-elem .resize-icon, .add-work-elem .delete-icon").on("click",function(e){
@@ -1692,8 +1701,6 @@ require_once "../modules/base.php";
     }
     
     function previewWorkImage(event){
-    console.log("All is ok!");
-    console.log("Dandytour");
       const input = event.target;
       const file = input.files[0];
       var previewContainer = $('.preview-work-img-container.template').clone();
@@ -1739,25 +1746,15 @@ require_once "../modules/base.php";
         updateCover();
     }
     
-    function hideParentElem(elem) {
-        const $workElement = $(elem).closest('.add-work-elem');
-        const workIndex = $workElement.attr('data-work-index');
-        
-        // Удаляем данные из хранилища
-        if (workIndex && portfolioWorks[workIndex]) {
-            delete portfolioWorks[workIndex];
+    function hideParentElem(elem){
+        if($(".fiwork-portfolio-form .add-works-container .add-work-elem-loaded-container").length>5){
+            $(elem).parent().parent().remove();
+        }else{
+            $(elem).parent().addClass("hidden");
         }
-        
-        if ($(".fiwork-portfolio-form .add-works-container .add-work-elem").length > 5) {
-            $workElement.remove();
-        } else {
-            $workElement.find('.add-work-elem-loaded-container').addClass("hidden");
-            // Сбрасываем индекс для пустых элементов
-            $workElement.attr('data-work-index', $workElement.index());
-        }
-        
         indicateWorkCount();
     }
+    
     function indicateWorkCount(){
         const workCount=0;
         const addWorkElemLength=$(".fiwork-portfolio-form .add-works-container .add-work-elem-loaded-container.hidden").length;
@@ -1840,177 +1837,41 @@ require_once "../modules/base.php";
         $(".fiwork-portfolio-form-indicator").addClass("active");
     });
     
-    // Глобальное хранилище для работ портфолио
-    let portfolioWorks = {};
-    let currentEditingIndex = null;
-    
-    $(".add-work-modal-container").on("submit", function(e) {
+    $(".add-work-modal-container").on("submit",function(e){
         e.preventDefault();
-        
-        const formData = new FormData(this);
-        const workData = {
-            name: $('#add-work-name-input').val(),
-            files: [],
-            cover: null
-        };
-        
-        // Сохраняем данные файлов
-        $('.load-works-container .loaded-work').each(function() {
-            const imgSrc = $(this).find('.upload-work-preview').attr('src');
-            workData.files.push(imgSrc);
-        });
-        
-        // Сохраняем обложку
-        if (cropper) {
+        $(".add-work-modal-block .preview-work-img-container.loaded-work").remove();
+        $(".add-work-modal-block .loaded-cover-block").addClass("hidden");
+        $(".load-cover-container .add-works-container .add-work-elem").removeClass("hidden");
+        $(".add-work-modal-block").addClass("hidden");
+        //some code
+        if(cropper){
             const canvas = cropper.getCroppedCanvas({
                 width: 400,
                 height: 400
             });
-            workData.cover = canvas.toDataURL('image/png');
+            const result=canvas.toDataURL('image/png');
+            if($(".editingWorkElem").length>0){
+                $(".editingWorkElem .add-work-elem-loaded-container").find(".work-img").attr("src",result).parent().parent().find(".loaded-modal-content").html($(".add-work-modal-container .add-work-modal-wrapper").html());
+            }else{
+                if($(".fiwork-portfolio-container .add-work-elem .add-work-elem-loaded-container.hidden").length>=2){
+                    $(".fiwork-portfolio-container .add-work-elem .add-work-elem-loaded-container.hidden").first().removeClass("hidden").find(".work-img").attr("src",result).parent().parent().find(".loaded-modal-content").html($(".add-work-modal-container .add-work-modal-wrapper").html());
+                }else{
+                    const loadingContainer=$(".fiwork-portfolio-container .add-work-elem .add-work-elem-loaded-container.hidden").first().parent().clone();
+                    $(loadingContainer).find(".add-work-elem-loaded-container").removeClass("hidden");
+                    $(loadingContainer).find(".work-img").attr("src",result);
+                    $(".fiwork-portfolio-container .add-work-elem .add-work-elem-loaded-container.hidden").parent().before(loadingContainer);
+                }
+            }
         }
-        
-        // Сохраняем в хранилище
-        const workIndex = currentEditingIndex !== null ? currentEditingIndex : generateNewWorkIndex();
-        portfolioWorks[workIndex] = workData;
-        
-        // Обновляем UI
-        updatePortfolioUI(workIndex, workData);
-        
-        // Очищаем и закрываем форму
-        resetWorkModal();
-        $(".add-work-modal-block").addClass("hidden");
-        currentEditingIndex = null;
-        
+        $(".editingWorkElem").removeClass("editingWorkElem");
         indicateWorkCount();
+        $(this).trigger("reset");
     });
     
-    function generateNewWorkIndex() {
-        return 'work_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-    }
-    
-    function updatePortfolioUI(workIndex, workData) {
-        let $targetElement;
-        
-        if (currentEditingIndex !== null) {
-            // Редактируем существующий элемент
-            $targetElement = $(`[data-work-index="${currentEditingIndex}"]`);
-        } else {
-            // Создаем новый элемент
-            const $emptyElement = $(".fiwork-portfolio-container .add-work-elem .add-work-elem-loaded-container.hidden").first().parent();
-            if ($emptyElement.length) {
-                $targetElement = $emptyElement;
-            } else {
-                // Создаем новый элемент если все заполнены
-                const $template = $(".fiwork-portfolio-container .add-work-elem").first().clone();
-                $targetElement = $template;
-                $(".fiwork-portfolio-container .add-works-container").append($targetElement);
-            }
-        }
-        
-        // Обновляем данные элемента
-        $targetElement.attr('data-work-index', workIndex);
-        const $loadedContainer = $targetElement.find('.add-work-elem-loaded-container');
-        $loadedContainer.removeClass('hidden');
-        $loadedContainer.find('.work-img').attr('src', workData.cover || workData.files[0]);
-        
-        // Обновляем обработчики событий
-        setupPortfolioItemEventHandlers($targetElement);
-    }
-    
-    function setupPortfolioItemEventHandlers($element) {
-        $element.off('click').on('click', function() {
-            $(".add-work-modal-block").removeClass("hidden");
-            currentEditingIndex = null;
-        });
-        
-        $element.find('.edit-icon').off('click').on('click', function(e) {
-            e.stopPropagation();
-            editLoadedContent(this);
-        });
-        
-        $element.find('.delete-icon').off('click').on('click', function(e) {
-            e.stopPropagation();
-            const workIndex = $(this).closest('.add-work-elem').attr('data-work-index');
-            if (workIndex && portfolioWorks[workIndex]) {
-                delete portfolioWorks[workIndex];
-            }
-            hideParentElem(this);
-        });
-        
-        $element.find('.resize-icon').off('click').on('click', function(e) {
-            e.stopPropagation();
-            // Логика для resize (если нужна)
-        });
-    }
-    
-    function editLoadedContent(element) {
-        const $workElement = $(element).closest('.add-work-elem');
-        const workIndex = $workElement.attr('data-work-index');
-        
-        if (!workIndex || workIndex === '0' || workIndex === '1' || workIndex === '2' || workIndex === '3' || workIndex === '4') {
-            // Это пустой элемент без данных
-            $(".add-work-modal-block").removeClass("hidden");
-            currentEditingIndex = null;
-            return;
-        }
-        
-        const workData = portfolioWorks[workIndex];
-        if (!workData) return;
-        
-        // Заполняем форму данными
-        fillWorkModal(workData);
-        currentEditingIndex = workIndex;
-        
-        // Показываем модальное окно
-        $(".add-work-modal-block").removeClass("hidden");
-    }
-    
-    function fillWorkModal(workData) {
-        // Заполняем название работы
-        $('#add-work-name-input').val(workData.name || '');
-        $('.add-work-name-count').text(workData.name ? workData.name.length : 0);
-        
-        // Очищаем предыдущие превью
-        $('.load-works-container .preview-work-img-container.loaded-work').remove();
-        
-        // Загружаем файлы
-        if (workData.files && workData.files.length > 0) {
-            workData.files.forEach((fileSrc, index) => {
-                const $previewContainer = $('.preview-work-img-container.template').clone();
-                $previewContainer.removeClass("template").addClass("loaded-work");
-                $previewContainer.find('.upload-work-preview').attr('src', fileSrc);
-                $previewContainer.css("display", "flex");
-                $('.load-works-container .add-works-container').prepend($previewContainer);
-            });
-        }
-        
-        // Загружаем обложку
-        if (workData.cover) {
-            $('.loaded-cover-block .user-img').attr('src', workData.cover);
-            $('.loaded-cover-block #img-to-crop').attr('src', workData.cover);
-            $('.loaded-cover-block').removeClass('hidden');
-            $('.load-cover-container .add-works-container .add-work-elem').addClass('hidden');
-            
-            // Инициализируем кроппер с сохраненной обложкой
-            setTimeout(() => {
-                cropImage("img-to-crop");
-            }, 100);
-        }
-    }
-    
-    function resetWorkModal() {
-        $(".add-work-modal-container").trigger("reset");
-        $('.add-work-name-count').text('0');
-        $('.load-works-container .preview-work-img-container.loaded-work').remove();
-        $('.loaded-cover-block').addClass('hidden');
-        $('.load-cover-container .add-works-container .add-work-elem').removeClass('hidden');
-        
-        if (cropper) {
-            cropper.destroy();
-            cropper = null;
-        }
-        
-        currentEditingIndex = null;
+    function editLoadedContent(elem){
+        $(elem).parent().parent().addClass("editingWorkElem");
+        $(".add-work-modal-block").removeClass("hidden").find(".add-work-modal-wrapper").html($(elem).parent().parent().find(".loaded-modal-content").html());
+        console.log($(elem).parent().parent().find(".loaded-modal-content").html());
     }
     
     /*Rich text editor*/
@@ -2134,68 +1995,5 @@ require_once "../modules/base.php";
             fileDisplay.appendChild(ul);
         }
     });
-</script>
-<script>
-// Функция для инициализации перетаскивания
-function initializePortfolioDragAndDrop() {
-    const portfolioContainer = document.querySelector('.fiwork-portfolio-container .add-works-container');
-    
-    if (portfolioContainer) {
-        new Sortable(portfolioContainer, {
-            animation: 150,
-            ghostClass: 'portfolio-ghost',
-            chosenClass: 'portfolio-chosen', 
-            dragClass: 'portfolio-drag',
-            handle: '.resize-icon', // Перетаскивание за иконку resize
-            filter: '.delete-icon, .edit-icon', // Исключаем кнопки удаления и редактирования
-            onStart: function(evt) {
-                // Добавляем класс при начале перетаскивания
-                evt.item.classList.add('dragging');
-            },
-            onEnd: function(evt) {
-                // Убираем класс после перетаскивания
-                evt.item.classList.remove('dragging');
-                
-                // Обновляем счетчик работ после перетаскивания
-                indicateWorkCount();
-                
-                console.log('Порядок работ изменен');
-            }
-        });
-    }
-}
-
-// Функция для блокировки/разблокировки кликов на иконках во время перетаскивания
-function setupDragAndDropEventHandlers() {
-    const portfolioContainer = $('.fiwork-portfolio-container');
-    
-    // Обработчики для иконок (оставляем вашу существующую логику)
-    portfolioContainer.on('click', '.resize-icon', function(e) {
-        e.stopPropagation();
-        // Ваша существующая логика для resize
-        console.log('Resize icon clicked');
-    });
-    
-    portfolioContainer.on('click', '.delete-icon', function(e) {
-        e.stopPropagation();
-        hideParentElem(this);
-    });
-    
-    portfolioContainer.on('click', '.edit-icon', function(e) {
-        e.stopPropagation();
-        editLoadedContent(this);
-    });
-}
-
-// Инициализация при загрузке страницы
-$(document).ready(function() {
-    initializePortfolioDragAndDrop();
-    setupDragAndDropEventHandlers();
-    
-    // Инициализируем обработчики для существующих элементов
-    $('.fiwork-portfolio-container .add-work-elem').each(function() {
-        setupPortfolioItemEventHandlers($(this));
-    });
-});
 </script>
 </html>

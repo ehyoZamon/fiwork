@@ -95,10 +95,25 @@ require_once "../modules/base.php";
                                     <span>Включены</span>
                                 </div>
                                 
-                                <div href="#" class="user-setting">
+                                <div href="#" class="user-setting" target="">
                                     <div class="user-setting-text">
                                         <img src="/img/portfolio-settings-page/quit-icon.svg" alt="quit-icon" class="quit-icon setting-icon"/>
                                         Выйти
+                                    </div>
+                                </div>
+                                
+                                <!-- Модальное окно выхода -->
+                                <div class="logout-modal-overlay" id="logout-modal-overlay" style="display: none;">
+                                    <div class="logout-modal">
+                                        <div class="logout-modal-icon">
+                                            <img src="/img/icons/logout.png" alt="logout" class="logout-icon"/>
+                                        </div>
+                                        <h3>Выйти из аккаунта?</h3>
+                                        <p>Вы уверены, что хотите выйти? Вы сможете войти снова в любое время.</p>
+                                        <div class="logout-modal-buttons">
+                                            <button type="button" id="confirm-logout-btn">Выйти</button>
+                                            <button type="button" id="cancel-logout-btn">Отмена</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -162,13 +177,37 @@ require_once "../modules/base.php";
                     </div>
                     <div class="profile-settings-content">
                         <div class="settings-part1 settings-part">
-                            <div class="phone-container">
+                            <!--<div class="phone-container">
                                 <label>Номер телефона</label>
                                 <div class="phone-input">
                                     <input type="text" value="+7****52****" name="user-phone">
                                     <img src="/img/portfolio-settings-page/edit-pencil.svg" alt="edit-icon" class="edit-icon"/>
                                 </div>
+                            </div>-->
+                            
+                            
+                            <div class="phone-container">
+                                <label>Номер телефона</label>
+                                <div class="phone-input">
+                                    <input type="text" value="+7****52****" name="user-phone" id="user-phone-display" readonly>
+                                    <img src="/img/portfolio-settings-page/edit-pencil.svg" alt="edit-icon" class="edit-icon" id="edit-phone-btn"/>
+                                </div>
+                                </div>
+                                
+                                <!-- Модальное окно -->
+                                <div class="phone-modal-overlay" id="phone-modal-overlay" style="display: none;">
+                                <div class="phone-modal">
+                                    <h3>Изменить номер телефона</h3>
+                                    <div class="modal-phone-input">
+                                        <input type="text" placeholder="Например: +7 901 234 567" id="new-phone-input" maxlength="15">
+                                    </div>
+                                    <div class="modal-buttons">
+                                        <button type="button" id="save-phone-btn">Сохранить</button>
+                                        <button type="button" id="cancel-phone-btn">Отмена</button>
+                                    </div>
+                                </div>
                             </div>
+                            
                             
                             <div class="email-container">
                                 <label>Email</label>
@@ -196,13 +235,29 @@ require_once "../modules/base.php";
                             </div>
                             
                             <div class="save-button-container">
-                                <input type="button" value="Сохранить"/><div class="delete-account">Удалить учетную запись</div>
+                                <input type="submit" value="Сохранить"/><div class="delete-account">Удалить учетную запись</div>
                             </div>
+                            
+                            <!-- Модальное окно удаления аккаунта -->
+                            <div class="delete-modal-overlay" id="delete-modal-overlay" style="display: none;">
+                                <div class="delete-modal">
+                                    <div class="delete-modal-icon">
+                                        <img src="/img/icons/warning.png" alt="warning" class="warning-icon"/>
+                                    </div>
+                                    <h3>Удалить учетную запись?</h3>
+                                    <p>Это действие нельзя отменить. Все данные, заказы и баланс будут удалены навсегда.</p>
+                                    <div class="delete-modal-buttons">
+                                        <button type="button" id="confirm-delete-btn">Удалить</button>
+                                        <button type="button" id="cancel-delete-btn">Отмена</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
                         </div>
                         
                         <div class="settings-part2 settings-part hidden">
                             <div class="user-profile-container">
-                                <div class="user-avatar-container">
+                                <!--<div class="user-avatar-container">
                                     <div class="img-container">
                                         <img src="/img/freelancer-avatars/freelancer3.webp" alt="freelancer-avatar" class="freelancer-avatar-img"/>
                                     </div>
@@ -210,7 +265,22 @@ require_once "../modules/base.php";
                                         <input type="button" value="Изменить"/>
                                         <input type="button" value="Удалить"/>
                                     </div>
+                                </div>-->
+                                
+                                <div class="user-avatar-container">
+                                    <div class="img-container">
+                                        <img src="/img/freelancer-avatars/freelancer3.webp" alt="freelancer-avatar" class="freelancer-avatar-img" id="avatar-preview"/>
+                                    </div>
+                                    <div class="controls-container">
+                                        <input type="button" value="Изменить" id="change-avatar-btn"/>
+                                        <input type="button" value="Удалить" id="delete-avatar-btn"/>
+                                        
+                                        <!-- Скрытый input для выбора файла -->
+                                        <input type="file" id="avatar-upload" accept="image/*" style="display: none;">
+                                    </div>
                                 </div>
+                                
+                                
                                 <div class="user-data-container">
                                     <div class="name-container">
                                         <label>Имя</label>
@@ -248,7 +318,19 @@ require_once "../modules/base.php";
                                     <div class="location-container">
                                         <div class="country-container">
                                             <label>Страна</label>
-                                            <input type="text" placeholder="Страна"/>
+                                            <div class="country-input">
+                                                <input type="text" placeholder="Страна" class="country-input-text" maxlength="50" name="country-input"/>
+                                                <div class="country-values-list">
+                                                    <ul>
+                                                        <li>Россия</li>
+                                                        <li>Казахстан</li>
+                                                        <li>Монголия</li>
+                                                        <li>Грузия</li>
+                                                        <li>Азербайджан</li>
+                                                        <li>Узбекистан</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="city-container">
                                             <label>Город (по желанию)</label>
@@ -261,6 +343,7 @@ require_once "../modules/base.php";
                                 <label>
                                     Информация о вас
                                 </label>
+                            
                                 <textarea class="about-you-textarea">Я старший мобильный (Android и IOS)  а также веб разработчик.
 • Web-языки: php, css, html, js
 • Mobile-языки: kotlin, java, swift, dart
@@ -271,8 +354,9 @@ require_once "../modules/base.php";
 • Mobile-фреймворки: react native, xamarin, flutter
                                    
                                 </textarea> 
+                                
                                 <div class="information-about-you-counter">
-                                    <div class="generate-by-ai-text">Сгенерировать с помощью ИИ<img src="/img/icons/gemini.svg" alt="ai-icon" class="ai-icon"/> </div><div class="information-about-you-counter-text"><span>427</span>&nbsp; из 1200 символов</div>                                        
+                                    <div class="generate-by-ai-text">Сгенерировать с помощью ИИ<img src="/img/icons/gemini.svg" alt="ai-icon" class="ai-icon"/> </div><div class="information-about-you-counter-text"><span class="information-about-you-counter-num">427</span>&nbsp; из 1200 символов</div>                                        
                                 </div>
                             </div>
                             
@@ -406,10 +490,24 @@ require_once "../modules/base.php";
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="time-container">
-                                        <span>c</span><input type="time" name="time-from"/><span>до</span><input type="time" name="time-to"/><span>часов (местное время)</span>
+                                
+                                    <div class="time-range-container">
+                                        <div class="time-input-group">
+                                            <span>с</span>
+                                            <select class="time-select-from" name="time-from">
+                                                <!-- Опции будут добавлены через JS -->
+                                            </select>
+                                            <span>до</span>
+                                            <select class="time-select-to" name="time-to">
+                                                <!-- Опции будут добавлены через JS -->
+                                            </select>
+                                            <span>часов (местное время)</span>
+                                        </div>
+                                        <div class="overall-time">Всего: <span id="total-hours">0</span> ч.</div>
                                     </div>
-                                    <div class="overall-time">Всего: 23 часа</div>
+                                
+                                    <!-- Кнопка "Добавить интервал" (по желанию) -->
+                                    <!-- <button type="button" class="add-interval-btn">+ Добавить интервал</button> -->
                                 </div>
                                 <input type="submit" value="Сохранить"/>
                             </div>
@@ -581,7 +679,14 @@ require_once "../modules/base.php";
                                         <h3>Популярные способы</h3>
                                         <div class="grafik-vyvoda">
                                             <span>График вывода средств</span>
-                                            <img src="/img/icons/round-question-icon.svg" alt="round-question-icon" class="round-question-icon"/>
+                                            
+                                            <span class="question-and-description tooltip-container">
+                                                <img src="/img/icons/round-question-icon.svg" alt="round-question" class="round-question-icon tooltip-question"/>
+                                                <span class="tooltip-text" style="font-weight: 400;">
+                                                    <h4>Имя подсказки</h4>
+                                                    <p>Текст подсказки</p>
+                                                </span>
+                                            </span>
                                         </div>
                                     </div>
                                 
@@ -784,6 +889,12 @@ require_once "../modules/base.php";
         $(this).addClass("active");
     });
     
+    $(".country-input .country-values-list li").on("click",function(){
+        $(this).parent().find("li").removeClass("active");
+        $(this).parent().parent().parent().find(".country-input-text").val($(this).html());
+        $(this).addClass("active");
+    });
+    
     $(".settings-part3 .radio-box").on('click',function(){
         $(this).find("input[type='radio']").trigger("click");
     });
@@ -800,10 +911,19 @@ require_once "../modules/base.php";
     });
     
     $(".user-setting").on("click",function(){
+        if($(this).attr("target").length==0){
+            return 0;
+        }
+        
         $(".settings-part").addClass("hidden");
         $("."+$(this).attr("target")).removeClass("hidden");
         $(".user-setting").removeClass("selected");
         $(this).addClass("selected");
+    });
+    
+    $(".information-about-you-counter-num").text($(".about-you-textarea").val().length); 
+    $("textarea.about-you-textarea").on("input change",function(){
+        $(".information-about-you-counter-num").text($(".about-you-textarea").val().length); 
     });
     
     function previewImage(event) {
@@ -865,9 +985,19 @@ require_once "../modules/base.php";
         }
     }
     
+    $(".add-new-skill-container .cancel-button").on('click',function(){
+        $(".add-new-skill-container").hide();    
+    });
+    
+    $(".skills-container .add-skill").on("click",function(){
+        $(".skills-container .add-new-skill-container").show();    
+    });
+    
+    $(".skills-container .add-new-skill-container").hide();
+    
     function updateSkillsCount(){
         $(".skills-container").find(".skills-count").text($(".skills-container .skills-wrapper").find(".skill").length-1);
-        if($(".skills-wrapper .skill").length>=13){
+        /*if($(".skills-wrapper .skill").length>=13){
             if($(".new-skill").length==0 && $(".editableSkill").length==0){
                 $(".skills-container .add-new-skill-container").hide();
             }else{
@@ -875,7 +1005,7 @@ require_once "../modules/base.php";
             }
         }else{
             $(".skills-container .add-new-skill-container").show();
-        }
+        }*/
     }
     
     updateSkillsCount();
@@ -951,5 +1081,265 @@ require_once "../modules/base.php";
         clearInterval(switchTimer);
       });
     });*/
+</script>
+
+<script>
+// === Модальное окно телефона ===
+const phoneDisplay = document.getElementById('user-phone-display');
+const editPhoneBtn = document.getElementById('edit-phone-btn');
+const modal = document.getElementById('phone-modal-overlay');
+const input = document.getElementById('new-phone-input');
+const saveBtn = document.getElementById('save-phone-btn');
+const cancelBtn = document.getElementById('cancel-phone-btn');
+
+// Открыть
+editPhoneBtn.onclick = () => {
+    input.value = phoneDisplay.value.replace(/\*/g, '0'); // восстановим пример
+    modal.style.display = 'flex';
+    setTimeout(() => input.focus(), 100);
+};
+
+// Закрыть
+const closeModal = () => {
+    modal.style.display = 'none';
+    input.value = '';
+};
+
+cancelBtn.onclick = closeModal;
+modal.onclick = (e) => { if (e.target === modal) closeModal(); };
+
+// Сохранить
+saveBtn.onclick = () => {
+    let phone = input.value.trim();
+
+    // Убираем лишние пробелы
+    phone = phone.replace(/\s+/g, ' ');
+
+    // Проверяем, есть ли хотя бы 8 цифр
+    const digits = phone.replace(/\D/g, '');
+    if (digits.length < 8) {
+        alert('Номер должен содержать минимум 8 цифр');
+        return;
+    }
+
+    // МАСКИРОВКА: показываем первые 2 и последние 2 цифры, остальное ***
+    const first2 = digits.slice(0, 2);
+    const last2 = digits.length > 2 ? digits.slice(-2) : '';
+    const stars = '*'.repeat(Math.max(0, digits.length - 4));
+    const maskedDigits = first2 + stars + last2;
+
+    // Восстанавливаем нецифровые символы (пробелы, +, скобки) из оригинала
+    let masked = '';
+    let digitIndex = 0;
+    for (let char of phone) {
+        if (/\d/.test(char)) {
+            masked += maskedDigits[digitIndex++] || '*';
+        } else {
+            masked += char;
+        }
+    }
+
+    phoneDisplay.value = masked;
+    closeModal();
+
+    // ОТПРАВКА НА СЕРВЕР (пример)
+    // fetch('/api/update-phone', { method: 'POST', body: JSON.stringify({ phone: phone }) })
+};
+</script>
+
+<script>
+// === Модальное окно удаления аккаунта ===
+const deleteLink = document.querySelector('.delete-account');
+const deleteOverlay = document.getElementById('delete-modal-overlay');
+const confirmDeleteBtn = document.getElementById('confirm-delete-btn');
+const cancelDeleteBtn = document.getElementById('cancel-delete-btn');
+
+// Открыть модалку
+deleteLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    deleteOverlay.style.display = 'flex';
+});
+
+// Закрыть
+const closeDeleteModal = () => {
+    deleteOverlay.style.display = 'none';
+};
+cancelDeleteBtn.onclick = closeDeleteModal;
+deleteOverlay.onclick = (e) => {
+    if (e.target === deleteOverlay) closeDeleteModal();
+};
+
+// Подтверждение удаления
+confirmDeleteBtn.onclick = () => {
+    // ЗДЕСЬ — запрос на сервер
+    fetch('/api/delete-account', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ confirm: true })
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.success) {
+            alert('Аккаунт удалён. Вы будете перенаправлены.');
+            window.location.href = '/';
+        } else {
+            alert('Ошибка: ' + (data.message || 'Попробуйте позже'));
+        }
+    })
+    .catch(() => {
+        alert('Не удалось удалить аккаунт. Проверьте подключение.');
+    })
+    .finally(() => {
+        closeDeleteModal();
+    });
+};
+</script>
+
+<script>
+// === Генерация времени от 00:00 до 23:30 с шагом 30 минут ===
+function generateTimeOptions() {
+    const options = [];
+    for (let h = 0; h < 24; h++) {
+        for (let m = 0; m < 60; m += 30) {
+            const hour = h.toString().padStart(2, '0');
+            const minute = m.toString().padStart(2, '0');
+            const time = `${hour}:${minute}`;
+            options.push(`<option value="${time}">${time}</option>`);
+        }
+    }
+    return options.join('');
+}
+
+// Заполняем оба select
+document.querySelectorAll('.time-select-from, .time-select-to').forEach(select => {
+    select.innerHTML = generateTimeOptions();
+});
+
+// Устанавливаем начальные значения (по умолчанию 09:00 - 18:00)
+document.querySelector('.time-select-from').value = '09:00';
+document.querySelector('.time-select-to').value = '18:00';
+
+// === Расчёт разницы во времени ===
+function calculateHours() {
+    const from = document.querySelector('.time-select-from').value;
+    const to = document.querySelector('.time-select-to').value;
+
+    if (!from || !to) return;
+
+    const [fromH, fromM] = from.split(':').map(Number);
+    const [toH, toM] = to.split(':').map(Number);
+
+    let diff = (toH * 60 + toM) - (fromH * 60 + fromM);
+    if (diff < 0) diff += 24 * 60; // если "до" раньше "от" — считаем через сутки
+
+    const hours = Math.floor(diff / 60);
+    const minutes = diff % 60;
+
+    let result = '';
+    if (hours > 0) result += `${hours} ч. `;
+    if (minutes > 0) result += `${minutes} мин.`;
+    if (hours === 0 && minutes === 0) result = '0 ч.';
+
+    console.log(result);
+    $('#total-hours').text(result || '0');
+    document.querySelector('.overall-time').textContent = `Всего: ${result.trim() || '0 ч.'}`;
+}
+
+// Обновляем при изменении
+document.querySelectorAll('.time-select-from, .time-select-to').forEach(el => {
+    el.addEventListener('change', calculateHours);
+});
+
+// Первый расчёт
+calculateHours();
+</script>
+
+<script>
+// === Изменение аватара ===
+const changeAvatarBtn = document.getElementById('change-avatar-btn');
+const deleteAvatarBtn = document.getElementById('delete-avatar-btn');
+const avatarUpload = document.getElementById('avatar-upload');
+const avatarPreview = document.getElementById('avatar-preview');
+const defaultAvatar = '/img/freelancer-avatars/freelancer3.webp';
+
+// Клик по "Изменить" → открываем выбор файла
+changeAvatarBtn.onclick = () => {
+    avatarUpload.click();
+};
+
+// При выборе файла — показываем превью
+avatarUpload.onchange = (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    if (!file.type.startsWith('image/')) {
+        alert('Пожалуйста, выберите изображение');
+        return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = (ev) => {
+        avatarPreview.src = ev.target.result;
+    };
+    reader.readAsDataURL(file);
+
+    // Здесь можно отправить на сервер через FormData
+    // uploadAvatarToServer(file);
+};
+
+// Удаление аватара
+deleteAvatarBtn.onclick = () => {
+    if (confirm('Удалить фото профиля?')) {
+        avatarPreview.src = defaultAvatar;
+        avatarUpload.value = ''; // сбрасываем input
+        // Здесь можно отправить запрос на удаление
+        // deleteAvatarFromServer();
+    }
+};
+</script>
+
+<script>
+// === Модальное окно выхода ===
+const logoutBtn = document.querySelector('.user-setting[target=""]'); // Кнопка "Выйти"
+const logoutOverlay = document.getElementById('logout-modal-overlay');
+const confirmLogoutBtn = document.getElementById('confirm-logout-btn');
+const cancelLogoutBtn = document.getElementById('cancel-logout-btn');
+
+// Открыть модалку
+logoutBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    logoutOverlay.style.display = 'flex';
+});
+
+// Закрыть модалку
+const closeLogoutModal = () => {
+    logoutOverlay.style.display = 'none';
+};
+cancelLogoutBtn.onclick = closeLogoutModal;
+logoutOverlay.onclick = (e) => {
+    if (e.target === logoutOverlay) closeLogoutModal();
+};
+
+// Подтверждение выхода
+confirmLogoutBtn.onclick = () => {
+    // Здесь запрос на выход (например, через fetch)
+    fetch('/logout', {
+        method: 'POST',
+        credentials: 'include' // если используются куки
+    })
+    .then(res => {
+        if (res.ok) {
+            window.location.href = '/'; // или на страницу входа
+        } else {
+            alert('Ошибка выхода. Попробуйте позже.');
+        }
+    })
+    .catch(() => {
+        alert('Не удалось выйти. Проверьте подключение.');
+    })
+    .finally(() => {
+        closeLogoutModal();
+    });
+};
 </script>
 </html>

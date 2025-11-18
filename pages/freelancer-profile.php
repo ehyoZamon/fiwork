@@ -136,7 +136,17 @@ require_once "../modules/base.php";
                         </div>
                         
                         <div class="receive-orders-container">
-                            <div class="receive-orders-text">Принимаю заказы <img src="/img/icons/round-question-icon.svg" alt="round-question" class="round-question-icon"/></div>
+                            <div class="receive-orders-text">Принимаю заказы 
+                            <span class="question-and-description tooltip-container">
+                                <img src="/img/icons/round-question-icon.svg" alt="round-question" class="round-question-icon tooltip-question"/>
+                                <span class="tooltip-text" style="font-weight: 400;">
+                                    <h4>Открыт</h4>
+                                    <p>Фрилансер открыт к приёму заказов</p>
+                                </span>
+                            </span>
+                            
+                            </div>
+                            
                             <label class="switch">
                                 <input type="checkbox">
                                 <span class="slider"></span>
@@ -314,6 +324,124 @@ require_once "../modules/base.php";
                     </div>
                 </div>
                 <div class="freelancer-details-container">
+                    <div class="stories-content">
+                        <div class="stories-shadow">
+                    </div>
+            
+                    <div class="stories-wrapper">
+                        
+                        <div class="stories-container">
+                            <div class="story-block">
+                                <div class="img-container">
+                                    <img src="/img/freelancer-profile/thinking.webp" alt="thinking" class="thinking-img"/>                        
+                                </div>
+                                <div class="text-container">
+                                    <p>Как заказать услуги?</p>
+                                </div>
+                            </div>
+                            
+                            <div class="story-block">
+                                <div class="img-container">
+                                    <img src="/img/freelancer-profile/income.webp" alt="income" class="income-img"/>                        
+                                </div>
+                                <div class="text-container">
+                                    <p>Как здесь заработать?</p>
+                                </div>
+                            </div>
+                            
+                            <div class="story-block">
+                                <div class="img-container">
+                                    <img src="/img/freelancer-profile/star.webp" alt="star" class="star-img"/>                        
+                                </div>
+                                <div class="text-container">
+                                    <p>Отзывы - круто!</p>
+                                </div>
+                            </div>
+                            
+                            <div class="story-block">
+                                <div class="img-container">
+                                    <img src="/img/freelancer-profile/radar.webp" alt="radar" class="radar-img"/>                        
+                                </div>
+                                <div class="text-container">
+                                    <p>Что такое радар?</p>
+                                </div>
+                            </div>
+                            
+                            <div class="story-block">
+                                <div class="img-container">
+                                    <img src="/img/freelancer-profile/fire.webp" alt="fire" class="fire-img"/>                        
+                                </div>
+                                <div class="text-container">
+                                    <p>Популярные рубрики</p>
+                                </div>
+                            </div>
+                            
+                            <div class="story-block">
+                                <div class="img-container">
+                                    <img src="/img/freelancer-profile/gift.webp" alt="gifts" class="gifts-img"/>                        
+                                </div>
+                                <div class="text-container">
+                                    <p>Новогодний конкурс</p>
+                                </div>
+                            </div>
+                            
+                            <div class="story-block">
+                                <div class="img-container">
+                                    <img src="/img/freelancer-profile/thinking.webp" alt="thinking" class="thinking-img"/>                        
+                                </div>
+                                <div class="text-container">
+                                    <p>Как заказать услуги?</p>
+                                </div>
+                            </div>
+                            
+                            <div class="story-block">
+                                <div class="img-container">
+                                    <img src="/img/freelancer-profile/income.webp" alt="income" class="income-img"/>                        
+                                </div>
+                                <div class="text-container">
+                                    <p>Как здесь заработать?</p>
+                                </div>
+                            </div>
+                            
+                            <div class="story-block">
+                                <div class="img-container">
+                                    <img src="/img/freelancer-profile/star.webp" alt="star" class="star-img"/>                        
+                                </div>
+                                <div class="text-container">
+                                    <p>Отзывы - круто!</p>
+                                </div>
+                            </div>
+                            
+                            <div class="story-block">
+                                <div class="img-container">
+                                    <img src="/img/freelancer-profile/radar.webp" alt="radar" class="radar-img"/>                        
+                                </div>
+                                <div class="text-container">
+                                    <p>Что такое радар?</p>
+                                </div>
+                            </div>
+                            
+                            <div class="story-block">
+                                <div class="img-container">
+                                    <img src="/img/freelancer-profile/fire.webp" alt="fire" class="fire-img"/>                        
+                                </div>
+                                <div class="text-container">
+                                    <p>Популярные рубрики</p>
+                                </div>
+                            </div>
+                            
+                            <div class="story-block">
+                                <div class="img-container">
+                                    <img src="/img/freelancer-profile/gift.webp" alt="gifts" class="gifts-img"/>                        
+                                </div>
+                                <div class="text-container">
+                                    <p>Новогодний конкурс</p>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                    </div>
+                    
                     <div class="my-orders-block">
                         <div class="my-orders-container">
                             Мои заказы  <span class="sum-overview">&nbsp;– Всего 16 (63 840 ₽)</span>
@@ -367,6 +495,7 @@ require_once "../modules/base.php";
                                   </ul>
                                 	<ul class="squares"></ul>
                                 </div>
+                                <div class="tooltipGraph" id="tooltipGraph"></div>
                             </div>
                         </div>
                     </div>
@@ -403,7 +532,7 @@ require_once "../modules/base.php";
                                                 Сделать сайт-лендинг
                                             </div>
                                             <div class="project-nav">
-                                                Разработка и IT > Создание сайта > Новый сайт
+                                                <a href="#">Разработка и IT</a> > <a href="#"> Создание сайта</a> > <a href="#">Новый сайт</a>
                                             </div>
                                         </div>
                                         <div class="order-details">
@@ -428,7 +557,7 @@ require_once "../modules/base.php";
                                                 Сделать сайт-лендинг
                                             </div>
                                             <div class="project-nav">
-                                                Разработка и IT > Создание сайта > Новый сайт
+                                                <a href="#">Разработка и IT</a> > <a href="#"> Создание сайта</a> > <a href="#">Новый сайт</a>
                                             </div>
                                         </div>
                                         <div class="order-details">
@@ -453,7 +582,7 @@ require_once "../modules/base.php";
                                                 Сделать сайт-лендинг
                                             </div>
                                             <div class="project-nav">
-                                                Разработка и IT > Создание сайта > Новый сайт
+                                                <a href="#">Разработка и IT</a> > <a href="#"> Создание сайта</a> > <a href="#">Новый сайт</a>
                                             </div>
                                         </div>
                                         <div class="order-details">
@@ -478,7 +607,7 @@ require_once "../modules/base.php";
                                                 Сделать сайт-лендинг
                                             </div>
                                             <div class="project-nav">
-                                                Разработка и IT > Создание сайта > Новый сайт
+                                                <a href="#">Разработка и IT</a> > <a href="#"> Создание сайта</a> > <a href="#">Новый сайт</a>
                                             </div>
                                         </div>
                                         <div class="order-details">
@@ -503,7 +632,7 @@ require_once "../modules/base.php";
                                                 Сделать сайт-лендинг
                                             </div>
                                             <div class="project-nav">
-                                                Разработка и IT > Создание сайта > Новый сайт
+                                                <a href="#">Разработка и IT</a> > <a href="#"> Создание сайта</a> > <a href="#">Новый сайт</a>
                                             </div>
                                         </div>
                                         <div class="order-details">
@@ -528,7 +657,7 @@ require_once "../modules/base.php";
                                                 Сделать сайт-лендинг
                                             </div>
                                             <div class="project-nav">
-                                                Разработка и IT > Создание сайта > Новый сайт
+                                                <a href="#">Разработка и IT</a> > <a href="#"> Создание сайта</a> > <a href="#">Новый сайт</a>
                                             </div>
                                         </div>
                                         <div class="order-details">
@@ -1163,7 +1292,7 @@ require_once "../modules/base.php";
     </div>
 </div>
 
-<div class="banned-modal">
+<div class="banned-modal hidden">
     <div class="banned-modal-block">    
         <img src="/img/icons/freelancer-profile-page/alert.svg" class="alert" alt="alert-icon"/>
         <h3>Аккаунт заблокирован 🚫️</h3>
@@ -1191,12 +1320,35 @@ require_once "../modules/base.php";
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 <script> 
     // Add squares
-    
     const squares = document.querySelector('.squares');
-    for (var i = 1; i < 365; i++) {
-      const level = Math.floor(Math.random() * 3);  
-      squares.insertAdjacentHTML('beforeend', `<li data-level="${level}"></li>`);
+    const tooltip = document.getElementById('tooltipGraph');
+    
+    let startDate = new Date(2024, 0, 1);
+    
+    for (let i = 0; i < 365; i++) {
+        let date = new Date(startDate);
+        date.setDate(startDate.getDate() + i);
+    
+        const level = Math.floor(Math.random() * 2);
+    
+        const li = document.createElement('li');
+        li.dataset.level = level;
+        li.dataset.date = date.toLocaleDateString('ru-RU');
+    
+        squares.appendChild(li);
+    
+        li.addEventListener('mousemove', (e) => {
+            tooltip.style.opacity = "1";
+            tooltip.style.left = e.pageX + 10 + "px";
+            tooltip.style.top = e.pageY + 10 + "px";
+            tooltip.innerHTML = `${li.dataset.date}<br>Продаж: ${level}`;
+        });
+    
+        li.addEventListener('mouseleave', () => {
+            tooltip.style.opacity = "0";
+        });
     }
+    
     
     $(".fast-executor-search-modal .close-icon").on("click",function(){
         $(".fast-executor-search-modal").addClass("hidden"); 

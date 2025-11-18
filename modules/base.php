@@ -113,9 +113,6 @@ $header=<<<EOT
                         <a href="#">Бизнес и жизнь</a>
                     </li>
                     <li>
-                        <a href="#">Блокчейн и крипто</a>
-                    </li>
-                    <li>
                         <a href="#">Нейросети</a>
                     </li>
                 </ul>
@@ -123,7 +120,6 @@ $header=<<<EOT
         </div>
     </header>
     
-
     <header class="phone-header">
         <div class="logo-burger-login-block">
             <div class="burger-container">
@@ -198,11 +194,23 @@ $header=<<<EOT
             <input type="submit" value="Найти" class="search-input-submit"/>
         </form>
     </header>
+    <div class="garlands-container">
+        <div class="garland-container">
+            <img src="/img/garlands.svg" alt="garlands" class="garlands-img"/>
+        </div>
+        <img src="/img/garland-switch.svg" alt="garland-switch" class="garland-switch"/>
+    </div> 
 EOT;
 
 $userHeader=<<<EOT
-    <link rel="stylesheet" href="/css/mobile-navigation-menu.css" />
-    <link rel="stylesheet" href="/css/base.css"/>
+    <div class="garlands-container">
+        <div class="garland-container">
+            <img src="/img/garlands.svg" alt="garlands" class="garlands-img"/>
+        </div>
+        <img src="/img/garland-switch.svg" alt="garland-switch" class="garland-switch"/>
+    </div> 
+    <link rel="stylesheet" href="/css/mobile-navigation-menu.css?v=<?= time(); ?>" />
+    <link rel="stylesheet" href="/css/base.css?v=<?= time(); ?>"/>
     <header class="computer-header">
         <div class="nav-part1-container">
             <div class="nav-part1">
@@ -225,7 +233,7 @@ $userHeader=<<<EOT
                         <a href="#">Заказы</a>
                         <a href="#">Биржа</a>
                         <a href="#">Портфолио</a>
-                        <a href="#" class="chat active">Чат<img src="/img/icons/red-dot.svg" alt="red-dot" class="red-dot"/></a>
+                        <a href="#" class="chat active">Чат <div class="unread-messages">77</div></a>
                     </div>
                     
                     <div class="balance">
@@ -367,9 +375,6 @@ $userHeader=<<<EOT
                     </li>
                     <li>
                         <a href="#">Бизнес и жизнь</a>
-                    </li>
-                    <li>
-                        <a href="#">Блокчейн и крипто</a>
                     </li>
                     <li>
                         <a href="#">Нейросети</a>
@@ -557,9 +562,20 @@ $footer=<<<EOT
             </div> 
         </div>
     </footer>
+    
 EOT;
 
 $modalWindows=<<<EOT
+    <div class="cookies-policy-wrapper">
+        <div class="cookies-policy-container">
+            <img src="/img/icons/cookies.svg" alt="cookie" class="cookie-icon"/>
+            <p>
+                Использую сайт fiwork, вы соглашаетесь с тем, что мы используем <a href="#">файлы cookie.</a> 
+            </p>
+            <input type="button" class="cookie-ok-button" value="Ok"/>
+        </div>
+    </div>
+
 <div class="fiwork-register-modal-container hidden">
     <div class="fiwork-register-modal">
         <img src="/img/icons/x-close.svg" class="x-close-icon close-fiwork-register-modal" alt="x-close-icon"/> 
@@ -603,14 +619,6 @@ $modalWindows=<<<EOT
             <p>Уже зарегистрированы? <a class='go-to-login-link'>Войти</a></p>
         </div>
     </div>
-</div>
-
-<div class="cookies-policy-container">
-    <img src="/img/icons/cookie-icon.svg" alt="cookie" class="cookie-icon"/>
-    <p>
-        Продолжая использовать сайт, вы принимаете <a href="#">условия обработки cookie-файлов</a> 
-    </p>
-    <input type="button" class="cookie-ok-button" value="OK"/>
 </div>
 
 <div class="fiwork-login-modal-container hidden">

@@ -61,14 +61,29 @@ require_once "../modules/base.php";
                                 <input type="checkbox">
                                 <span class="slider"></span>
                             </label>
-                            <img src="/img/icons/round-question-icon.svg" class="round-question-icon" alt="round-question-icon"/>
+                            
+                            <span class="question-and-description tooltip-container">
+                                <img src="/img/icons/round-question-icon.svg" alt="round-question" class="round-question-icon tooltip-question"/>
+                                <span class="tooltip-text" style="font-weight: 400;">
+                                    <h4>Имя подсказки</h4>
+                                    <p>Текст подсказки</p>
+                                </span>
+                            </span>
+                            
                         </div>
                         <div class="vertical-line">
                         </div>
                         <div class="part2">
                             <input type="checkbox" name="hide-services-on-weekends">
                             <span>Скрывать услуги на выходные</span>
-                            <img src="/img/icons/round-question-icon.svg" class="round-question-icon" alt="round-question-icon"/>
+                            <span class="question-and-description tooltip-container">
+                                <img src="/img/icons/round-question-icon.svg" alt="round-question" class="round-question-icon tooltip-question"/>
+                                <span class="tooltip-text" style="font-weight: 400; right: 0;">
+                                    <h4>Имя подсказки</h4>
+                                    <p>Текст подсказки</p>
+                                </span>
+                            </span>
+                            
                         </div>
                     </div>
                 </div>
@@ -130,21 +145,34 @@ require_once "../modules/base.php";
                             <p>
                                 Вы можете перенести товары или услуги из любой другой фриланс биржи или маркетплейса
                             </p>
-                            <div class="platforms">
+                            <div class="import-from-other-platforms">
                                 <div class="platform">
-                                    <img src="/img/my-services-page/kwork.svg" alt="kwork" class="kwork-icon"/>
+                                    <img src="/img/my-portfolio-page/kwork-icon.svg" alt="kwork-icon" class="platform-icon">
+                                    <img src="/img/my-portfolio-page/pointer.svg" alt="pointer-icon" class="pointer-icon">
+                                    <div class="import-platform-description">
+                                        Перенести портфолио из Kwork
+                                    </div>
                                 </div>
                                 <div class="platform">
-                                    <img src="/img/my-services-page/fl.svg" alt="kwork" class="kwork-icon"/>
+                                    <img src="/img/my-portfolio-page/fl-icon.svg" style="left: 50px;" alt="fl-icon" class="platform-icon">
+                                    <img src="/img/my-portfolio-page/pointer.svg" alt="pointer-icon" class="pointer-icon">
+                                    <div class="import-platform-description">
+                                        Перенести портфолио из Fl
+                                    </div>
                                 </div>
                                 <div class="platform">
-                                    <img src="/img/my-services-page/fi.svg" alt="fi" class="fi-icon"/>
+                                    <img src="/img/my-portfolio-page/fi-icon.svg" style="left: 100px;" alt="fi-icon" class="platform-icon">
+                                    <img src="/img/my-portfolio-page/pointer.svg" alt="pointer-icon" class="pointer-icon">
+                                    <div class="import-platform-description">
+                                        Перенести портфолио из Fi
+                                    </div>
                                 </div>
                                 <div class="platform">
-                                    <img src="/img/my-services-page/upwork.svg" alt="fi" class="fi-icon"/>
-                                </div>
-                                <div class="platform">
-                                    <img src="/img/my-services-page/alfa.svg" alt="fi" class="fi-icon"/>
+                                    <img src="/img/my-portfolio-page/up-icon.svg" style="left: 140px;" alt="up-icon" class="platform-icon">
+                                    <img src="/img/my-portfolio-page/pointer.svg" alt="pointer-icon" class="pointer-icon">
+                                    <div class="import-platform-description">
+                                        Перенести портфолио из UP
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -153,17 +181,17 @@ require_once "../modules/base.php";
                     <div class="my-services-wrapper">
                         <div class="my-services-wrapper-header">
                             <div class="my-services-wrapper-nav">
-                                <div class="my-services-wrapper-nav-elem active">
+                                <div class="my-services-wrapper-nav-elem show-active active">
                                     Активные
+                                    <div class="elem-count">2</div>
+                                </div>
+                                <div class="my-services-wrapper-nav-elem show-stoped">
+                                    Остановленные
                                     <div class="elem-count">1</div>
                                 </div>
-                                <div class="my-services-wrapper-nav-elem">
-                                    Остановленные
-                                    <div class="elem-count">12</div>
-                                </div>
-                                <div class="my-services-wrapper-nav-elem">
+                                <div class="my-services-wrapper-nav-elem show-all">
                                     Все
-                                    <div class="elem-count">13</div>
+                                    <div class="elem-count">3</div>
                                 </div>
                             </div>
                             <div class="my-services-wrapper-search">
@@ -173,7 +201,7 @@ require_once "../modules/base.php";
                         </div>
                         
                         <div class="my-services-wrapper-container">
-                            <div class="my-service">
+                            <div class="my-service all active">
                                 <div class="my-service-container">
                                     <div class="img-container">
                                         <img src="/img/my-services-page/ios-flutter.png" class="my-service-banner" alt="service-banner"/>
@@ -182,10 +210,35 @@ require_once "../modules/base.php";
                                         <div class="my-service-description-header">
                                             <label>Разработка приложения для IOS на Flutter</label>
                                             <div class="my-service-description-controls">
-                                                <img src="/img/my-services-page/delete.svg" alt="delete-icon" class="delete-icon"/>
-                                                <img src="/img/my-services-page/pause.svg" alt="pause-icon" class="pauge-icon"/>
-                                                <img src="/img/my-services-page/edit.svg" alt="edit-icon" class="edit-icon"/>
-                                                <img src="/img/my-services-page/copy.svg" alt="copy-icon" class="copy-icon"/>
+                                                <span class="question-and-description tooltip-container">
+                                                    <img src="/img/my-services-page/delete.svg" alt="delete-icon" class="delete-icon tooltip-question"/>
+                                                    <span class="tooltip-text" style="font-weight: 400; style: right: 0;">
+                                                        <p>Удалить</p>
+                                                    </span>
+                                                </span>
+                                                
+                                                <span class="question-and-description tooltip-container">
+                                                    <img src="/img/my-services-page/pause.svg" alt="pause-icon" class="pause-icon tooltip-question"/>
+                                                    <span class="tooltip-text" style="font-weight: 400; style: right: 0;">
+                                                        <p>Пауза</p>
+                                                    </span>
+                                                </span>
+                                                
+                                                <span class="question-and-description tooltip-container">
+                                                    <img src="/img/my-services-page/edit.svg" alt="edit-icon" class="edit-icon tooltip-question"/>
+                                                
+                                                    <span class="tooltip-text" style="font-weight: 400; style: right: 0;">
+                                                        <p>Редактировать</p>
+                                                    </span>
+                                                </span>
+                                                
+                                                <span class="question-and-description tooltip-container">
+                                                    <img src="/img/my-services-page/copy.svg" alt="copy-icon" class="copy-icon tooltip-question"/>
+                                                    <span class="tooltip-text" style="font-weight: 400; style: right: 0;">
+                                                        <p>Копировать</p>
+                                                    </span>
+                                                </span>
+                                                
                                             </div>
                                         </div>
                                         
@@ -232,7 +285,7 @@ require_once "../modules/base.php";
                                 </div>
                             </div>
                             
-                            <div class="my-service">
+                            <div class="my-service all active">
                                 <div class="my-service-container">
                                     <div class="img-container">
                                         <img src="/img/my-services-page/ios-flutter.png" class="my-service-banner" alt="service-banner"/>
@@ -241,10 +294,35 @@ require_once "../modules/base.php";
                                         <div class="my-service-description-header">
                                             <label>Разработка приложения для IOS на Flutter</label>
                                             <div class="my-service-description-controls">
-                                                <img src="/img/my-services-page/delete.svg" alt="delete-icon" class="delete-icon"/>
-                                                <img src="/img/my-services-page/pause.svg" alt="pause-icon" class="pauge-icon"/>
-                                                <img src="/img/my-services-page/edit.svg" alt="edit-icon" class="edit-icon"/>
-                                                <img src="/img/my-services-page/copy.svg" alt="copy-icon" class="copy-icon"/>
+                                                <span class="question-and-description tooltip-container">
+                                                    <img src="/img/my-services-page/delete.svg" alt="delete-icon" class="delete-icon tooltip-question"/>
+                                                    <span class="tooltip-text" style="font-weight: 400; style: right: 0;">
+                                                        <p>Удалить</p>
+                                                    </span>
+                                                </span>
+                                                
+                                                <span class="question-and-description tooltip-container">
+                                                    <img src="/img/my-services-page/pause.svg" alt="pause-icon" class="pause-icon tooltip-question"/>
+                                                    <span class="tooltip-text" style="font-weight: 400; style: right: 0;">
+                                                        <p>Пауза</p>
+                                                    </span>
+                                                </span>
+                                                
+                                                <span class="question-and-description tooltip-container">
+                                                    <img src="/img/my-services-page/edit.svg" alt="edit-icon" class="edit-icon tooltip-question"/>
+                                                
+                                                    <span class="tooltip-text" style="font-weight: 400; style: right: 0;">
+                                                        <p>Редактировать</p>
+                                                    </span>
+                                                </span>
+                                                
+                                                <span class="question-and-description tooltip-container">
+                                                    <img src="/img/my-services-page/copy.svg" alt="copy-icon" class="copy-icon tooltip-question"/>
+                                                    <span class="tooltip-text" style="font-weight: 400; style: right: 0;">
+                                                        <p>Копировать</p>
+                                                    </span>
+                                                </span>
+                                                
                                             </div>
                                         </div>
                                         
@@ -291,7 +369,7 @@ require_once "../modules/base.php";
                                 </div>
                             </div>
                             
-                            <div class="my-service">
+                            <div class="my-service all stoped">
                                 <div class="my-service-container">
                                     <div class="img-container">
                                         <img src="/img/my-services-page/ios-flutter.png" class="my-service-banner" alt="service-banner"/>
@@ -300,10 +378,35 @@ require_once "../modules/base.php";
                                         <div class="my-service-description-header">
                                             <label>Разработка приложения для IOS на Flutter</label>
                                             <div class="my-service-description-controls">
-                                                <img src="/img/my-services-page/delete.svg" alt="delete-icon" class="delete-icon"/>
-                                                <img src="/img/my-services-page/pause.svg" alt="pause-icon" class="pauge-icon"/>
-                                                <img src="/img/my-services-page/edit.svg" alt="edit-icon" class="edit-icon"/>
-                                                <img src="/img/my-services-page/copy.svg" alt="copy-icon" class="copy-icon"/>
+                                                <span class="question-and-description tooltip-container">
+                                                    <img src="/img/my-services-page/delete.svg" alt="delete-icon" class="delete-icon tooltip-question"/>
+                                                    <span class="tooltip-text" style="font-weight: 400; style: right: 0;">
+                                                        <p>Удалить</p>
+                                                    </span>
+                                                </span>
+                                                
+                                                <span class="question-and-description tooltip-container">
+                                                    <img src="/img/my-services-page/pause.svg" alt="pause-icon" class="pause-icon tooltip-question"/>
+                                                    <span class="tooltip-text" style="font-weight: 400; style: right: 0;">
+                                                        <p>Пауза</p>
+                                                    </span>
+                                                </span>
+                                                
+                                                <span class="question-and-description tooltip-container">
+                                                    <img src="/img/my-services-page/edit.svg" alt="edit-icon" class="edit-icon tooltip-question"/>
+                                                
+                                                    <span class="tooltip-text" style="font-weight: 400; style: right: 0;">
+                                                        <p>Редактировать</p>
+                                                    </span>
+                                                </span>
+                                                
+                                                <span class="question-and-description tooltip-container">
+                                                    <img src="/img/my-services-page/copy.svg" alt="copy-icon" class="copy-icon tooltip-question"/>
+                                                    <span class="tooltip-text" style="font-weight: 400; style: right: 0;">
+                                                        <p>Копировать</p>
+                                                    </span>
+                                                </span>
+                                                
                                             </div>
                                         </div>
                                         
@@ -378,5 +481,47 @@ require_once "../modules/base.php";
     $(".give-feedback-modal-container .close-icon, .give-feedback-modal-container .cancel-button").on("click",function(){
         $(".give-feedback-modal-block").addClass("hidden"); 
     });
+    
+    $(".my-service.all").hide();
+    $(".my-service.active").show();
+    
+    $(".my-services-wrapper-nav-elem.show-all").on("click",function(){
+        $(".my-services-wrapper-nav-elem.active").removeClass("active");
+        $(this).addClass("active");
+        $(".my-service.all").show();
+    });
+    
+    $(".my-services-wrapper-nav-elem.show-active").on("click",function(){
+        $(".my-services-wrapper-nav-elem.active").removeClass("active");
+        $(this).addClass("active");
+        $(".my-service.all").hide();
+        $(".my-service.active").show();
+    });
+    
+    $(".my-services-wrapper-nav-elem.show-stoped").on("click",function(){
+        $(".my-services-wrapper-nav-elem.active").removeClass("active");
+        $(this).addClass("active");
+        $(".my-service.all").hide();
+        $(".my-service.stoped").show();
+    });
+    
+    const searchInput = document.getElementsByClassName('my-services-wrapper-search-input')[0];
+
+    searchInput.addEventListener('input', function () {
+        const query = this.value.trim().toLowerCase();
+    
+        const items = document.querySelectorAll('.my-service');
+    
+        items.forEach(item => {
+            const text = item.innerText.toLowerCase();
+    
+            if (text.includes(query)) {
+                item.style.display = "block";
+            } else {
+                item.style.display = "none";
+            }
+        });
+    });
+    
 </script>
 </html>

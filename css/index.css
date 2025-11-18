@@ -29,7 +29,6 @@
 
 *{
     box-sizing: border-box;
-    transition-duration: 0.1s;
     transition-property: all;
     transition-timing-function: linear;
 }
@@ -56,6 +55,43 @@ header{
     /*padding-left: 20px;
     padding-right: 20px;*/
 }
+
+.garlands-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.garland-container{
+    overflow: hidden;
+    margin-left: -1%;
+    width: 101%;
+}
+
+.garland-container .garlands-img{
+    margin-top: -7px;
+    cursor: pointer;
+}
+
+.garland-container .garlands-img.gray{
+    filter: grayscale(100%);
+}
+
+.garland-switch{
+    position: absolute;
+    top: -30px;
+    right: 30px;
+    transition-duration: 0.3s;
+    transition-property: all;
+}
+
+.garlands-container:hover .garland-switch{
+    top: 0px;
+    transition-duration: 0.3s;
+    transition-property: all;
+}
+
 
 .nav-part1-container{
     width: 100%;
@@ -170,47 +206,6 @@ header{
     gap: 12px;
 }
 
-.registration-and-login-block .register-button{
-    padding: 0px 24px;
-    width: 214px;
-    height: 48px;
-    background: #e8ffec;
-    font-family: var(--font-family);
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 300%;
-    letter-spacing: -0.01em;
-    text-transform: capitalize;
-    color: #04b70a;
-    border: 0;
-    cursor: pointer;
-    transition-duration: 0.3s;
-}
-
-.registration-and-login-block .register-button:hover{
-    background: #bbf3ca;
-}
-
-.registration-and-login-block .login-button{
-    padding: 0px 24px;
-    width: 96px;
-    height: 48px;
-    background: #04b70a;
-    font-family: var(--font-family);
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 300%;
-    letter-spacing: -0.01em;
-    text-transform: capitalize;
-    color: #fff;
-    border: 0;
-    cursor: pointer;
-    transition-duration: 0.3s;
-}
-
-.registration-and-login-block .login-button:hover{
-    background: #079e0c;
-}
 
 input:hover,
 input:focus,
@@ -601,7 +596,7 @@ footer{
 .services-nav-container1 .row1{
     width: 100%;
     display: grid;
-    grid-template-columns: 1.54fr 1fr 1fr 1.54fr 1fr 1fr 1.54fr;
+    grid-template-columns: 1.54fr 1fr 1fr 1.54fr 1fr 1fr;
     gap: 8px;
     min-height: 90px;
     height: 100%;
@@ -610,7 +605,7 @@ footer{
 .services-nav-container1 .row2{
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1.54fr 1.54fr 1.54fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1.54fr 1.54fr;
     gap: 8px;
     min-height: 90px;
 }
@@ -802,6 +797,9 @@ footer{
     background: #fff;
     text-decoration: none;
     margin: 0;
+    border: 1px solid #e4e5e7;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .ad-container .ad-part1{
@@ -965,7 +963,6 @@ footer{
 /*Start earning block*/
 .start-earning-block{
     width: 100%;
-    margin-top: 50px;
     display: grid;
     grid-template-columns: 7.5fr 6.5fr;
     gap: 40px;
@@ -976,6 +973,7 @@ footer{
     flex-direction: row;
     gap: 10px;
     background: #2b56cc;
+    border-radius: 8px;
 }
 
 .start-earning-banner-text{
@@ -983,7 +981,7 @@ footer{
     padding-right: 0;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
     flex: 1;
 }
 
@@ -1032,6 +1030,7 @@ footer{
     justify-content: center;
     gap: 10px;
     cursor: pointer;
+    border-radius: 8px;
 }
 
 .start-earning-banner-text .become-freelancer:hover{
@@ -1061,6 +1060,7 @@ footer{
     border: 1px solid #e4e5e7;
     padding: 40px;
     gap: 40px;
+    border-radius: 8px;
 } 
 
 .start-earning-steps-container h3{
@@ -2093,73 +2093,6 @@ footer{
 }
 /*End of check-login-modal-container*/
 
-/*Cookies-policy-container*/
-.cookies-policy-container{
-    border: 1px solid #e0e8f9;
-    border-radius: 12px;
-    width: 500px;
-    max-width: 80%;
-    box-shadow: 0 8px 24px 0 rgba(150, 158, 166, 0.2);
-    background: #f1f4fd;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 15px;
-    position: fixed;
-    z-index: 1000;
-    right: 20px;
-    bottom: 20px;
-    gap: 15px;
-    display: none;
-}
-
-.cookies-policy-container img{
-    width: 48px;
-}
-
-.cookies-policy-container p{
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 115%;
-    color: #1f234c;
-    text-align: left;
-    margin: 0;
-    padding: 0;
-}
-
-.cookies-policy-container a{
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 115%;
-    text-decoration: underline;
-    text-decoration-skip-ink: none;
-    color: #1f234c;
-    display: inline;
-    margin: 0; 
-    padding: 0;
-}
-
-.cookies-policy-container input[type='button']{
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 130%;
-    text-align: center;
-    color: #fff;
-    border-radius: 4px;
-    width: 43px;
-    height: 30px;
-    background: #4a6ddb;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 0;
-    cursor: pointer;
-}
-/*End of cookies-policy-container*/
 
 
 .phone-header{
@@ -2190,6 +2123,28 @@ footer{
 .change-login-option{
     display: none;
 }
+
+
+.introduce-logos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px 0;
+}
+
+.introduce-logos .logo-container{
+    max-width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.introduce-logos .logo-container img{
+    max-width: 100%;
+}
+
+
 @media (max-width: 1330px){
     .services-nav-container1 .service-nav-elem{
         background-size: auto 80%;
@@ -2342,6 +2297,30 @@ footer{
         grid-area: fourth;
     }
     
+    
+    .introduce-logos{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        margin: 20px 0;
+        gap: 20px;
+    }
+    
+    .introduce-logos .logo-container{
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .introduce-logos .logo-container img{
+        width: 80%;
+    }
+    
+    .introduce-logos .logo-container img.tacc{
+        width: 40%;
+    }
+    
+    .introduce-logos .logo-container img.vc-ru{
+        width: 40%;
+    }
 }
 
 @media (max-width: 840px){
@@ -2357,6 +2336,8 @@ footer{
     .additional-apps-text h2{
         font-size: 18px;
     }
+    
+    
 }
 
 @media (max-width: 800px){
@@ -2882,6 +2863,27 @@ footer{
         font-size: 18px;
     }
     
+    .introduce-logos{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        overflow-x: auto;
+        padding-bottom: 10px;
+        margin-bottom: 0;
+    }
+    
+    .introduce-logos .logo-container{
+        width: auto;
+        max-width: none;
+    }
+    
+    .introduce-logos .logo-container img{
+        height: 35px !important;
+        width: auto !important;
+        max-width: none;
+    }    
 }
 
 @media (max-width: 480px){

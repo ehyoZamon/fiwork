@@ -1,5 +1,4 @@
-window.onload=function(){
-  const swiper = new Swiper('.similar-to-search-swiper', {
+const swiper = new Swiper('.similar-to-search-swiper', {
     slidesPerView: 1,
     spaceBetween: 10,
     autoHeight: false,
@@ -21,7 +20,7 @@ window.onload=function(){
             slidesPerView: 4,
       },
       1400: {
-            slidesPerView: 5,
+            slidesPerView: 4,
       }
     },
   });
@@ -40,7 +39,7 @@ window.onload=function(){
         400: { slidesPerView: 2,},
         830: { slidesPerView: 3 },
         1100: { slidesPerView: 4 },
-        1400: { slidesPerView: 5 },
+        1400: { slidesPerView: 4 },
       },
       on: {
         slideChange: function () {
@@ -60,6 +59,8 @@ window.onload=function(){
         }
       }
     });
+  
+window.onload=function(){
     
     /*$(".swiper-hidden").removeClass("swiper-hidden");*/
 
@@ -322,4 +323,14 @@ window.onload=function(){
         });
       });
     /*end of accordion*/
+    
+    /*garland*/
+    $(".garland-container .garlands-img").on("click",function(){
+        if($(this).hasClass('gray')){
+            $(this).removeClass("gray");
+        }else{
+            $(this).addClass("gray");
+        }
+    });
+    /*end of garland*/
 }

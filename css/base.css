@@ -45,6 +45,7 @@ header{
     padding-right: 20px;*/
 }
 
+
 .nav-part1-container{
     width: 100%;
     display: flex;
@@ -57,7 +58,7 @@ header{
 }
 .nav-part1{
     width: 100%;
-    max-width: 1400px;
+    max-width: 1240px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -160,30 +161,32 @@ header{
 
 .registration-and-login-block .register-button{
     padding: 0px 24px;
-    width: 214px;
-    height: 48px;
-    background: #e8ffec;
+    border: 1px solid #2196f3;
+    border-radius: 4px;
     font-family: var(--font-family);
     font-weight: 600;
     font-size: 16px;
     line-height: 300%;
     letter-spacing: -0.01em;
     text-transform: capitalize;
-    color: #04b70a;
-    border: 0;
     cursor: pointer;
     transition-duration: 0.3s;
+    color: #2196f3;
+    background: none;
 }
 
+
 .registration-and-login-block .register-button:hover{
-    background: #bbf3ca;
+    border-color: #0078D7;
+    color: #0078D7;
 }
 
 .registration-and-login-block .login-button{
     padding: 0px 24px;
+    border-radius: 4px;
     width: 96px;
     height: 48px;
-    background: #04b70a;
+    background: #2196f3;
     font-family: var(--font-family);
     font-weight: 600;
     font-size: 16px;
@@ -197,9 +200,8 @@ header{
 }
 
 .registration-and-login-block .login-button:hover{
-    background: #079e0c;
+    background: #0078D7;
 }
-
 input:hover,
 input:focus,
 input:active,
@@ -224,7 +226,7 @@ input:valid {
 
 .nav-part2{
     width: 100%;
-    max-width: 1400px;
+    max-width: 1240px;
 }
 
 .nav-part2 ul{
@@ -354,7 +356,7 @@ footer{
 
 .footer-container{
     width: 100%;
-    max-width: 1400px;
+    max-width: 1240px;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -457,7 +459,7 @@ footer{
 }
 
 .main-container{
-    max-width: 1400px;
+    max-width: 1240px;
     overflow: hidden;
     width: 100%;
 }
@@ -1388,28 +1390,33 @@ footer{
 /*End of check-login-modal-container*/
 
 /*Cookies-policy-container*/
+.cookies-policy-wrapper{
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
 .cookies-policy-container{
-    border: 1px solid #e0e8f9;
     border-radius: 12px;
-    width: 500px;
-    max-width: 80%;
+    max-width: 90%;
     box-shadow: 0 8px 24px 0 rgba(150, 158, 166, 0.2);
-    background: #f1f4fd;
+    background: rgb(20,30,40);
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
     padding: 15px;
-    position: fixed;
-    z-index: 1000;
-    right: 20px;
-    bottom: 20px;
     gap: 15px;
-    display: none;
 }
 
 .cookies-policy-container img{
-    width: 48px;
+    width: 12px;
 }
 
 .cookies-policy-container p{
@@ -1417,7 +1424,7 @@ footer{
     font-weight: 400;
     font-size: 15px;
     line-height: 115%;
-    color: #1f234c;
+    color: #fff;
     text-align: left;
     margin: 0;
     padding: 0;
@@ -1428,30 +1435,29 @@ footer{
     font-weight: 400;
     font-size: 15px;
     line-height: 115%;
-    text-decoration: underline;
     text-decoration-skip-ink: none;
-    color: #1f234c;
+    color: #FFC504;
     display: inline;
     margin: 0; 
     padding: 0;
+    text-decoration: none;
 }
 
 .cookies-policy-container input[type='button']{
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 130%;
-    text-align: center;
-    color: #fff;
-    border-radius: 4px;
-    width: 43px;
-    height: 30px;
-    background: #4a6ddb;
+    border-radius: 8px;
+    min-width: 43px;
+    min-height: 32px;
+    background: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: var(--font17);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 114%;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.8);
     border: 0;
-    cursor: pointer;
 }
 /*End of cookies-policy-container*/
 
@@ -1486,6 +1492,42 @@ footer{
 }
 
 /*user-header*/
+.garlands-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.garland-container{
+    overflow: hidden;
+    margin-left: -1%;
+    width: 101%;
+}
+
+.garland-container .garlands-img{
+    margin-top: -7px;
+    cursor: pointer;
+}
+
+.garland-container .garlands-img.gray{
+    filter: grayscale(100%);
+}
+
+.garland-switch{
+    position: absolute;
+    top: -30px;
+    right: 30px;
+    transition-duration: 0.3s;
+    transition-property: all;
+}
+
+.garlands-container:hover .garland-switch{
+    top: 0px;
+    transition-duration: 0.3s;
+    transition-property: all;
+}
+
 .user-header{
     display: flex;
     flex-direction: row;
@@ -1493,6 +1535,20 @@ footer{
     justify-content: flex-end;
     gap: 20px;
     position: relative;
+}
+
+.unread-messages{
+    display: inline-block;
+    font-size: 12px !important;
+    border-radius: 12px;
+    background-color: pink;
+    color: white;
+    background: #ff6163;
+    height: min-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1px 7px;
 }
 
 .user-header .user-header-nav{

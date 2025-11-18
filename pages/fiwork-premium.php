@@ -82,8 +82,12 @@ require_once "../modules/base.php";
                                 Поддержка проекта и доступ к дополнительным преимуществам.
                             </div>
                             
-                            <div class="price-month">
+                            <div class="price-month monthly">
                                 <span class="price-text">19&nbsp;000&nbsp;₽</span> /в месяц
+                            </div>
+                            
+                            <div class="price-month yearly" style="display: none;">
+                                <span class="price-text">159&nbsp;600&nbsp;₽</span> /в год
                             </div>
                             
                             <input type="button" value="Подключите сейчас" class="connect-now-button"/>
@@ -552,6 +556,16 @@ require_once "../modules/base.php";
     
     $(".connect-now-button").on("click",function(){
         $(".fiwork-premium-modal-block").removeClass("hidden");
+    });
+    
+    $(".toggle-premium-to-yearly input[type='checkbox']").on("change", function(){
+        if($(this).is(":checked")){
+            $(".price-month.yearly").show();
+            $(".price-month.monthly").hide();
+        }else{
+            $(".price-month.yearly").hide();
+            $(".price-month.monthly").show();
+        }
     });
 </script>
 </html>

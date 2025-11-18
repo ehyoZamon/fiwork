@@ -217,10 +217,3 @@ input:valid{
 .goals-users-avatar{
     width: 40px;
 }
-
-.nav-part1-container{
-    background-image: url("../img/goals-users/garlands.png");
-    background-size: 100% auto;
-    background-position: top left;
-    background-repeat: no-repeat;
-}

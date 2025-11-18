@@ -484,6 +484,32 @@ input:valid{
     justify-content: center;
     cursor: pointer;
 }
+
+.offer-service-button-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.offer-service-button-container .offer-service-button{
+    background: #04b70a;
+    border: 1px solid #04b70a;
+    border-radius: 6px;
+    padding: 19px;
+    min-width: 200px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 71%;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+}
 /*end of content container*/
 
 @media(max-width: 1060px){

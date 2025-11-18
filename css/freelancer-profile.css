@@ -245,6 +245,58 @@ input:valid {
     padding-top: 20px;
 }
 
+.tooltip-container {
+    position: relative; /* Создаем контекст для абсолютного позиционирования подсказки */
+    cursor: help; /* Меняем курсор на знак вопроса */
+}
+
+.tooltip-text {
+    visibility: hidden;
+    opacity: 0; 
+    position: absolute;
+    z-index: 10;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px; 
+    background-color: #fefefe;
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.06);
+    color: #111;
+    text-align: left;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    white-space: normal;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip-text h4,
+.tooltip-text p{
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+#tooltipGraph {
+    position: absolute;
+    padding: 6px 10px;
+    background: #fff;
+    color: #111;
+    font-size: 12px;
+    border-radius: 4px;
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.15s;
+    z-index: 9999;
+    white-space: nowrap;
+}
+
+
 .receive-orders-text{
     display: flex;
     flex-direction: row;
@@ -469,6 +521,7 @@ span.new{
     grid-template-columns: 45px 1fr;
     gap: 10px;
     width: 100%;
+    cursor: pointer;
 }
 
 .freelancer-message .user-messaging-avatar{
@@ -626,10 +679,12 @@ span.new{
     line-height: 150%;
     text-align: right;
     color: #62646a;
+    cursor: pointer;
 }
 
 .my-orders-block .see-more-container img, .my-goods-block .see-more-container{
     width: 10px;
+    cursor: pointer;
 }
 /*end of my-orders-block*/
 
@@ -697,21 +752,21 @@ span.new{
 }
 
 /* Chrome, Edge, Safari */
-.fiwork-activity-graph-wrapper::-webkit-scrollbar {
+.main-container *::-webkit-scrollbar {
   width: 8px; /* ширина вертикального скроллбара */
   height: 8px; /* высота горизонтального скроллбара */
 }
 
-.fiwork-activity-graph-wrapper::-webkit-scrollbar-thumb {
+.main-container *::-webkit-scrollbar-thumb {
   background-color: #efeff0;
   border-radius: 4px;
 }
 
-.fiwork-activity-graph-wrapper::-webkit-scrollbar-track {
+.main-container *::-webkit-scrollbar-track {
   background: transparent;
 }
 
-.fiwork-activity-graph-wrapper::-webkit-scrollbar-button {
+.main-container *::-webkit-scrollbar-button {
   display: none; /* Убирает стрелки */
 }
 
@@ -776,14 +831,15 @@ span.new{
 
 .squares li {
   background-color: #ebedf0;
+  border-radius: 2px;
 }
 
 .squares li[data-level="1"] {
-  background-color: #c6e48b;
+    background-color: #9be9a8;
 }
 
 .squares li[data-level="2"] {
-  background-color: #7bc96f;
+  background-color: #ebedf0;
 }
 
 .squares li[data-level="3"] {
@@ -837,6 +893,7 @@ span.new{
     line-height: 150%;
     text-align: right;
     color: #62646a;
+    cursor: pointer;
 }
 
 .new-in-stock-header .see-more-container img{
@@ -915,6 +972,7 @@ span.new{
     font-size: 14px;
     line-height: 157%;
     color: #333;
+    cursor: pointer;
 }
 
 .new-in-stock-table .project-nav{
@@ -923,6 +981,12 @@ span.new{
     font-size: 12px;
     line-height: 133%;
     color: #8a8a8a;
+}
+
+.project-nav a{
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
 }
 
 .new-in-stock-table .order-details{
@@ -944,6 +1008,7 @@ span.new{
     font-size: 14px;
     line-height: 157%;
     color: #333;
+    cursor: pointer;
 }
 
 .new-in-stock-table .user-avatar-container{
@@ -1003,6 +1068,7 @@ span.new{
     box-shadow: 0 2px 3px -2px rgba(0, 0, 0, 0.15);
     border: 1px solid #efeff0;
     margin-top: 20px;
+    display: none;
 }
 
 .three-steps-to-start-block h2{
@@ -2096,6 +2162,94 @@ footer{
     display: none;
 }
 /*end of banned-modal*/
+
+.stories-content{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px;
+    background: #fff;
+    border: 1px solid #efeff0;
+    border-radius: 8px;
+}
+
+.stories-wrapper{
+    width: 100%;
+    overflow: hidden;
+    overflow-x: auto;
+    background: #fff;
+    border: 1px solid #efeff0;
+    border-radius: 8px;
+    height: 153px;
+    padding: 20px;
+}
+
+.stories-content .stories-shadow{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+    height: 100%;
+    aspect-ratio: 3/15;
+    z-index: 100;
+}
+
+
+.stories-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    width: auto;
+    width: min-content;
+}
+
+.stories-container .story-block{
+    width: 120px;
+    aspect-ratio: 1/1;
+    border: 2px solid #aac8ff;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;   
+}
+
+.stories-container .story-block .img-container{
+    width: 100%;
+    height: 100%;
+}
+
+.stories-container .story-block .img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: inline-block;
+    position: relative;
+}
+
+.stories-container .story-block .text-container{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    padding: 12px;
+}
+
+.stories-container .story-block .text-container p{ 
+    text-align: left;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 123%;
+    letter-spacing: -0.02em;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+
+
 @media (max-width: 1200px){
     .freelancer-profile-block{
         gap: 20px;

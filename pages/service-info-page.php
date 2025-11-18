@@ -77,7 +77,10 @@ require_once "../modules/base.php";
                                     <img src="/img/icons/grey-like.svg" alt="like-icon" class="like-icon">
                                     <div class="like-nums">2,767</div>
                                 </div>
-                                <img src="/img/icons/square-share.svg" alt="share-icon" class="share-icon">
+                                <div class="share-icon-container">
+                                    <img src="/img/icons/square-share.svg" alt="share-icon" class="share-icon"/>
+                                    <img src="/img/icons/square-share-blue.svg" alt="share-icon" class="share-icon-blue"/>
+                                </div>
                             </div>
                         </div>
                         <h2>Логотип шрифтовой элегантный + бонусы.</h2>
@@ -297,7 +300,19 @@ require_once "../modules/base.php";
                                 <img src="/img/icons/freelancer-green-shield.svg" alt="freelancer-green-shield" class="freelancer-green-shield"/>
                                 <p>Подтвержденный профиль</p>
                             </div>
-                            <img src="/img/icons/round-info-icon.svg" alt="round info icon" class="round-info-icon"/>
+                            
+                            <div class="verified-user">
+                                <img src="/img/icons/verified.svg" alt="round info icon" class="round-info-icon galochka verified-icon"/>
+                                
+                                <div class="about-verified">
+                                    <img src="/img/icons/freelancer-profile-page/galochka.svg" alt="galochka" class="galochka">
+                                    <div class="about-verified-description">
+                                        <h3>Верифицированная страница</h3>
+                                        <p>Страница подтверждена администрацией.</p>
+                                        <p class="special-color">Узнайте больше о верификации</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         
                         <div class="orders-finished-container">

@@ -285,7 +285,7 @@ input:valid{
     padding: 0;
 }
 
-.content-container-header .select-offers-container .select-offer{
+.content-container-header .select-offers-container .select-offer-wrap{
     margin: 0;
     padding: 0;
     display: flex;
@@ -296,6 +296,42 @@ input:valid{
     color: #3b82f6;
     cursor: pointer;
 }
+
+.content-container-header .select-offers-container .select-offer{
+    position: relative;
+}
+
+.select-offer-options{
+    position: absolute;
+    width: 100%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 10px;
+    background: #fff;
+    gap: 5px;
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.06);
+    display: none;
+    min-width: 170px;
+}
+
+.content-container-header .select-offers-container .select-offer:hover .select-offer-options{
+    display: flex;
+}
+
+.select-offer-options .offer-option{
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    text-align: left;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+/*.select-offer-options .offer-option.active{
+    display: none; 
+}*/
 
 .content-container-header .project-count{
     font-family: var(--second-family);
@@ -332,6 +368,11 @@ input:valid{
     height: auto;
     margin-top: 20px;
     padding: 20px;
+    border-radius: 8px;
+}
+
+.project-offer:hover{
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.06);
 }
 
 .project-offer-description-container{
@@ -361,6 +402,7 @@ input:valid{
     font-size: 20px;
     line-height: 140%;
     color: #090;
+    cursor: pointer;
 }
 
 .project-offer-description-container .project-offer-description p{
@@ -388,6 +430,14 @@ input:valid{
     padding: 0;
     cursor: pointer;
     margin-left: 5px;
+}
+
+.description-text.hidden-text{
+    display: none;
+}
+
+.show-full-text.hidden-button{
+    display: none;
 }
 
 .project-offer-description-container .preferred-budget-container{
@@ -441,6 +491,37 @@ input:valid{
     width: 12px;
 }
 
+.tooltip-container {
+    position: relative; /* Создаем контекст для абсолютного позиционирования подсказки */
+    cursor: help; /* Меняем курсор на знак вопроса */
+}
+
+.tooltip-text {
+    visibility: hidden;
+    opacity: 0; 
+    position: absolute;
+    z-index: 10;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px; 
+    background-color: #fefefe;
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.06);
+    color: #111;
+    text-align: left;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    white-space: normal;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+
 .customer-description-container{
     display: flex;
     flex-direction: row;
@@ -450,10 +531,22 @@ input:valid{
     margin-top: 15px;
 }
 
+.customer-description-container .question-and-description{
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.customer-description-container .question-and-description img{
+    width: 14px; 
+}
+
 .customer-description-container .img-container{
     width: 65px;
     aspect-ratio: 1/1;
     border-radius: 3px;
+    flex-shrink: 0;
 }
 
 .customer-description-container .img-container img{
@@ -470,6 +563,7 @@ input:valid{
     align-items: flex-start;
     justify-content: center;
     height: 100%;
+    flex: 1; 
 }
 
 .customer-description-container .customer-details-container .customer-detail{
@@ -678,6 +772,121 @@ input:valid{
 }
 /*end of modal-block*/
 
+/*pagination*/
+.pagination-container {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+    justify-content: center;
+}
+
+.pagination-item {
+    display: flex;
+    align-items: center;
+    margin: 0 4px;
+}
+
+.page-link, .ellipsis {
+    display: block;
+    min-width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    text-decoration: none2;
+    color: #333;
+    font-size: 16px;
+    padding: 0 8px;
+    transition: color 0.2s, background-color 0.2s;
+    cursor: pointer;
+    user-select: none;
+    font-family: var(--font-family);
+    text-decoration: none;
+
+}
+
+.page-link.active {
+    background-color: #e5e5e5;
+    color: #1a1a1a;
+    font-weight: 500;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.page-link:not(.active):hover {
+    color: #007bff;
+}
+
+#page-numbers{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.ellipsis {
+    cursor: default;
+    color: #666;
+}
+
+.arrow-link {
+    padding: 0 12px;
+    font-size: 18px;
+    color: #666;
+}
+
+.arrow-link:hover {
+    color: #007bff;
+}
+
+/*end of pagination*/
+/* Кнопка "Оставить отзыв" */
+.feedback-button {
+    background: #fff;
+    border: 1px solid #ff4444;
+    color: #ff4444;
+    border-radius: 4px;
+    padding: 8px 16px;
+    min-height: 32px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 114%;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+.project-offer:hover .feedback-button {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Адаптация под мобильные — всегда видно, если нужно */
+@media (max-width: 840px) {
+    .feedback-button {
+        opacity: 1;
+        visibility: visible;
+        margin-bottom: 10px;
+        width: 100%;
+        margin-right: 0;
+    }
+    
+    .offer-service-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .offer-service-button {
+        width: 100%;
+    }
+}
+
 @media(max-width: 1300px){
     .project-offer-description-container{
         width: 100%;
@@ -758,5 +967,19 @@ input:valid{
     .birja-proektov-block{
         margin: 0;
         padding: 0;
+    }
+}
+
+
+@media (max-width: 420px){
+    .customer-description-container{
+        display: flex;
+        flex-direction: column; 
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    
+    .project-count{
+        font-size: 14px !important
     }
 }
