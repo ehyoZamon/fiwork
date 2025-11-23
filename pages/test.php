@@ -4,169 +4,129 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Интерактивная Пагинация</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #f7f7f7;
-            margin: 0;
-        }
+<style>
+    /* Общие стили для блока */
+.partner-materials-block {
+    background-color: #f6f6f6; /* Светло-серый фон */
+    padding: 30px 40px;
+    border-radius: 12px;
+    max-width: 1000px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #1c1c1c;
+}
 
-        .pagination-container {
-            display: flex;
-            align-items: center;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+/* Заголовок блока */
+.block-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #1c1c1c;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
 
-        .pagination-item {
-            display: flex;
-            align-items: center;
-            margin: 0 4px;
-        }
+/* Контейнер для трех колонок */
+.content-grid {
+    display: grid;
+    /* Создаем 3 колонки одинаковой ширины */
+    grid-template-columns: repeat(3, 1fr);
+    /* Задаем вертикальный и горизонтальный отступы между элементами */
+    gap: 30px 40px; 
+}
 
-        .page-link, .ellipsis {
-            display: block;
-            min-width: 36px;
-            height: 36px;
-            line-height: 36px;
-            text-align: center;
-            text-decoration: none;
-            color: #333;
-            font-size: 16px;
-            padding: 0 8px;
-            transition: color 0.2s, background-color 0.2s;
-            cursor: pointer;
-            user-select: none;
-        }
+/* Стили для каждой колонки/секции */
+.content-column {
+    padding-right: 20px; /* Небольшой отступ, если текст будет длинным */
+}
 
-        .page-link.active {
-            background-color: #e5e5e5;
-            color: #1a1a1a;
-            font-weight: bold;
-            border-radius: 8px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-        }
+.section-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #1c1c1c;
+}
 
-        .page-link:not(.active):hover {
-            color: #007bff;
-        }
+.section-description {
+    font-size: 15px;
+    color: #4a4a4a;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
 
-        .ellipsis {
-            cursor: default;
-            color: #666;
-        }
+/* Ссылки (email и "Ознакомиться") */
+.contact-link,
+.download-link {
+    display: inline-block;
+    font-size: 15px;
+    color: #0177FF; /* Используем синий цвет из вашего первого примера */
+    text-decoration: none;
+    font-weight: 500;
+    line-height: 1.4;
+}
 
-        .arrow-link {
-            padding: 0 12px;
-            font-size: 18px;
-            color: #666;
-        }
+.contact-link:hover,
+.download-link:hover {
+    text-decoration: underline;
+}
 
-        .arrow-link:hover {
-            color: #007bff;
-        }
-    </style>
+/* Медиа-запрос для лучшей адаптивности на небольших экранах */
+@media (max-width: 768px) {
+    .content-grid {
+        /* При меньшей ширине делаем 2 колонки */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .content-grid {
+        /* При совсем маленькой ширине делаем 1 колонку */
+        grid-template-columns: 1fr;
+    }
+    .partner-materials-block {
+        padding: 20px;
+    }
+}
+</style>
 </head>
 <body>
 
-    <nav class="pagination-container" aria-label="Пагинация">
-        <div class="pagination-item">
-            <a href="#" class="page-link arrow-link" id="prev">&lt;</a>
+<div class="partner-materials-block">
+    <h2 class="block-title">Материалы для партнеров</h2>
+
+    <div class="content-grid">
+        <div class="content-column">
+            <h3 class="section-title">Для медиа</h3>
+            <p class="section-description">По вопросам медиапартнёрств и специальных проектов</p>
+            <a href="mailto:media@fiwork.ru" class="contact-link">media@fiwork.ru</a>
         </div>
 
-        <div id="page-numbers"></div>
-
-        <div class="pagination-item">
-            <a href="#" class="page-link arrow-link" id="next">&gt;</a>
+        <div class="content-column">
+            <h3 class="section-title">Представителям прессы</h3>
+            <p class="section-description">Контакт пресс-службы для обращений СМИ</p>
+            <a href="mailto:press@fiwork.ru" class="contact-link">press@fiwork.ru</a>
         </div>
-    </nav>
 
-    <script>
-        const totalPages = 18;
-        const visibleCount = 3; // сколько страниц видно одновременно
-        let currentPage = 1;
+        <div class="content-column">
+            <h3 class="section-title">Логотипы VK</h3>
+            <p class="section-description">Продукты экосистемы VK</p>
+            <a href="#" class="download-link">Ознакомиться и загрузить →</a>
+        </div>
 
-        const pageNumbersContainer = document.getElementById('page-numbers');
-        const prev = document.getElementById('prev');
-        const next = document.getElementById('next');
+        <div class="content-column">
+            <h3 class="section-title">Медиагалерея</h3>
+            <p class="section-description">Логотип и официальные фотографии ВКонтакте</p>
+            <a href="#" class="download-link">Ознакомиться и загрузить →</a>
+        </div>
 
-        function renderPagination() {
-            pageNumbersContainer.innerHTML = '';
+        <div class="content-column">
+            <h3 class="section-title">Виджеты для сайтов</h3>
+            <p class="section-description">Возможность встроить запись, видеть сообщества или плейлист</p>
+            <a href="#" class="download-link">Выбрать виджет →</a>
+        </div>
 
-            // Вычисляем диапазон отображаемых страниц
-            let start = Math.max(1, currentPage - 1);
-            let end = Math.min(start + visibleCount - 1, totalPages - 1);
-
-            if (end >= totalPages - 1) {
-                start = totalPages - visibleCount;
-                if (start < 1) start = 1;
-            }
-
-            // Создаём элементы страниц
-            for (let i = start; i <= end; i++) {
-                const div = document.createElement('div');
-                div.className = 'pagination-item';
-                const a = document.createElement('a');
-                a.textContent = i;
-                a.href = '#';
-                a.className = 'page-link' + (i === currentPage ? ' active' : '');
-                a.addEventListener('click', e => {
-                    e.preventDefault();
-                    currentPage = i;
-                    renderPagination();
-                });
-                div.appendChild(a);
-                pageNumbersContainer.appendChild(div);
-            }
-
-            // Добавляем многоточие и последнюю страницу
-            if (end < totalPages - 1) {
-                const dots = document.createElement('div');
-                dots.className = 'pagination-item';
-                dots.innerHTML = '<span class="ellipsis">...</span>';
-                pageNumbersContainer.appendChild(dots);
-            }
-
-            const last = document.createElement('div');
-            last.className = 'pagination-item';
-            const aLast = document.createElement('a');
-            aLast.textContent = totalPages;
-            aLast.href = '#';
-            aLast.className = 'page-link' + (currentPage === totalPages ? ' active' : '');
-            aLast.addEventListener('click', e => {
-                e.preventDefault();
-                currentPage = totalPages;
-                renderPagination();
-            });
-            last.appendChild(aLast);
-            pageNumbersContainer.appendChild(last);
-        }
-
-        // Стрелка "вперёд"
-        next.addEventListener('click', e => {
-            e.preventDefault();
-            if (currentPage < totalPages) {
-                currentPage++;
-                renderPagination();
-            }
-        });
-
-        // Стрелка "назад"
-        prev.addEventListener('click', e => {
-            e.preventDefault();
-            if (currentPage > 1) {
-                currentPage--;
-                renderPagination();
-            }
-        });
-
-        renderPagination();
-    </script>
-
+        <div class="content-column empty-placeholder"></div>
+    </div>
+</div>       
 </body>
 </html>

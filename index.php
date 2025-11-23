@@ -47,71 +47,72 @@ require_once "./modules/base.php";
     
     <div class="main-block">
         <div class="main-container">
-            
-            <div class="services-nav-block computer-version">
-                <div class="services-nav-container1">
-                    <div class="row1">
-                        <a href="#" class="logo-service service-nav-elem">
-                            <span>Нужен логотип</span>
-                        </a>
-                        <a href="#" class="music-creation-service service-nav-elem">
-                            <span>Песня<br>под-ключ</span>
-                        </a>
-                        <a href="#" class="vfx-3d-service service-nav-elem">
-                            <span>VFX и 3D</span>
-                        </a>
-                        <a href="#" class="create-app-service service-nav-elem">
-                            <span>Создать<br>приложение</span>
-                        </a>
-                        <a href="#" class="website-building-service service-nav-elem">
-                            <span>Нужен<br>сайт</span>
-                        </a>
-                        <a href="#" class="ozvuchka-service service-nav-elem">
-                            <span>Озвучка</span>
-                        </a>
-                        <a style="display: none;" href="#" class="html-markup-service service-nav-elem">
-                            <span>Верстка&nbsp;по<br>макету</span>
-                        </a>
+        
+            <div class="services-nav-wrapper">   
+                <div class="services-nav-block">
+                    <div class="services-nav-container1">
+                        <div class="row1">
+                            <a href="#" class="logo-service service-nav-elem">
+                                <span>Нужен логотип</span>
+                            </a>
+                            <a href="#" class="music-creation-service service-nav-elem">
+                                <span>Песня<br>под-ключ</span>
+                            </a>
+                            <a href="#" class="vfx-3d-service service-nav-elem">
+                                <span>VFX и 3D</span>
+                            </a>
+                            <a href="#" class="create-app-service service-nav-elem">
+                                <span>Создать<br>приложение</span>
+                            </a>
+                            <a href="#" class="website-building-service service-nav-elem">
+                                <span>Нужен<br>сайт</span>
+                            </a>
+                            <a href="#" class="ozvuchka-service service-nav-elem">
+                                <span>Озвучка</span>
+                            </a>
+                            <a style="display: none;" href="#" class="html-markup-service service-nav-elem">
+                                <span>Верстка&nbsp;по<br>макету</span>
+                            </a>
+                        </div>
+                        <div class="row2">
+                            <a href="#" class="naming-service service-nav-elem">
+                                <span>Нейминг</span>
+                            </a>
+                            <a href="#" class="figma-design-service service-nav-elem">
+                                <span>Figma<br>дизайн</span>
+                            </a>
+                            
+                            <a href="#" class="reels-making-service service-nav-elem">
+                                <span>Reels мейкинг</span>
+                            </a>
+                            <a href="#" class="flutter-service service-nav-elem">
+                                <span>Flutter</span>
+                            </a>
+                            <a href="#" class="create-telegram-app-service service-nav-elem">
+                                <span>Создать Telegram приложение</span>
+                            </a>
+                            <a href="#" class="songwriting-service service-nav-elem">
+                                <span>Сонграйтинг</span>
+                            </a>
+                            <a href="#" style="display: none;" class="social-sites-service service-nav-elem">
+                                <span>Оформить<br> соц-сети</span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="row2">
-                        <a href="#" class="naming-service service-nav-elem">
-                            <span>Нейминг</span>
-                        </a>
-                        <a href="#" class="figma-design-service service-nav-elem">
-                            <span>Figma<br>дизайн</span>
-                        </a>
-                        
-                        <a href="#" class="reels-making-service service-nav-elem">
-                            <span>Reels мейкинг</span>
-                        </a>
-                        <a href="#" class="flutter-service service-nav-elem">
-                            <span>Flutter</span>
-                        </a>
-                        <a href="#" class="create-telegram-app-service service-nav-elem">
-                            <span>Создать Telegram приложение</span>
-                        </a>
-                        <a href="#" class="songwriting-service service-nav-elem">
-                            <span>Сонграйтинг</span>
-                        </a>
-                        <a href="#" style="display: none;" class="social-sites-service service-nav-elem">
-                            <span>Оформить<br> соц-сети</span>
-                        </a>
+                
+                    <div class="services-nav-container2">
+                        <h3>Безопасные сделки</h3>
+                        <p>Это просто и удобно!</p>
+                        <img src="/img/icons/pocket.svg" alt="pocket" class="pocket-icon"/>
                     </div>
-                </div>
-            
-                <div class="services-nav-container2">
-                    <h3>Безопасные сделки</h3>
-                    <p>Это просто и удобно!</p>
-                    <img src="/img/icons/pocket.svg" alt="pocket" class="pocket-icon"/>
-                </div>
-            
-                <div class="services-nav-container3">
-                    <h3>Нет нужной услуги?</h3>
-                    <p>Исполнитель найдется&nbsp;сам</p>
-                    <input type="button" value="Добавить проект" class="add-project"/>
+                
+                    <div class="services-nav-container3">
+                        <h3>Нет нужной услуги?</h3>
+                        <p>Исполнитель найдется&nbsp;сам</p>
+                        <input type="button" value="Добавить проект" class="add-project"/>
+                    </div>
                 </div>
             </div>
-            
             <div class="similar-to-search-block computer-version">
                 <div class="shadow"></div>
                 <div class="similar-to-search-header-container">
@@ -1477,11 +1478,10 @@ require_once "./modules/base.php";
                     </div>
                 </div>
                 
-                
             </div>
         </div>
     </div>
-    
+
     <?=$footer;?>
     <?=$modalWindows;?>
 
