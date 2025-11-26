@@ -8,6 +8,21 @@ $header=<<<EOT
                 <div class="logo-and-search-block">
                     <a href="#" class="logo-container">
                         <img src="/img/logo.svg" alt="logo" class="header-logo"/>
+                        <div class="beta-container">
+                            <div class="beta-wrapper">
+                                <img src="/img/beta.svg" alt="beta" class="beta-icon"/>
+                                <div class="beta-tooltip">
+                                    <div class="beta-tooltip-header">Бета-версия</div>
+                                    <div class="beta-tooltip-text">
+                                        Мы постоянно вносим<br>обновления и делаем интерфейс<br>более удобным и приятным.
+                                    </div>
+                                    <div class="beta-tooltip-stats">
+                                        <span class="online"><img src="/img/icons/green-dot.svg" alt="green-dot" class="beta-green-dot"/>Онлайн: 1535</span>
+                                        <span class="orders"><img src="/img/icons/blue-dot.svg" alt="blue-dot" class="beta-blue-dot"/>Заказ: 7 сек. назад</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </a>
                     <div class="search-container">
                         <hr class="search-button-stick"><input type="text" placeholder="  Найти услуги" class="search-service-input" name="search-service">
@@ -124,6 +139,21 @@ $header=<<<EOT
         <div class="logo-burger-login-block">
             <a href="#" class="mobile-logo-link">
                 <img src="/img/logo.svg" alt="burger" class="mobile-logo-icon"/>
+                <div class="beta-container">
+                    <div class="beta-wrapper">
+                        <img src="/img/beta.svg" alt="beta" class="beta-icon"/>
+                        <div class="beta-tooltip">
+                            <div class="beta-tooltip-header">Бета-версия</div>
+                            <div class="beta-tooltip-text">
+                                Мы постоянно вносим<br>обновления и делаем интерфейс<br>более удобным и приятным.
+                            </div>
+                            <div class="beta-tooltip-stats">
+                                <span class="online"><img src="/img/icons/green-dot.svg" alt="green-dot" class="beta-green-dot"/>Онлайн: 1535</span>
+                                <span class="orders"><img src="/img/icons/blue-dot.svg" alt="blue-dot" class="beta-blue-dot"/>Заказ: 7 сек. назад</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </a>
             
             <div class="burger-container">
@@ -138,7 +168,7 @@ $header=<<<EOT
                 <div class="main-menu-search-and-login">
                     <div class="main-menu-login-container">
                         <img src="/img/new-mobile-menu/person-icon.svg" alt="login-icon" class="login-icon"/>
-                        Вход / Регистрация
+                        <span class="login-text" >Вход / Регистрация</span>
                     </div>
                     
                     <div class="main-menu-search-container">
@@ -334,12 +364,27 @@ $userHeader=<<<EOT
     </div> 
     <link rel="stylesheet" href="/css/mobile-navigation-menu.css?v=<?= time(); ?>" />
     <link rel="stylesheet" href="/css/base.css?v=<?= time(); ?>"/>
-    <header class="computer-header">
+    <header class="computer-header computer-user-header">
         <div class="nav-part1-container">
             <div class="nav-part1">
                 <div class="logo-and-search-block">
                     <a href="#" class="logo-container">
                         <img src="/img/logo.svg" alt="logo" class="header-logo"/>
+                        <div class="beta-container">
+                            <div class="beta-wrapper">
+                                <img src="/img/beta.svg" alt="beta" class="beta-icon"/>
+                                <div class="beta-tooltip">
+                                    <div class="beta-tooltip-header">Бета-версия</div>
+                                    <div class="beta-tooltip-text">
+                                        Мы постоянно вносим<br>обновления и делаем интерфейс<br>более удобным и приятным.
+                                    </div>
+                                    <div class="beta-tooltip-stats">
+                                        <span class="online"><img src="/img/icons/green-dot.svg" alt="green-dot" class="beta-green-dot"/>Онлайн: 1535</span>
+                                        <span class="orders"><img src="/img/icons/blue-dot.svg" alt="blue-dot" class="beta-blue-dot"/>Заказ: 7 сек. назад</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </a>
                     <div class="search-container">
                         <hr class="search-button-stick"><input type="text" placeholder="  Найти услуги" class="search-service-input" name="search-service">
@@ -359,17 +404,21 @@ $userHeader=<<<EOT
                         <a href="#" class="chat active">Чат <div class="unread-messages">77</div></a>
                     </div>
                     
-                    <div class="balance">
-                        <div class="current-balance">900 ₽</div>
-                        <div class="vertical-line"></div>
-                        <div class="balance-text">Баланс</div>
-                    </div>
-                    <img src="/img/icons/user-header-burger.svg" alt="burder" class="user-header-burger"/>
+                    <img src="/img/icons/user-header-burger.svg" alt="burder" style="display: none;" class="user-header-burger"/>
                     <div class="user-header-avatar active">
                         <div class="img-container">
-                            <img src="/img/user-avatars/user-avatar8.png" alt="user-avatar" class="user-avatar"/>
+                            <img src="/img/freelancer-avatars/freelancer3.webp" alt="user-avatar" class="user-avatar"/>
                         </div>
                         <div class="user-avatar-status">
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="balance">
+                        <div class="current-balance">0 ₽</div>
+                        <div class="balance-text">
+                            <span class="balance-select-text fill-money">Вывести</span>
+                            <span class="balance-select-text get-out-money hidden">Пополнить</span><img src="/img/icons/chevron-down.svg" alt="chevron-down" class="chevron-down">
                         </div>
                     </div>
                     
@@ -512,6 +561,21 @@ $userHeader=<<<EOT
         <div class="logo-burger-login-block">
             <a href="#" class="mobile-logo-link">
                 <img src="/img/logo.svg" alt="burger" class="mobile-logo-icon"/>
+                <div class="beta-container">
+                    <div class="beta-wrapper">
+                        <img src="/img/beta.svg" alt="beta" class="beta-icon"/>
+                        <div class="beta-tooltip">
+                            <div class="beta-tooltip-header">Бета-версия</div>
+                            <div class="beta-tooltip-text">
+                                Мы постоянно вносим<br>обновления и делаем интерфейс<br>более удобным и приятным.
+                            </div>
+                            <div class="beta-tooltip-stats">
+                                <span class="online"><img src="/img/icons/green-dot.svg" alt="green-dot" class="beta-green-dot"/>Онлайн: 1535</span>
+                                <span class="orders"><img src="/img/icons/blue-dot.svg" alt="blue-dot" class="beta-blue-dot"/>Заказ: 7 сек. назад</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </a>
             
             <div class="burger-container">
@@ -525,8 +589,10 @@ $userHeader=<<<EOT
             <div class="menu" id="menu-main">
                 <div class="main-menu-search-and-login">
                     <div class="main-menu-login-container">
-                        <img src="/img/new-mobile-menu/person-icon.svg" alt="login-icon" class="login-icon"/>
-                        Вход / Регистрация
+                        <div class="menu-avatar-container">
+                            <img src="/img/freelancer-avatars/freelancer3.webp"/>
+                        </div> 
+                        <span class="menu-user-name">Андрей</span>
                     </div>
                     
                     <div class="main-menu-search-container">

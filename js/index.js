@@ -59,8 +59,19 @@ const swiper = new Swiper('.similar-to-search-swiper', {
         }
       }
     });
+    
+
+function changeUserStatus(){
+    console.log("The status of user was changed"); 
+    if($(".user-header-menu .switch input[type='checkbox']").is(':checked')){
+        $(".user-header .user-header-avatar").addClass("active");
+    } else {
+        $(".user-header .user-header-avatar").removeClass("active");
+    }
+}
   
 window.onload=function(){
+    changeUserStatus();
     /*$(".swiper-hidden").removeClass("swiper-hidden");*/
 
     $(".registration-and-login-block .register-button, .mobile-menu-register-button").on("click",function(){
@@ -108,12 +119,16 @@ window.onload=function(){
         $(".user-header-menu .user-type").removeClass("selected");
         $(this).addClass("selected");
         $(".user-header-menu .receive-orders").removeClass("active");
+        $(".balance-select-text").addClass("hidden");
+        $(".balance-select-text.fill-money").removeClass("hidden");
     });
     
     $(".user-header-menu .freelancer-user-type").on("click",function(){
         $(".user-header-menu .user-type").removeClass("selected");
         $(this).addClass("selected");
         $(".user-header-menu .receive-orders").addClass("active");
+        $(".balance-select-text").addClass("hidden");
+        $(".balance-select-text.get-out-money").removeClass("hidden");
     });
     
     $(".go-to-register-link").on("click",function(){
@@ -136,10 +151,11 @@ window.onload=function(){
     });
     
     $(".phone-header .close-menu-icon").on("click",function(){
-        $(".phone-header").removeClass("menu-activated"); 
+        $(".phone-header").removeClass("menu-activated");
+        $(".phone-header").css("max-width","100%");
     });
     
-    $(".user-header-avatar, .user-header-burger").on("click",function(e){
+    $(".user-header-avatar, .user-header-burger, .balance-text").on("click",function(e){
         e.stopPropagation();
         $(".user-header-menu").toggleClass("hidden");
     });
@@ -352,4 +368,8 @@ window.onload=function(){
         $(this).addClass("active");
     });
     /*end of language switch*/
+    
+    $(".user-header-menu .switch").on("click change",function(){
+        changeUserStatus();
+    });
 }

@@ -2374,11 +2374,6 @@ textarea:focus, input:focus, select:focus{
         grid-template-columns: 880px;
     }
     
-    .user-header .user-header-nav{
-        display: none !important;
-    }
-    
-    
     .step-stage-form-description-modal{
         display: none !important;
     }

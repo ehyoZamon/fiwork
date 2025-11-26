@@ -42,7 +42,6 @@ require_once "../modules/base.php";
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
-        
 </head>
 <body>
     <?=$userHeader;?>
@@ -1193,7 +1192,7 @@ require_once "../modules/base.php";
                                 <input type="button" value="Продолжить" class="continue-to-next-step-button submit-fiwork-price-and-options" onclick="submitForm('fiwork-price-and-options-form');"/> 
                             </div>
                             
-                            <form class="create-fiwork-step fiwork-portfolio-form active">
+                            <form class="create-fiwork-step fiwork-portfolio-form hidden">
                                 <div class="create-fiwork-step-header">
                                     <div class="create-fiwork-step-num-container">
                                         4

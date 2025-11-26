@@ -978,7 +978,6 @@ footer{
     display: grid;
     grid-template-columns: 7.5fr 6.5fr;
     gap: 40px;
-    margin-top: 40px;
 }
 
 .start-earning-banner-container{
@@ -2144,7 +2143,6 @@ footer{
     align-items: center;
     justify-content: space-between;
     margin: 50px 0;
-    display: none;
 }
 
 .introduce-logos .logo-container{
@@ -3162,6 +3160,10 @@ footer{
     
     body{
         padding-bottom: 82px;
+    }
+    
+    .introduce-logos{
+        display: none;
     }
 }
 

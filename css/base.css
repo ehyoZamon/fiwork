@@ -56,6 +56,7 @@ header{
     padding-left: 20px;
     padding-right: 20px;
 }
+
 .nav-part1{
     width: 100%;
     max-width: 1240px;
@@ -76,6 +77,18 @@ header{
 .logo-and-search-block .header-logo{
     width: 92px;
     height: auto;
+    margin-top: 15px;
+}
+
+.beta-container{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.beta-container .beta-icon{
+    width: 37px;
 }
 
 
@@ -1543,7 +1556,8 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1px 7px;
+    padding: 3px 5px;
+    line-height: 100%;
 }
 
 .user-header .user-header-nav{
@@ -1551,7 +1565,7 @@ footer{
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    gap: 20px;
+    gap: 30px;
 }
 
 .user-header .user-header-nav a{
@@ -1569,12 +1583,28 @@ footer{
     align-items: center;
     justify-content: flex-start;
     gap: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    border-radius: 50px;
-    padding: 10px;
     cursor: pointer;
+    height: 30px;
 }
 
+.balance-text{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    font-family: var(--font7);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    text-align: right;
+    color: #05b;
+    width: 100px;
+    justify-content: space-between;
+}
+
+.balance-select-text.hidden{
+    display: none;
+}
 
 .user-header .vertical-line{
     border-left: 1px solid rgba(5, 5, 5, 0.5);
@@ -1586,7 +1616,7 @@ footer{
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
 
 .user-header .chat .user-dot{
@@ -1618,6 +1648,13 @@ footer{
     overflow: hidden;
 }
 
+.user-header .user-header-avatar .img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: inline-block;
+}
+
 
 .user-header .user-header-avatar .user-avatar-status{
     width: 12px;
@@ -1639,23 +1676,23 @@ footer{
 }
 
 .user-header .balance .current-balance{
-    font-family: var(--second-family);
+    font-family: "SF Pro Text", sans-serif;
     font-weight: 500;
-    font-size: 13px;
-    line-height: 145%;
-    letter-spacing: 0.02em;
-    color: #177de5;
+    font-size: 20px;
+    line-height: 140%;
+    color: #000;
+    margin: 0;
+    padding: 0;
 }
 
 .user-header-menu{
     position: absolute;
-    top: 60px;
+    top: 50px;
     right: 40px;
     width: 240px;
     backdrop-filter: blur(25px);
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
     background: #fff;
-    max-width: 100%;
     z-index: 100;
     padding: 10px;
 }
@@ -1936,8 +1973,25 @@ footer{
 }
 
 @media (max-width: 1150px){
-    .user-header .user-header-nav{
-        display: none !important;
+    .computer-user-header .nav-part1{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .computer-user-header .nav-part1-container{
+        height: auto;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+    
+    .computer-user-header .user-header{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: flex-end;
     }
 }
 
@@ -2307,5 +2361,126 @@ footer{
         padding-bottom: 82px;
         padding-top: 60px;
     }
+    
+    .menu-avatar-container{
+        width: 24px;
+        aspect-ratio: 1/1;
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        overflow: hidden;
+    }
+    
+    .menu-avatar-container img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: inline-block;
+        position: relative;
+    }
 }
 
+/* Тултип Beta */
+.beta-wrapper {
+    position: relative;
+}
+
+.beta-tooltip {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    width: 280px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    padding: 16px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 1000;
+    font-family: var(--font-family);
+}
+
+/* Стрелочка */
+.beta-tooltip::before {
+    content: '';
+    position: absolute;
+    margin-top: -8px;
+    border: 8px solid transparent;
+    border-right-color: #fff;
+}
+
+/* Показываем при ховере */
+.beta-container:hover .beta-tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Содержимое тултипа */
+.beta-tooltip-header {
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.beta-tooltip-text {
+    font-size: 13px;
+    line-height: 1.4;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.beta-tooltip-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 12px;
+}
+
+
+.beta-tooltip-stats span{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.beta-green-dot{
+    width: 4px;
+    aspect-ratio: 1/1;
+}
+
+.beta-blue-dot{
+    width: 4px;
+    aspect-ratio: 1/1;
+}
+
+/* Мобильная версия — тултип чуть ниже, чтобы не перекрывал пальцем */
+@media (max-width: 768px) {
+    .beta-container{
+        display: none;
+    }
+}
+
+@media (max-width: 1400px){
+    .beta-tooltip {
+        position: absolute;
+        left: 0;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 1200px){
+    .user-header .user-header-nav{
+        gap: 20px;
+    }
+}
