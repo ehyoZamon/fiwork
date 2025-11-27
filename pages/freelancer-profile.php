@@ -500,6 +500,23 @@ require_once "../modules/base.php";
                         </div>
                     </div>
                     
+                    <div class="card-offer-block">
+                        <div class="card-offer-description">
+                            <h2>Карты для зарубежных оплат</h2>
+                            <p>
+                                Виртуальные карты в $, чтобы платить за иностранные сервисы 
+                                или расплачиваться в магазинах, ресторанах и отелях за рубежом
+                            </p>
+                            
+                            <div class="select-card">
+                                Выбрать карту
+                            </div>
+                        </div>
+                        <div class="card-offer-banner">
+                            <img src="/img/freelancer-profile/card-offer.webp" alt="card-offer" class="card-offer-img">
+                        </div>
+                    </div>
+                    
                     
                     <div class="new-in-stock-block">
                         <div class="new-in-stock-header">

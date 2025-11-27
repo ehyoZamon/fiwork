@@ -1577,6 +1577,64 @@ footer{
     color: #62646a;
 }
 
+.user-header .user-header-nav a:hover{
+    border-bottom: 2px solid #2787f5;
+    padding: 16px 0;
+    color: #2787f5;
+}
+
+
+.user-header .user-header-nav a.notification{
+    cursor: pointer;
+    border-bottom: none;
+    position: relative;
+}
+
+.user-header .user-header-nav .notification-list-container{
+    position: absolute;
+    z-index: 100;
+    right: 0;
+    padding-top: 10px;
+}
+
+.user-header .user-header-nav .notification-list{
+    width: 350px;
+    background: #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.user-header .user-header-nav .notification:hover .notification-list{
+    display: inline-block;
+    top: 20px;
+}
+
+.user-header .user-header-nav .notification-list-elem{
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    flex-direction: row;
+    gap: 10px; 
+    background: #f7f7f7;
+    border-top: 1px solid #ddd;
+    color: #1D2635;
+}
+
+.user-header .user-header-nav .notification-list-elem:hover{
+    background: #fcfcfc;
+}
+
+.user-header .user-header-nav .notification-list-elem.active{
+    background: #fff;
+    color: #1D2635;
+    border-top: none;
+}
+
+
+
 .user-header .balance{
     display: flex;
     flex-direction: row;
@@ -1600,6 +1658,13 @@ footer{
     color: #05b;
     width: 100px;
     justify-content: space-between;
+    z-index: 110;
+}
+
+.balance-select-text{
+    text-decoration: none;
+    cursor: pointer;
+    color: #05b;
 }
 
 .balance-select-text.hidden{
@@ -1635,6 +1700,7 @@ footer{
 .user-header .user-header-avatar{
     cursor: pointer;
     position: relative;
+    z-index: 110;
 } 
 
 .user-header .user-header-avatar .img-container{
@@ -1671,7 +1737,7 @@ footer{
     background: #1dbf73;
 }
 
-.user-header-menu.hidden{
+.user-header-menu-container.hidden{
     display: none;
 }
 
@@ -1683,12 +1749,18 @@ footer{
     color: #000;
     margin: 0;
     padding: 0;
+    z-index: 110;
+}
+
+.user-header-menu-container{
+    top: 10px;
+    padding-top: 40px;
+    position: absolute;
+    right: 0;
+    z-index: 101;
 }
 
 .user-header-menu{
-    position: absolute;
-    top: 50px;
-    right: 40px;
     width: 240px;
     backdrop-filter: blur(25px);
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
@@ -1894,10 +1966,21 @@ footer{
 .user-header-menu-nav{
     display: flex;
     flex-direction: column;
-    gap: 10px;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 0 10px;
+    width: 100%;
+}
+
+.user-header .notification .notification-active-icon{
+    display: none;
+}
+
+.user-header .notification.active .notification-active-icon{
+    display: inline-block;
+}
+
+.user-header .notification.active .notification-icon{
+    display: none;
 }
 
 .user-header-menu-nav a{
@@ -1911,6 +1994,14 @@ footer{
     display: flex;
     flex-direction: row;
     gap: 10px;
+    border-radius: 8px;
+    width: 100%;
+    padding: 8px; 
+}
+
+.user-header-menu-nav a:hover{
+    background: #f3f6f8;
+    border-radius: 8px;
 }
 
 .user-header-menu-nav a img{

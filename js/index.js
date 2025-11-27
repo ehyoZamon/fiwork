@@ -155,15 +155,32 @@ window.onload=function(){
         $(".phone-header").css("max-width","100%");
     });
     
-    $(".user-header-avatar, .user-header-burger, .balance-text").on("click",function(e){
+    $(".user-header-avatar, .balance-text .chevron-down").on("mouseenter",function(e){
         e.stopPropagation();
-        $(".user-header-menu").toggleClass("hidden");
+        $(".user-header-menu-container").toggleClass("hidden");
     });
     
-    $("body").on("click",function(){
-        $(".user-header-menu").addClass("hidden");
+    $(".user-header").on("mouseleave",function(){
+        $(".user-header-menu-container").addClass("hidden");
     });
     
+    $(".user-header .copy-icon").on("click", function () {
+        const $icon = $(this);
+        const username = $icon.closest(".user-username").text().trim();
+    
+        navigator.clipboard.writeText("https://fiwork.ru/"+username).then(() => {
+            $icon.attr("src", "/img/icons/check.svg");
+            $(".user-header .copy-icon").hide();
+            $(".user-header .checkmark-icon").show();
+            setTimeout(() => {
+                $icon.attr("src", "/img/icons/copy.svg");
+                $(".user-header .copy-icon").show();
+                $(".user-header .checkmark-icon").hide();
+            }, 3000);
+        });
+    });
+
+
     $(".user-header-menu").on("click",function(e){
         e.stopPropagation();
     });

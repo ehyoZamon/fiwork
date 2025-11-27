@@ -124,19 +124,23 @@ require_once "../modules/base.php";
                     
                     <div class="verification-block">
                         <div class="documents-verified-container verification-container">
-                            <img src="/img/icons/docs-verified.svg" alt="docs-verified" class="verification-img docs-verified"/>
-                            <div class="verification-block-content">  
-                                <h3>Документы проверены</h3>
-                                <p>По фото паспорта и видео испол…</p>
+                            <div class="verification-wrapper">
+                                <img src="/img/icons/docs-verified.svg" alt="docs-verified" class="verification-img docs-verified"/>
+                                <div class="verification-block-content">  
+                                    <h3>Документы проверены</h3>
+                                    <p>По фото паспорта и видео испол…</p>
+                                </div>
                             </div>
                             <img src="/img/icons/chevron-right.svg" alt="chevron-right" class="chevron-right"/>
                         </div>
                         
                         <div class="rush-order-block verification-container">
-                            <img src="/img/icons/rush-order.svg" alt="rush-order" class="verification-img rush-order"/>
-                            <div class="verification-block-content">  
-                                <h3>Может сегодня</h3>
-                                <p>По фото паспорта и видео испол…</p>
+                            <div class="verification-wrapper">
+                                <img src="/img/icons/man-verified.webp" alt="man-verified" class="verification-img man-verified"/>
+                                <div class="verification-block-content">  
+                                    <h3>Отчет о продавце</h3>
+                                    <p>Купить отчёт за 399 ₽</p>
+                                </div>
                             </div>
                             <img src="/img/icons/chevron-right.svg" alt="chevron-right" class="chevron-right"/>
                         </div>
@@ -357,8 +361,8 @@ require_once "../modules/base.php";
 <div class="maybe-today-modal-block-container hidden">
     <div class="maybe-today-modal-block">
         <div class="maybe-today-modal-block-content">
-            <h3>Может сегодня</h3>
-            <p>Исполнители включают этот статус в объявлениях об услугах, когда готовы взять заказ день в день.</p>
+            <h3>Отчёт о продавце</h3>
+            <p>Даёт полную информацию о продавце.</p>
         </div>
         <div>
             <img src="/img/icons/white-close-icon.svg" alt="white-close-icon" class="white-close-icon close-maybe-today-modal-block"/>

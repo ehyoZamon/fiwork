@@ -361,7 +361,8 @@ $userHeader=<<<EOT
             <img src="/img/garlands.svg" alt="garlands" class="garlands-img"/>
         </div>
         <img src="/img/garland-switch.svg" alt="garland-switch" class="garland-switch"/>
-    </div> 
+    </div>
+    
     <link rel="stylesheet" href="/css/mobile-navigation-menu.css?v=<?= time(); ?>" />
     <link rel="stylesheet" href="/css/base.css?v=<?= time(); ?>"/>
     <header class="computer-header computer-user-header">
@@ -402,6 +403,34 @@ $userHeader=<<<EOT
                         <a href="#">Биржа</a>
                         <a href="#">Портфолио</a>
                         <a href="#" class="chat active">Чат <div class="unread-messages">77</div></a>
+                        <a href="#" class="notification active">
+                            <img src="/img/icons/notification.svg" alt="notification" class="notification-icon"/>
+                            <img src="/img/icons/notification-active.svg" alt="notification-active" class="notification-active-icon"/>
+                            <div class="notification-list-container">
+                                <div class="notification-list">
+                                    <div class="notification-list-elem active">
+                                        <img src="/img/icons/round-notification-active.svg" alt="round-notification-active" class="round-notification-active"/>
+                                        Размещен новый заказ
+                                    </div>
+                                    <div class="notification-list-elem">
+                                        <img src="/img/icons/round-notification.svg" alt="round-notification" class="round-notification"/>
+                                        Размещен новый заказ
+                                    </div>
+                                    <div class="notification-list-elem">
+                                        <img src="/img/icons/round-notification.svg" alt="round-notification" class="round-notification"/>
+                                        Order accepted by client
+                                    </div>
+                                    <div class="notification-list-elem">
+                                        <img src="/img/icons/round-notification.svg" alt="round-notification" class="round-notification"/>
+                                        New order placed
+                                    </div>
+                                    <div class="notification-list-elem">
+                                        <img src="/img/icons/round-notification.svg" alt="round-notification" class="round-notification"/>
+                                        Your project successfully activate
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                     
                     <img src="/img/icons/user-header-burger.svg" alt="burder" style="display: none;" class="user-header-burger"/>
@@ -417,45 +446,48 @@ $userHeader=<<<EOT
                     <div class="balance">
                         <div class="current-balance">0 ₽</div>
                         <div class="balance-text">
-                            <span class="balance-select-text fill-money">Вывести</span>
-                            <span class="balance-select-text get-out-money hidden">Пополнить</span><img src="/img/icons/chevron-down.svg" alt="chevron-down" class="chevron-down">
+                            <a href="#" class="balance-select-text fill-money">Вывести</a>
+                            <a href="#" class="balance-select-text get-out-money hidden">Пополнить</a><img src="/img/icons/chevron-down.svg" alt="chevron-down" class="chevron-down">
                         </div>
                     </div>
                     
-                    <div class="user-header-menu hidden">
-                        <div class="part1">
-                            <div class="premium-container active"><img src="/img/icons/grey-diamond.svg" alt="grey-diamond" class="grey-diamond"/><img src="/img/icons/blue-diamond.svg" alt="blue-diamond" class="blue-diamond"/>Premium</div>
-                            <div class="user-name">Андрей Иванов</div>
-                            <div class="user-username">andreycode <img src="/img/icons/copy.svg" alt="copy-icon" class="copy-icon"/></div>
-                            <div class="receive-orders active">
-                                <div class="receive-orders-text"><span class="not-working receive-order-text active">Не работаю</span><span class="receiving-orders receive-order-text">Принимаю заказы</span> 
-                                <img src="/img/icons/round-question-icon.svg" alt="round-question" class="round-question-icon"/>
-                                </div>
-                                <label class="switch">
-                                    <input type="checkbox">
-                                    <span class="slider"></span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="part2">
-                            <div class="user-type-block">
-                                <div class="orderer-user-type user-type">
-                                    Я покупатель
-                                </div>
-                                <div class="freelancer-user-type user-type selected">
-                                    Я продавец
+                    <div class="user-header-menu-container hidden">
+                        <div class="user-header-menu">
+                            <div class="part1">
+                                <div class="premium-container active"><img src="/img/icons/grey-diamond.svg" alt="grey-diamond" class="grey-diamond"/><img src="/img/icons/blue-diamond.svg" alt="blue-diamond" class="blue-diamond"/>Premium</div>
+                                <div class="user-name">Андрей Иванов</div>
+                                <div class="user-username">andreycode <img src="/img/icons/copy.svg" alt="copy-icon" class="copy-icon"/>
+                                                                      <img src="/img/icons/green-checkmark.svg" alt="checkmark" style="display: none;" class="checkmark-icon"/>
+                                                            </div>
+                                <div class="receive-orders active">
+                                    <div class="receive-orders-text"><span class="not-working receive-order-text active">Не работаю</span><span class="receiving-orders receive-order-text">Принимаю заказы</span> 
+                                    <img src="/img/icons/round-question-icon.svg" alt="round-question" class="round-question-icon"/>
+                                    </div>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
                                 </div>
                             </div>
-                            <div class="user-header-menu-nav">
-                                <a href="#"><img src="/img/icons/user-header-menu/user-settings.svg" alt="profile-icon"/>Профиль</a>
-                                <a href="#"><img src="/img/icons/user-header-menu/settings.svg" alt="profile-icon"/>Настройки</a>
-                                <a href="#"><img src="/img/icons/user-header-menu/help.svg" alt="profile-icon"/>Помощь</a>
-                                <a href="#"><img src="/img/icons/user-header-menu/quit.svg" alt="profile-icon"/>Выйти</a>
-                                
+                            <div class="part2">
+                                <div class="user-type-block">
+                                    <div class="orderer-user-type user-type">
+                                        Я покупатель
+                                    </div>
+                                    <div class="freelancer-user-type user-type selected">
+                                        Я продавец
+                                    </div>
+                                </div>
+                                <div class="user-header-menu-nav">
+                                    <a href="#"><img src="/img/icons/user-header-menu/user-settings.svg" alt="profile-icon"/>Профиль</a>
+                                    <a href="#"><img src="/img/icons/user-header-menu/settings.svg" alt="profile-icon"/>Настройки</a>
+                                    <a href="#"><img src="/img/icons/user-header-menu/help.svg" alt="profile-icon"/>Помощь</a>
+                                    <a href="#"><img src="/img/icons/user-header-menu/quit.svg" alt="profile-icon"/>Выйти</a>
+                                    
+                                </div>
                             </div>
                         </div>
                     </div>
-                    
                     
                 </div>
             </div>
