@@ -223,6 +223,19 @@ input:valid {
   border-radius: 10px;
 }
 
+
+.freelancer-progress .progress-fill.green{
+    background-color: #22c55e; 
+}
+
+.freelancer-progress .progress-fill.orange{
+    background-color: orange;
+}
+
+.freelancer-progress .progress-fill.red{
+    background: #e45865;
+}
+
 .freelancer-progress .progress-text {
     font-size: 14px;
     color: #4b5563; /* серый цвет */
@@ -1172,6 +1185,7 @@ span.new{
   background-color: #22c55e; /* зелёный */
   border-radius: 10px;
 }
+
 
 .step-details-container .step-progress-text {
     font-size: 14px;

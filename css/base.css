@@ -2398,7 +2398,7 @@ footer{
         bottom: 0;
         left: 0;
         height: 82px;
-        z-index: 100;
+        z-index: 120;
     }
     
     .footer-mobile-menu .footer-mobile-elem{

@@ -389,4 +389,5 @@ window.onload=function(){
     $(".user-header-menu .switch").on("click change",function(){
         changeUserStatus();
     });
+    
 }

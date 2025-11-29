@@ -274,8 +274,75 @@ require_once "../modules/base.php";
                 </div>
                 <div class="aside-content-block">
                     <div class="service-price-block">
-                        от 550 ₽
+                        <span>от 550 ₽</span>
+                        <div class="price-estimate normal-price">
+                            <span class="price-estimate-text normal-price">Справедливая цена &nbsp;<img src="/img/icons/green-chevron-down.svg" alt="green-chevron-down" class="green-chevron-down-icon"/></span> 
+                            <span class="price-estimate-text middle-price">Cредняя цена &nbsp;<img src="/img/icons/chevron-down.svg" alt="green-chevron-down" class="green-chevron-down-icon"/></span> 
+                            <span class="price-estimate-text high-price">Высокая цена &nbsp;<img src="/img/icons/chevron-down.svg" alt="green-chevron-down" class="green-chevron-down-icon"/></span> 
+                            
+                            <div class="price-calculator-container">
+                                <div class="price-calculator-card">
+                                    <div class="price-range-header">
+                                        <span class="label left">Ниже оценки</span>
+                                        <span class="label right">Выше оценки</span>
+                                    </div>
+                                
+                                    <div class="range-slider-container">
+                                        <input type="range" min="0" max="100" value="50" class="range-slider">
+                                        <img src="/img/icons/slider-indicator.svg" alt="slider-indicator" class="slider-indicator"/>
+                                        <div class="range-track-active" style="left: 33.3%; right: 33.3%;">
+                                            <img src="/img/icons/vertical-line.svg" alt="vertical-line" class="vertical-line-left"/>
+                                            <img src="/img/icons/vertical-line.svg" alt="vertical-line" class="vertical-line-right"/>
+                                            <div class="price-from">
+                                                от 500 ₽
+                                            </div>
+                                            <div class="price-to">
+                                                до 1500 ₽
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                
+                                    <p class="description">
+                                        Похожие заказы выполняются в этом диапазоне цен после учёта всех правок и согласований.
+                                    </p>
+                                
+                                    <div class="factors-section">
+                                        <h3>Влияет на цену</h3>
+                                        <div class="factor-item">
+                                            <img src="/img/icons/round-green-plus.svg" alt="round-green-plus" class="round-green-plus-icon"/>
+                                            <span>30 заказов — в среднем 4 у похожих</span>
+                                        </div>
+                                        <div class="factor-item">
+                                            <img src="/img/icons/round-green-plus.svg" alt="round-green-plus" class="round-green-plus-icon"/>
+                                            <span>27 отзывов — в среднем 5 у похожих</span>
+                                        </div>
+                                        <div class="factor-item">
+                                            <img src="/img/icons/round-green-plus.svg" alt="round-green-plus" class="round-green-plus-icon"/>
+                                            <span>30 повторных — в среднем 5 у похожих</span>
+                                        </div>
+                                    </div>
+                                
+                                    <div class="complexity-box">
+                                        <div class="complexity-label">
+                                            <span class="icon">✦</span>
+                                            С учётом сложности
+                                        </div>
+                                        
+                                        <div class="complexity-content">
+                                            <h3>Оценка учитывает сложность проекта.</h3>
+                                            <p>
+                                                Нейросеть анализирует бриф и данные проекта, оценивая сложность, сроки и требования,
+                                                чтобы сформировать точную рыночную стоимость работы.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
                     </div>
+                    
                     <div class="replies-now-block">
                         <img src="/img/icons/green-dot.svg" alt="green-dot" class="green-dot"/><span>Ответит прямо сейчас</span>
                     </div>
@@ -409,7 +476,7 @@ require_once "../modules/base.php";
                     <div class="vertical-line"></div>
                     <p class="response-time-container">Обычно отвечает за: <span class="response-time">4 мин.</span></p>
                 </div>
-                <form method="POST" action="#">
+                <form method="POST">
                         <textarea class="send-message-modal-block-textarea">Добрый день. Тема: кворк "Обновление CMS Bitrix Битрикс на PHP 8".</textarea>
                         <div class="send-modal-block-message-button-container">
                             <div class="add-file-area-container">
@@ -427,6 +494,35 @@ require_once "../modules/base.php";
     </div>
 </div>
 
+<div class="message-sent-modal-block-container hidden">
+    <div class="message-sent-modal-block">
+        <div class="message-sent-modal-block-header">
+            <h3>Отправить сообщение</h3>
+            <img src="/img/icons/close-modal-grey-icon.svg" alt="close-modal-icon" class="close-modal-grey-icon close-message-sent-modal-block"/>
+        </div>
+        <div class="message-sent-modal-block-content">
+            <img src="/img/icons/green-round-checkmark.svg" alt="green-round-checkmark" class="green-round-checkmark"/>
+            <p class="message-is-sent-text">Сообщение отправлено</p>
+            <a href="#" class="sent-message-link">Просмотрите ваше сообщение</a>
+        </div>
+    </div>
+</div>
+
+<div class="freelancer-information-modal-block-container hidden">
+    <div class="freelancer-information-modal-block">
+        <img src="/img/icons/close-modal-grey-icon.svg" alt="close-modal-icon" class="close-modal-grey-icon close-freelancer-information-modal-block"/>
+        <div class="freelancer-information-modal-block-content">
+            <img src="/img/icons/freelancer-information-icon.svg" class="freelancer-information-icon" class="feelancer-information-icon"/>
+            <h3>Отчет об исполнителе</h3>
+            <p class="our-db-info">У нас самая полная база данных об исполнителе. Мы покажем споры по заказам, стоимость заказов из отзывов, сумму выполненных заказов, дату регистрации и многое другое.</p>
+            <input type="button" value="Купить отчёт за 399 ₽" class="buy-freelancer-info"/>
+            <p class="our-db-additional-info">Для заказов стоимостью выше 10 000 ₽ мы рекомендуем оформлять отчёт — это поможет вам принять взвешенное решение перед началом сотрудничества с исполнителем.</p>
+        </div>
+    </div>
+</div>
+
+
+
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="/js/jQuery/jquery-3.5.1.min.js"></script>
@@ -434,7 +530,6 @@ require_once "../modules/base.php";
 <script src="/js/mobile-navigation-menu.js?v=<?= time(); ?>"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 <script>
-  window.onload=function(){
       const thumbSwiper = new Swiper(".swiper-thumb", {
         spaceBetween: 5,
         slidesPerView: 7,
@@ -464,7 +559,8 @@ require_once "../modules/base.php";
       /*Logic of modal-windows*/
       
       $(".rush-order-block").on("click",function(){
-          $(".maybe-today-modal-block-container").removeClass("hidden");  
+          //$(".maybe-today-modal-block-container").removeClass("hidden");  
+            $(".freelancer-information-modal-block-container").removeClass('hidden');
       });
       
       $(".close-maybe-today-modal-block").on("click",function(){
@@ -486,9 +582,22 @@ require_once "../modules/base.php";
       
       $(".close-send-message-modal-block").on("click",function(){
           $(".send-message-modal-block-container").addClass("hidden"); 
-      })
+      });
+      
+      $(".close-message-sent-modal-block").on('click',function(){
+            $(".message-sent-modal-block-container").addClass("hidden"); 
+      });
+      
+      $(".close-freelancer-information-modal-block").on('click',function(){
+          $(".freelancer-information-modal-block-container").addClass('hidden');
+      });
       
       /*End of logic of modal-windows*/
-  }
+      
+      $(".send-message-modal-block form").on("submit",function(e){
+            e.preventDefault();
+            $(".send-message-modal-block-container").addClass("hidden"); 
+            $(".message-sent-modal-block-container").removeClass("hidden"); 
+      });
 </script>
 </html>

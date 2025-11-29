@@ -91,10 +91,10 @@ require_once "../modules/base.php";
                                     Отзывы
                                 </p>
                                 <div class="progress-container">
-                                    <div class="progress-bar" style="display: none;">
-                                      <div class="progress-fill" style="width: 100%;"></div>
+                                    <div class="progress-bar">
+                                      <div class="progress-fill" style="width: 50%;"></div>
                                     </div>
-                                    <div class="progress-text">0</div>
+                                    <div class="progress-text">50%</div>
                                 </div>
                             </div>
                             
@@ -116,7 +116,7 @@ require_once "../modules/base.php";
                                 </p>
                                 <div class="progress-container">
                                     <div class="progress-bar">
-                                      <div class="progress-fill" style="width: 30%; background: #e45865;"></div>
+                                      <div class="progress-fill" style="width: 30%;"></div>
                                     </div>
                                     <div class="progress-text">30%</div>
                                 </div>
@@ -1444,6 +1444,32 @@ require_once "../modules/base.php";
         $(".banned-modal").addClass("hidden"); 
     });
     /*end of search-fiwork-step-stages*/
+    
+    function changeProgressFillColor() {
+        $(".freelancer-progressbar-container .progress-fill").each(function(index, element) {
+            
+            const widthStyle = $(element).css("width");
+    
+            const widthValue = parseFloat($(element).get(0).style.width.replace('%', ''));
+            
+            if (isNaN(widthValue)) return; 
+    
+            $(element).removeClass("red orange green");
+            
+            if (widthValue <= 39) {
+                // 0 - 39% -> Красный
+                $(element).addClass("red");
+            } else if (widthValue <= 85) {
+                // 40 - 85% -> Оранжевый
+                $(element).addClass("orange");
+            } else {
+                // 86 - 100% -> Зеленый
+                $(element).addClass("green");
+            }
+        });
+    }
+    
+    changeProgressFillColor();
 </script>
 <script>
     var portfolioSwiper = new Swiper(".myPortfolioSwiper", {

@@ -985,21 +985,65 @@ input:valid {
 }
 
 .aside-content-block .service-price-block{
-
     font-family: var(--font7);
-
     font-weight: 600;
-
     font-size: 30px;
-
     line-height: 133%;
-
     color: #333;
-
     text-align: left;
-
     margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+}
 
+.service-price-block .price-estimate{
+    background: #d9f2df;
+    border-radius: 12px;
+    min-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font8);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 101%;
+    text-align: center;
+    color: #267e3b;
+    margin: 0;
+    padding: 7px;
+    gap: 8px;
+    position: relative;
+}
+
+.service-price-block .price-estimate.high-price{
+    color: #a90000;
+    background: #ffdada;
+}
+
+.service-price-block .price-estimate.middle-price{
+    color: #000;
+    background: #e9eaec;
+}
+
+.service-price-block .price-estimate-text{
+    cursor: pointer;
+    z-index: 101;
+    display: none;
+}
+
+.service-price-block .price-estimate.high-price .price-estimate-text.high-price{
+    display: inline-block;
+}
+
+.service-price-block .price-estimate.middle-price .price-estimate-text.middle-price{
+    display: inline-block;
+}
+
+.service-price-block .price-estimate.normal-price .price-estimate-text.normal-price{
+    display: inline-block;
 }
 
 .aside-content-block .replies-now-block{
@@ -1044,7 +1088,7 @@ input:valid {
 
 }
 
-.aslide-content-block .green-dot{
+.aside-content-block .green-dot{
 
     width: 8px;
 
@@ -1836,7 +1880,9 @@ input:valid {
 
 }
 
-.send-message-modal-block-container{
+.send-message-modal-block-container,
+.message-sent-modal-block-container,
+.freelancer-information-modal-block-container{
 
     position: fixed;
 
@@ -1862,10 +1908,10 @@ input:valid {
 
 }
 
-.send-message-modal-block{
-
+.send-message-modal-block,
+.message-sent-modal-block,
+.freelancer-information-modal-block{
     padding: 0;
-
     width: 90%;
 
     max-width: 720px;
@@ -1882,47 +1928,155 @@ input:valid {
 
 }
 
-.send-message-modal-block-header{
+.message-sent-modal-block,
+.freelancer-information-modal-block{
+    max-width: 460px;
+    position: relative;
+}
 
-    width: 100%;
-
-    display: flex;
-
-    flex-direction: row;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    gap: 10px;
-
+.freelancer-information-modal-block{
     padding: 24px;
+}
 
-    padding-bottom: 14px;
+.freelancer-information-modal-block-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
+.freelancer-information-modal-block .close-freelancer-information-modal-block{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+
+.send-message-modal-block-header,
+.message-sent-modal-block-header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 24px;
     background: linear-gradient(180deg, #fff 0%, #f7f7f7 100%);
-
-}
-
-.send-message-modal-block-header h3{
-
-    margin: 0;
-
-    padding: 0;
-
-    font-family: var(--second-family);
-
-    font-weight: 600;
-
-    font-size: 22px;
-
-    line-height: 127%;
-
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 133%;
     color: #111;
-
 }
 
-.send-message-modal-block-header img{
+.message-sent-modal-block-header{
+    padding-bottom: 10px;
+}
+
+.message-sent-modal-block-content{
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.message-sent-modal-block-content img{
+    width: 72px;
+}
+
+.message-sent-modal-block-content p{
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 133%;
+    color: #090;
+}
+
+.message-sent-modal-block-content a{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 157%;
+    color: #177de5;
+}
+
+.send-message-modal-block-header h3,
+.message-sent-modal-block-header h3{
+    margin: 0;
+    padding: 0;
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 127%;
+    color: #111;
+}
+
+.freelancer-information-modal-block h3{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 133%;
+    text-align: center;
+    color: #111;
+    margin-bottom: 0;
+}
+
+.freelancer-information-modal-block .our-db-info{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    text-align: center;
+    color: #333;
+    text-align: center;
+    width: 100%;
+}
+
+.freelancer-information-modal-block .our-db-additional-info{
+    font-family: var(--font11);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    text-align: center;
+    color: #333;
+    text-align: center;
+    width: 100%;
+}
+
+.freelancer-information-modal-block .buy-freelancer-info{
+    margin-top: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #04b70a;
+    border-radius: 6px;
+    padding: 19px 17px;
+    width: 240px;
+    height: 48px;
+    min-width: 150px;
+    max-width: 240px;
+    background: #04b70a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 71%;
+    text-align: center;
+    color: #fff;
+}
+
+.send-message-modal-block-header img,
+.message-sent-modal-block-header img{
 
     width: 40px;
 
@@ -2344,10 +2498,10 @@ input:valid {
 
 }
 
-.send-message-modal-block-container.hidden{
-
+.send-message-modal-block-container.hidden,
+.message-sent-modal-block-container.hidden, 
+.freelancer-information-modal-block-container.hidden{
     display: none;
-
 }
 /*end modal-blocks*/
 
@@ -2355,6 +2509,241 @@ input:valid {
     filter: invert(50%) sepia(100%) saturate(2000%) hue-rotate(200deg) brightness(100%) contrast(100%);
     transition-duration: 0s;
 }
+
+/*price-calculator-card*/
+.price-calculator-container{
+    position: absolute;
+    right: 10px;
+    padding-top: 40px;
+    z-index: 100;
+    top: 0px;
+    display: none;
+}
+
+.service-price-block .price-estimate:hover  .price-calculator-container{
+    display: block;
+}
+
+.price-calculator-card {
+    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.25);
+    background: #fff;
+    border-radius: 12px;
+    width: 380px;
+    padding: 20px;
+}
+
+.price-calculator-card .price-range-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.price-calculator-card .price-range-header .label {
+    font-family: var(--font8);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 133%;
+    color: rgba(28, 33, 40, 0.6);
+}
+
+.price-calculator-card .range-slider-container {
+    position: relative;
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+.price-calculator-card .range-slider {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0; /* Скрываем его, но сохраняем интерактивность */
+    z-index: 2;
+    margin: 0;
+    cursor: pointer;
+}
+
+.price-calculator-card .range-slider-container .price-from{
+    font-family: var(--font8);
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 133%;
+    color: #000;
+    position: absolute;
+    top: 20px;
+    left: -35px;
+}
+
+.price-calculator-card .range-slider-container .vertical-line-left{
+    top: 10px;
+    left: 0;
+    position: absolute;
+}
+
+.price-calculator-card .range-slider-container .vertical-line-right{
+    top: 10px;
+    right: 0;
+    position: absolute;
+}
+
+.price-calculator-card .range-slider-container .slider-indicator{
+    position: absolute;
+    left: 60%;
+    top: -2px;
+    z-index: 101;
+}
+
+.price-calculator-card .range-slider-container .price-to{
+    font-family: var(--font8);
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 133%;
+    color: #000;
+    position: absolute;
+    top: 20px;
+    right: -35px;
+}
+
+.price-calculator-card .range-slider-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    height: 8px; 
+    background-color: #e0f0e0; 
+    border-radius: 4px;
+    z-index: 1;
+}
+
+.price-calculator-card .range-track-active {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 8px; 
+    background-color: #4CAF50;
+    border-radius: 4px;
+    z-index: 1;
+}
+
+
+
+.price-calculator-card .range-track-active::before {
+    left: -8px;
+}
+
+.price-calculator-card .range-track-active::after {
+    right: -8px; 
+}
+
+
+.price-calculator-card .description {
+    font-family: var(--font8);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 133%;
+    color: #000;
+    margin: 0;
+    padding: 20px 0;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+.price-calculator-card .factors-section{
+    padding: 20px 0;
+}
+
+.price-calculator-card .factors-section h3 {
+    font-family: var(--font8);
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 124%;
+    letter-spacing: 0.02em;
+    color: #000;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.price-calculator-card .factor-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.price-calculator-card .factor-item span{
+    font-family: var(--font8);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 137%;
+    color: #000;
+    text-align: left;
+}
+
+.price-calculator-card .complexity-box {
+    width: 100%;
+    background: #ffffff;
+    border: 2px solid #e7c9ff;
+    border-radius: 16px;
+    padding: 18px 20px 20px;
+    position: relative;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.price-calculator-card .complexity-label {
+    position: absolute;
+    top: -14px;
+    left: 18px;
+    background: #a259ff;
+    color: #fff;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font8);
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 109%;
+    color: #fff;
+}
+
+.price-calculator-card .complexity-label .icon {
+    font-size: 13px;
+}
+
+.price-calculator-card .complexity-content h3 {
+    margin: 10px 0 8px;
+    text-align: left;
+    line-height: 120%;
+    margin-top: 0;
+    font-family: var(--font8);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 133%;
+    color: #000;
+}
+
+.price-calculator-card .complexity-content p {
+    font-family: var(--font8);
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 123%;
+    color: rgba(28, 33, 40, 0.6);
+    margin: 0;
+    text-align: left;
+}
+
+/*end of price-calculator-card*/
 
 
 @media (max-width: 1280px){
@@ -2633,6 +3022,9 @@ input:valid {
 
     } 
 
+    .price-calculator-card{
+        width: 300px;
+    }
 }
 
 @media (max-width: 500px){
