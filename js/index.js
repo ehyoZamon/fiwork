@@ -70,6 +70,10 @@ function changeUserStatus(){
     }
 }
   
+function openFillBalanceModal(){
+    $(".fill-balance-modal-block-container").removeClass("hidden");
+}
+
 window.onload=function(){
     changeUserStatus();
     /*$(".swiper-hidden").removeClass("swiper-hidden");*/
@@ -120,7 +124,7 @@ window.onload=function(){
         $(this).addClass("selected");
         $(".user-header-menu .receive-orders").removeClass("active");
         $(".balance-select-text").addClass("hidden");
-        $(".balance-select-text.fill-money").removeClass("hidden");
+        $(".balance-select-text.get-out-money").removeClass("hidden");
     });
     
     $(".user-header-menu .freelancer-user-type").on("click",function(){
@@ -128,8 +132,9 @@ window.onload=function(){
         $(this).addClass("selected");
         $(".user-header-menu .receive-orders").addClass("active");
         $(".balance-select-text").addClass("hidden");
-        $(".balance-select-text.get-out-money").removeClass("hidden");
+        $(".balance-select-text.fill-money").removeClass("hidden");
     });
+    
     
     $(".go-to-register-link").on("click",function(){
         $(".fiwork-register-modal-container").removeClass("hidden");
@@ -390,4 +395,26 @@ window.onload=function(){
         changeUserStatus();
     });
     
+    $(".close-fill-balance-modal-block").on("click",function(){
+        $(".fill-balance-modal-block-container").addClass("hidden");
+    });
+    
+    $(".fill-balance-modal-block .select-payment-list .payment-method-elem").on("click",function(){
+        $(".fill-balance-modal-block .select-payment-list .payment-method-elem").removeClass("selected");
+        $(".fill-balance-modal-block .select-payment-method .payment-method-text").html($(this).html());
+        $(this).addClass("selected");
+    });
+    
+    $(".fill-balance-modal-block .enter-sum").on("input change",function(){
+        var sum=$(this).val();
+        if(sum>0){
+            $(".fill-balance-modal-block .additional-sum-block").removeClass("hidden");
+            $(".fill-balance-modal-block .result-sum-block").removeClass("hidden");
+            $(".fill-balance-modal-block .result-sum-block .result-sum-text").text(parseInt(sum)+200);
+        }else{
+            $(".fill-balance-modal-block .additional-sum-block").addClass("hidden");
+            $(".fill-balance-modal-block .result-sum-block").addClass("hidden");
+        }
+    });
+
 }

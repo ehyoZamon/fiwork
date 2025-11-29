@@ -1913,19 +1913,12 @@ input:valid {
 .freelancer-information-modal-block{
     padding: 0;
     width: 90%;
-
     max-width: 720px;
-
     display: flex;
-
     flex-direction: column;
-
     border-radius: 16px;
-
     overflow: hidden;
-
     background: #fff;
-
 }
 
 .message-sent-modal-block,
@@ -2022,7 +2015,7 @@ input:valid {
 
 .freelancer-information-modal-block h3{
     font-family: var(--font-family);
-    font-weight: 600;
+    font-weight: 500;
     font-size: 18px;
     line-height: 133%;
     text-align: center;
@@ -2077,11 +2070,8 @@ input:valid {
 
 .send-message-modal-block-header img,
 .message-sent-modal-block-header img{
-
     width: 40px;
-
     cursor: pointer;
-
 }
 
 .send-message-modal-block-wrapper{

@@ -447,7 +447,7 @@ $userHeader=<<<EOT
                         <div class="current-balance">0 ₽</div>
                         <div class="balance-text">
                             <a href="#" class="balance-select-text fill-money">Вывести</a>
-                            <a href="#" class="balance-select-text get-out-money hidden">Пополнить</a><img src="/img/icons/chevron-down.svg" alt="chevron-down" class="chevron-down">
+                            <a href="#" class="balance-select-text get-out-money hidden" onclick="openFillBalanceModal();">Пополнить</a><img src="/img/icons/chevron-down.svg" alt="chevron-down" class="chevron-down">
                         </div>
                     </div>
                     
@@ -803,6 +803,99 @@ $userHeader=<<<EOT
             </div>
         </a>
     </div>
+    
+    <div class="fill-balance-modal-block-container hidden">
+        <div class="fill-balance-modal-block">
+            <div class="fill-balance-modal-block-header">
+                <h3>Пополнение баланса</h3>
+                <img src="/img/icons/close-modal-grey-icon.svg" alt="close-modal-icon" class="close-modal-grey-icon close-fill-balance-modal-block"/>
+            </div>
+            <div class="fill-balance-modal-block-content">
+                <div class="fill-balance-modal-block-description">
+                    <img src="/img/icons/pound-on-hand.svg" alt="pound-on-hand" class="pound-on-hand"/>
+                    <p>Пополняйте с запасом, чтобы
+                        всегда заказывать в один клик</p>
+                </div>
+                
+                <form class="fill-balance-modal-form">
+                    <div class="form-input">
+                        <label>
+                            Способ оплаты
+                        </label>
+                        <div class="select-payment-method">
+                            <div class="payment-method-text">
+                                <img src="/img/icons/blue-card-icon.svg" alt="blue-card-icon" class="blue-card-icon"/>
+                                Банковская карта (РФ)
+                            </div>
+                            <img src="/img/icons/chevron-down.svg" alt="chevron-down" class="chevron-down-icon"/>
+        
+                            <div class="select-payment-list-container">                    
+                                <div class="select-payment-list">
+                                    <div class="payment-method-elem selected">
+                                            <img src="/img/icons/blue-card-icon.svg" alt="blue-card-icon" class="blue-card-icon"/>
+                                            Банковская карта (РФ)
+                                    </div>
+                                    <div class="payment-method-elem">
+                                            <img src="/img/icons/sbp.svg" alt="sbp-icon" class="sbp-icon"/>
+                                            QR-код СБП (РФ)
+                                    </div>
+                                    <div class="payment-method-elem">
+                                            <img src="/img/icons/bank-card.svg" alt="bank-card-icon" class="bank-card-icon"/>
+                                            Банковская карта (Иностранная)
+                                    </div>
+                                    <div class="payment-method-elem">
+                                            <img src="/img/icons/usdt-crypto.svg" alt="usdt-icon" class="usdt-icon"/>
+                                            Криптовалюта
+                                    </div>
+                                    <div class="payment-method-elem">
+                                            <img src="/img/icons/beznal-dlya-urid.svg" alt="beznal-dlya-urid-icon" class="beznal-dlya-urid-icon"/>
+                                            Безнал для юрлиц и ИП
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-input">
+                        <label>
+                            Сумма, ₽
+                        </label>
+                        <input type="number" min="300" max="1000000" placeholder="Введите сумму" class="enter-sum" required/>
+                    </div>
+                    
+                    <div class="form-input additional-sum-block hidden">
+                        <label>
+                        </label>
+                        <div class="sum-description">
+                            + сервисный сбор:<span class="sum-description-text">200</span>₽ 
+                            
+                            <span class="question-and-description tooltip-container">
+                                <img src="/img/icons/round-question-icon.svg" alt="round-question" class="round-question-icon tooltip-question">
+                                <span class="tooltip-text" style="font-weight: 400;">
+                                    <h4>Описание сбора</h4>
+                                    <div class="description-text">Текст для описания сбора</div>
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="form-input result-sum-block hidden">
+                        <label>
+                            Итого
+                        </label>
+                        <p class="result-sum">
+                            <span class="result-sum-text">3500</span> ₽
+                        </p>
+                    </div>
+                    
+                    <div class="submit-container">
+                        <input type="submit" value="Перейти к оплате" class="submit-payment"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 EOT;
 
 $footer=<<<EOT
@@ -1083,6 +1176,8 @@ $modalWindows=<<<EOT
         </form>
     </div>
 </div>
+
+
 <script src="/js/mobile-navigation-menu.js?v=<?= time(); ?>"></script>
 EOT;
 ?>

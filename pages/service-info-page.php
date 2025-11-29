@@ -522,7 +522,6 @@ require_once "../modules/base.php";
 </div>
 
 
-
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="/js/jQuery/jquery-3.5.1.min.js"></script>

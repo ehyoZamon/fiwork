@@ -2052,6 +2052,382 @@ footer{
     display: none;
 }
 
+/*fill-balance-modal-block-container*/
+.fill-balance-modal-block-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    z-index: 110;
+}
+
+.fill-balance-modal-block-container.hidden{
+    display: none;
+}
+
+.fill-balance-modal-block{
+    padding: 0;
+    width: 90%;
+    max-width: 720px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    background: #fff;
+}
+
+.fill-balance-modal-block{
+    max-width: 460px;
+    position: relative;
+}
+
+.fill-balance-modal-block-header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 24px;
+    background: linear-gradient(180deg, #fff 0%, #f7f7f7 100%);
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 133%;
+    color: #111;
+    padding-bottom: 10px;
+    border-radius: 16px 16px 0 0;
+}
+
+
+.fill-balance-modal-block-content{
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+.fill-balance-modal-block-content .fill-balance-modal-block-description{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+.fill-balance-modal-block-content .fill-balance-modal-block-description img{
+    width: 48px;
+    aspect-ratio: 1/1;
+}
+
+.fill-balance-modal-block-content .fill-balance-modal-block-description p{
+    max-width: 220px;
+    text-align: left;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    color: #111;
+    margin: 0;
+    padding: 0;
+}
+
+.fill-balance-modal-block-header h3{
+    margin: 0;
+    padding: 0;
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 127%;
+    color: #111;
+}
+
+.fill-balance-modal-block-header img{
+    width: 40px;
+    cursor: pointer;
+}
+
+.fill-balance-modal-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.fill-balance-modal-form .sum-description{
+    text-align: left;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+    color: #666;
+    width: 100%;
+    text-align: left;
+    margin-top: -7px;
+}
+
+.fill-balance-modal-form .additional-sum-block.hidden,
+.fill-balance-modal-form .result-sum-block.hidden{
+    display: none;
+}
+
+
+.fill-balance-modal-form .sum-description-text{
+    font-weight: 500;
+}
+
+.fill-balance-modal-form .form-input{
+    width: 100%;
+    display:  flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.fill-balance-modal-form .form-input label{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 157%;
+    color: #111;  
+    width: 130px;
+    flex-shrink: 0;
+    display: inline-block;
+}
+
+.fill-balance-modal-form .form-input .result-sum{
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 71%;
+    text-align: left;
+    width: 100%;
+}
+
+.fill-balance-modal-form .form-input .select-payment-method{ 
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex: 1;
+    background: #fff;
+    border: 1px solid #a5a5a5;
+    border-radius: 4px;
+    padding: 10px;
+    min-height: 40px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    color: #333;
+    cursor: pointer;
+    position: relative;
+}
+
+.fill-balance-modal-form .select-payment-list-container{
+    position: absolute;
+    width: 100%;
+    top: 40px;
+    padding-top: 10px;
+    right: 0;
+    z-index: 10;
+    display: none;
+}
+
+.fill-balance-modal-form .select-payment-method:hover .select-payment-list-container{
+    display: block;
+}
+
+.fill-balance-modal-form .select-payment-list{
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+    background: #fff;
+    overflow: hidden;
+}
+
+.fill-balance-modal-form .select-payment-list .payment-method-elem{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 157%;
+    color: #333;
+}
+
+.fill-balance-modal-form .select-payment-list .payment-method-elem.selected{
+    color: #177de5;
+    background: #f6f6f6;
+}
+
+.fill-balance-modal-form .form-input .select-payment-method .chevron-down-icon{
+    display: none;
+}
+
+.fill-balance-modal-form .form-input .select-payment-method:hover .chevron-down-icon{
+    display: inline-block;
+}
+
+.fill-balance-modal-form .payment-method-text{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 157%;
+    color: #333;
+}
+
+.fill-balance-modal-form .form-input .enter-sum{
+    width: 100%;
+    background: #fff;
+    border: 1px solid #a5a5a5;
+    border-radius: 4px;
+    padding: 10px 36px 10px 12px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    color: #8a8a8a;
+}
+
+.fill-balance-modal-form .submit-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.fill-balance-modal-form .submit-payment{
+    border: 1px solid #04b70a;
+    border-radius: 6px;
+    padding: 10px;
+    width: 196px;
+    max-width: 100%;
+    min-height: 48px;
+    min-width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff;
+    background: #04b70a;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.fill-balance-modal-form .submit-payment:hover{
+    opacity: 1;
+}
+/*end of fill-balance-modal-block-container*/
+
+
+
+
+/*tooltip*/
+.tooltip-container {
+    position: relative; 
+    cursor: help; 
+    display: inline-block;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    opacity: 0; 
+    position: absolute;
+    z-index: 10;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px; 
+    background-color: #fefefe;
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.06);
+    color: #111;
+    text-align: left;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    white-space: normal;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip-text h4,
+.tooltip-text .description-text{
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+#tooltipGraph {
+    position: absolute;
+    padding: 6px 10px;
+    background: #fff;
+    color: #111;
+    font-size: 12px;
+    border-radius: 4px;
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.15s;
+    z-index: 9999;
+    white-space: nowrap;
+}
+
+/*end of tooltip style*/
+
+
+/* Стилизация для скрытия стрелок у input type="number" */
+input[type="number"] {
+    -moz-appearance: textfield; /* Скрывает стрелки в Firefox */
+    appearance: none;          /* Базовое свойство */
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;  /* Скрывает стрелки в Chrome, Safari, Edge */
+    margin: 0;                 /* Также полезно убрать margin */
+}
+
 
 @media (max-width: 1220px){
     .nav-part ul{
@@ -2495,6 +2871,14 @@ footer{
     transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
     z-index: 1000;
     font-family: var(--font-family);
+}
+
+@media(max-width: 550px){
+    .fill-balance-modal-form .form-input{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
 }
 
 /* Стрелочка */
