@@ -68,6 +68,12 @@ input:valid {
     justify-content: center;
 }
 
+.main-container.part2{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
 .freelancer-info-block{
     margin-top: 30px;
     margin-bottom: 30px;
@@ -139,7 +145,15 @@ input:valid {
     padding: 0;
 }
 
-.freelancer-info-content1 .freelancer-name img{
+.freelancer-name-string{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.freelancer-info-content1 .freelancer-name-string img{
     width: 20px;
 }
 
@@ -560,6 +574,11 @@ input:valid {
     cursor: pointer;
 }
 
+
+.add-portfolio-button:hover{
+    background: #ebebeb;
+}
+
 .add-portfolio-button img{
     width: 62px;
     aspect-ratio: 1/1;
@@ -618,7 +637,8 @@ input:valid {
     width: 100%;
     position: relative;
     display: grid;
-    gap: 0;
+    gap: 10px;
+    grid-template-columns: repeat(4,1fr);
 }
 
 .service-card-block{
@@ -668,6 +688,28 @@ input:valid {
     object-fit: cover;
     position: relative;
 }
+
+.ad-container .ad-banner .white-like-icon{
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 6px;
+    z-index: 100;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 50%;
+}
+
+.ad-container .ad-banner .white-like-icon:hover{
+    background-color: red;
+}
+
+.ad-container .ad-banner.liked .white-like-icon{
+    background-color: red;
+}
+
 
 .ad-container h3{
     font-family: var(--font-family);
@@ -742,7 +784,8 @@ input:valid {
 }
 
 
-.tooltip-container {
+.tooltip-container,
+.user-offline-container{
     position: relative;
     cursor: help;
     display: inline-block;
@@ -815,6 +858,59 @@ input:valid {
     display: flex;
 }
 
+.is-user-online{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.is-user-online .user-offline{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-family: var(--font20);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 129%;
+    color: #667085;
+    border: 1px solid #d3d3d3;
+    border-radius: 30px;
+    padding: 3px 7px;
+    min-height: 26px;
+}
+
+.is-user-online .user-online{
+    font-family: var(--font20);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 129%;
+    color: #04b70a;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border: 1px solid #04b70a;
+    border-radius: 30px;
+    padding: 3px 7px;
+    min-height: 26px;
+}
+
+.is-user-online.offline .user-online{
+    display: none;
+}
+
+.is-user-online.online .user-offline{
+    display: none;
+}
+
+.is-user-online img{
+    width: 6px !important;
+}
 
 .about-verified-img{
     width: 14px;
@@ -888,7 +984,8 @@ input:valid {
     border-color: transparent transparent #fff transparent;
 }
 
-.tooltip-container:hover .tooltip-text {
+.tooltip-container:hover .tooltip-text,
+.user-offline-container:hover .tooltip-text{
     visibility: visible;
     opacity: 1;
     top: 100%;
@@ -959,44 +1056,143 @@ input:valid {
 
 /*reviews-about-freelancer-block*/
 .main-block.part2{
-    background: #fbfbfb;
     margin-bottom: 0;
     margin-top: 50px;
 }
 
 .reviews-about-freelancer-block{
     width: 100%;
-    padding: 30px;
+    max-width: 930px;
+    padding: 30px 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    min-height: 300px;
 }
 
 .reviews-about-freelancer-header{
     display: flex;
+    width: 100%;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     gap: 10px;
 }
 
 .reviews-about-freelancer-header h2{
-    font-family: var(--second-family);
-    font-weight: 600;
-    font-size: 26px;
-    line-height: 115%;
-    color: #000;
+    font-family: var(--third-family);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 125%;
+    color: #212121;
     text-align: left;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
 }
+
+.reviews-about-freelancer-header .reviews-count{
+    font-family: var(--third-family);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    color: #908f8f;
+}
+
+.reviews-about-freelancer-header .stars-count{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1px;
+} 
 
 .reviews-about-freelancer-header img{
     width: 18px;
     aspect-ratio: 1/1;
 }
 
+
+.reviews-about-freelancer-header .stars-count img{
+    width: 22px;
+}
+
+.reviews-about-freelancer-header .stars-count img.half-fill-star{
+    width: 20px;
+}
+
+.reviews-about-freelancer-header .stars-estimate{
+    font-family: var(--third-family);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    color: #212121;
+}
+
+.reviews-about-freelancer-header .select-reviews-type{
+    min-width: 216px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ededed;
+    border-radius: 4px;
+    background: #fff;
+    padding: 10px;
+    position: relative;
+}
+
+.reviews-about-freelancer-header .select-reviews-list{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    background: #fefefe;
+    border-radius: 8px;
+    border: 1px solid #ededed;
+    display: none;
+}
+
+.reviews-about-freelancer-header .select-reviews-type:hover .select-reviews-list{
+    display: block;
+}
+
+.reviews-about-freelancer-header .select-reviews-list .list-elem{
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ededed;
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: #323232;
+    cursor: pointer;
+}
+
+.reviews-about-freelancer-header .select-reviews-list .list-elem.active{
+    font-weight: 500;
+    color: #07e;
+    background-color: #fff;
+}
+
+.reviews-about-freelancer-header .review-type-value{
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: #323232;
+}
+
+.reviews-about-freelancer-header .chevron-down{
+    width: 14px;
+    cursor: pointer;
+}
 
 .review-types-block{
     width: 100%;
@@ -1024,9 +1220,6 @@ input:valid {
     cursor: pointer;
 }
 
-.review-types-block .review-type.active{
-    border-bottom: 1px solid #ffa800;
-}
 
 .reviews-freelancer-container{
     width: 100%;
@@ -1039,10 +1232,10 @@ input:valid {
 .review-freelancer-content{
     padding-top: 30px;
     padding-bottom: 30px;
-    border-bottom: 1px solid  #eaeaea;
     width: 100%;
     display: flex;
     flex-direction: column;
+    margin-top: 30px;
 }
 
 .review-freelancer-content .review-header{
@@ -1055,32 +1248,247 @@ input:valid {
     margin-bottom: 10px;
 }
 
+.reviewer-review{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.reviewer-review .reviewer-status{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.reviewer-review .reviewer-status .reviewer-star-status-count{
+    font-family: var(--third-family);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    color: #212121;
+}
+
+.reviewer-review .reviewer-status .yellow-star-icon{
+    width: 16px;
+}
+
+.reviewer-review .reviewer-status .verified-status{
+    background: #e8f6ef;
+    border-radius: 8px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    color: #15a863;
+    padding: 5px;
+}
+
+
+.reviewer-review .reviewer-status .verified-status.hidden{
+    display: none;
+}
+
+.reviewer-review .reviewer-review-text,
+.freelancer-response-container .freelancer-response-text{
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #323232;
+}
+
+.reviewer-review .response-functions-block{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+
+.reviewer-review .reviewer-review-response-functions{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.reviewer-review .reviewer-review-response-functions.hidden{
+    display: none;
+}
+
+.response-functions-block .write-response-block{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 10px;
+    background: #fff;
+    border-radius: 8px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ededed;
+    display: none;
+}
+
+.response-functions-block.open .write-response-block{
+    display: flex;
+}
+
+.reviewer-review .write-response-block.hidden{
+    display: none;
+}
+
+.reviewer-review .write-response-block .write-response-textarea{
+    width: 100%;
+    height: 100px;
+    resize: none;
+    border: none;
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #908f8f;
+}
+
+.reviewer-review .write-response-block .send-button{
+    background: #07e;
+    border-radius: 8px;
+    width: 172px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--third-family);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    text-align: center;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.reviewer-review .write-response-block .write-response-textarea:focus {
+    border: none;
+    outline: none; 
+}
+
+
+.reviewer-review .reviewer-review-response-functions .open-close-response-option{
+    font-family: var(--third-family);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 133%;
+    color: #323232;
+    background: #ededed;
+    border: 1px solid #ededed;
+    border-radius: 8px;
+    height: 30px;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.response-functions-block .close-response-option{
+    display: none;
+}
+
+.response-functions-block.open .close-response-option{
+    display: inline;
+}
+
+.response-functions-block.open .open-response-option{
+    display: none;
+}
+
+
+.reviewer-review .reviewer-review-response-functions .there-is-response{
+    border-radius: 12px;
+    height: 24px;
+    padding: 5px 10px;
+    background: #e6f1fd;
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    color: #474747;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+
+
+.reviewer-review .reviewer-review-response-functions .there-is-response{
+    visibility: hidden;
+}
+
 .reviewer-block, .freelancer-response-block{
     width: 100%;
     display: grid;
     grid-template-columns: 50px 1fr;
-    gap: 30px;
+    gap: 15px;
 }
 
-.freelancer-response-block{
-    padding-left: 80px;
-    margin-top: 20px;
+.freelancer-response-wrapper{
+    margin-top: 10px;
+}
+
+.freelancer-response-wrapper .freelancer-response-header{
+    font-family: var(--third-family);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    color: #212121;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.freelancer-response-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    padding-left: 20px;
+    border-left: 1px solid #e5e5e5;
 }
 
 .reviewer-img-container, .freelancer-response-img-container{
-    width: 100%
-.reviewer-block, .freelancer-response-block{
     width: 100%;
     display: grid;
     grid-template-columns: 50px 1fr;
     gap: 30px;
-};
     aspect-ratio: 1/1;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 100%;
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    text-align: center;
+    color: #fff;
+    background: #07e;;
 }
 
 .reviewer-img-container img, .freelancer-response-img-container img{
@@ -1095,6 +1503,7 @@ input:valid {
 .reviewer-feedback, .freelancer-feedback{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 5px;
 }
 
@@ -1116,18 +1525,13 @@ input:valid {
     padding: 0;
 }
 
-.reviewer-info .green-hand-like-icon,
-.reviewer-info .dislike-icon{
-    width: 16px;
-    height: auto;
-}
-
-.reviewer-info .review-date, .freelancer-response-info .freelancer-response-date{
-    font-family: var(--second-family);
+.reviewer-feedback .review-date,
+.freelancer-response-block .review-date{
+    font-family: var(--third-family);
     font-weight: 400;
-    font-size: 13px;
-    line-height: 169%;
-    color: #a9a7a7;
+    font-size: 12px;
+    line-height: 100%;
+    color: #666;
 }
 
 .reviewer-feedback .review-text, .freelancer-feedback .freelancer-response-text{
@@ -1159,20 +1563,27 @@ input:valid {
 .show-more-reviews-block{
     margin-top: 20px;
     text-align: left;
+    width: 100%;
+    
 }
 
 .show-more-reviews-block .show-more-reviews{
-    display: inline-flex;
-    align-items: center;
-    justify-content: flex-start;
     gap: 5px;
-    font-family: var(--second-family);
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 157%;
-    color: #177de5;
-    width: auto;
+    width: 100%;
     cursor: pointer;
+    color: #64748b;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    padding: 8px 12px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
 }
 
 .show-more-reviews-block .show-more-reviews img{
@@ -1191,6 +1602,11 @@ footer{
 }
 /*end of reviews-about-freelancer-block*/
 
+@media (max-width: 1100px){
+    .my-services-container{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
 
 @media (max-width: 920px){
     .freelancer-avatar-container{
@@ -1209,6 +1625,13 @@ footer{
     
     .freelancer-portfolio-container{
         grid-template-columns: repeat(3,1fr);
+    }
+    
+}
+
+@media(max-width: 800px){
+    .my-services-container{
+        grid-template-columns: repeat(2,1fr);
     }
     
 }
@@ -1242,16 +1665,22 @@ footer{
         padding-left: 0;
     }
     
+    .reviews-about-freelancer-header{
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-start;
+        gap: 20px;
+    }
+    
+    .reviews-about-freelancer-header h2{
+        width: 100%;
+        justify-content: flex-start;
+    }
+    
     
     .reviewer-block, .freelancer-response-block{
         grid-template-columns: 30px 1fr;
         gap: 15px;
-    }
-    
-    
-    .freelancer-response-block{
-        padding-left: 45px;
-        margin-top: 20px;
     }
     
     
@@ -1287,5 +1716,13 @@ footer{
     
     .add-portfolio-button p{
         font-size: 12px;
+    }
+}
+
+@media(max-width: 400px){
+    .freelancer-info-content1{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
     }
 }

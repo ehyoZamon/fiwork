@@ -1453,63 +1453,6 @@ footer{
     background: #079e0c;
 }
 
-.fiwork-register-modal-form fieldset{
-    border: 0px;
-    border-top: 1px solid #e9eaeb;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-}
-
-.fiwork-register-modal-form fieldset legend{
-    padding: 10px;
-}
-
-.fiwork-register-modal-form fieldset{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    flex-direction: column;
-    width: 100%;
-    padding-bottom: 10px;
-}
-
-.fiwork-register-modal-form fieldset a{
-    border: 1px solid #d5d7da;
-    border-radius: 8px;
-    padding: 10px 16px;
-    max-width: 352px;
-    height: 44px;
-    width: 100%;
-    box-shadow: 0 1px 2px 0 rgba(10, 13, 18, 0.05); 
-    background: #fff;
-    text-decoration: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.fiwork-register-modal-form fieldset a:hover{
-    background: #eee;
-}
-
-.fiwork-register-modal-form fieldset img{
-    width: 25px;
-}
-
-.fiwork-register-modal-form fieldset span{
-    font-family: var(--font-family);
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 150%;
-    color: #414651;
-    padding: 0;
-    margin: 0;
-}
-
 .fiwork-register-modal-container.hidden{
     display: none;
 }
@@ -1699,12 +1642,13 @@ footer{
     align-items: center;
     justify-content: center;
     gap: 20px;
-    margin-top: 10px;
 }
 
 .social-sites-enter-links a{
     text-decoration: none;
     display: inline-block;
+    width: 60px;
+    height: 60px;
 }
 
 .social-sites-enter-links img{

@@ -1045,24 +1045,32 @@ $modalWindows=<<<EOT
         </div>
         <form class="fiwork-register-modal-form">
             <input type="text" placeholder="Введите email или телефон" name="new-user-login" class="new-user-login"/> 
+            <div class="password-wrapper">
+                <input type="password" id="password" placeholder="Пароль" class="password-input">
+                <span class="toggle-password hidden" onclick="togglePassword()">
+                    <img src="/img/icons/password-hidden.svg" alt="password-hidden" class="password-hidden-icon"/>
+                    <img src="/img/icons/password-visible.svg" alt="password-visible" class="password-visible-icon"/>
+                </span>
+            </div>
+            
             <input type="button" value="Далее" class="register-modal-form-next-button"/> 
             <fieldset>
                 <legend>Или</legend>
-                <a href="#">
-                    <img src="/img/icons/vk-blue.svg" alt="vk-icon" class="vk-blue-icon"/>
-                    <span>Продолжить с Вконтакте</span>
-                </a>
-                
-                <a href="#">
-                    <img src="/img/icons/telegram-blue.svg" alt="vk-icon" class="telegram-blue-icon"/>
-                    <span>Продолжить с Telegram</span>
-                </a>
-                
-                <a href="#">
-                    <img src="/img/icons/yandex-red-icon.svg" alt="yandex-icon" class="yandex-red-icon"/>
-                    <span>Продолжить с Яндекс</span>
-                </a>
             </fieldset>
+                <div class="social-sites-enter-links">
+                    <a href="#">
+                        <img src="/img/icons/vk-grey.svg" alt="vk-grey" class="vk-grey-icon grey-icon"/>
+                        <img src="/img/icons/vk-square-blue.svg" alt="vk-square-blue" class="vk-square-blue-icon colorful-icon"/>
+                    </a>
+                    <a href="#">
+                        <img src="/img/icons/yandex-grey.svg" alt="yandex-grey" class="yandex-grey-icon grey-icon"/>
+                        <img src="/img/icons/yandex-square-red.svg" alt="yandex-red-icon" class="yandex-square-red-icon colorful-icon"/>
+                    </a>
+                    <a href="#">
+                        <img src="/img/icons/telegram-grey.svg" alt="telegram-grey" class="telegram-grey-icon grey-icon"/>
+                        <img src="/img/icons/telegram-square-blue.svg" alt="telegram-square-blue" class="telegram-square-blue-icon colorful-icon"/>
+                    </a>
+                </div>
         </form>
     
         <div class="change-login-option">
@@ -1084,6 +1092,14 @@ $modalWindows=<<<EOT
         <form class="fiwork-login-modal-form">
             <label for="user-login">Электронная почта или телефон</label>
             <input id="user-login" type="text" placeholder="user@example.com" name="new-user-login" class="new-user-login"/> 
+            <div class="password-wrapper-login">
+                <input type="password" id="password-login" placeholder="Пароль" class="password-input">
+                <span class="toggle-password-login hidden" onclick="togglePasswordLogin()">
+                    <img src="/img/icons/password-hidden.svg" alt="password-hidden" class="password-hidden-icon"/>
+                    <img src="/img/icons/password-visible.svg" alt="password-visible" class="password-visible-icon"/>
+                </span>
+            </div>
+            
             <div class="remember-me-container">
                 <div class="remember-me-checkbox">
                     <input type="checkbox" name="remember-me" class="remember-me-checkbox-input"/>

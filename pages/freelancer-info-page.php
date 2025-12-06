@@ -67,16 +67,33 @@ require_once "../modules/base.php";
                                 <img src="/img/freelancer-avatars/freelancer3.webp" alt="freelancer-avatar" class="freelancer-avatar-img"/>
                             </div>
                             <div class="freelancer-info">
-                                <h3 class="freelancer-name">Андрей 
-                                    <div class="verified-user">
-                                        <img src="/img/icons/verified.svg" alt="verified" class="verified-icon">
-                                        <div class="about-verified">
-                                            <img src="/img/icons/freelancer-profile-page/galochka.svg" alt="galochka" class="galochka">
-                                            <div class="about-verified-description">
-                                                <h3>Верифицированная страница</h3>
-                                                <p>Страница Андрея подтверждена администрацией.</p>
-                                                <p class="special-color">Узнайте больше о верификации</p>
+                                <h3 class="freelancer-name">
+                                    <div class="freelancer-name-string">
+                                        Андрей 
+                                        <div class="verified-user">
+                                            <img src="/img/icons/verified.svg" alt="verified" class="verified-icon">
+                                            <div class="about-verified">
+                                                <img src="/img/icons/freelancer-profile-page/galochka.svg" alt="galochka" class="galochka">
+                                                <div class="about-verified-description">
+                                                    <h3>Верифицированная страница</h3>
+                                                    <p>Страница Андрея подтверждена администрацией.</p>
+                                                    <p class="special-color">Узнайте больше о верификации</p>
+                                                </div>
                                             </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="is-user-online offline">
+                                        <div class="user-offline-container">
+                                            <div class="user-offline">
+                                                <img src="/img/icons/grey-dot.svg" alt="grey-dot" class="grey-dot"/> Не в сети
+                                            </div>
+                                            <span class="tooltip-text" style="font-weight: 400;">
+                                                <h4>Офлайн 2 минуты</h4>
+                                            </span>
+                                        </div>
+                                        <div class="user-online">
+                                            <img src="/img/icons/green-dot.svg" alt="green-dot" class="green-dot"/> Онлайн
                                         </div>
                                     </div>
                                 </h3>
@@ -281,11 +298,12 @@ require_once "../modules/base.php";
                 
                 <div class="my-services-block">
                     <h2>Мои услуги</h2>
-                    <div class="swiper my-services-swiper">
-                        <div class="swiper-wrapper my-services-container">
+                    <div class="my-services-swiper">
+                        <div class="my-services-container">
                             <a href="#" class="ad-container swiper-slide">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
+                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this,event);"/>
                                         <img src="/img/ads/ad1.webp" class="ad-img" alt="ad1"/>
                                     </div>
                                     
@@ -319,6 +337,7 @@ require_once "../modules/base.php";
                             <a href="#" class="ad-container swiper-slide">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
+                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this,event);"/>
                                         <img src="/img/ads/taplink.webp" class="ad-img" alt="ad1"/>
                                     </div>
                                     
@@ -352,6 +371,7 @@ require_once "../modules/base.php";
                             <a href="#" class="ad-container swiper-slide">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
+                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this,event);"/>
                                         <img src="/img/ads/app-design.webp" class="ad-img" alt="ad1"/>
                                     </div>
                                     
@@ -385,6 +405,7 @@ require_once "../modules/base.php";
                             <a href="#" class="ad-container swiper-slide">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
+                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this,event);"/>
                                         <img src="/img/ads/ux-ui-design.webp" class="ad-img" alt="ad1"/>
                                     </div>
                                     
@@ -419,6 +440,7 @@ require_once "../modules/base.php";
                             <a href="#" class="ad-container swiper-slide">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
+                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this,event);"/>
                                         <img src="/img/ads/ux-ui-design.webp" class="ad-img" alt="ad1"/>
                                     </div>
                                     
@@ -459,562 +481,209 @@ require_once "../modules/base.php";
         <div class="main-container part2">
             <div class="reviews-about-freelancer-block">
                 <div class="reviews-about-freelancer-header">
-                    <h2>Отзывы о <span class="username">testodes</span></h2>
-                    <span class="question-and-description tooltip-container">
-                        <img src="/img/icons/round-question-icon.svg" alt="round-question-icon" class="round-question-icon tooltip-question"/>
-                        <span class="tooltip-text" style="font-weight: 400;">
-                            <h4>Отзывы покупателей</h4>
-                            <p>Отзывы покупателей на работы исполнителя и ответы на их отзывы.</p>
-                        </span>
-                    </span>        
-                </div>
-                <div class="review-types-block">
-                    <div class="review-type positive-review active" target="positive-review">
-                        Положительные <span class="positive-review-num">12</span>
-                    </div>
-                    <div class="review-type negative-review" target="negative-review">
-                        Отрицательные <span class="negative-review-num">1</span>
+                    <h2>Отзывы <span class="reviews-count">4980</span> 
+                        <div class="stars-count">
+                            <img src="/img/icons/yellow-star.svg" alt="yellow-star" class="yellow-star-icon"/>
+                            <img src="/img/icons/yellow-star.svg" alt="yellow-star" class="yellow-star-icon"/>
+                            <img src="/img/icons/yellow-star.svg" alt="yellow-star" class="yellow-star-icon"/>
+                            <img src="/img/icons/yellow-star.svg" alt="yellow-star" class="yellow-star-icon"/>
+                            <img src="/img/icons/half-fill-star.svg" alt="half-fill-star" class="half-fill-star"/>
+                        </div>
+                        <span class="stars-estimate">4,3</span>
+                        
+                        <span class="question-and-description tooltip-container">
+                            <img src="/img/icons/round-question-icon.svg" alt="round-question-icon" class="round-question-icon tooltip-question"/>
+                            <span class="tooltip-text" style="font-weight: 400;">
+                                <h4>Отзывы покупателей</h4>
+                                <p>Отзывы покупателей на работы исполнителя и ответы на их отзывы.</p>
+                            </span>
+                        </span>     
+                    </h2>
+                    
+                    <div class="select-reviews-type">
+                        <span class="review-type-value">Положительные</span> <img src="/img/icons/chevron-down.svg" alt="chevron-down" class="chevron-down-icon"/>
+                        <div class="select-reviews-list">
+                            <div class="list-elem review-type positive-review active" target="positive-review">Положительные</div>
+                            <div class="list-elem review-type negative-review" target="negative-review">Негативные</div>
+                        </div>
                     </div>
                 </div>
                 
                 <div class="reviews-freelancer-container">
                     <div class="review-freelancer-content positive-review">
-                        <div class="review-header">
+                        <div class="review-header" style="display: none;">
                             Разработка интернет-магазина
                         </div>
                         
-                        <div class="reviewer-block">
-                            <div class="reviewer-img-container">
-                                <img src="/img/freelancer-avatars/reviewer1.png" alt="reviewer-img" class="reviewer-avatar"/>
-                            </div>
-                            <div class="reviewer-feedback">
-                                <div class="reviewer-info">
-                                    <span class="reviewer-username">sadasdf</span> 
-                                    <img src="/img/icons/green-hand-like.svg" alt="green-hand-like" class="green-hand-like-icon"/>
-                                    <span class="review-date">2 месяца назад</span>
+                        <div class="reviewer-review">
+                            <div class="reviewer-block">
+                                <div class="reviewer-img-container">
+                                    <img src="/img/freelancer-avatars/leonid.png" alt="reviewer-img" class="reviewer-avatar"/>
                                 </div>
-                                <div class="review-text">
-                                    Прекрасная работа. Спасибо большое! Рекомендую!
+                                <div class="reviewer-feedback">
+                                    <div class="reviewer-info">
+                                        <span class="reviewer-username">Леонид Казенников</span> 
+                                        <img src="/img/icons/new-user-emblem.svg" alt="new-user-emblem" class="new-user-emblem"/>
+                                    </div>
+                                    <div class="review-date">
+                                        Сегодня, 18:33
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reviewer-status">
+                                <span class="reviewer-star-status-count">4.9</span>
+                                <img src="/img/icons/yellow-star.svg" alt="yellow-star" class="yellow-star-icon"/>
+                                <span class="verified-status">
+                                    Проверенный статус
+                                </span> 
+                            </div>
+                            <div class="reviewer-review-text">
+                                Хороший букмекер, который отлично справляется со своими функциями. Ставлю на Пари почти 3 года. Выплаты
+                                происходят без проблем. Не замечал, чтобы ставки резали. Это для меня главное. Ну и похвастаюсь уж тогда раз отзыв
+                            </div>
+                            
+                            <div class="response-functions-block">
+                                <div class="reviewer-review-response-functions">
+                                    <div class="there-is-response">
+                                        <img src="/img/icons/blue-checkmark.svg" alt="blue-checkmark" class="blue-checkmark-icon"> Есть ответ от продавца
+                                    </div>
+                                    
+                                    <div class="open-close-response-option">
+                                        <span class="close-response-option" onclick="closeResponseFunctionsBlock(this);">
+                                            Свернуть
+                                        </span>
+                                        
+                                        <span class="open-response-option" onclick="openResponseFunctionsBlock(this);">
+                                            Ответить
+                                        </span>
+                                    </div> 
+                                </div>
+                                
+                                <div class="write-response-block">
+                                    <textarea class="write-response-textarea" placeholder="Ваш ответ"></textarea>
+                                    <input type="button" class="send-button" value="Отправить">
                                 </div>
                             </div>
                         </div>
                         
-                        <div class="freelancer-response-block">
-                            <div class="freelancer-response-img-container">
-                                <img src="/img/freelancer-avatars/freelancer4.png" alt="reviewer-img" class="reviewer-avatar"/>
-                            </div>
-                            <div class="freelancer-feedback">
-                                <div class="freelancer-response-info">
-                                    <span class="freelancer-response-username">testcodes</span> 
-                                    <span class="freelancer-response-date">2 месяца назад</span>
-                                </div>
-                                <div class="freelancer-response-text">
-                                    Никита, спасибо за положительный отзыв, обращайтесь еще, всегда рад помочь!
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     
                     <div class="review-freelancer-content positive-review">
-                        <div class="review-header">
-                            Разработка Telegram WebApp приложения
-                        </div>
-                        <div class="reviewer-block">
-                            <div class="reviewer-img-container">
-                                <img src="/img/freelancer-avatars/reviewer2.png" alt="reviewer-img" class="reviewer-avatar"/>
-                            </div>
-                            <div class="reviewer-feedback">
-                                <div class="reviewer-info">
-                                    <span class="reviewer-username">geek434</span> 
-                                    <img src="/img/icons/green-hand-like.svg" alt="green-hand-like" class="green-hand-like-icon"/>
-                                    <span class="review-date">2 месяца назад</span>
-                                </div>
-                                <div class="review-text">
-                                    Большое спасибо за структуру и за скорость выполнения! ! ! И за цену отдельное спасибо! )
-                                </div>
-                            </div>
-                        </div>
                         
-                        <div class="freelancer-response-block">
-                            <div class="freelancer-response-img-container">
-                                <img src="/img/freelancer-avatars/freelancer4.png" alt="reviewer-img" class="reviewer-avatar"/>
-                            </div>
-                            <div class="freelancer-feedback">
-                                <div class="freelancer-response-info">
-                                    <span class="freelancer-response-username">testcodes</span> 
-                                    <span class="freelancer-response-date">2 месяца назад</span>
+                        <div class="reviewer-review">
+                            <div class="reviewer-block">
+                                <div class="reviewer-img-container">
+                                    ПУ 
                                 </div>
-                                <div class="freelancer-response-text">
-                                    Вадим, спасибо за положительный отзыв, обращайтесь еще, всегда рад помочь!
+                                <div class="reviewer-feedback">
+                                    <div class="reviewer-info">
+                                        <span class="reviewer-username">петя ушанин</span> 
+                                        <img src="/img/icons/new-user-emblem.svg" alt="new-user-emblem" class="new-user-emblem"/>
+                                    </div>
+                                    <div class="review-date">
+                                        Сегодня, 18:29
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reviewer-status">
+                                <span class="reviewer-star-status-count">4.9</span>
+                                <img src="/img/icons/yellow-star.svg" alt="yellow-star" class="yellow-star-icon"/>
+                                <span class="verified-status hidden">
+                                    Проверенный статус
+                                </span> 
+                            </div>
+                            <div class="reviewer-review-text">
+                                Поставил на матч лига европы лацио против вильярреала, давно наблюдал за этой парой. В Pari роспись была удобная,
+                                я взял ставку на тотал по ударам и попал в самый точный момент. Матч шел оживленно, ставка закрылась до
+                                финального свистка. Вывод пришел почти сразу, без сюрпризов.
+                            </div>
+                                
+                            <div class="response-functions-block">
+                                <div class="reviewer-review-response-functions">
+                                    <div class="there-is-response hidden">
+                                        <img src="/img/icons/blue-checkmark.svg" alt="blue-checkmark" class="blue-checkmark-icon"> Есть ответ от продавца
+                                    </div>
+                                    
+                                    <div class="open-close-response-option">
+                                        <span class="close-response-option" onclick="closeResponseFunctionsBlock(this);">
+                                            Свернуть
+                                        </span>
+                                        <span class="open-response-option" onclick="openResponseFunctionsBlock(this);">
+                                            Ответить
+                                        </span>
+                                    </div> 
+                                </div>
+                                
+                                <div class="write-response-block">
+                                    <textarea class="write-response-textarea" placeholder="Ваш ответ"></textarea>
+                                    <input type="button" class="send-button" value="Отправить">
                                 </div>
                             </div>
                         </div>
+
                     </div>
                     
                     <div class="review-freelancer-content positive-review">
-                        <div class="review-header">
-                            VPN приложение
-                        </div>
-                        <div class="reviewer-block">
-                            <div class="reviewer-img-container">
-                                <img src="/img/freelancer-avatars/reviewer3.png" alt="reviewer-img" class="reviewer-avatar"/>
-                            </div>
-                            <div class="reviewer-feedback">
-                                <div class="reviewer-info">
-                                    <span class="reviewer-username">ivanproj</span> 
-                                    <img src="/img/icons/green-hand-like.svg" alt="green-hand-like" class="green-hand-like-icon"/>
-                                    <span class="review-date">2 месяца назад</span>
+                        <div class="reviewer-review">
+                            <div class="reviewer-block">
+                                <div class="reviewer-img-container">
+                                    <img src="/img/freelancer-avatars/mishana.png" alt="reviewer-img" class="reviewer-avatar"/>
                                 </div>
-                                <div class="review-text">
-                                    Все быстро, со знанием дела - профи!<br>
-                                    Рекомендую
+                                <div class="reviewer-feedback">
+                                    <div class="reviewer-info">
+                                        <span class="reviewer-username">Мишаня Кобздев</span> 
+                                        <img src="/img/icons/new-user-emblem.svg" alt="new-user-emblem" class="new-user-emblem"/>
+                                    </div>
+                                    <div class="review-date">
+                                        Сегодня, 18:28
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        
-                        <div class="reply-to-review-block">
-                            <div class="reply-to-review">
-                                Ответить
+                            <div class="reviewer-status">
+                                <span class="reviewer-star-status-count">4.9</span>
+                                <img src="/img/icons/yellow-star.svg" alt="yellow-star" class="yellow-star-icon"/>
+                                <span class="verified-status">
+                                    Проверенный статус
+                                </span> 
                             </div>
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="review-freelancer-content positive-review">
-                        <div class="review-header">
-                            Разработка VPN приложения
-                        </div>
-                        <div class="reviewer-block">
-                            <div class="reviewer-img-container">
-                                <img src="/img/freelancer-avatars/reviewer4.png" alt="reviewer-img" class="reviewer-avatar"/>
+                            <div class="reviewer-review-text">
+                                Вообще как-то даже случайно тут оказался) Увидел сайт, зарегался, запульнул ставку на Австралиан Опен и выиграл.
+                                Крутяк вообще! И, собственно, все теннисные турниры закидывал. Понятно, что сумма была небольшая, но выигрыш
+                                вывел абсолютно без проблем. И фрибешки в конкурсе прогнозистов отлавливал)ов.
                             </div>
-                            <div class="reviewer-feedback">
-                                <div class="reviewer-info">
-                                    <span class="reviewer-username">artem_code</span> 
-                                    <img src="/img/icons/green-hand-like.svg" alt="green-hand-like" class="green-hand-like-icon"/>
-                                    <span class="review-date">3 месяца назад</span>
+                                
+                            <div class="response-functions-block">
+                                <div class="reviewer-review-response-functions">
+                                    <div class="there-is-response">
+                                        <img src="/img/icons/blue-checkmark.svg" alt="blue-checkmark" class="blue-checkmark-icon"> Есть ответ от продавца
+                                    </div>
+                                    
+                                    <div class="open-close-response-option">
+                                        <span class="close-response-option" onclick="closeResponseFunctionsBlock(this);">
+                                            Свернуть
+                                        </span>
+                                        <span class="open-response-option" onclick="openResponseFunctionsBlock(this);">
+                                            Ответить
+                                        </span>
+                                    </div> 
                                 </div>
-                                <div class="review-text">
-                                    Нужно было внести незначительные изменения. Все было предельно четко, быстро и качественно. Проделанной работой я полностью доволен. Продолжим 
-                                    дальнейшее сотрудничество. Рекомендую этого исполнителя.
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="reply-to-review-block">
-                            <div class="reply-to-review">
-                                Ответить
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="review-freelancer-content positive-review">
-                        <div class="review-header">
-                            Разработка интернет-магазина
-                        </div>
-                        
-                        <div class="reviewer-block">
-                            <div class="reviewer-img-container">
-                                <img src="/img/freelancer-avatars/reviewer1.png" alt="reviewer-img" class="reviewer-avatar"/>
-                            </div>
-                            <div class="reviewer-feedback">
-                                <div class="reviewer-info">
-                                    <span class="reviewer-username">sadasdf</span> 
-                                    <img src="/img/icons/green-hand-like.svg" alt="green-hand-like" class="green-hand-like-icon"/>
-                                    <span class="review-date">2 месяца назад</span>
-                                </div>
-                                <div class="review-text">
-                                    Прекрасная работа. Спасибо большое! Рекомендую!
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="freelancer-response-block">
-                            <div class="freelancer-response-img-container">
-                                <img src="/img/freelancer-avatars/freelancer4.png" alt="reviewer-img" class="reviewer-avatar"/>
-                            </div>
-                            <div class="freelancer-feedback">
-                                <div class="freelancer-response-info">
-                                    <span class="freelancer-response-username">testcodes</span> 
-                                    <span class="freelancer-response-date">2 месяца назад</span>
-                                </div>
-                                <div class="freelancer-response-text">
-                                    Никита, спасибо за положительный отзыв, обращайтесь еще, всегда рад помочь!
+                                
+                                <div class="write-response-block">
+                                    <textarea class="write-response-textarea" placeholder="Ваш ответ"></textarea>
+                                    <input type="button" class="send-button" value="Отправить">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="review-freelancer-content positive-review">
-                        <div class="review-header">
-                            Разработка Telegram WebApp приложения
-                        </div>
-                        <div class="reviewer-block">
-                            <div class="reviewer-img-container">
-                                <img src="/img/freelancer-avatars/reviewer2.png" alt="reviewer-img" class="reviewer-avatar"/>
-                            </div>
-                            <div class="reviewer-feedback">
-                                <div class="reviewer-info">
-                                    <span class="reviewer-username">geek434</span> 
-                                    <img src="/img/icons/green-hand-like.svg" alt="green-hand-like" class="green-hand-like-icon"/>
-                                    <span class="review-date">2 месяца назад</span>
-                                </div>
-                                <div class="review-text">
-                                    Большое спасибо за структуру и за скорость выполнения! ! ! И за цену отдельное спасибо! )
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="freelancer-response-block">
-                            <div class="freelancer-response-img-container">
-                                <img src="/img/freelancer-avatars/freelancer4.png" alt="reviewer-img" class="reviewer-avatar"/>
-                            </div>
-                            <div class="freelancer-feedback">
-                                <div class="freelancer-response-info">
-                                    <span class="freelancer-response-username">testcodes</span> 
-                                    <span class="freelancer-response-date">2 месяца назад</span>
-                                </div>
-                                <div class="freelancer-response-text">
-                                    Вадим, спасибо за положительный отзыв, обращайтесь еще, всегда рад помочь!
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="review-freelancer-content positive-review">
-                        <div class="review-header">
-                            VPN приложение
-                        </div>
-                        <div class="reviewer-block">
-                            <div class="reviewer-img-container">
-                                <img src="/img/freelancer-avatars/reviewer3.png" alt="reviewer-img" class="reviewer-avatar"/>
-                            </div>
-                            <div class="reviewer-feedback">
-                                <div class="reviewer-info">
-                                    <span class="reviewer-username">ivanproj</span> 
-                                    <img src="/img/icons/green-hand-like.svg" alt="green-hand-like" class="green-hand-like-icon"/>
-                                    <span class="review-date">2 месяца назад</span>
-                                </div>
-                                <div class="review-text">
-                                    Все быстро, со знанием дела - профи!<br>
-                                    Рекомендую
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="reply-to-review-block">
-                            <div class="reply-to-review">
-                                Ответить
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="review-freelancer-content positive-review">
-                        <div class="review-header">
-                            Разработка VPN приложения
-                        </div>
-                        <div class="reviewer-block">
-                            <div class="reviewer-img-container">
-                                <img src="/img/freelancer-avatars/reviewer4.png" alt="reviewer-img" class="reviewer-avatar"/>
-                            </div>
-                            <div class="reviewer-feedback">
-                                <div class="reviewer-info">
-                                    <span class="reviewer-username">artem_code</span> 
-                                    <img src="/img/icons/green-hand-like.svg" alt="green-hand-like" class="green-hand-like-icon"/>
-                                    <span class="review-date">3 месяца назад</span>
-                                </div>
-                                <div class="review-text">
-                                    Нужно было внести незначительные изменения. Все было предельно четко, быстро и качественно. Проделанной работой я полностью доволен. Продолжим 
-                                    дальнейшее сотрудничество. Рекомендую этого исполнителя.
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="reply-to-review-block">
-                            <div class="reply-to-review">
-                                Ответить
-                            </div>
-                        </div>
-                    </div>
-                    
-                    
-                    
-                    <div class="review-freelancer-content positive-review">
-                        <div class="review-header">
-                            Опубликую ваше приложение Ios, Android в AppStore и Google Play
-                        </div>
-                        <div class="reviewer-block">
-                            <div class="reviewer-img-container">
-                                <img src="/img/freelancer-avatars/reviewer5.png" alt="reviewer-img" class="reviewer-avatar"/>
-                            </div>
-                            <div class="reviewer-feedback">
-                                <div class="reviewer-info">
-                                    <span class="reviewer-username">AstonDVkms</span> 
-                                    <img src="/img/icons/green-hand-like.svg" alt="green-hand-like" class="green-hand-like-icon"/>
-                                    <span class="review-date">4 месяца назад</span>
-                                </div>
-                                <div class="review-text">
-                                    Обратился к этому специалисту с вопросом по публикации приложения в App Store, и после разъяснения по всем интересующим меня вопросам мы приступили к 
-                                    работе. Работа выполнена на отлично, исполнитель всегда был на связи и отвечал на все мои вопросы. Однозначно могу рекомендовать данного исполнителя как 
-                                    профессионала своего дела
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="reply-to-review-block">
-                            <div class="reply-to-review">
-                                Ответить
-                            </div>
-                        </div>
-                    </div>
-                
-                    <div class="review-freelancer-content negative-review">
-                        <div class="review-header">
-                            Разработка интернет-магазина
-                        </div>
-                         
-                        <div class="reviewer-block">
-                            <div class="reviewer-img-container">
-                                <img src="/img/freelancer-avatars/reviewer1.png" alt="reviewer-img" class="reviewer-avatar"/>
-                            </div>
-                            <div class="reviewer-feedback">
-                                <div class="reviewer-info">
-                                    <span class="reviewer-username">sadasdf</span> 
-                                    <img src="/img/icons/dislike.svg" alt="dislike" class="dislike-icon"/>
-                                    <span class="review-date">2 месяца назад</span>
-                                </div>
-                                <div class="review-text">
-                                    Работа выполнена некачественно и с большими задержками. Пришлось много дорабатывать самостоятельно. Не рекомендую.
-                                </div>
-                            </div>
-                        </div>
-                         
-                        <div class="freelancer-response-block">
-                            <div class="freelancer-response-img-container">
-                                <img src="/img/freelancer-avatars/freelancer4.png" alt="reviewer-img" class="reviewer-avatar"/>
-                            </div>
-                            <div class="freelancer-feedback">
-                                <div class="freelancer-response-info">
-                                    <span class="freelancer-response-username">testcodes</span> 
-                                    <span class="freelancer-response-date">2 месяца назад</span>
-                                </div>
-                                <div class="freelancer-response-text">
-                                    Никита, сожалею, что у вас сложилось такое мнение. Я старался решить все возникающие проблемы.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                     
-                    <div class="review-freelancer-content negative-review">
-                        <div class="review-header">
-                            Разработка Telegram WebApp приложения
-                        </div>
-                        <div class="reviewer-block">
-                            <div class="reviewer-img-container">
-                                <img src="/img/freelancer-avatars/reviewer2.png" alt="reviewer-img" class="reviewer-avatar"/>
-                            </div>
-                            <div class="reviewer-feedback">
-                                <div class="reviewer-info">
-                                    <span class="reviewer-username">geek434</span> 
-                                    <img src="/img/icons/dislike.svg" alt="dislike" class="dislike-icon"/>
-                                    <span class="review-date">2 месяца назад</span>
-                                </div>
-                                <div class="review-text">
-                                    Структура кода ужасная, сроки сорваны. Пришлось привлекать другого специалиста для исправления ошибок. Очень недоволен результатом.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="freelancer-response-block">
-                            <div class="freelancer-response-img-container">
-                                <img src="/img/freelancer-avatars/freelancer4.png" alt="reviewer-img" class="reviewer-avatar"/>
-                            </div>
-                            <div class="freelancer-feedback">
-                                <div class="freelancer-response-info">
-                                    <span class="freelancer-response-username">testcodes</span> 
-                                    <span class="freelancer-response-date">2 месяца назад</span>
-                                </div>
-                                <div class="freelancer-response-text">
-                                    Вадим, извините за задержки, возникли непредвиденные сложности, которые не удалось быстро решить.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                     
-                    <div class="review-freelancer-content negative-review">
-                        <div class="review-header">
-                            VPN приложение
-                        </div>
-                        <div class="reviewer-block">
-                            <div class="reviewer-img-container">
-                                <img src="/img/freelancer-avatars/reviewer3.png" alt="reviewer-img" class="reviewer-avatar"/>
-                            </div>
-                            <div class="reviewer-feedback">
-                                <div class="reviewer-info">
-                                    <span class="reviewer-username">ivanproj</span> 
-                                    <img src="/img/icons/dislike.svg" alt="dislike" class="dislike-icon"/>
-                                    <span class="review-date">2 месяца назад</span>
-                                </div>
-                                <div class="review-text">
-                                    Работа заняла слишком много времени, постоянно приходилось напоминать о себе. Результат не соответствует ожиданиям. <br>
-                                    Не могу рекомендовать.
-                                </div>
-                            </div>
-                        </div>
-                         
-                        <div class="reply-to-review-block">
-                            <div class="reply-to-review">
-                                Ответить
-                            </div>
-                        </div>
-                    </div>
-                     
-                    <div class="review-freelancer-content negative-review">
-                        <div class="review-header">
-                            Разработка VPN приложения
-                        </div>
-                        <div class="reviewer-block">
-                            <div class="reviewer-img-container">
-                                <img src="/img/freelancer-avatars/reviewer4.png" alt="reviewer-img" class="reviewer-avatar"/>
-                            </div>
-                            <div class="reviewer-feedback">
-                                <div class="reviewer-info">
-                                    <span class="reviewer-username">artem_code</span> 
-                                    <img src="/img/icons/dislike.svg" alt="dislike" class="dislike-icon"/>
-                                    <span class="review-date">3 месяца назад</span>
-                                </div>
-                                <div class="review-text">
-                                    Изменения были незначительными, но заняли много времени. Коммуникация была сложной, приходилось долго ждать ответов. Качеством недоволен.
-                                </div>
-                            </div>
-                        </div>
-                         
-                        <div class="reply-to-review-block">
-                            <div class="reply-to-review">
-                                Ответить
-                            </div>
-                        </div>
-                    </div>
-                     
-                    <div class="review-freelancer-content negative-review">
-                        <div class="review-header">
-                            Опубликую ваше приложение Ios, Android в AppStore и Google Play
-                        </div>
-                        <div class="reviewer-block">
-                            <div class="reviewer-img-container">
-                                <img src="/img/freelancer-avatars/reviewer5.png" alt="reviewer-img" class="reviewer-avatar"/>
-                            </div>
-                            <div class="reviewer-feedback">
-                                <div class="reviewer-info">
-                                    <span class="reviewer-username">AstonDVkms</span> 
-                                    <img src="/img/icons/dislike.svg" alt="dislike" class="dislike-icon"/>
-                                    <span class="review-date">4 месяца назад</span>
-                                </div>
-                                <div class="review-text">
-                                    Обратился по поводу публикации. Процесс затянулся, возникли проблемы, которые исполнитель решал очень медленно. Пришлось постоянно его подталкивать. <br>
-                                    Не могу назвать этого исполнителя профессионалом.
-                                </div>
-                            </div>
-                        </div>
-                         
-                        <div class="reply-to-review-block">
-                            <div class="reply-to-review">
-                                Ответить
-                            </div>
-                        </div>
-                    </div> 
-                 
-                 <div class="review-freelancer-content negative-review">
-                        <div class="review-header">
-                            VPN приложение
-                        </div>
-                        <div class="reviewer-block">
-                            <div class="reviewer-img-container">
-                                <img src="/img/freelancer-avatars/reviewer3.png" alt="reviewer-img" class="reviewer-avatar"/>
-                            </div>
-                            <div class="reviewer-feedback">
-                                <div class="reviewer-info">
-                                    <span class="reviewer-username">ivanproj</span> 
-                                    <img src="/img/icons/dislike.svg" alt="dislike" class="dislike-icon"/>
-                                    <span class="review-date">2 месяца назад</span>
-                                </div>
-                                <div class="review-text">
-                                    Работа заняла слишком много времени, постоянно приходилось напоминать о себе. Результат не соответствует ожиданиям. <br>
-                                    Не могу рекомендовать.
-                                </div>
-                            </div>
-                        </div>
-                         
-                        <div class="reply-to-review-block">
-                            <div class="reply-to-review">
-                                Ответить
-                            </div>
-                        </div>
-                    </div>
-                     
-                    <div class="review-freelancer-content negative-review">
-                        <div class="review-header">
-                            Разработка VPN приложения
-                        </div>
-                        <div class="reviewer-block">
-                            <div class="reviewer-img-container">
-                                <img src="/img/freelancer-avatars/reviewer4.png" alt="reviewer-img" class="reviewer-avatar"/>
-                            </div>
-                            <div class="reviewer-feedback">
-                                <div class="reviewer-info">
-                                    <span class="reviewer-username">artem_code</span> 
-                                    <img src="/img/icons/dislike.svg" alt="dislike" class="dislike-icon"/>
-                                    <span class="review-date">3 месяца назад</span>
-                                </div>
-                                <div class="review-text">
-                                    Изменения были незначительными, но заняли много времени. Коммуникация была сложной, приходилось долго ждать ответов. Качеством недоволен.
-                                </div>
-                            </div>
-                        </div>
-                         
-                        <div class="reply-to-review-block">
-                            <div class="reply-to-review">
-                                Ответить
-                            </div>
-                        </div>
-                    </div>
-                     
-                    <div class="review-freelancer-content negative-review">
-                        <div class="review-header">
-                            Опубликую ваше приложение Ios, Android в AppStore и Google Play
-                        </div>
-                        <div class="reviewer-block">
-                            <div class="reviewer-img-container">
-                                <img src="/img/freelancer-avatars/reviewer5.png" alt="reviewer-img" class="reviewer-avatar"/>
-                            </div>
-                            <div class="reviewer-feedback">
-                                <div class="reviewer-info">
-                                    <span class="reviewer-username">AstonDVkms</span> 
-                                    <img src="/img/icons/dislike.svg" alt="dislike" class="dislike-icon"/>
-                                    <span class="review-date">4 месяца назад</span>
-                                </div>
-                                <div class="review-text">
-                                    Обратился по поводу публикации. Процесс затянулся, возникли проблемы, которые исполнитель решал очень медленно. Пришлось постоянно его подталкивать. <br>
-                                    Не могу назвать этого исполнителя профессионалом.
-                                </div>
-                            </div>
-                        </div>
-                         
-                        <div class="reply-to-review-block">
-                            <div class="reply-to-review">
-                                Ответить
-                            </div>
-                        </div>
-                    </div> 
+                     
                     
                     <div class="show-more-reviews-block">
                         <div class="show-more-reviews show" onclick="showMoreReviews();">
-                            Показать ещё <img src="/img/icons/blue-chevron-down.svg" class="blue-chevron-down-icon" alt="blue-chevron"/>
+                            <img src="/img/icons/grey-arrow-down.svg" class="blue-chevron-down-icon" alt="blue-chevron"/> Показать ещё 
                         </div>
                         
                         <div class="show-more-reviews hide" style="display: none;" onclick="hideMoreReviews();">
-                            Cкрыть <img src="/img/icons/blue-chevron-down.svg" style="transform: rotateX(180deg);" class="blue-chevron-down-icon" alt="blue-chevron"/>
+                            <img src="/img/icons/grey-arrow-down.svg" style="transform: rotateX(180deg);" class="blue-chevron-down-icon" alt="blue-chevron"/> Cкрыть 
                         </div>
                     </div>
                 </div>  
@@ -1032,32 +701,72 @@ require_once "../modules/base.php";
 <script src="/js/mobile-navigation-menu.js?v=<?= time(); ?>"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 <script>
-    const serivicesSwiper = new Swiper('.my-services-swiper', {
-        slidesPerView: 1,
-        spaceBetween: 10,
-        autoHeight: false,
-        loop: false,
-        observer: true, // Watch for DOM changes
-        observeParents: true, // Watch parent elements too
-        navigation: {
-          nextEl: '.btn-next',
-          prevEl: '.btn-prev',
-        },
-        breakpoints: {
-          600: {
-              slidesPerView: 2,
-          },
-          830: {
-            slidesPerView: 3,
-          },
-          1100: {
-            slidesPerView: 4,
-          },
-          1400: {
-            slidesPerView: 4,
-          }
-        },
-  });
+    let servicesSwiper = null;
+    
+    function initServicesSwiper() {
+        const width = window.innerWidth;
+        if (width <= 600 && !servicesSwiper) {
+            $(".my-services-swiper").addClass("swiper");
+            $(".my-services-container").addClass("swiper-wrapper");
+            $(".my-services-container").css("gap","0");
+            servicesSwiper = new Swiper('.my-services-swiper', {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                autoHeight: false,
+                loop: false,
+                observer: true, // Watch for DOM changes
+                observeParents: true, // Watch parent elements too
+                navigation: {
+                  nextEl: '.btn-next',
+                  prevEl: '.btn-prev',
+                },
+                breakpoints: {
+                  600: {
+                      slidesPerView: 2,
+                  },
+                  830: {
+                    slidesPerView: 3,
+                  },
+                  1100: {
+                    slidesPerView: 4,
+                  },
+                  1400: {
+                    slidesPerView: 4,
+                  }
+                },
+            });
+        }
+    
+        if (width > 600 && servicesSwiper) {
+            
+            $(".my-services-swiper").removeClass("swiper");
+            $(".my-services-container").removeClass("swiper-wrapper");
+            $(".my-services-container").css("gap","10px");
+            servicesSwiper.destroy(true, true);
+            servicesSwiper = null;
+        }
+    }
+    
+    
+    initServicesSwiper();
+    
+    window.addEventListener('resize', initServicesSwiper);
+</script>
+<script>
+    function likeThisAd(elem,e) {
+        if(e){
+            e.stopPropagation();
+            e.preventDefault();
+        }
+        
+        if ($(elem).parent().hasClass("liked")) {
+            console.log("removed liked");
+            $(elem).parent().removeClass("liked");
+        } else {
+            $(elem).parent().addClass('liked'); 
+            console.log("liked added");
+        }
+    }
   
     $(".freelancer-trophies-container").on("change",function(){ 
         updateTrophiesDisplay();    
@@ -1097,10 +806,10 @@ require_once "../modules/base.php";
     });
     
     
-    $(".review-types-block .review-type").on("click",function(){
-       $(".review-types-block .review-type.active").removeClass("active");  
+    $(".select-reviews-list .list-elem").on("click",function(){
+       $(".select-reviews-list .list-elem").removeClass("active");  
        $(this).addClass("active");
-        updateReviews($(this).attr("target"));
+       updateReviews($(this).attr("target"));
     });
 
     // Ограничение на количество отображаемых отзывов
@@ -1160,7 +869,7 @@ require_once "../modules/base.php";
         }
     }
     
-   $(document).ready(function () {
+   /*$(document).ready(function () { Убрал document.ready чтобы header работал корректно*/
 
         // --- Функция: обрезать текст до последнего пробела ---
         function cutBySpace(text, limit) {
@@ -1243,8 +952,86 @@ require_once "../modules/base.php";
             }
         });
     
-    });
-
+    /*});*/
+    
+    
+    function openResponseFunctionsBlock(elem) {
+        $(".response-functions-block").removeClass("open");
+        $(elem).closest(".response-functions-block").addClass("open");
+    }
+    
+    function closeResponseFunctionsBlock(elem){
+        $(".response-functions-block").removeClass("open");
+    }
   
+</script>
+<script>
+// === ОТВЕТ ФРИЛАНСЕРА НА ОТЗЫВ ===
+$(document).on('click', '.write-response-block .send-button', function () {
+    const $button = $(this);
+    const $writeBlock = $button.closest('.write-response-block');
+    const $responseFunctionsBlock = $button.closest('.response-functions-block');
+    const $reviewContent = $button.closest('.review-freelancer-content');
+
+    const responseText = $writeBlock.find('.write-response-textarea').val().trim();
+
+    // Если текст пустой — ничего не делаем
+    if (!responseText) {
+        alert('Напишите ответ перед отправкой');
+        return;
+    }
+
+    // Скрываем форму ответа
+    $responseFunctionsBlock.removeClass('open');
+
+    // Показываем, что ответ уже есть
+    $responseFunctionsBlock.find('.there-is-response').removeClass('hidden').css('visibility', 'visible');
+
+    // Очищаем textarea
+    $writeBlock.find('.write-response-textarea').val('');
+
+    // Проверяем, есть ли уже блок с ответом фрилансера
+    let $responseWrapper = $reviewContent.find('.freelancer-response-wrapper');
+
+    if ($responseWrapper.length === 0) {
+        // Если нет — создаём его
+        $responseWrapper = $(`
+            <div class="freelancer-response-wrapper">
+                <div class="freelancer-response-header">Ответ продавца</div>
+                <div class="freelancer-response-container"></div>
+            </div>
+        `);
+        $reviewContent.append($responseWrapper);
+    }
+
+    // Создаём блок с ответом
+    const currentTime = new Date().toLocaleString('ru-RU', {
+        day: 'numeric',
+        month: 'long',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+    }).replace(' г.,', '');
+
+    const responseHTML = `
+        <div class="freelancer-response-block">
+            <div class="freelancer-response-img-container">
+                <img src="/img/freelancer-avatars/freelancer3.webp" alt="freelancer" class="reviewer-avatar">
+            </div>
+            <div class="freelancer-feedback">
+                <div class="freelancer-response-info">
+                    <span class="freelancer-response-username">Андрей</span>
+                </div>
+                <div class="review-date">
+                    <span class="freelancer-response-date">Только что</span>
+                </div>
+            </div>
+        </div>
+        <div class="freelancer-response-text">${responseText.replace(/\n/g, '<br>')}</div>
+    `;
+
+    // Добавляем ответ в контейнер
+    $responseWrapper.find('.freelancer-response-container').append(responseHTML);
+});
 </script>
 </html>

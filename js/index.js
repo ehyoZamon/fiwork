@@ -74,6 +74,30 @@ function openFillBalanceModal(){
     $(".fill-balance-modal-block-container").removeClass("hidden");
 }
 
+ function togglePassword() {
+    let input = document.getElementById("password");
+    if (input.type === "password") {
+        input.type = "text";
+        $(".toggle-password").removeClass("hidden");
+    } else {
+        input.type = "password";
+        $(".toggle-password").addClass("hidden");
+        
+    }
+}
+
+ function togglePasswordLogin() {
+    let input = document.getElementById("password-login");
+    if (input.type === "password") {
+        input.type = "text";
+        $(".toggle-password-login").removeClass("hidden");
+    } else {
+        input.type = "password";
+        $(".toggle-password-login").addClass("hidden");
+        
+    }
+}
+
 window.onload=function(){
     changeUserStatus();
     /*$(".swiper-hidden").removeClass("swiper-hidden");*/
@@ -416,5 +440,8 @@ window.onload=function(){
             $(".fill-balance-modal-block .result-sum-block").addClass("hidden");
         }
     });
+    
+   
+
 
 }

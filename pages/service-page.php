@@ -73,6 +73,31 @@ require_once "../modules/base.php";
                     </div>
                 </div>
                 
+                <h1>Логотип рисованный от руки</h1>
+                <div class="services-subcategories-block">
+                    <div class="subcategory-elem">
+                        Винтаж/ретро <img src="/img/icons/white-close-icon.svg" alt="white-close-icon" class="white-close-icon" onclick="closeSubcategoryElem(this);"/>
+                    </div>
+                    <div class="subcategory-elem">
+                        3D <img src="/img/icons/white-close-icon.svg" alt="white-close-icon" class="white-close-icon" onclick="closeSubcategoryElem(this);"/>
+                    </div>
+                    <div class="subcategory-elem">
+                        Плоский <img src="/img/icons/white-close-icon.svg" alt="white-close-icon" class="white-close-icon" onclick="closeSubcategoryElem(this);"/>
+                    </div>
+                    <div class="subcategory-elem">
+                        Шрифтовый <img src="/img/icons/white-close-icon.svg" alt="white-close-icon" class="white-close-icon" onclick="closeSubcategoryElem(this);"/>
+                    </div>
+                    <div class="subcategory-elem">
+                        Геральдический <img src="/img/icons/white-close-icon.svg" alt="white-close-icon" class="white-close-icon" onclick="closeSubcategoryElem(this);"/>
+                    </div>
+                    <div class="subcategory-elem">
+                        Рисованный от руки <img src="/img/icons/white-close-icon.svg" alt="white-close-icon" class="white-close-icon" onclick="closeSubcategoryElem(this);"/>
+                    </div>
+                    <div class="subcategory-elem">
+                        Акварельный <img src="/img/icons/white-close-icon.svg" alt="white-close-icon" class="white-close-icon" onclick="closeSubcategoryElem(this);"/>
+                    </div>
+                </div>
+                
                 <div class="services-container">
                     <div class="services-filter-container">
                         <!-- Mobile filter toggle button -->
@@ -256,22 +281,27 @@ require_once "../modules/base.php";
                     </div>
                     <div class="services-elems-container">
                         <div class="similar-to-search-block">
-                            <a href="#" class="ad-container">
+                            <a href="#" class="ad-container recommended">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
+                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
                                         <img src="/img/ads/ad1.webp" class="ad-img" alt="ad1"/>
                                     </div>
                                     
                                     <h3>Создам дизайн мобильного приложения</h3>
                                     
-                                    <div class="freelancer-container">
-                                        <div class="freelancer-avatar">
-                                            <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
-                                            <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status"/>
+                                    <div class="freelancer-wrapper">
+                                        <div class="freelancer-container">
+                                            <div class="freelancer-avatar">
+                                                <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
+                                                <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status"/>
+                                            </div>
+                                            <p class="freelancer-username">cc__creative</p>
+                                            <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer"/>
                                         </div>
-                                        <p class="freelancer-username">cc__creative</p>
-                                        <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer"/>
+                                        <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
                                     </div>
+                                    
                                 </div>
                                     
                                 <div class="service-data-container">
@@ -292,18 +322,23 @@ require_once "../modules/base.php";
                             <a href="#" class="ad-container">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
+                                    
+                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
                                         <img src="/img/ads/taplink.webp" class="ad-img" alt="ad1"/>
                                     </div>
                                     
                                     <h3>Создание сайтов Taplink, Дизайн</h3>
                                     
-                                    <div class="freelancer-container">
-                                        <div class="freelancer-avatar">
-                                            <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
-                                            <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                    <div class="freelancer-wrapper">
+                                        <div class="freelancer-container">
+                                            <div class="freelancer-avatar">
+                                                <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
+                                                <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                            </div>
+                                            <p class="freelancer-username">cc__creative</p>
+                                            <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer"/>
                                         </div>
-                                        <p class="freelancer-username">cc__creative</p>
-                                        <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer"/>
+                                        <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
                                     </div>
                                 </div>
                                     
@@ -325,18 +360,22 @@ require_once "../modules/base.php";
                             <a href="#" class="ad-container">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
+                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
                                         <img src="/img/ads/app-design.webp" class="ad-img" alt="ad1"/>
                                     </div>
                                     
                                     <h3>Продуманный Дизайн мобильного приложения</h3>
                                     
-                                    <div class="freelancer-container">
-                                        <div class="freelancer-avatar">
-                                            <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
-                                            <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                    <div class="freelancer-wrapper">
+                                        <div class="freelancer-container">
+                                            <div class="freelancer-avatar">
+                                                <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
+                                                <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                            </div>
+                                            <p class="freelancer-username">cc__creative</p>
+                                            <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
                                         </div>
-                                        <p class="freelancer-username">cc__creative</p>
-                                        <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
+                                        <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
                                     </div>
                                 </div>
                                     
@@ -358,18 +397,23 @@ require_once "../modules/base.php";
                             <a href="#" class="ad-container">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
+                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
                                         <img src="/img/ads/ux-ui-design.webp" class="ad-img" alt="ad1"/>
                                     </div>
                                     
                                     <h3>Стильный дизайн мобильных приложений </h3>
                                     
-                                    <div class="freelancer-container">
-                                        <div class="freelancer-avatar">
-                                            <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
-                                            <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                    <div class="freelancer-wrapper">
+                                        <div class="freelancer-container">
+                                            <div class="freelancer-avatar">
+                                                <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
+                                                <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                            </div>
+                                            <p class="freelancer-username">cc__creative</p>
+                                            <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
                                         </div>
-                                        <p class="freelancer-username">cc__creative</p>
-                                        <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
+                                        
+                                        <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
                                     </div>
                                 </div>
                                     
@@ -391,6 +435,7 @@ require_once "../modules/base.php";
                             <a href="#" class="ad-container">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
+                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
                                         <img src="/img/ads/mobile-design.webp" class="ad-img" alt="ad1"/>
                                     </div>
                                     
@@ -424,18 +469,23 @@ require_once "../modules/base.php";
                             <a href="#" class="ad-container">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
+                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
                                         <img src="/img/ads/ad1.webp" class="ad-img" alt="ad1"/>
                                     </div>
                                     
                                     <h3>Создам дизайн мобильного приложения</h3>
                                     
-                                    <div class="freelancer-container">
-                                        <div class="freelancer-avatar">
-                                            <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
-                                            <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status"/>
+                                    <div class="freelancer-wrapper">
+                                        <div class="freelancer-container">
+                                            <div class="freelancer-avatar">
+                                                <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
+                                                <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status"/>
+                                            </div>
+                                            <p class="freelancer-username">cc__creative</p>
+                                            <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer"/>
                                         </div>
-                                        <p class="freelancer-username">cc__creative</p>
-                                        <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer"/>
+                                        
+                                        <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
                                     </div>
                                 </div>
                                     
@@ -457,18 +507,23 @@ require_once "../modules/base.php";
                             <a href="#" class="ad-container">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
+                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
                                         <img src="/img/ads/taplink.webp" class="ad-img" alt="ad1"/>
                                     </div>
                                     
                                     <h3>Создание сайтов Taplink, Дизайн</h3>
                                     
-                                    <div class="freelancer-container">
-                                        <div class="freelancer-avatar">
-                                            <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
-                                            <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                    <div class="freelancer-wrapper">
+                                        <div class="freelancer-container">
+                                            <div class="freelancer-avatar">
+                                                <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
+                                                <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                            </div>
+                                            <p class="freelancer-username">cc__creative</p>
+                                            <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer"/>
                                         </div>
-                                        <p class="freelancer-username">cc__creative</p>
-                                        <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer"/>
+                                        
+                                        <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
                                     </div>
                                 </div>
                                     
@@ -490,18 +545,23 @@ require_once "../modules/base.php";
                             <a href="#" class="ad-container">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
+                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
                                         <img src="/img/ads/app-design.webp" class="ad-img" alt="ad1"/>
                                     </div>
                                     
                                     <h3>Продуманный Дизайн мобильного приложения</h3>
                                     
-                                    <div class="freelancer-container">
-                                        <div class="freelancer-avatar">
-                                            <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
-                                            <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                    <div class="freelancer-wrapper">
+                                        <div class="freelancer-container">
+                                            <div class="freelancer-avatar">
+                                                <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
+                                                <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                            </div>
+                                            <p class="freelancer-username">cc__creative</p>
+                                            <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
                                         </div>
-                                        <p class="freelancer-username">cc__creative</p>
-                                        <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
+                                        
+                                        <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
                                     </div>
                                 </div>
                                     
@@ -523,18 +583,23 @@ require_once "../modules/base.php";
                             <a href="#" class="ad-container">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
+                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
                                         <img src="/img/ads/ux-ui-design.webp" class="ad-img" alt="ad1"/>
                                     </div>
                                     
                                     <h3>Стильный дизайн мобильных приложений </h3>
                                     
-                                    <div class="freelancer-container">
-                                        <div class="freelancer-avatar">
-                                            <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
-                                            <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                    <div class="freelancer-wrapper">
+                                        <div class="freelancer-container">
+                                            <div class="freelancer-avatar">
+                                                <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
+                                                <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                            </div>
+                                            <p class="freelancer-username">cc__creative</p>
+                                            <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
                                         </div>
-                                        <p class="freelancer-username">cc__creative</p>
-                                        <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
+                                        
+                                        <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
                                     </div>
                                 </div>
                                     
@@ -556,18 +621,23 @@ require_once "../modules/base.php";
                             <a href="#" class="ad-container">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
+                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
                                         <img src="/img/ads/mobile-design.webp" class="ad-img" alt="ad1"/>
                                     </div>
                                     
                                     <h3>Создам дизайн мобильного приложения</h3>
                                     
-                                    <div class="freelancer-container">
-                                        <div class="freelancer-avatar">
-                                            <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
-                                            <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                    <div class="freelancer-wrapper">
+                                        <div class="freelancer-container">
+                                            <div class="freelancer-avatar">
+                                                <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
+                                                <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                            </div>
+                                            <p class="freelancer-username">cc__creative</p>
+                                            <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
                                         </div>
-                                        <p class="freelancer-username">cc__creative</p>
-                                        <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
+                                        
+                                        <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
                                     </div>
                                 </div>
                                     
@@ -589,18 +659,23 @@ require_once "../modules/base.php";
                             <a href="#" class="ad-container">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
+                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
                                         <img src="/img/ads/ad1.webp" class="ad-img" alt="ad1"/>
                                     </div>
                                     
                                     <h3>Создам дизайн мобильного приложения</h3>
                                     
-                                    <div class="freelancer-container">
-                                        <div class="freelancer-avatar">
-                                            <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
-                                            <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status"/>
+                                    <div class="freelancer-wrapper">
+                                        <div class="freelancer-container">
+                                            <div class="freelancer-avatar">
+                                                <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
+                                                <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status"/>
+                                            </div>
+                                            <p class="freelancer-username">cc__creative</p>
+                                            <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer"/>
                                         </div>
-                                        <p class="freelancer-username">cc__creative</p>
-                                        <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer"/>
+                                        
+                                        <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
                                     </div>
                                 </div>
                                     
@@ -622,18 +697,23 @@ require_once "../modules/base.php";
                             <a href="#" class="ad-container">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
+                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
                                         <img src="/img/ads/taplink.webp" class="ad-img" alt="ad1"/>
                                     </div>
                                     
                                     <h3>Создание сайтов Taplink, Дизайн</h3>
                                     
-                                    <div class="freelancer-container">
-                                        <div class="freelancer-avatar">
-                                            <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
-                                            <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                    <div class="freelancer-wrapper">
+                                        <div class="freelancer-container">
+                                            <div class="freelancer-avatar">
+                                                <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
+                                                <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                            </div>
+                                            <p class="freelancer-username">cc__creative</p>
+                                            <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer"/>
                                         </div>
-                                        <p class="freelancer-username">cc__creative</p>
-                                        <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer"/>
+                                        
+                                        <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
                                     </div>
                                 </div>
                                     
@@ -655,20 +735,26 @@ require_once "../modules/base.php";
                             <a href="#" class="ad-container">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
+                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
                                         <img src="/img/ads/app-design.webp" class="ad-img" alt="ad1"/>
                                     </div>
                                     
                                     <h3>Продуманный Дизайн мобильного приложения</h3>
                                     
-                                    <div class="freelancer-container">
-                                        <div class="freelancer-avatar">
-                                            <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
-                                            <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                    <div class="freelancer-wrapper">
+                                        <div class="freelancer-container">
+                                            <div class="freelancer-avatar">
+                                                <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
+                                                <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                            </div>
+                                            <p class="freelancer-username">cc__creative</p>
+                                            <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
                                         </div>
-                                        <p class="freelancer-username">cc__creative</p>
-                                        <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
+                                        
+                                        <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
                                     </div>
                                 </div>
+                                
                                     
                                 <div class="service-data-container">
                                     <div class="service-rating">
@@ -688,18 +774,23 @@ require_once "../modules/base.php";
                             <a href="#" class="ad-container">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
+                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
                                         <img src="/img/ads/ux-ui-design.webp" class="ad-img" alt="ad1"/>
                                     </div>
                                     
                                     <h3>Стильный дизайн мобильных приложений </h3>
                                     
-                                    <div class="freelancer-container">
-                                        <div class="freelancer-avatar">
-                                            <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
-                                            <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                    <div class="freelancer-wrapper">
+                                        <div class="freelancer-container">
+                                            <div class="freelancer-avatar">
+                                                <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
+                                                <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                            </div>
+                                            <p class="freelancer-username">cc__creative</p>
+                                            <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
                                         </div>
-                                        <p class="freelancer-username">cc__creative</p>
-                                        <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
+                                        
+                                        <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
                                     </div>
                                 </div>
                                     
@@ -721,18 +812,23 @@ require_once "../modules/base.php";
                             <a href="#" class="ad-container">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
+                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
                                         <img src="/img/ads/mobile-design.webp" class="ad-img" alt="ad1"/>
                                     </div>
                                     
                                     <h3>Создам дизайн мобильного приложения</h3>
                                     
-                                    <div class="freelancer-container">
-                                        <div class="freelancer-avatar">
-                                            <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
-                                            <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                    <div class="freelancer-wrapper">
+                                        <div class="freelancer-container">
+                                            <div class="freelancer-avatar">
+                                                <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
+                                                <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                            </div>
+                                            <p class="freelancer-username">cc__creative</p>
+                                            <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
                                         </div>
-                                        <p class="freelancer-username">cc__creative</p>
-                                        <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
+                                        
+                                        <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
                                     </div>
                                 </div>
                                     
@@ -754,18 +850,23 @@ require_once "../modules/base.php";
                             <a href="#" class="ad-container">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
+                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
                                         <img src="/img/ads/ad1.webp" class="ad-img" alt="ad1"/>
                                     </div>
                                     
                                     <h3>Создам дизайн мобильного приложения</h3>
                                     
-                                    <div class="freelancer-container">
-                                        <div class="freelancer-avatar">
-                                            <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
-                                            <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status"/>
-                                        </div>
-                                        <p class="freelancer-username">cc__creative</p>
-                                        <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer"/>
+                                    <div class="freelancer-wrapper">
+                                        <div class="freelancer-container">
+                                            <div class="freelancer-avatar">
+                                                <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
+                                                <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status"/>
+                                            </div>
+                                            <p class="freelancer-username">cc__creative</p>
+                                            <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer"/>
+                                        </div
+                                        
+                                        <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>>
                                     </div>
                                 </div>
                                     
@@ -787,18 +888,23 @@ require_once "../modules/base.php";
                             <a href="#" class="ad-container">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
+                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
                                         <img src="/img/ads/taplink.webp" class="ad-img" alt="ad1"/>
                                     </div>
                                     
                                     <h3>Создание сайтов Taplink, Дизайн</h3>
                                     
-                                    <div class="freelancer-container">
-                                        <div class="freelancer-avatar">
-                                            <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
-                                            <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                    <div class="freelancer-wrapper">
+                                        <div class="freelancer-container">
+                                            <div class="freelancer-avatar">
+                                                <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
+                                                <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                            </div>
+                                            <p class="freelancer-username">cc__creative</p>
+                                            <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer"/>
                                         </div>
-                                        <p class="freelancer-username">cc__creative</p>
-                                        <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer"/>
+                                        
+                                        <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
                                     </div>
                                 </div>
                                     
@@ -820,18 +926,23 @@ require_once "../modules/base.php";
                             <a href="#" class="ad-container">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
+                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
                                         <img src="/img/ads/app-design.webp" class="ad-img" alt="ad1"/>
                                     </div>
                                     
                                     <h3>Продуманный Дизайн мобильного приложения</h3>
                                     
-                                    <div class="freelancer-container">
-                                        <div class="freelancer-avatar">
-                                            <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
-                                            <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                    <div class="freelancer-wrapper">
+                                        <div class="freelancer-container">
+                                            <div class="freelancer-avatar">
+                                                <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
+                                                <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                            </div>
+                                            <p class="freelancer-username">cc__creative</p>
+                                            <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
                                         </div>
-                                        <p class="freelancer-username">cc__creative</p>
-                                        <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
+                                        
+                                        <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
                                     </div>
                                 </div>
                                     
@@ -853,18 +964,23 @@ require_once "../modules/base.php";
                             <a href="#" class="ad-container">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
+                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
                                         <img src="/img/ads/ux-ui-design.webp" class="ad-img" alt="ad1"/>
                                     </div>
                                     
                                     <h3>Стильный дизайн мобильных приложений </h3>
                                     
-                                    <div class="freelancer-container">
-                                        <div class="freelancer-avatar">
-                                            <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
-                                            <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                    <div class="freelancer-wrapper">
+                                        <div class="freelancer-container">
+                                            <div class="freelancer-avatar">
+                                                <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
+                                                <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                            </div>
+                                            <p class="freelancer-username">cc__creative</p>
+                                            <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
                                         </div>
-                                        <p class="freelancer-username">cc__creative</p>
-                                        <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
+                                        
+                                        <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
                                     </div>
                                 </div>
                                     
@@ -886,18 +1002,23 @@ require_once "../modules/base.php";
                             <a href="#" class="ad-container">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
+                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
                                         <img src="/img/ads/mobile-design.webp" class="ad-img" alt="ad1"/>
                                     </div>
                                     
                                     <h3>Создам дизайн мобильного приложения</h3>
                                     
-                                    <div class="freelancer-container">
-                                        <div class="freelancer-avatar">
-                                            <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
-                                            <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                    <div class="freelancer-wrapper">
+                                        <div class="freelancer-container">
+                                            <div class="freelancer-avatar">
+                                                <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
+                                                <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                            </div>
+                                            <p class="freelancer-username">cc__creative</p>
+                                            <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
                                         </div>
-                                        <p class="freelancer-username">cc__creative</p>
-                                        <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
+                                        
+                                        <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
                                     </div>
                                 </div>
                                     
@@ -919,18 +1040,23 @@ require_once "../modules/base.php";
                             <a href="#" class="ad-container">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
+                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
                                         <img src="/img/ads/ad1.webp" class="ad-img" alt="ad1"/>
                                     </div>
                                     
                                     <h3>Создам дизайн мобильного приложения</h3>
                                     
-                                    <div class="freelancer-container">
-                                        <div class="freelancer-avatar">
-                                            <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
-                                            <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status"/>
+                                    <div class="freelancer-wrapper">
+                                        <div class="freelancer-container">
+                                            <div class="freelancer-avatar">
+                                                <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
+                                                <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status"/>
+                                            </div>
+                                            <p class="freelancer-username">cc__creative</p>
+                                            <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer"/>
                                         </div>
-                                        <p class="freelancer-username">cc__creative</p>
-                                        <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer"/>
+                                        
+                                        <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
                                     </div>
                                 </div>
                                     
@@ -952,18 +1078,23 @@ require_once "../modules/base.php";
                             <a href="#" class="ad-container">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
+                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
                                         <img src="/img/ads/taplink.webp" class="ad-img" alt="ad1"/>
                                     </div>
                                     
                                     <h3>Создание сайтов Taplink, Дизайн</h3>
                                     
-                                    <div class="freelancer-container">
-                                        <div class="freelancer-avatar">
-                                            <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
-                                            <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                    <div class="freelancer-wrapper">
+                                        <div class="freelancer-container">
+                                            <div class="freelancer-avatar">
+                                                <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
+                                                <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                            </div>
+                                            <p class="freelancer-username">cc__creative</p>
+                                            <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer"/>
                                         </div>
-                                        <p class="freelancer-username">cc__creative</p>
-                                        <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer"/>
+                                        
+                                        <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
                                     </div>
                                 </div>
                                     
@@ -985,18 +1116,23 @@ require_once "../modules/base.php";
                             <a href="#" class="ad-container">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
+                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
                                         <img src="/img/ads/app-design.webp" class="ad-img" alt="ad1"/>
                                     </div>
                                     
                                     <h3>Продуманный Дизайн мобильного приложения</h3>
                                     
-                                    <div class="freelancer-container">
-                                        <div class="freelancer-avatar">
-                                            <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
-                                            <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                    <div class="freelancer-wrapper">
+                                        <div class="freelancer-container">
+                                            <div class="freelancer-avatar">
+                                                <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
+                                                <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                            </div>
+                                            <p class="freelancer-username">cc__creative</p>
+                                            <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
                                         </div>
-                                        <p class="freelancer-username">cc__creative</p>
-                                        <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
+                                        
+                                        <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
                                     </div>
                                 </div>
                                     
@@ -1018,18 +1154,23 @@ require_once "../modules/base.php";
                             <a href="#" class="ad-container">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
+                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
                                         <img src="/img/ads/ux-ui-design.webp" class="ad-img" alt="ad1"/>
                                     </div>
                                     
                                     <h3>Стильный дизайн мобильных приложений </h3>
                                     
-                                    <div class="freelancer-container">
-                                        <div class="freelancer-avatar">
-                                            <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
-                                            <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                    <div class="freelancer-wrapper">
+                                        <div class="freelancer-container">
+                                            <div class="freelancer-avatar">
+                                                <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
+                                                <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                            </div>
+                                            <p class="freelancer-username">cc__creative</p>
+                                            <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
                                         </div>
-                                        <p class="freelancer-username">cc__creative</p>
-                                        <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
+                                        
+                                        <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
                                     </div>
                                 </div>
                                     
@@ -1065,6 +1206,21 @@ require_once "../modules/base.php";
 <script src="/js/mobile-navigation-menu.js?v=<?= time(); ?>"></script>
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 <script>
+  function closeSubcategoryElem(elem){
+      $(elem).parent().remove();
+  }
+  
+    function likeThisAd(elem) {
+        if ($(elem).parent().hasClass("liked")) {
+            console.log("removed liked");
+            $(elem).parent().removeClass("liked");
+        } else {
+            $(elem).parent().addClass('liked'); 
+            console.log("liked added");
+        }
+    }
+  
+    
   const minRange = document.getElementById('min-range');
   const maxRange = document.getElementById('max-range');
   const minPrice = document.getElementById('min-price');
