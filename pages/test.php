@@ -5,70 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Интерактивная Пагинация</title>
 <style>
-.complexity-box {
-    width: 100%;
-    max-width: 480px;
-    background: #ffffff;
-    border: 2px solid #e7c9ff;
-    border-radius: 16px;
-    padding: 18px 20px 20px;
-    position: relative;
-    font-family: Arial, sans-serif;
-    box-sizing: border-box;
+.tree ul{
+  display:none;
+  padding-left:15px;
 }
 
-/* Фиолетовый бейдж */
-.complexity-label {
-    position: absolute;
-    top: -14px;
-    left: 18px;
-    background: #a259ff;
-    color: #fff;
-    padding: 4px 14px;
-    border-radius: 20px;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
+.tree li.open > ul{
+  display:block;
 }
 
-/* Иконка (звёздочка как в примерном интерфейсе) */
-.complexity-label .icon {
-    font-size: 13px;
-}
-
-/* Заголовок */
-.complexity-content h3 {
-    margin: 10px 0 8px;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-/* Описание */
-.complexity-content p {
-    margin: 0;
-    font-size: 15px;
-    line-height: 1.45;
-    color: #666;
+.tree-item{
+  cursor:pointer;
+  padding:5px 0;
 }
 
 </style>
 </head>
 <body>
-<div class="complexity-box">
-    <div class="complexity-label">
-        <span class="icon">✦</span>
-        С учётом сложности
-    </div>
+<ul class="tree">
+  <li>
+    <div class="tree-item">A</div>
+    <ul>
+      <li>
+        <div class="tree-item">A1</div>
+        <ul>
+          <li><div class="tree-item">A11</div></li>
+          <li><div class="tree-item">A12</div></li>
+          <li><div class="tree-item">A13</div></li>
+        </ul>
+      </li>
+      <li><div class="tree-item">A2</div></li>
+      <li><div class="tree-item">A3</div></li>
+    </ul>
+  </li>
 
-    <div class="complexity-content">
-        <h3>Оценка учитывает сложность проекта.</h3>
-        <p>
-            Нейросеть анализирует бриф и данные проекта, оценивая сложность, сроки и требования,
-            чтобы сформировать точную рыночную стоимость работы.
-        </p>
-    </div>
-</div>
+  <li>
+    <div class="tree-item">B</div>
+    <ul>
+      <li><div class="tree-item">B1</div></li>
+      <li><div class="tree-item">B2</div></li>
+    </ul>
+  </li>
 
+  <li><div class="tree-item">C</div></li>
+</ul>
+
+<script>
+document.addEventListener("click", function(e){
+  
+  if (!e.target.classList.contains("tree-item")) return;
+  
+  let li = e.target.closest("li");
+  let parentUl = li.parentElement;
+
+  [...parentUl.children].forEach(el=>{
+    if(el !== li){
+      el.classList.remove("open");
+    }
+  });
+
+  li.classList.toggle("open");
+});
+
+</script>
 </body>
 </html>
