@@ -5,69 +5,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Интерактивная Пагинация</title>
 <style>
-.complexity-box {
-    width: 100%;
-    max-width: 480px;
-    background: #ffffff;
-    border: 2px solid #e7c9ff;
-    border-radius: 16px;
-    padding: 18px 20px 20px;
-    position: relative;
-    font-family: Arial, sans-serif;
-    box-sizing: border-box;
+.accordion{
+  width:450px;
+  margin:30px auto;
+  font-family:Arial;
 }
-
-/* Фиолетовый бейдж */
-.complexity-label {
-    position: absolute;
-    top: -14px;
-    left: 18px;
-    background: #a259ff;
-    color: #fff;
-    padding: 4px 14px;
-    border-radius: 20px;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
+.plan{border:1px solid #ddd;margin-bottom:15px;border-radius:6px;overflow:hidden;}
+.plan-header{
+  padding:15px;
+  background:#fff;
+  font-size:20px;
+  cursor:pointer;
+  font-weight:600;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
-
-/* Иконка (звёздочка как в примерном интерфейсе) */
-.complexity-label .icon {
-    font-size: 13px;
+.plan.active .plan-header{
+  background:#f1f7ff;
+  border-bottom:1px solid #ddd;
 }
-
-/* Заголовок */
-.complexity-content h3 {
-    margin: 10px 0 8px;
-    font-size: 18px;
-    font-weight: bold;
+.plan-body{
+  display:none;
+  padding:15px;
+  background:#fff;
 }
-
-/* Описание */
-.complexity-content p {
-    margin: 0;
-    font-size: 15px;
-    line-height: 1.45;
-    color: #666;
-}
+.plan.active .plan-body{display:block;}
+.price{color:#53a600;font-weight:bold;}
+.arrow{transition:0.3s;}
+.plan.active .arrow{
 
 </style>
 </head>
 <body>
-<div class="complexity-box">
-    <div class="complexity-label">
-        <span class="icon">✦</span>
-        С учётом сложности
+
+<div class="accordion">
+
+  <!-- План -->
+  <div class="plan">
+    <div class="plan-header" data-price="2500">
+      <span class="price">2 500 ₽</span> Эконом
+      <div class="arrow">▼</div>
+    </div>
+    <div class="plan-body">
+      <ul>
+        <li>2 правки</li>
+        <li>1 день</li>
+      </ul>
+
+      <button class="order-btn">Заказать за 2500 ₽</button>
+    </div>
+  </div>
+
+  <!-- План -->
+  <div class="plan active">
+    <div class="plan-header" data-price="5000">
+      <span class="price">5 000 ₽</span> Стандарт
+      <div class="arrow">▼</div>
     </div>
 
-    <div class="complexity-content">
-        <h3>Оценка учитывает сложность проекта.</h3>
-        <p>
-            Нейросеть анализирует бриф и данные проекта, оценивая сложность, сроки и требования,
-            чтобы сформировать точную рыночную стоимость работы.
-        </p>
+    <div class="plan-body">
+      <ul>
+        <li>Доработка до 100%</li>
+        <li>3 дня</li>
+        <li>В нескольких цветах</li>
+        <li>Фавикон</li>
+      </ul>
+
+      <h4>Добавить к заказу</h4>
+
+      <label>
+        <input type="checkbox" class="extra" data-add="1500">
+        Срочное выполнение +1500 ₽
+      </label>
+
+      <label>
+        <input type="checkbox" class="extra" data-add="1200">
+        Печать +1200 ₽
+      </label>
+
+      <button class="order-btn">Заказать за 5000 ₽</button>
     </div>
+  </div>
+
+  <!-- План -->
+  <div class="plan">
+    <div class="plan-header" data-price="7000">
+      <span class="price">7 000 ₽</span> Бизнес
+      <div class="arrow">▼</div>
+    </div>
+    <div class="plan-body">
+      <ul>
+        <li>VIP сервис</li>
+        <li>5 дней</li>
+      </ul>
+
+      <button class="order-btn">Заказать за 7000 ₽</button>
+    </div>
+  </div>
+
 </div>
 
 </body>

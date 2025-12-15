@@ -61,7 +61,8 @@ require_once "../modules/base.php";
                                     <img src="/img/freelancer-avatars/freelancer4.jpg" alt="freelancer-avatar" class="freelancer-avatar"/>
                                 </div>
                                 <div class="freelancer-name">
-                                    Андрей
+                                    <span>Андрей</span>
+                                    <div class="freelancer-username">umairshafiq101</div>
                                 </div>
                             </div>
                             <div class="freelancer-stars-container">
@@ -158,6 +159,7 @@ require_once "../modules/base.php";
                         <div class="ai-agent-text">
                             ИИ-помощник
                             <img src="/img/icons/black-arrow-right.svg" alt="black-arrow-right" class="black-arrow-right"/>
+                            <img src="/img/icons/blue-arrow-right.svg" alt="blue-arrow-right" class="blue-arrow-right"/>
                         </div>
                         <div class="img-container">
                             <img src="/img/icons/ai-agent-icon.svg" alt="ai-agent-icon" class="ai-agent-icon"/>
@@ -229,6 +231,98 @@ require_once "../modules/base.php";
                             <a>Смотреть все</a>
                         </div>
                         <div class="freelancer-messages-content">
+                            <div class="freelancer-message">
+                                <div class="user-messaging-avatar">
+                                    <img src="/img/user-avatars/user-avatar1.png" alt="user-avatar" class="user-messaging-img"/> 
+                                </div>
+                                <div class="user-messaging-data">
+                                    <div class="user-messaging-username-and-date">
+                                        <h4>Crumpl_Production</h4>
+                                        <span>10 декабря</span>
+                                    </div>
+                                    <div class="user-message-and-num">
+                                        <p class="message">Здравствуйте. Напишите основной текст</p>
+                                        <div class="message-num-container">
+                                            <span class="message-num">1</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="freelancer-message">
+                                <div class="user-messaging-avatar">
+                                    <img src="/img/user-avatars/user-avatar2.jpg" alt="user-avatar" class="user-messaging-img"/> 
+                                </div>
+                                <div class="user-messaging-data">
+                                    <div class="user-messaging-username-and-date">
+                                        <h4>ABRAM7</h4>
+                                        <span>10 декабря</span>
+                                    </div>
+                                    <div class="user-message-and-num">
+                                        <p class="message">Здравствуйте</p>
+                                        <div class="message-num-container">
+                                            <span class="message-num">1</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="freelancer-message">
+                                <div class="user-messaging-avatar">
+                                    <img src="/img/user-avatars/user-avatar3.jpg" alt="user-avatar" class="user-messaging-img"/> 
+                                </div>
+                                <div class="user-messaging-data">
+                                    <div class="user-messaging-username-and-date">
+                                        <h4>egorov5</h4>
+                                        <span>9 декабря</span>
+                                    </div>
+                                    <div class="user-message-and-num">
+                                        <p class="message">напоминаю о себе</p>
+                                        <div class="message-num-container">
+                                            <span class="message-num">1</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="freelancer-message">
+                                <div class="user-messaging-avatar">
+                                    <img src="/img/user-avatars/user-avatar4.jpg" alt="user-avatar" class="user-messaging-img"/> 
+                                </div>
+                                <div class="user-messaging-data">
+                                    <div class="user-messaging-username-and-date">
+                                        <h4>Igor_AA</h4>
+                                        <span>7 декабря</span>
+                                    </div>
+                                    <div class="user-message-and-num">
+                                        <p class="message">чтобы ссылку прислать на проект?</p>
+                                        <div class="message-num-container">
+                                            <span class="message-num">2</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="freelancer-message">
+                                <div class="user-messaging-avatar">
+                                    <img src="/img/user-avatars/user-avatar5.jpg" alt="user-avatar" class="user-messaging-img"/> 
+                                </div>
+                                <div class="user-messaging-data">
+                                    <div class="user-messaging-username-and-date">
+                                        <h4>gregben80</h4>
+                                        <span>6 декабря</span>
+                                    </div>
+                                    <div class="user-message-and-num">
+                                        <p class="message">Добрый день. Тема: кворк "Опублику…"</p>
+                                        <div class="message-num-container">
+                                            <span class="message-num">1</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
                             <div class="freelancer-message">
                                 <div class="user-messaging-avatar">
                                     <img src="/img/user-avatars/user-avatar1.png" alt="user-avatar" class="user-messaging-img"/> 
@@ -447,7 +541,8 @@ require_once "../modules/base.php";
                             Мои заказы  <span class="sum-overview">&nbsp;– Всего 16 (63 840 ₽)</span>
                         </div>
                         <div class="see-more-container">
-                            Посмотреть все <img src="/img/icons/chevron-right-grey.svg"/>
+                            Посмотреть все <img src="/img/icons/chevron-right-grey.svg" class="grey-chevron-right"/>
+                                            <img src="/img/icons/blue-chevron-right.svg" class="blue-chevron-right"/>
                         </div>
                     </div>
                     
@@ -456,7 +551,8 @@ require_once "../modules/base.php";
                             Мои товары  <span class="active-overview">&nbsp;– Активно 0 из 13</span>
                         </div>
                         <div class="see-more-container">
-                            Посмотреть все <img src="/img/icons/chevron-right-grey.svg"/>
+                            Посмотреть все <img src="/img/icons/chevron-right-grey.svg" class="grey-chevron-right"/>
+                            <img src="/img/icons/blue-chevron-right.svg" class="blue-chevron-right"/>
                         </div>
                     </div>
                     
@@ -525,7 +621,8 @@ require_once "../modules/base.php";
                             </h2>
                                 
                             <div class="see-more-container">
-                                Посмотреть все <img src="/img/icons/chevron-right-grey.svg"/>
+                                Посмотреть все <img src="/img/icons/chevron-right-grey.svg" class="grey-chevron-right"/>
+                                <img src="/img/icons/blue-chevron-right.svg" class="blue-chevron-right"/>
                             </div>
                         </div>
                         

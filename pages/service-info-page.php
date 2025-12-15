@@ -28,7 +28,7 @@ require_once "../modules/base.php";
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     <link rel="stylesheet" href="/css/service-info-page.css?v=<?= time(); ?>" />
-    <link rel="stylesheet" href="/css/accordion.css?v=<?= time(); ?>" />
+    <link rel="stylesheet" href="/css/aside-accordion.css?v=<?= time(); ?>" />
     
     <link rel="stylesheet" href="/css/mobile-navigation-menu.css?v=<?= time(); ?>" />
     
@@ -85,41 +85,64 @@ require_once "../modules/base.php";
                         </div>
                         <h2>Логотип шрифтовой элегантный + бонусы.</h2>
                     </div>
-                    
-                    <div class="service-photo-slider slider-wrapper hidden">
-                        <div class="swiper swiper-main">
-                          <div class="swiper-wrapper photo-slider">
-                            <div class="swiper-slide"><img src="/img/service-info-page-slider/slide1.webp" alt="slide1"/></div>
-                            <div class="swiper-slide"><img src="/img/service-info-page-slider/slide2.png" alt="slide2"/></div>
-                            <div class="swiper-slide"><img src="/img/service-info-page-slider/slide3.webp" alt="slide3"/></div>
-                            <div class="swiper-slide"><img src="/img/service-info-page-slider/slide4.webp" alt="slide4"/></div>
-                            <div class="swiper-slide"><img src="/img/service-info-page-slider/slide5.webp" alt="slide5"/></div>
-                            <div class="swiper-slide"><img src="/img/service-info-page-slider/slide6.webp" alt="slide6"/></div>
-                            <div class="swiper-slide"><img src="/img/service-info-page-slider/slide1.webp" alt="slide7"/></div>
-                            <div class="swiper-slide"><img src="/img/service-info-page-slider/slide2.png" alt="slide8"/></div>
-                          </div>
                         
-                            <div class="slider-controls">
-                                <div class="slider-button-prev" style="transform: rotateY(180deg);"><img src="/img/icons/chevron-right.svg"  alt="arrow-left" class="arrow-left"/></div>
-                                <div class="slider-button-next"><img src="/img/icons/chevron-right.svg" alt="arrow-right" class="arrow-right"/></div>
-                            </div>
-                            <div class="swiper-pagination custom-pagination"></div>
-                            <div class="fullscreen-toggle-button"><img src="/img/icons/fullscreentoggle.svg" alt="fullscreentoggle" class="fullscreentoggle"/></div>
-                          <!-- Навигация -->
-                        </div>
-                        
-                        
-                        <!-- Thumbnail Swiper -->
-                        <div class="swiper swiper-thumb">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide"><img src="/img/service-info-page-slider/slide1.webp" alt="slide1"/></div>
-                                <div class="swiper-slide"><img src="/img/service-info-page-slider/slide2.png" alt="slide2"/></div>
-                                <div class="swiper-slide"><img src="/img/service-info-page-slider/slide3.webp" alt="slide3"/></div>
-                                <div class="swiper-slide"><img src="/img/service-info-page-slider/slide4.webp" alt="slide4"/></div>
-                                <div class="swiper-slide"><img src="/img/service-info-page-slider/slide5.webp" alt="slide5"/></div>
-                                <div class="swiper-slide"><img src="/img/service-info-page-slider/slide6.webp" alt="slide6"/></div>
-                                <div class="swiper-slide"><img src="/img/service-info-page-slider/slide1.webp" alt="slide7"/></div>
-                                <div class="swiper-slide"><img src="/img/service-info-page-slider/slide2.png" alt="slide8"/></div>
+                    <div class="slider-screen-wrapper">
+                        <img src="/img/icons/white-close-icon.svg" alt="white-close-icon" class="slider-close-icon" onclick="closeFullScreenSlider();"/> 
+                        <div class="slider-screen-container full-screen">
+                            
+                            <div class="service-photo-slider slider-wrapper full-screen">
+                                <div class="about-slide">
+                                    <div class="author-img-container">
+                                        <img src="/img/freelancers/ekaterina.jpg" alt="ekaterina" class="ekaterina-img"/>
+                                    </div>
+                                    <div class="about-slide-container">
+                                        <div class="slide-info">
+                                            Компания DELOR
+                                        </div>
+                                        <div class="author-info">
+                                            ekaterinayablokova
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="swiper swiper-main">
+                                  <div class="swiper-wrapper photo-slider">
+                                    <div class="swiper-slide"><img src="/img/service-info-page-slider/slide1.webp" alt="slide1"/></div>
+                                    <div class="swiper-slide"><img src="/img/service-info-page-slider/slide2.png" alt="slide2"/></div>
+                                    <div class="swiper-slide"><img src="/img/service-info-page-slider/slide3.webp" alt="slide3"/></div>
+                                    <div class="swiper-slide"><img src="/img/service-info-page-slider/slide4.webp" alt="slide4"/></div>
+                                    <div class="swiper-slide"><img src="/img/service-info-page-slider/slide5.webp" alt="slide5"/></div>
+                                    <div class="swiper-slide"><img src="/img/service-info-page-slider/slide6.webp" alt="slide6"/></div>
+                                    <div class="swiper-slide"><img src="/img/service-info-page-slider/slide1.webp" alt="slide7"/></div>
+                                    <div class="swiper-slide"><img src="/img/service-info-page-slider/slide2.png" alt="slide8"/></div>
+                                  </div>
+                                
+                                    <div class="slider-controls">
+                                        <div class="slider-button-prev" style="transform: rotateY(180deg);"><img src="/img/icons/chevron-right.svg"  alt="arrow-left" class="arrow-left"/>
+                                        <img src="/img/icons/round-grey-chevron-right.svg" alt="round-chevron-left" style="transform: rotateX(180deg);" class="round-chevron-left"/></div>
+                                        <div class="slider-button-next"><img src="/img/icons/chevron-right.svg" alt="arrow-right" class="arrow-right"/>
+                                        <img src="/img/icons/round-grey-chevron-right.svg" alt="round-chevron-right" class="round-chevron-right"/>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-pagination custom-pagination"></div>
+                                    <div class="fullscreen-toggle-button"><img src="/img/icons/fullscreentoggle.svg" alt="fullscreentoggle" class="fullscreentoggle"/></div>
+                                  <!-- Навигация -->
+                                </div>
+                                
+                                
+                                <!-- Thumbnail Swiper -->
+                                <div class="swiper swiper-thumb">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="/img/service-info-page-slider/slide1.webp" alt="slide1"/></div>
+                                        <div class="swiper-slide"><img src="/img/service-info-page-slider/slide2.png" alt="slide2"/></div>
+                                        <div class="swiper-slide"><img src="/img/service-info-page-slider/slide3.webp" alt="slide3"/></div>
+                                        <div class="swiper-slide"><img src="/img/service-info-page-slider/slide4.webp" alt="slide4"/></div>
+                                        <div class="swiper-slide"><img src="/img/service-info-page-slider/slide5.webp" alt="slide5"/></div>
+                                        <div class="swiper-slide"><img src="/img/service-info-page-slider/slide6.webp" alt="slide6"/></div>
+                                        <div class="swiper-slide"><img src="/img/service-info-page-slider/slide1.webp" alt="slide7"/></div>
+                                        <div class="swiper-slide"><img src="/img/service-info-page-slider/slide2.png" alt="slide8"/></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -276,7 +299,7 @@ require_once "../modules/base.php";
                         <div class="select-additional-services">
                             <h2>Детали заказа и выбор дополнительных услуг</h2>
                             <div class="additional-service-block">
-                                <input type="checkbox" onclick="checkAdditionalServicesCheckbox();" class="additional-service-checkbox"/>
+                                <input type="checkbox" onclick="checkAdditionalServicesCheckbox(this,event);" class="additional-service-checkbox"/>
                                 <p>Срочное выполнение заказа</p>
                                 <div class="additional-service-price">
                                     + 1 500 ₽
@@ -284,7 +307,7 @@ require_once "../modules/base.php";
                             </div>
                             
                             <div class="additional-service-block">
-                                <input type="checkbox" onclick="checkAdditionalServicesCheckbox();" class="additional-service-checkbox"/>
+                                <input type="checkbox" onclick="checkAdditionalServicesCheckbox(this,event);" class="additional-service-checkbox"/>
                                 <p>Раскрутка проекта под аудиторию</p>
                                 <div class="additional-service-price">
                                     + 1 500 ₽
@@ -321,7 +344,258 @@ require_once "../modules/base.php";
                 
                 
                 <div class="aside-content-block">
-                    <div class="service-price-wrapper">
+                    <div class="aside-accordion-nav aside-accordion-block">
+                        <div class="accordion">
+                            <div class="accordion-item service-price-wrapper price-editable">
+                              <button class="accordion-header">
+                                <p>
+                                    <span class="service-price">2 500 ₽</span>
+                                    Эконом
+                                </p>
+                                
+                                <span class="plus"><img src="/img/icons/open.svg" class="open-icon" alt="open-icon"></span>
+                              </button>
+                              <div class="accordion-body">
+                              <div class="order-details">
+                                    <h3>Детали заказа</h3>
+                                    <div class="order-detail"><img src="/img/icons/infinity-icon.svg" alt="infinity-icon" class="infinity-icon"/>Доработка до 100% результата</div>
+                                    <div class="order-detail"><img src="/img/icons/clock-going.svg" alt="clock-icon" class="clock-icon"/>3 дня на выполнение</div>
+                                    <div class="order-detail"><img src="/img/icons/grey-clock-going.svg" alt="clock-icon" class="greyclock-icon"/>Обычно выполняет за 1 день</div>
+                                </div>
+                                
+                                <div class="select-additional-services">
+                                    <div class="select-additional-services-header">Добавить к заказу
+                                        <p>
+                                            <span class="simple-text">Как выбрать</span>
+                                                            
+                                            <span class="question-and-description tooltip-container">
+                                                <img src="/img/icons/round-question-icon.svg" alt="round-question-icon" class="round-question-icon tooltip-question"/>
+                                                <span class="tooltip-text" style="font-weight: 400;">
+                                                    Выберите нужную дополнительную услугу.
+                                                    Цена заказа автоматически пересчитается. Услуги можно докупить и после старта заказа.
+                                                </span>
+                                            </span>     
+                                        </p>
+                                    </div>
+                                    
+                                    <div class="additional-service-block">
+                                        <input type="checkbox" onclick="checkAdditionalServicesCheckbox(this,event);" class="additional-service-checkbox"/>
+                                        <p>Срочное выполнение заказа</p>
+                                        <div class="additional-service-price">
+                                            + 1 500 ₽
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="additional-service-block">
+                                        <input type="checkbox" onclick="checkAdditionalServicesCheckbox(this,event);" class="additional-service-checkbox"/>
+                                        <p>Раскрутка проекта под аудиторию</p>
+                                        <div class="additional-service-price">
+                                            + 1 500 ₽
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="additional-service-block">
+                                        <input type="checkbox" onclick="checkAdditionalServicesCheckbox(this,event);" class="additional-service-checkbox"/>
+                                        <p>Фирменная печать</p>
+                                        <div class="additional-service-price">
+                                            + 1 500 ₽
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="close-open-options hidden">
+                                        <div class="`-options" onclick="showAllOptions(this);">
+                                            Показать все опции <img src="/img/icons/blue-chevron-down.svg" alt="blue-chevron-down" class="blue-chevron-down"/>
+                                        </div>
+                                        <div class="close-additional-options hidden" onclick="closeAdditionalOptions(this);">
+                                            Скрыть опции <img src="/img/icons/blue-chevron-down.svg" alt="blue-chevron-up" class="blue-chevron-up" style="transform: rotateX(180deg);"/>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="order-now-container">                            
+                                    <div class="order-now-block">
+                                        <span>Заказать за 2500 ₽</span>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                            
+                            <div class="accordion-item service-price-wrapper price-editable">
+                              <button class="accordion-header">
+                                <p>
+                                    <span class="service-price">5 000 ₽</span>
+                                    Стандарт
+                                </p>
+                                
+                                <span class="plus"><img src="/img/icons/open.svg" class="open-icon" alt="open-icon"></span>
+                              </button>
+                              <div class="accordion-body">
+                                <div class="order-details">
+                                    <h3>Детали заказа</h3>
+                                    <div class="order-detail"><img src="/img/icons/infinity-icon.svg" alt="infinity-icon" class="infinity-icon"/>Доработка до 100% результата</div>
+                                    <div class="order-detail"><img src="/img/icons/clock-going.svg" alt="clock-icon" class="clock-icon"/>3 дня на выполнение</div>
+                                    <div class="order-detail"><img src="/img/icons/grey-clock-going.svg" alt="clock-icon" class="greyclock-icon"/>Обычно выполняет за 1 день</div>
+                                    
+                                    <div class="additional-order-details">
+                                        <div class="order-detail"><img src="/img/icons/green-checkmark.svg" alt="checkmark-icon" class="checkmark-icon"/>В нескольких цветах</div>
+                                        <div class="order-detail"><img src="/img/icons/green-checkmark.svg" alt="checkmark-icon" class="checkmark-icon"/>Фавикон</div>
+                                        <div class="order-detail"><img src="/img/icons/green-checkmark.svg" alt="checkmark-icon" class="checkmark-icon"/>Высокое разрешение</div>
+                                        <div class="order-detail"><img src="/img/icons/green-checkmark.svg" alt="checkmark-icon" class="checkmark-icon"/>Исходники</div>
+                                        <div class="order-detail"><img src="/img/icons/green-checkmark.svg" alt="checkmark-icon" class="checkmark-icon"/>до 3 логотипов</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="select-additional-services">
+                                    <div class="select-additional-services-header">Добавить к заказу
+                                        <p>
+                                            <span class="simple-text">Как выбрать</span>
+                                                            
+                                            <span class="question-and-description tooltip-container">
+                                                <img src="/img/icons/round-question-icon.svg" alt="round-question-icon" class="round-question-icon tooltip-question"/>
+                                                <span class="tooltip-text" style="font-weight: 400;">
+                                                    Выберите нужную дополнительную услугу.
+                                                    Цена заказа автоматически пересчитается. Услуги можно докупить и после старта заказа.
+                                                </span>
+                                            </span>     
+                                        </p>
+                                    </div>
+                                    
+                                    <div class="additional-service-block">
+                                        <input type="checkbox" onclick="checkAdditionalServicesCheckbox(this,event);" class="additional-service-checkbox"/>
+                                        <p>Срочное выполнение заказа</p>
+                                        <div class="additional-service-price">
+                                            + 1 500 ₽
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="additional-service-block">
+                                        <input type="checkbox" onclick="checkAdditionalServicesCheckbox(this,event);" class="additional-service-checkbox"/>
+                                        <p>Раскрутка проекта под аудиторию</p>
+                                        <div class="additional-service-price">
+                                            + 1 500 ₽
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="additional-service-block">
+                                        <input type="checkbox" onclick="checkAdditionalServicesCheckbox(this,event);" class="additional-service-checkbox"/>
+                                        <p>Фирменная печать</p>
+                                        <div class="additional-service-price">
+                                            + 1 500 ₽
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="additional-service-block">
+                                        <input type="checkbox" onclick="checkAdditionalServicesCheckbox(this,event);" class="additional-service-checkbox"/>
+                                        <p>Анимационный логотип</p>
+                                        <div class="additional-service-price">
+                                            + 1 500 ₽
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="additional-service-block">
+                                        <input type="checkbox" onclick="checkAdditionalServicesCheckbox(this,event);" class="additional-service-checkbox"/>
+                                        <p>Инструкция по использованию</p>
+                                        <div class="additional-service-price">
+                                            + 1 500 ₽
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="close-open-options hidden">
+                                        <div class="`-options" onclick="showAllOptions(this);">
+                                            Показать все опции <img src="/img/icons/blue-chevron-down.svg" alt="blue-chevron-down" class="blue-chevron-down"/>
+                                        </div>
+                                        <div class="close-additional-options hidden" onclick="closeAdditionalOptions(this);">
+                                            Скрыть опции <img src="/img/icons/blue-chevron-down.svg" alt="blue-chevron-up" class="blue-chevron-up" style="transform: rotateX(180deg);"/>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="order-now-container">                            
+                                    <div class="order-now-block">
+                                        <span>Заказать за 5000 ₽</span>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                            
+                            <div class="accordion-item service-price-wrapper price-editable">
+                              <button class="accordion-header">
+                                 <p>
+                                    <span class="service-price">7 000 ₽</span>
+                                    Бизнес
+                                </p>
+                                
+                                <span class="plus"><img src="/img/icons/open.svg" class="open-icon" alt="open-icon"></span>
+                              </button>
+                              <div class="accordion-body">
+                              <div class="order-details">
+                                    <h3>Детали заказа</h3>
+                                    <div class="order-detail"><img src="/img/icons/infinity-icon.svg" alt="infinity-icon" class="infinity-icon"/>Доработка до 100% результата</div>
+                                    <div class="order-detail"><img src="/img/icons/clock-going.svg" alt="clock-icon" class="clock-icon"/>3 дня на выполнение</div>
+                                    <div class="order-detail"><img src="/img/icons/grey-clock-going.svg" alt="clock-icon" class="greyclock-icon"/>Обычно выполняет за 1 день</div>
+                                </div>
+                                
+                                <div class="select-additional-services">
+                                    <div class="select-additional-services-header">Добавить к заказу
+                                        <p>
+                                            <span class="simple-text">Как выбрать</span>
+                                                            
+                                            <span class="question-and-description tooltip-container">
+                                                <img src="/img/icons/round-question-icon.svg" alt="round-question-icon" class="round-question-icon tooltip-question"/>
+                                                <span class="tooltip-text" style="font-weight: 400;">
+                                                    Выберите нужную дополнительную услугу.
+                                                    Цена заказа автоматически пересчитается. Услуги можно докупить и после старта заказа.
+                                                </span>
+                                            </span>     
+                                        </p>
+                                    </div>
+                                    
+                                    <div class="additional-service-block">
+                                        <input type="checkbox" onclick="checkAdditionalServicesCheckbox(this,event);" class="additional-service-checkbox"/>
+                                        <p>Срочное выполнение заказа</p>
+                                        <div class="additional-service-price">
+                                            + 1 500 ₽
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="additional-service-block">
+                                        <input type="checkbox" onclick="checkAdditionalServicesCheckbox(this,event);" class="additional-service-checkbox"/>
+                                        <p>Раскрутка проекта под аудиторию</p>
+                                        <div class="additional-service-price">
+                                            + 1 500 ₽
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="additional-service-block">
+                                        <input type="checkbox" onclick="checkAdditionalServicesCheckbox(this,event);" class="additional-service-checkbox"/>
+                                        <p>Фирменная печать</p>
+                                        <div class="additional-service-price">
+                                            + 1 500 ₽
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="close-open-options hidden">
+                                        <div class="`-options" onclick="showAllOptions(this);">
+                                            Показать все опции <img src="/img/icons/blue-chevron-down.svg" alt="blue-chevron-down" class="blue-chevron-down"/>
+                                        </div>
+                                        <div class="close-additional-options hidden" onclick="closeAdditionalOptions(this);">
+                                            Скрыть опции <img src="/img/icons/blue-chevron-down.svg" alt="blue-chevron-up" class="blue-chevron-up" style="transform: rotateX(180deg);"/>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="order-now-container">                            
+                                    <div class="order-now-block">
+                                        <span>Заказать за 5000 ₽</span>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-price-wrapper price-editable">
                         <div class="service-price-block">
                             <span class="service-price">6000 ₽</span>
                             <div class="price-estimate normal-price">
@@ -347,6 +621,16 @@ require_once "../modules/base.php";
                                                 </div>
                                                 <div class="price-to">
                                                     до 1500 ₽
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                            <div class="close-open-options hidden">
+                                                <div class="`-options" onclick="showAllOptions(this);">
+                                                    Показать все опции <img src="/img/icons/blue-chevron-down.svg" alt="blue-chevron-down" class="blue-chevron-down"/>
+                                                </div>
+                                                <div class="close-additional-options hidden" onclick="closeAdditionalOptions(this);">
+                                                    Скрыть опции <img src="/img/icons/blue-chevron-down.svg" alt="blue-chevron-up" class="blue-chevron-up" style="transform: rotateX(180deg);"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -389,18 +673,60 @@ require_once "../modules/base.php";
                                     </div>
                                 </div>
                             </div>
-                            
+                          
                         </div>
                         <div class="order-details">
                             <h3>Детали заказа</h3>
                             <div class="order-detail"><img src="/img/icons/infinity-icon.svg" alt="infinity-icon" class="infinity-icon"/>Доработка до 100% результата</div>
                             <div class="order-detail"><img src="/img/icons/clock-going.svg" alt="clock-icon" class="clock-icon"/>4 дня на выполнение</div>
                             <div class="order-detail"><img src="/img/icons/grey-clock-going.svg" alt="clock-icon" class="greyclock-icon"/>4 дня на выполнение</div>
-                            
+
                             <div class="order-now-block">
                                 <span>Заказать за 6000 ₽</span>
                             </div>
                         </div>
+                        
+                        <div class="select-additional-services">
+                                <div class="select-additional-services-header">Добавить к заказу
+                                    <p>
+                                        <span class="simple-text">Как выбрать</span>
+                                                        
+                                        <span class="question-and-description tooltip-container">
+                                            <img src="/img/icons/round-question-icon.svg" alt="round-question-icon" class="round-question-icon tooltip-question"/>
+                                            <span class="tooltip-text" style="font-weight: 400;">
+                                                Выберите нужную дополнительную услугу.
+                                                Цена заказа автоматически пересчитается. Услуги можно докупить и после старта заказа.
+                                            </span>
+                                        </span>     
+                                    </p>
+                                </div>
+                                
+                                <div class="additional-service-block">
+                                    <input type="checkbox" onclick="checkAdditionalServicesCheckbox(this,event);" class="additional-service-checkbox"/>
+                                    <p>Срочное выполнение заказа</p>
+                                    <div class="additional-service-price">
+                                        + 1 500 ₽
+                                    </div>
+                                </div>
+                                
+                                <div class="additional-service-block">
+                                    <input type="checkbox" onclick="checkAdditionalServicesCheckbox(this,event);" class="additional-service-checkbox"/>
+                                    <p>Раскрутка проекта под аудиторию</p>
+                                    <div class="additional-service-price">
+                                        + 1 500 ₽
+                                    </div>
+                                </div>
+                                
+                                <div class="additional-service-block">
+                                    <input type="checkbox" onclick="checkAdditionalServicesCheckbox(this,event);" class="additional-service-checkbox"/>
+                                    <p>Фирменная печать</p>
+                                    <div class="additional-service-price">
+                                        + 1 500 ₽
+                                    </div>
+                                </div>
+                            </div>
+
+                        
                     </div>
                                 
                     
@@ -484,14 +810,16 @@ require_once "../modules/base.php";
                         </div>
                     </div>
                     
-                    <div class="safe-deal-container">
-                        <img src="/img/icons/safe-deal-icon.svg" alt="safe-deal-icon" class="safe-deal-icon"/>
-                        <p>Безопасная сделка</p>
-                    </div>
-                    
-                    <div class="money-back-guarantee-block">
-                        <img src="/img/icons/money-back-icon.svg" alt="money-back-icon" class="money-back-icon"/>
-                        <p>Возврат денег при не выполнении</p>
+                    <div class="safe-deal-block">
+                        <div class="safe-deal-container">
+                            <img src="/img/icons/safe-deal-icon.svg" alt="safe-deal-icon" class="safe-deal-icon"/>
+                            <p>Безопасная сделка</p>
+                        </div>
+                        
+                        <div class="money-back-guarantee-block">
+                            <img src="/img/icons/money-back-icon.svg" alt="money-back-icon" class="money-back-icon"/>
+                            <p>Возврат денег при не выполнении</p>
+                        </div>
                     </div>
                     
                     <div class="ask-freelancer-block">
@@ -505,7 +833,6 @@ require_once "../modules/base.php";
                             <div class="question-template">Цена актуальна?</div>
                             <div class="question-template">Что нужно для заказа?</div>
                             <div class="question-template">Свободны сегодня?</div>
-                            
                         </div>
                     </div>
                 </div>
@@ -515,7 +842,7 @@ require_once "../modules/base.php";
     
     <div class="main-block">
         <div class="main-container">
-            <div class="service-info-block">
+            <div class="service-info-block no-top-margin">
                 <div class="main-content-block">
                     <div class="reviews-about-freelancer-block">
                         <div class="reviews-about-freelancer-header">
@@ -842,7 +1169,48 @@ require_once "../modules/base.php";
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 <script>
 
-    function checkAdditionalServicesCheckbox(){
+    function closeFullScreenSlider(){
+        $(".slider-screen-wrapper").removeClass("full-screen-wrapper");
+        $("body").css("overflow-y","auto"); 
+    }
+    
+    $(".fullscreen-toggle-button").on("click",function(){
+        $("body").css("overflow-y","hidden");
+        $(".slider-screen-wrapper").addClass("full-screen-wrapper")
+    });
+    /*Реализация скрытия и показа дополнительных опций*/
+    $(".select-additional-services").each(function(){
+        if($(this).find(".additional-service-block").length>3){
+           $(this).find(".additional-service-block").hide();
+           $(this).find(".additional-service-block").slice(0,3).show();
+           $(this).find(".close-open-options").removeClass("hidden");
+           $(this).find(".show-all-options").removeClass("hidden");
+           $(this).find(".close-additional-options").addClass("hidden");
+        }else{
+            $(this).find(".close-open-options").addClass("hidden");
+        }
+    });
+    
+    function showAllOptions(elem){
+        $(elem).parent().find(".close-additional-options").removeClass('hidden');
+        $(elem).addClass('hidden');
+        $(elem).closest(".select-additional-services").find(".additional-service-block").show();
+    }
+    
+    function closeAdditionalOptions(elem){
+        $(elem).parent().find(".show-all-options").removeClass('hidden');
+        $(elem).addClass('hidden');
+        $(elem).closest(".select-additional-services").find(".additional-service-block").hide().slice(0,3).show();
+    }
+    /*Конец кода скрытия и показа дополнительных опций*/
+
+    $(".additional-service-block").on("click",function(){
+       $(this).find("input[type=checkbox]").trigger("click"); 
+    });
+    
+    function checkAdditionalServicesCheckbox(elem,e){
+        e.stopPropagation();
+        changeEditableSum(elem);
         $(".select-additional-services .additional-service-block input[type='checkbox']").each(function(){
             if($(this).is(':checked')){
                 $(this).closest(".additional-service-block").addClass("selected");
@@ -850,6 +1218,27 @@ require_once "../modules/base.php";
                 $(this).closest(".additional-service-block").removeClass("selected");
             }
         });
+    }
+    
+    function changeEditableSum(elem){
+        const editableSumBlock = $(elem).closest(".price-editable");
+        
+        let initialSum = parseInt(
+            editableSumBlock.find(".service-price").text().replace(/\D+/g,"")
+        );
+        
+        editableSumBlock.find(".additional-service-block input[type='checkbox']:checked").each(function(){
+            const additionalSum = parseInt(
+                $(this).closest(".additional-service-block")
+                    .find(".additional-service-price")
+                    .text()
+                    .replace(/\D+/g,"")
+            );
+            initialSum += additionalSum;
+        });
+    
+        console.log(initialSum);
+        $(editableSumBlock).find(".order-now-block span").text("Заказать за " + initialSum + " ₽");
     }
 
     const thumbSwiper = new Swiper(".swiper-thumb", {
@@ -884,55 +1273,22 @@ require_once "../modules/base.php";
         }
       });
       
-      const sliderContainer = document.querySelector('.swiper-main'); 
-
-        // 2. Кнопка полного экрана
-        const fullscreenButton = document.querySelector('.fullscreen-toggle-button');
-        
-        // Функция, которая проверяет текущее состояние и переключает режим
-        function toggleNativeFullscreen() {
-            // Проверяем, находимся ли мы уже в режиме Fullscreen
-            if (document.fullscreenElement) {
-                // Если да, выходим из него (работает для всех элементов на странице)
-                document.exitFullscreen();
-                
-            } else {
-                // Если нет, запрашиваем Fullscreen для контейнера слайдера
-                // Метод requestFullscreen() нужно вызвать на самом элементе (sliderContainer)
-                if (sliderContainer.requestFullscreen) {
-                    sliderContainer.requestFullscreen();
-                } 
-                // Добавьте префиксы для старых браузеров, если необходимо:
-                // else if (sliderContainer.webkitRequestFullscreen) { sliderContainer.webkitRequestFullscreen(); }
-                // else if (sliderContainer.msRequestFullscreen) { sliderContainer.msRequestFullscreen(); }
-            }
-            
-            // !!! ВАЖНО !!!
-            // После изменения размеров контейнера, необходимо вызвать метод update() Swiper'а.
-            // Вызов нужен для того, чтобы Swiper пересчитал размеры слайдов и навигации.
-            // Мы вызываем update() с небольшой задержкой, чтобы браузер успел отрисовать Fullscreen.
-            setTimeout(() => {
-                mainSwiper.update();
-            }, 50); 
-        }
-        
-        // Вешаем слушатель события на кнопку
-        if (fullscreenButton && sliderContainer) {
-            fullscreenButton.addEventListener('click', toggleNativeFullscreen);
-        }
-        
-        // Опционально: Обработчик события 'fullscreenchange'
-        // Это полезно, если пользователь выходит из FS, нажав Esc.
-        document.addEventListener('fullscreenchange', () => {
-            // В любом случае, при смене режима нужно обновить Swiper
-            mainSwiper.update();
-        });
+      
 
       $(".service-photo-slider").removeClass("hidden");
       
       $(".question-templates .question-template").on("click",function(){
-         $(".ask-freelancer-block textarea").val($(this).html()); 
+         $(".send-message-modal-block-container textarea").val($(this).html());
+         $(".send-message-modal-block-container").find(".send-message-modal-block").hide();
+         $(".send-message-modal-block-container").removeClass('hidden');
+         $(".send-message-modal-block-container").find(".send-message-modal-block").slideDown(300);
       });
+      
+      $(".send-message-to-freelancer").on("click",function(){
+         $(".send-message-modal-block-container").find(".send-message-modal-block").hide();
+         $(".send-message-modal-block-container").removeClass('hidden');
+         $(".send-message-modal-block-container").find(".send-message-modal-block").slideDown(300);
+      })
       
       
       
@@ -957,15 +1313,22 @@ require_once "../modules/base.php";
       
       $(".send-message-block").on("click",function(){
           $(".send-message-modal-block-container textarea").html($(".main-content-header h2").html());
-          $(".send-message-modal-block-container").removeClass("hidden");
+         $(".send-message-modal-block-container").find(".send-message-modal-block").hide();
+         $(".send-message-modal-block-container").removeClass('hidden');
+         $(".send-message-modal-block-container").find(".send-message-modal-block").slideDown(300);
+          
       });
       
       $(".close-send-message-modal-block").on("click",function(){
-          $(".send-message-modal-block-container").addClass("hidden"); 
+          $(".send-message-modal-block-container").find(".send-message-modal-block").slideUp(300,function(){
+            $(".send-message-modal-block-container").addClass("hidden"); 
+          });
       });
       
       $(".close-message-sent-modal-block").on('click',function(){
+          $(".send-message-modal-block-container").find(".send-message-modal-block").slideUp(300,function(){
             $(".message-sent-modal-block-container").addClass("hidden"); 
+          });
       });
       
       $(".close-freelancer-information-modal-block").on('click',function(){

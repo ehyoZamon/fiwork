@@ -594,6 +594,7 @@ footer{
     z-index: 1000;
     overflow-x: hidden;
     padding: 20px;
+    opacity: 1;
 }
 
 .fiwork-register-modal{
@@ -828,6 +829,7 @@ footer{
 
 .fiwork-register-modal-container.hidden{
     display: none;
+    opacity: 0;
 }
 /*End of fiwork modal-register-container*/
 
@@ -1039,6 +1041,121 @@ footer{
     display: inline-block;
 }
 /*End of fiwork modal-login-container*/
+
+/*fiwork-footer*/
+.fiwork-footer{
+    background: #fff;
+    border-top: 1px solid #e8e8e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.fiwork-footer-container{
+    width: 100%;
+    max-width: 1240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.fiwork-footer-container .logo-lang-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    border-bottom: 1px solid #ededed;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.fiwork-footer-container .lang-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.fiwork-footer-container .flag-icon{
+    width: 16px;
+    border-radius: 50%;
+}
+
+.fiwork-footer-container .chevron-down-icon{
+    width: 10px;
+}
+
+
+.fiwork-footer-statistics{
+    padding: 30px 0;
+    border-bottom: 1px solid #ededed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.fiwork-footer-statistics .fiwork-statistics-part1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+}
+
+.fiwork-statistics-part1 .statistics-block{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start; 
+}
+
+.fiwork-statistics-elem{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    color: #a5a5a5;
+}
+
+.statistics-block .statistics-num{
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+    font-family: var(--third-family);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 111%;
+    color: #212121;
+}
+
+.statistics-block .statistics-num img{ 
+    width: 24px;
+}
+
+.statistics-block .statistics-description{
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    color: #474747;
+}
+
+/*end of fiwork-footer*/
 
 /*Check-register-modal-container*/
 .check-register-modal-container{

@@ -457,7 +457,7 @@ input:valid{
     justify-content: center;
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(8px);
-    z-index: 100;
+    z-index: 120;
 }
 
 .delete-portfolio-modal-block.hidden{
@@ -557,7 +557,7 @@ input:valid{
     justify-content: center;
     background: rgba(0, 0, 0, 0.6);   
     backdrop-filter: blur(8px);
-    z-index: 100;
+    z-index: 120;
 }
 
 .add-work-modal-container{

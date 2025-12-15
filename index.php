@@ -1482,7 +1482,7 @@ require_once "./modules/base.php";
         </div>
     </div>
 
-    <?=$footer;?>
+    <?=$fiworkFooter;?>
     <?=$modalWindows;?>
 
 </body>

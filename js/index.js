@@ -103,27 +103,35 @@ window.onload=function(){
     /*$(".swiper-hidden").removeClass("swiper-hidden");*/
 
     $(".registration-and-login-block .register-button, .mobile-menu-register-button").on("click",function(){
-       $(".fiwork-register-modal-container").removeClass("hidden"); 
+       $(".fiwork-register-modal-container").css("opacity",0).removeClass("hidden").animate({"opacity": 1},300);
     });
 
     $(".close-fiwork-register-modal").on("click",function(){
-        $(".fiwork-register-modal-container").addClass("hidden");
+        $(".fiwork-register-modal-container").animate({"opacity":0},300,function(){
+            $(this).addClass("hidden");
+        });
     });
     
     $(".registration-and-login-block .login-button").on("click",function(){
-       $(".fiwork-login-modal-container").removeClass("hidden"); 
+       $(".fiwork-login-modal-container").css("opacity",0).removeClass("hidden").animate({"opacity":1},300); 
     });
 
     $(".close-fiwork-login-modal").on("click",function(){
-        $(".fiwork-login-modal-container").addClass("hidden");
+        $(".fiwork-login-modal-container").animate({"opacity":0},300,function(){
+            $(this).addClass("hidden");
+        });
     });
     
     $(".close-check-register-modal").on("click",function(){
-        $(".check-register-modal-container").addClass("hidden"); 
+        $(".check-register-modal-container").animate({"opacity":0},300,function(){
+            $(this).addClass("hidden"); 
+        });
     });
     
     $(".close-check-login-modal").on("click",function(){
-       $(".check-login-modal-container").addClass("hidden"); 
+       $(".check-login-modal-container").animate({"opacity":1},300,function(){
+           $(this).addClass("hidden"); 
+       });
     });
     
     if (localStorage.getItem('cookieAccepted') === 'true') {
@@ -161,17 +169,23 @@ window.onload=function(){
     
     
     $(".go-to-register-link").on("click",function(){
-        $(".fiwork-register-modal-container").removeClass("hidden");
-        $(".fiwork-login-modal-container").addClass("hidden");
+       $(".fiwork-register-modal-container").css("opacity",0).removeClass("hidden").animate({"opacity": 1},300);
+        $(".fiwork-login-modal-container").animate({"opacity":0},300,function(){
+            $(this).addClass("hidden");
+        });
     });
     
     $(".go-to-login-link").on("click",function(){
-        $(".fiwork-register-modal-container").addClass("hidden");
-        $(".fiwork-login-modal-container").addClass("hidden");
+        $(".fiwork-register-modal-container").animate({"opacity":0},300,function(){
+            $(this).addClass("hidden");
+        });
+        $(".fiwork-login-modal-container").animate({"opacity":0},300,function(){
+            $(this).addClass("hidden");
+        });
     });
     
     $(".mobile-login-link").on("click",function(){
-        $(".fiwork-login-modal-container").removeClass("hidden"); 
+        $(".fiwork-login-modal-container").css("opacity",0).removeClass("hidden").animate({"opacity":1},300); 
     });
     
     $(".phone-header .burger-icon").on("click",function(){
@@ -297,15 +311,19 @@ window.onload=function(){
     });
 
     $(".register-modal-form-next-button").on("click",function(){
-        $(".fiwork-register-modal-container").addClass("hidden");
-        $(".check-register-modal-container").removeClass("hidden");
+        $(".fiwork-register-modal-container").animate({"opacity":0},300,function(){
+            $(this).addClass("hidden");
+        });
+        $(".check-register-modal-container").css("opacity",0).removeClass("hidden").animate({"opacity":1},300);
         startTimer();
         
     });
     
     $(".back-to-register-form-button").on("click",function(){
-        $(".check-register-modal-container").addClass("hidden");
-        $(".fiwork-register-modal-container").removeClass("hidden");
+        $(".check-register-modal-container").animate({"opacity":0},300,function(){
+            $(this).addClass("hidden");
+        });
+       $(".fiwork-register-modal-container").css("opacity",0).removeClass("hidden").animate({"opacity": 1},300);
     });
     
     /*End of check-register-modal logic*/
@@ -371,30 +389,27 @@ window.onload=function(){
     });
 
     $(".login-modal-form-next-button").on("click",function(){
-        $(".fiwork-login-modal-container").addClass("hidden");
-        $(".check-login-modal-container").removeClass("hidden");
+        $(".fiwork-login-modal-container").animate({"opacity":0},300,function(){
+            $(this).addClass("hidden");
+        });
+        
+        $(".check-login-modal-container").css("opacity",0).removeClass("hidden").animate({"opacity":1},300);
         loginStartTimer();
     });
     
     $(".back-to-login-form-button").on("click",function(){
-        $(".check-login-modal-container").addClass("hidden");
-        $(".fiwork-login-modal-container").removeClass("hidden");
+        $(".check-login-modal-container").animate({"opacity":0},300,function(){
+            $(this).addClass("hidden");
+        });
+        $(".fiwork-login-modal-container").css("opacity",0).removeClass("hidden").animate({"opacity":1},300);
     });
     
     /*End of check-register-modal logic*/
     
     /*accordion*/
-      document.querySelectorAll('.accordion-header').forEach(header => {
-        header.addEventListener('click', () => {
-          header.classList.toggle('active');
-    
-          const body = header.nextElementSibling;
-          if (header.classList.contains('active')) {
-            body.style.display = 'flex';
-          } else {
-            body.style.display = 'none';
-          }
-        });
+      $(".accordion-header").on("click",function(){
+            $(this).closest(".accordion").find(".accordion-header").removeClass("active");
+            $(this).addClass("active");
       });
     /*end of accordion*/
     

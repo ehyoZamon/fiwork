@@ -120,12 +120,22 @@ input:valid {
     font-family: var(--font8);
     font-weight: 600;
     font-size: 17px;
-    line-height: 148%;
-    text-align: center;
+    line-height: 100%;
+    text-align: left;
     color: #000;
     margin: 0;
-    padding: 0;
+    padding-left: 5px;
 }
+
+
+.freelancer-avatar-name-container .freelancer-username{
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 217%;
+    color: #74767e;
+}
+
 
 .freelancer-stars-container{
     display: flex;
@@ -390,6 +400,12 @@ input:valid {
     cursor: pointer;
 } 
 
+
+.ai-agent-container:hover{
+    border: 1px solid #1738cc;
+}
+
+
 .ai-agent-text{
     font-family: var(--font-family);
     font-weight: 600;
@@ -404,9 +420,27 @@ input:valid {
     gap: 10px;
 }
 
+.ai-agent-container:hover .ai-agent-text{
+    color: #1738cc;   
+}
+
+.blue-arrow-right{
+    display: none;
+}
+
+.ai-agent-container:hover .blue-arrow-right{
+    display: inline-block;
+}
+
+
+.ai-agent-container:hover .black-arrow-right{
+    display: none;
+}
+
 .ai-agent-text img{
     width: 16px;
 }
+
 
 .ai-agent-container .img-container{
     width: 32px;
@@ -433,7 +467,6 @@ input:valid {
     padding: 20px;
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    gap: 10px;
     margin-top: 20px;
 }
 
@@ -460,11 +493,17 @@ span.new{
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 0;
+    padding: 7px 0;
     margin: 0;
     margin-top: 10px;
     cursor: pointer; 
     position: relative;
+}
+
+
+.freelancer-activities-container figure:hover{
+    background: #eff6ff;
+    border-radius: 8px;
 }
 
 .freelancer-activities-container figcaption{
@@ -525,6 +564,39 @@ span.new{
     align-items: flex-start;
     justify-content: flex-start;
     gap: 20px;
+}
+
+/* Делаем контейнер сообщений прокручиваемым */
+.freelancer-messages-content {
+    max-height: 400px;           /* Ограничиваем высоту (можно изменить под дизайн) */
+    overflow-y: auto;            /* Включаем вертикальный скролл при переполнении */
+    overflow-x: hidden;          /* Скрываем горизонтальный скролл */
+    padding-right: 10px;         /* Отступ под скроллбар, чтобы текст не прилипал */
+    scrollbar-width: thin;       /* Для Firefox — тонкий скроллбар */
+    scrollbar-color: #ddd transparent;
+}
+
+/* Стилизация скроллбара для WebKit (Chrome, Safari, Edge) */
+.freelancer-messages-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.freelancer-messages-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.freelancer-messages-content::-webkit-scrollbar-thumb {
+    background-color: #ddd;
+    border-radius: 3px;
+}
+
+.freelancer-messages-content::-webkit-scrollbar-thumb:hover {
+    background-color: #ccc;
+}
+
+/* При наведении — показываем скроллбар явно (по желанию) */
+.freelancer-messages-content:hover::-webkit-scrollbar-thumb {
+    background-color: #ccc;
 }
 
 .freelancer-message{
@@ -695,9 +767,25 @@ span.new{
     cursor: pointer;
 }
 
-.my-orders-block .see-more-container img, .my-goods-block .see-more-container{
+.my-orders-block .see-more-container img, .my-goods-block .see-more-container img{
     width: 10px;
     cursor: pointer;
+}
+
+.see-more-container .blue-chevron-right{
+    display: none;
+}
+
+.see-more-container:hover .blue-chevron-right{
+    display: inline-block;
+}
+
+.see-more-container:hover .grey-chevron-right{
+    display: none;
+}
+
+.see-more-container:hover{
+    color: #0c7bf5;
 }
 /*end of my-orders-block*/
 
@@ -2226,6 +2314,14 @@ footer{
     border-radius: 8px;
     position: relative;
     overflow: hidden;   
+    cursor: pointer;
+}
+
+
+.stories-container .story-block:hover{
+    box-shadow:
+        0 0 0 3px #4c9aee;
+    outline: 2px solid #fff;
 }
 
 .stories-container .story-block .img-container{

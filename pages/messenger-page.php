@@ -61,6 +61,10 @@ require_once "../modules/base.php";
                             <img src="/img/icons/search-icon.svg" alt="search-icon" class="search-icon svg-icon"/>
                             <input type="text" placeholder="Поиск..." class="search-in-message-input"/>
                         </div>
+                        <div class="sound-control on">
+                            <img src="/img/icons/sound.svg" alt="sound-on" class="sound-on-icon"/>
+                            <img src="/img/icons/grey-no-sound.svg" alt="sound-off" class="sound-off-icon"/>
+                        </div>
                     </div>
                     
                     <div class="contacts-block">
@@ -287,10 +291,13 @@ require_once "../modules/base.php";
                             <div class="contact-info">
                                 <div class="contact-avatar">
                                     <img src="/img/user-avatars/user-avatar7.webp" alt="contact-avatar" class="contact-avatar"/>
+                                    
+                                    <div class="user-contact-status">
+                                    </div>
                                 </div>
                                 <div class="contact-details">
-                                    <div class="contact-username"><h4>admin</h4><span>&#9789; 23:29</span></div>
-                                    <div class="active-time"><span class="last-seen-text">Офлайн 16 часов</span><span class="writing-text hidden">печатает...</span></div>
+                                    <div class="contact-username"><h4>admin&nbsp;·</h4><span>Эмиль</span></div>
+                                    <div class="active-time"><span class="last-seen-text">Офлайн&nbsp|&nbsp;Отвечает за 2 минуты</span><span class="writing-text hidden">печатает...</span></div>
                                 </div>
                             </div>
                             <!--<div class="contact-functional-panel">
@@ -422,58 +429,86 @@ require_once "../modules/base.php";
                             </div>
                         </div>
                         
-                        <div class="control-panel">
-                            <div class="attach-container">
-                                <img src="/img/icons/messenger-page/attach.svg" alt="attach-icon" class="attach-icon svg-icon"/>
-                            </div>
-                            <textarea placeholder="Напишите что-нибудь..."></textarea>
-                            <div class="control-panel-buttons">
-                                <div class="cp-button">
-                                    <img src="/img/icons/messenger-page/smile.svg" alt="smile-icon" class="smile-icon cp-icon svg-icon"/>
+                        <div class="control-panel-container">
+                            <div class="control-panel">
+                                <div class="attach-container">
+                                    <label class="attach-file-label">
+                                        <input type="file" multiple class="attach-file-input" id="chat-file-input" style="display:none;">
+                                        <img src="/img/icons/messenger-page/attach.svg" alt="attach-icon" class="attach-icon svg-icon"/>
+                                    </label>
+                                    
+                                    <!-- Блок для отображения прикрепленных файлов -->
+                                    <div class="chat-attachments-list" id="chat-attachments-list"></div>
                                 </div>
-                                <div class="cp-button open-stickers-block">
-                                    <img src="/img/icons/messenger-page/sticker.svg" alt="sticker-icon" class="sticker-icon cp-icon svg-icon"/>
-                                    <div class="stickers-block">
-                                        <div class="stickers-container">
-                                            <h3>Стикеры: Фил</h3>
-                                            <div class="stickers-wrapper">
-                                                <img src="/img/icons/messenger-page/stickers/in-love-1.webp" alt="sticker" class="fil-sticker"/>
-                                                <img src="/img/icons/messenger-page/stickers/in-love-2.webp" alt="sticker" class="fil-sticker"/>
-                                                <img src="/img/icons/messenger-page/stickers/in-love-3.webp" alt="sticker" class="fil-sticker"/>
-                                                <img src="/img/icons/messenger-page/stickers/in-love-4.webp" alt="sticker" class="fil-sticker"/>
-                                                <img src="/img/icons/messenger-page/stickers/in-love-5.webp" alt="sticker" class="fil-sticker"/>
-                                                <img src="/img/icons/messenger-page/stickers/in-love-6.webp" alt="sticker" class="fil-sticker"/>
-                                                <img src="/img/icons/messenger-page/stickers/in-love-7.webp" alt="sticker" class="fil-sticker"/>
-                                                <img src="/img/icons/messenger-page/stickers/in-love-8.webp" alt="sticker" class="fil-sticker"/>
-                                                <img src="/img/icons/messenger-page/stickers/in-love-9.webp" alt="sticker" class="fil-sticker"/>
-                                                <img src="/img/icons/messenger-page/stickers/in-love-10.webp" alt="sticker" class="fil-sticker"/>
-                                                <img src="/img/icons/messenger-page/stickers/in-love-11.webp" alt="sticker" class="fil-sticker"/>
-                                                <img src="/img/icons/messenger-page/stickers/in-love-12.webp" alt="sticker" class="fil-sticker"/>
-                                                <img src="/img/icons/messenger-page/stickers/in-love-13.webp" alt="sticker" class="fil-sticker"/>
-                                                <img src="/img/icons/messenger-page/stickers/in-love-14.webp" alt="sticker" class="fil-sticker"/>
-                                                <img src="/img/icons/messenger-page/stickers/in-love-15.webp" alt="sticker" class="fil-sticker"/>
-                                                <img src="/img/icons/messenger-page/stickers/in-love-16.webp" alt="sticker" class="fil-sticker"/>
-                                                <img src="/img/icons/messenger-page/stickers/in-love-17.webp" alt="sticker" class="fil-sticker"/>
-                                                <img src="/img/icons/messenger-page/stickers/in-love-18.webp" alt="sticker" class="fil-sticker"/>
-                                                <img src="/img/icons/messenger-page/stickers/in-love-19.webp" alt="sticker" class="fil-sticker"/>
-                                                <img src="/img/icons/messenger-page/stickers/in-love-20.webp" alt="sticker" class="fil-sticker"/>
-                                                <img src="/img/icons/messenger-page/stickers/in-love-21.webp" alt="sticker" class="fil-sticker"/>
-                                                <img src="/img/icons/messenger-page/stickers/in-love-22.webp" alt="sticker" class="fil-sticker"/>
-                                                <img src="/img/icons/messenger-page/stickers/in-love-23.webp" alt="sticker" class="fil-sticker"/>
-                                                <img src="/img/icons/messenger-page/stickers/in-love-24.webp" alt="sticker" class="fil-sticker"/>
-                                                <img src="/img/icons/messenger-page/stickers/in-love-25.webp" alt="sticker" class="fil-sticker"/>
-                                                <img src="/img/icons/messenger-page/stickers/in-love-26.webp" alt="sticker" class="fil-sticker"/>
-                                                <img src="/img/icons/messenger-page/stickers/in-love-27.webp" alt="sticker" class="fil-sticker"/>
+                                
+                                <textarea placeholder="Напишите что-нибудь..."></textarea>
+                                
+                                <div id="random-buttons">
+                                    <!-- Скрипт сам покажет одну случайную -->
+                                    <button class="rand-btn violet" data-action="generateTZ"><img src="/img/icons/messenger-page/blue-stars.svg" class="blue-stars" alt="blue-stars"/> Сгенирировать ТЗ</button>
+                                    <button class="rand-btn yellow" data-action="hello"><img src="/img/icons/messenger-page/yellow-smile.svg" class="yellow-smile" alt="yellow-smile"/> Поздороваться</button>
+                                    <button class="rand-btn violet" data-action="assistant"><img src="/img/icons/messenger-page/blue-stars.svg" class="blue-stars" alt="blue-stars"/> ИИ-помощник</button>
+                                </div>
+                                <div class="control-panel-buttons">
+                                    <div class="cp-button">
+                                        <img src="/img/icons/cube-stars.svg" alt="ai-icon" class="ai-icon cp-icon svg-icon"/>
+                                    </div>
+                                    <div class="cp-button open-stickers-block">
+                                        <img src="/img/icons/messenger-page/sticker.svg" alt="sticker-icon" class="sticker-icon grey-sticker cp-icon svg-icon"/>
+                                        <img src="/img/icons/messenger-page/blue-sticker.svg" alt="sticker-icon" class="sticker-icon blue-sticker cp-icon svg-icon"/>
+                                        <div class="stickers-block">
+                                            <div class="stickers-container">
+                                                <h3>Стикеры: Фил</h3>
+                                                <div class="stickers-wrapper">
+                                                    <img src="/img/icons/messenger-page/stickers/in-love-1.webp" alt="sticker" class="fil-sticker"/>
+                                                    <img src="/img/icons/messenger-page/stickers/in-love-2.webp" alt="sticker" class="fil-sticker"/>
+                                                    <img src="/img/icons/messenger-page/stickers/in-love-3.webp" alt="sticker" class="fil-sticker"/>
+                                                    <img src="/img/icons/messenger-page/stickers/in-love-4.webp" alt="sticker" class="fil-sticker"/>
+                                                    <img src="/img/icons/messenger-page/stickers/in-love-5.webp" alt="sticker" class="fil-sticker"/>
+                                                    <img src="/img/icons/messenger-page/stickers/in-love-6.webp" alt="sticker" class="fil-sticker"/>
+                                                    <img src="/img/icons/messenger-page/stickers/in-love-7.webp" alt="sticker" class="fil-sticker"/>
+                                                    <img src="/img/icons/messenger-page/stickers/in-love-8.webp" alt="sticker" class="fil-sticker"/>
+                                                    <img src="/img/icons/messenger-page/stickers/in-love-9.webp" alt="sticker" class="fil-sticker"/>
+                                                    <img src="/img/icons/messenger-page/stickers/in-love-10.webp" alt="sticker" class="fil-sticker"/>
+                                                    <img src="/img/icons/messenger-page/stickers/in-love-11.webp" alt="sticker" class="fil-sticker"/>
+                                                    <img src="/img/icons/messenger-page/stickers/in-love-12.webp" alt="sticker" class="fil-sticker"/>
+                                                    <img src="/img/icons/messenger-page/stickers/in-love-13.webp" alt="sticker" class="fil-sticker"/>
+                                                    <img src="/img/icons/messenger-page/stickers/in-love-14.webp" alt="sticker" class="fil-sticker"/>
+                                                    <img src="/img/icons/messenger-page/stickers/in-love-15.webp" alt="sticker" class="fil-sticker"/>
+                                                    <img src="/img/icons/messenger-page/stickers/in-love-16.webp" alt="sticker" class="fil-sticker"/>
+                                                    <img src="/img/icons/messenger-page/stickers/in-love-17.webp" alt="sticker" class="fil-sticker"/>
+                                                    <img src="/img/icons/messenger-page/stickers/in-love-18.webp" alt="sticker" class="fil-sticker"/>
+                                                    <img src="/img/icons/messenger-page/stickers/in-love-19.webp" alt="sticker" class="fil-sticker"/>
+                                                    <img src="/img/icons/messenger-page/stickers/in-love-20.webp" alt="sticker" class="fil-sticker"/>
+                                                    <img src="/img/icons/messenger-page/stickers/in-love-21.webp" alt="sticker" class="fil-sticker"/>
+                                                    <img src="/img/icons/messenger-page/stickers/in-love-22.webp" alt="sticker" class="fil-sticker"/>
+                                                    <img src="/img/icons/messenger-page/stickers/in-love-23.webp" alt="sticker" class="fil-sticker"/>
+                                                    <img src="/img/icons/messenger-page/stickers/in-love-24.webp" alt="sticker" class="fil-sticker"/>
+                                                    <img src="/img/icons/messenger-page/stickers/in-love-25.webp" alt="sticker" class="fil-sticker"/>
+                                                    <img src="/img/icons/messenger-page/stickers/in-love-26.webp" alt="sticker" class="fil-sticker"/>
+                                                    <img src="/img/icons/messenger-page/stickers/in-love-27.webp" alt="sticker" class="fil-sticker"/>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="cp-button" style="display: none;">
+                                        <img src="/img/icons/messenger-page/microphone.svg" alt="microphone-icon" class="microphone-icon cp-icon svg-icon"/>
+                                    </div>
+                                    <div class="send-message-button">
+                                        <img src="/img/icons/messenger-page/send-message-grey.svg" alt="send-message-icon" class="send-message-icon send-message-grey"/>
+                                        <img src="/img/icons/messenger-page/send-message-green.svg" alt="send-message-icon" class="send-message-icon send-message-green"/>
+                                    </div>
                                 </div>
-                                <div class="cp-button">
-                                    <img src="/img/icons/messenger-page/microphone.svg" alt="microphone-icon" class="microphone-icon cp-icon svg-icon"/>
-                                </div>
-                                <div class="send-message-button">
-                                    <img src="/img/icons/messenger-page/arrow-top-green.svg" alt="arrow-top-icon" class="arrow-top-green-icon"/>
-                                </div>
+                            </div>
+                            <div class="forbidden-word-warning chat-warning chat-warning-messenger hidden">
+                                <img src="/img/icons/warning.png" alt="warning" class="warning-icon">
+                                <span>Общение и заказы за пределами Fiwork несут высокий риск мошенничества! Передача контактных данных строго запрещена <a href="#">правилами сайта</a>.</span>
+                            </div>
+                            
+                            <div class="forbidden-word-warning chat-warning chat-warning-commission hidden">
+                                <img src="/img/icons/warning.png" alt="warning" class="warning-icon">
+                                <span>Не следует обсуждать в переписке с покупателем комиссию сервиса. Комиссия Fiwork обеспечивает развитие проекта и
+                                        безопасность сделок. Каждая успешная сделка в системе увеличивает ваши продажи.</span>
                             </div>
                         </div>
                         
@@ -650,6 +685,13 @@ require_once "../modules/base.php";
 <script src="/js/mobile-navigation-menu.js?v=<?= time(); ?>"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 <script>
+    $(".sound-control .sound-on-icon").on("click",function(){
+       $(".sound-control").removeClass("on").addClass("off"); 
+    });
+    
+    $(".sound-control .sound-off-icon").on("click",function(){
+        $(".sound-control").removeClass("off").addClass("on");
+    })
     $(".admin-contact").on("click",function(){
         $(".messenger-screen").addClass("hidden");
         $(".messenger-content").removeClass("hidden");
@@ -667,6 +709,11 @@ require_once "../modules/base.php";
     
     $("#individual-order-suggestion-text").on("input change",function(){
         $(".individual-order-suggestion-text-length .num").text($(this).val().length); 
+    });
+    
+    $(".contacts-block .contact-container").on("click",function(){
+        $(".contacts-block .contact-container").removeClass("selected-contact");
+        $(this).addClass("selected-contact");
     });
     
     $(".egorov5-messages").on("click",function(){
@@ -1101,6 +1148,14 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 <script>
+$(".control-panel textarea").on("input change mouseenter mouseleave", function() {
+    if($(this).val().length>0){
+        $(".send-message-button").addClass("active");
+    }else{
+        $(".send-message-button").removeClass("active");
+    }
+});
+
 document.addEventListener("DOMContentLoaded", function () {
     const textarea = document.querySelector(".control-panel textarea");
     const sendButton = document.querySelector(".send-message-button");
@@ -1139,7 +1194,8 @@ document.addEventListener("DOMContentLoaded", function () {
         textarea.value = "";
         textarea.style.height = "auto";
         scrollMessageContainerToBottom();
-
+        
+        $(".send-message-button").removeClass("active");
         // === ОТПРАВКА НА СЕРВЕР (если нужно) ===
         // fetch("/send-message.php", {
         //     method: "POST",
@@ -1188,6 +1244,334 @@ document.addEventListener("DOMContentLoaded", function () {
         div.textContent = text;
         return div.innerHTML.replace(/\n/g, "<br>");
     }
+    
+    
 });
 </script>
+<script>
+const input = $(".control-panel textarea")[0];
+const buttons = document.querySelectorAll("#random-buttons .rand-btn");
+
+// Показать случайную кнопку
+function showRandomButton() {
+    buttons.forEach(btn => btn.classList.remove("show")); // спрятать все
+
+    const randomIndex = Math.floor(Math.random() * buttons.length);
+    buttons[randomIndex].classList.add("show");
+    console.log(randomIndex);
+    console.log(buttons[randomIndex]);
+}
+
+// Скрываем кнопки при вводе текста
+$(input).on("input change", function () {
+    if (this.value.trim() === "") {
+        showRandomButton();
+    } else {
+        buttons.forEach(btn => btn.classList.remove("show"));
+    }
+});
+
+// Логика каждой кнопки
+buttons.forEach(btn => {
+    btn.addEventListener("click", function () {
+        const action = this.dataset.action;
+
+        switch (action) {
+            case "generateTZ":
+                alert("Открывается модальное окно генератор ТЗ!");
+                break;
+
+            case "hello":
+                alert("Привет 👋!");
+                break;
+
+            case "assistant":
+                alert("Запуск ИИ-помощника...");
+                break;
+
+            default:
+                console.log("Нет действия");
+        }
+    });
+});
+
+// Старт — сразу показываем случайную кнопку
+showRandomButton();
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const chatFileInput = document.getElementById('chat-file-input');
+    const chatAttachmentsList = document.getElementById('chat-attachments-list');
+    const textarea = document.querySelector(".control-panel textarea");
+    const sendButton = document.querySelector(".send-message-button");
+    
+    // Хранилище для файлов чата
+    let chatFiles = [];
+    
+    // Максимальный размер файла (10 МБ)
+    const MAX_FILE_SIZE = 10 * 1024 * 1024;
+    
+    // Допустимые типы файлов
+    const ALLOWED_TYPES = [
+        'image/jpeg', 'image/png', 'image/gif', 'image/webp',
+        'application/pdf',
+        'application/msword',
+        'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+        'application/vnd.ms-excel',
+        'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+        'text/plain',
+        'application/zip',
+        'application/x-rar-compressed'
+    ];
+    
+    // Обработка выбора файлов
+    chatFileInput.addEventListener('change', function(e) {
+        const files = Array.from(e.target.files);
+        
+        files.forEach(file => {
+            // Проверка размера
+            if (file.size > MAX_FILE_SIZE) {
+                showError(`Файл "${file.name}" слишком большой. Максимум 10 МБ.`);
+                return;
+            }
+            
+            // Проверка типа
+            if (!ALLOWED_TYPES.includes(file.type)) {
+                showError(`Тип файла "${file.name}" не поддерживается.`);
+                return;
+            }
+            
+            // Добавляем файл в список
+            addFileToChat(file);
+        });
+        
+        // Сбрасываем input
+        this.value = '';
+    });
+    
+    // Функция добавления файла в список
+    function addFileToChat(file) {
+        const fileId = Date.now() + Math.random();
+        
+        // Добавляем в массив
+        chatFiles.push({
+            id: fileId,
+            file: file
+        });
+        
+        // Создаем элемент для отображения
+        const fileItem = document.createElement('div');
+        fileItem.className = 'attachment-item chat-attachment-item';
+        fileItem.dataset.id = fileId;
+        
+        // Иконка в зависимости от типа файла
+        let icon = '/img/icons/messenger-page/file.svg';
+        if (file.type.startsWith('image/')) {
+            icon = '/img/icons/messenger-page/image.svg';
+        } else if (file.type === 'application/pdf') {
+            icon = '/img/icons/messenger-page/pdf.svg';
+        }
+        
+        fileItem.innerHTML = `
+            <div class="attachment-preview">
+                <img src="${icon}" alt="file-icon" class="file-icon">
+                <div class="attachment-info">
+                    <span class="attachment-name">${file.name}</span>
+                    <span class="attachment-size">${formatFileSize(file.size)}</span>
+                </div>
+            </div>
+            <img src="/img/icons/x-close.svg" alt="remove" class="remove-attachment svg-icon">
+        `;
+        
+        // Добавляем кнопку удаления
+        fileItem.querySelector('.remove-attachment').addEventListener('click', () => {
+            removeFileFromChat(fileId);
+        });
+        
+        // Добавляем в список
+        chatAttachmentsList.appendChild(fileItem);
+        
+        // Показываем список файлов
+        //chatAttachmentsList.style.display = 'block';
+        
+        // Если есть файлы, показываем кнопку отправки
+        updateSendButton();
+    }
+    
+    // Удаление файла из списка
+    function removeFileFromChat(fileId) {
+        // Удаляем из массива
+        chatFiles = chatFiles.filter(f => f.id !== fileId);
+        
+        // Удаляем из DOM
+        const element = document.querySelector(`.chat-attachment-item[data-id="${fileId}"]`);
+        if (element) {
+            element.remove();
+        }
+        
+        // Если файлов не осталось, скрываем список
+        if (chatFiles.length === 0) {
+            chatAttachmentsList.style.display = 'none';
+        }
+        
+        updateSendButton();
+    }
+    
+    // Обновление состояния кнопки отправки
+    function updateSendButton() {
+        const hasText = textarea.value.trim().length > 0;
+        const hasFiles = chatFiles.length > 0;
+        
+        if (hasText || hasFiles) {
+            sendButton.classList.add('active');
+        } else {
+            sendButton.classList.remove('active');
+        }
+    }
+    
+    // Форматирование размера файла
+    function formatFileSize(bytes) {
+        if (bytes === 0) return '0 B';
+        const k = 1024;
+        const sizes = ['B', 'KB', 'MB'];
+        const i = Math.floor(Math.log(bytes) / Math.log(k));
+        return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
+    }
+    
+    // Показ ошибок
+    function showError(message) {
+        // Создаем временное уведомление
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'file-error-message';
+        errorDiv.textContent = message;
+        
+        document.querySelector('.control-panel').appendChild(errorDiv);
+        
+        setTimeout(() => {
+            errorDiv.remove();
+        }, 3000);
+    }
+    
+    // Модифицируем функцию отправки сообщения
+    const originalSendMessage = window.sendMessage;
+    
+    window.sendMessage = function(content = "") {
+        const messageText = content.trim();
+        
+        // Если нет ни текста, ни файлов - не отправляем
+        if (!messageText && chatFiles.length === 0) {
+            return;
+        }
+        
+        // Создаем FormData для отправки
+        const formData = new FormData();
+        
+        // Добавляем текст
+        if (messageText) {
+            formData.append('message', messageText);
+        }
+        
+        // Добавляем файлы
+        chatFiles.forEach((fileObj, index) => {
+            formData.append(`file_${index}`, fileObj.file);
+        });
+        
+        // Добавляем информацию о получателе
+        formData.append('to', 'admin'); // Здесь нужно динамическое значение
+        formData.append('type', chatFiles.length > 0 ? 'with_files' : 'text');
+        
+        // Отправка на сервер
+        fetch("/api/send-message.php", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Очищаем файлы после успешной отправки
+                chatFiles = [];
+                chatAttachmentsList.innerHTML = '';
+                chatAttachmentsList.style.display = 'none';
+                
+                // Очищаем текстовое поле
+                textarea.value = "";
+                textarea.style.height = "auto";
+                
+                // Обновляем кнопку
+                sendButton.classList.remove('active');
+                
+                // Прокручиваем вниз
+                scrollMessageContainerToBottom();
+            } else {
+                showError('Ошибка при отправке сообщения: ' + data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            showError('Ошибка сети при отправке сообщения');
+        });
+    };
+    
+    // Обновляем обработчики отправки
+    sendButton.addEventListener("click", () => {
+        window.sendMessage(textarea.value);
+    });
+    
+    textarea.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" && !e.shiftKey) {
+            e.preventDefault();
+            window.sendMessage(textarea.value);
+        }
+    });
+    
+    // Следим за изменениями в текстовом поле
+    textarea.addEventListener("input", updateSendButton);
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const configs = [
+        {
+            words: [
+                "telegram", "телеграм", "tg", "тг", "телега",
+                "whatsapp", "ватсап", "вотсап", "watsap", "вацап",
+                "vk", "вк", "вконтакте",
+                "email", "почта", "e-mail", "@",
+                "телефон", "номер", "позвони", "позвонить", "+7", "8("
+            ],
+            warningSelector: ".chat-warning-messenger"
+        },
+        {
+            words: ["комиссия", "комся", "комис", "комисия"],
+            warningSelector: ".chat-warning-commission"
+        }
+    ];
+
+    const textareas = [
+        document.getElementById("order-suggestion-text"),
+        document.getElementById("individual-order-suggestion-text"),
+        document.querySelector(".control-panel textarea")
+    ].filter(Boolean);
+
+    textareas.forEach(textarea => {
+
+        const checkText = () => {
+            const text = textarea.value.toLowerCase();
+
+            configs.forEach(cfg => {
+                const hasForbidden = cfg.words.some(word => text.includes(word));
+                $(cfg.warningSelector).toggleClass("hidden", !hasForbidden);
+            });
+        };
+
+        textarea.addEventListener("input", checkText);
+        textarea.addEventListener("paste", () => setTimeout(checkText, 0));
+        textarea.addEventListener("focus", checkText);
+    });
+
+});
+</script>
+
+
 </html>

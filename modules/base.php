@@ -1015,6 +1015,87 @@ $footer=<<<EOT
     </footer>
 EOT;
 
+$fiworkFooter=<<<EOT
+    <div class="fiwork-footer">
+        <div class="fiwork-footer-container">
+            <div class="logo-lang-container">
+                <img src="/img/grey-logo.svg" alt="grey logo" class="footer-logo"/>
+                <div class="lang-container">
+                    <img src="/img/icons/lang/russian.svg" alt="russian-flags" class="russian-flag-icon flag-icon"/>
+                    Русский
+                    <img src="/img/icons/chevron-down.svg" alt="chevron-down" class="chevron-down-icon"/>
+                </div>
+            </div>
+            
+            <div class="fiwork-footer-statistics">
+                <div class="fiwork-statistics-part1">
+                    <div class="statistics-block">
+                        <div class="statistics-num">
+                            <img src="/img/fiwork-footer/wallet.svg"> 
+                            2 176 739 013 ₽
+                        </div>
+                        <div class="statistics-description">
+                            Сумма выполненных заказов
+                        </div>
+                    </div>
+                    
+                    <div class="statistics-block">
+                        <div class="statistics-num">
+                            <img src="/img/fiwork-footer/scales.svg" alt="scales" class="scales-icon"/>
+                            78 404
+                        </div>
+                        <div class="statistics-description">
+                            Решено споров
+                        </div>
+                    </div>
+                    
+                    <div class="statistics-block">
+                        <div class="statistics-num">
+                            <img src="/img/fiwork-footer/chat.svg" alt="chat-icon" class="chat-icon"> 
+                            423 797
+                        </div>
+                        <div class="statistics-description">
+                            Всего отзывов 
+                        </div>
+                    </div>
+                    
+                    <div class="statistics-block">
+                        <div class="statistics-num">
+                            <img src="/img/fiwork-footer/height.svg" alt="height-icon" class="height-icon"> 
+                            514
+                        </div>
+                        <div class="statistics-description">
+                            Вакансий размещено    
+                        </div>
+                    </div>
+                    
+                    <div class="statistics-block">
+                        <div class="statistics-num">
+                            <img src="/img/fiwork-footer/people.svg"> 
+                            2 450 000
+                        </div>
+                        <div class="statistics-description">
+                            Всего пользователей
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="fiwork-statistics-part2">
+                    <div class="fiwork-statistics-elem">
+                        <img src="/img/fiwork-footer/green-dot.svg" alt="green-dot" class="green-dot"/>
+                        Онлайн: <span class="online-users-on-fiwork">1535</span>
+                    </div> 
+                    <div class="fiwork-statistics-elem">
+                        <img src="/img/fiwork-footer/blue-dot.svg" alt="blue-dot" class="blue-dot"/>
+                        Заказ: <span class="last-user-login">7 сек. назад</span
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+EOT;
+
+
 $modalWindows=<<<EOT
     <div class="cookies-policy-wrapper">
         <div class="cookies-policy-container">
