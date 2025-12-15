@@ -144,6 +144,7 @@ window.onload=function(){
         $(".footer-mobile-elem.active").removeClass("active");
         $(this).addClass("active");
     });
+    
 
     // При клике — сохраняем и скрываем
     $('.cookie-ok-button').on('click', function () {
@@ -427,6 +428,13 @@ window.onload=function(){
     $(".lang-switch .seg").on("click",function(){
         $(".lang-switch .seg.active").removeClass("active");
         $(this).addClass("active");
+    });
+    
+    
+    $(".fiwork-footer .select-lang-wrapper .lang-option").on("click",function(){
+       $(".fiwork-footer .lang-option.selected").removeClass("selected");
+       $(this).addClass("selected");
+       $(".fiwork-footer .lang-container .selected-lang").html($(this).html());
     });
     /*end of language switch*/
     

@@ -977,6 +977,7 @@ footer{
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    margin-bottom: 0 !important;
 }
 
 .remember-me-checkbox{
@@ -1051,7 +1052,7 @@ footer{
     justify-content: center;
     padding: 30px 20px;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 
 .fiwork-footer-container{
@@ -1078,10 +1079,47 @@ footer{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+    cursor: pointer;
+    position: relative; 
+    width: 150px;
+    padding: 10px;
+}
+
+
+.fiwork-footer .select-lang-wrapper{
+    position: absolute;
+    left: 0;
+    top: 40px;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 100;
+    background-color: #fbfbfb;
+    border-radius: 8px;
+    display: none;
+}
+
+.fiwork-footer .lang-container:hover .select-lang-wrapper{
+    display: flex;
+}
+
+
+.fiwork-footer .select-lang-wrapper .lang-option{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
     justify-content: flex-start;
     gap: 5px;
     cursor: pointer;
 }
+
+.fiwork-footer .select-lang-wrapper .lang-option.selected{
+    display: none;
+} 
 
 .fiwork-footer-container .flag-icon{
     width: 16px;
@@ -1101,6 +1139,7 @@ footer{
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    gap: 40px;
 }
 
 .fiwork-footer-statistics .fiwork-statistics-part1{
@@ -1128,6 +1167,8 @@ footer{
     font-size: 12px;
     line-height: 133%;
     color: #a5a5a5;
+    gap: 5px;
+    white-space: nowrap;
 }
 
 .statistics-block .statistics-num{
@@ -1153,6 +1194,176 @@ footer{
     font-size: 12px;
     line-height: 133%;
     color: #474747;
+}
+
+.fiwork-footer-navigation-container{ 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    width: 100%; 
+}
+
+.fiwork-footer-navigation{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.fiwork-footer-navigation a{
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    color: #09f;
+    text-decoration: none;
+    cursor: pointer;   
+}
+
+.fiwork-footer-social-sites{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start; 
+    gap: 8px;
+}
+
+.fiwork-footer-social-sites a{ 
+    text-decoration: none;
+    cursor: pointer;
+    background: #f8f8f8;
+    border-radius: 8px;
+    padding: 10px 15px;
+}
+
+.fiwork-footer .partners-awards-and-apps{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: space-between;
+}
+
+.fiwork-footer .partners-and-awards {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.fiwork-footer .partners-container,
+.fiwork-footer .awards-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.fiwork-footer .partners-container h3,
+.fiwork-footer .awards-container h3{
+    text-align: left;
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    color: #908f8f;
+    margin: 0;
+    padding: 0;
+}
+
+.fiwork-footer .partners-wrapper,
+.fiwork-footer .awards-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.fiwork-footer .partners-wrapper a,
+.fiwork-footer .awards-wrapper a{  
+    cursor: pointer;
+    text-decoration: none; 
+}
+
+.fiwork-footer .mobile-apps-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background: #f8f8f8;
+    border-radius: 8px;
+    height: 100%;
+    padding: 15px;
+    gap: 15px;
+}
+
+.fiwork-footer .mobile-apps-container h3{
+    font-family: var(--third-family);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    color: #323232;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+.fiwork-footer .qr-and-apps-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.fiwork-footer .qr-container{
+    width: 100px;
+    aspect-ratio: 1/1;
+    padding: 10px;
+    text-decoration: none; 
+    cursor: pointer; 
+    border-radius: 8px; 
+    background: #fff; 
+}
+
+.fiwork-footer .qr-container img{
+    width: 100%; 
+}
+
+.fiwork-footer .mobile-app-links{
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 5px;
+} 
+
+.fiwork-footer .mobile-app-links a{
+    cursor: pointer;
+    text-decoration: none;
+    min-width: 164px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    background: #fff;
+    border: 1px solid #ededed; ;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.fiwork-footer .mobile-apps-description{
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    color: #ccc;
+    margin: 0;
+    padding: 0; 
 }
 
 /*end of fiwork-footer*/
@@ -1657,6 +1868,39 @@ footer{
     width: 100%;
 }
 
+
+/*form-message-block*/
+.form-message-block{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-message-block .form-message{
+    width: 100%;
+    text-align: center;
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.form-message-block .form-message.error{
+    color: #f94636;
+}
+
+.form-message-block .form-message.success{
+    color: #04b70a;
+}
+
+.form-message-block .form-message.hidden{
+    display: none;
+}
+
+
+/*end of form-message-block*/
 @media(max-width: 1600px){
     .garland-container .garlands-img{
         width: auto;
@@ -2620,6 +2864,17 @@ input[type="number"]::-webkit-outer-spin-button {
         padding-left: 0;
         padding-right: 0;
     }
+    
+    
+    .fiwork-footer-statistics .fiwork-statistics-part1{
+        display: inline-block;
+        text-align: left;
+    }
+    
+    .fiwork-footer-statistics .statistics-block{
+        display: inline-flex;
+        margin: 15px; 
+    }
 }
 
 
@@ -2685,8 +2940,8 @@ input[type="number"]::-webkit-outer-spin-button {
     .additional-apps-text h2{
         font-size: 16px;
     }
-    
-    
+    FD
+    moniPl
     .additional-apps-text p{
         font-size: 12px;
     }
@@ -2705,6 +2960,13 @@ input[type="number"]::-webkit-outer-spin-button {
     
     .mega-menu-column a{
         font-size: 12px;
+    }
+    
+    .fiwork-footer-navigation-container{ 
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+        justify-content: flex-start;
     }
 }
 
@@ -2992,6 +3254,15 @@ input[type="number"]::-webkit-outer-spin-button {
         display: inline-block;
         position: relative;
     }
+    
+        
+    .fiwork-footer .partners-awards-and-apps{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
 }
 
 /* Тултип Beta */
@@ -3023,6 +3294,36 @@ input[type="number"]::-webkit-outer-spin-button {
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
+    }
+    
+    .fiwork-footer .fiwork-footer-statistics{ 
+        flex-direction: column; 
+        gap: 20px;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    
+    .fiwork-footer .fiwork-footer-navigation{ 
+        display: inline-block;
+        text-align: left;
+    }
+    
+    .fiwork-footer .fiwork-footer-navigation a{
+        display: inline-block;
+        margin: 10px;
+    }
+    
+        
+    .fiwork-footer .partners-wrapper,
+    .fiwork-footer .awards-wrapper{
+        display: inline-block; 
+        text-align: left;
+    }
+    
+    .fiwork-footer .partners-wrapper a, 
+    .fiwork-footer .awards-wrapper a{
+        display: inline-block;
+        margin: 10px;
     }
 }
 

@@ -1021,9 +1021,50 @@ $fiworkFooter=<<<EOT
             <div class="logo-lang-container">
                 <img src="/img/grey-logo.svg" alt="grey logo" class="footer-logo"/>
                 <div class="lang-container">
-                    <img src="/img/icons/lang/russian.svg" alt="russian-flags" class="russian-flag-icon flag-icon"/>
+                    <span class="selected-lang"><img src="/img/icons/lang/russian.svg" alt="russian-flags" class="russian-flag-icon flag-icon"/>
                     Русский
+                    </span> 
                     <img src="/img/icons/chevron-down.svg" alt="chevron-down" class="chevron-down-icon"/>
+                    <div class="select-lang-wrapper">
+                        <div class="lang-option selected"> 
+                            <img src="/img/icons/lang/russian.svg" alt="russian-flag" class="russian-flag-icon flag-icon"/>
+                            Русский
+                        </div>
+                        
+                        <div class="lang-option"> 
+                            <img src="/img/icons/lang/english.svg" alt="english-flag" class="english-flag-icon flag-icon"/>
+                            Английский
+                        </div>
+                        
+                        <div class="lang-option"> 
+                            <img src="/img/icons/lang/france.png" alt="france-flag" class="france-flag-icon flag-icon"/>
+                            Французский
+                        </div>
+                        
+                        
+                        <div class="lang-option"> 
+                            <img src="/img/icons/lang/italy.png" alt="italy-flag" class="italy-flag-icon flag-icon"/>
+                            Итальянский 
+                        </div>
+                        
+                        <div class="lang-option"> 
+                            <img src="/img/icons/lang/kazakhstan.png" alt="kazakh-flag" class="kazakh-flag-icon flag-icon"/>
+                            Казахский 
+                        </div>
+                        
+                        
+                        <div class="lang-option"> 
+                            <img src="/img/icons/lang/uzbekistan.png" alt="ubzek-flag" class="uzbek-flag-icon flag-icon"/>
+                            Узбекский
+                        </div>
+                        
+                        
+                        <div class="lang-option"> 
+                            <img src="/img/icons/lang/tajik.png" alt="tajik-flag" class="tajik-flag-icon flag-icon"/>
+                            Таджикский
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
             
@@ -1085,10 +1126,95 @@ $fiworkFooter=<<<EOT
                         <img src="/img/fiwork-footer/green-dot.svg" alt="green-dot" class="green-dot"/>
                         Онлайн: <span class="online-users-on-fiwork">1535</span>
                     </div> 
+                    
                     <div class="fiwork-statistics-elem">
                         <img src="/img/fiwork-footer/blue-dot.svg" alt="blue-dot" class="blue-dot"/>
                         Заказ: <span class="last-user-login">7 сек. назад</span
                     </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="fiwork-footer-navigation-container">
+            <div class="fiwork-footer-navigation">
+                <a href="#">О проекте</a>
+                <a href="#">Вакансии</a>
+                <a href="#">Прессе</a>
+                <a href="#">Креаторам</a>
+                <a href="#">Политика конфиденциальности</a>
+            </div>
+            <div class="fiwork-footer-social-sites"> 
+                <a href="#"><img src="/img/fiwork-footer/vk.svg" alt="vk-icon" clas="vk-icon"></a>
+                <a href="#"><img src="/img/fiwork-footer/telegram.svg" alt="telegram-icon" class="telegram-icon"></a>
+                <a href="#"><img src="/img/fiwork-footer/dzen.svg" alt="dzen-icon" class="dzen-icon"></a>
+                <a href="#"><img src="/img/fiwork-footer/skolkovo.svg" alt="skolkovo-icon" class="skolkovo-icon"></a>
+            </div>
+        </div>
+        
+        <div class="partners-awards-and-apps">
+            <div class="partners-and-awards">
+                <div class="awards-container">
+                    <h3>Награды</h3>
+                    <div class="awards-wrapper">
+                        <a href="#">
+                            <img src="/img/fiwork-footer/award-product-radar.webp" alt="product-radar" class="product-radar-icon"/>
+                        </a>
+                        <a href="#">
+                            <img src="/img/fiwork-footer/award-gold-site.webp" alt="gold-site" class="gold-site-icon"/>
+                        </a>
+                        <a href="#">
+                            <img src="/img/fiwork-footer/award-awards.webp" alt="awards" class="awards-icon"/>
+                        </a>
+                        <a href="#">
+                            <img src="/img/fiwork-footer/award-runet.webp" alt="runet" class="runet-icon"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="partners-container">
+                    <h3>Партнеры</h3>
+                    <div class="partners-wrapper">
+                        <a href="#">
+                            <img src="/img/fiwork-footer/partner-combocard.svg" alt="combo-cards" class="combo-cards-icon"/>
+                        </a>
+                        <a href="#">
+                            <img src="/img/fiwork-footer/partner-apple-pay.svg" alt="apple-pay" class="apple-pay-icon"/>
+                        </a>
+                        <a href="#">
+                            <img src="/img/fiwork-footer/partner-mastercard.svg" alt="mastercard-pay" class="mastercard-pay-icon"/>
+                        </a>
+                        <a href="#">
+                            <img src="/img/fiwork-footer/partner-mir.svg" alt="mir-pay" class="mir-pay-icon"/>
+                        </a>
+                        <a href="#">
+                            <img src="/img/fiwork-footer/partner-visa.svg" alt="visa-pay" class="visa-pay-icon"/> 
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="apps">
+                <div class="mobile-apps-container">
+                    <h3>Мобильное приложение</h3>
+                    
+                    <div class="qr-and-apps-container">
+                        <a class="qr-container">
+                            <img src="/img/fiwork-footer/qr.png" class="qr" alt="qr"/>
+                        </a>
+                        
+                        <div class="mobile-app-links">
+                            <a href="#">
+                                <img src="/img/fiwork-footer/mobile-app-store.svg" alt="mobile-app-store" class="mobile-app-store"/>
+                            </a>
+                            <a href="#">
+                                <img src="/img/fiwork-footer/mobile-google-play.svg" alt="mobile-google-play" class="mobile-google-play"/>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <p class="mobile-apps-description">
+                        Наведите камеру чтобы скачать приложение
+                    </p> 
                 </div>
             </div>
         </div>
@@ -1134,7 +1260,13 @@ $modalWindows=<<<EOT
                 </span>
             </div>
             
-            <input type="button" value="Далее" class="register-modal-form-next-button"/> 
+            <div class="form-message-block">
+                <div class="form-message success hidden">
+                    Вы успешно зарегистрировались
+                </div>
+            </div>
+            
+            <input type="button" value="Зарегистрироваться" class="register-modal-form-next-button"/> 
             <fieldset>
                 <legend>Или</legend>
             </fieldset>
@@ -1191,6 +1323,13 @@ $modalWindows=<<<EOT
                     Забыли пароль?
                 </a>
             </div> 
+            
+            <div class="form-message-block">
+                <div class="form-message error hidden">
+                    Неверный email или пароль
+                </div>
+            </div>
+            
             <input type="button" value="Войти" class="login-modal-form-next-button"/>
             <div class="social-sites-enter-links">
                 <a href="#">
@@ -1234,6 +1373,7 @@ $modalWindows=<<<EOT
               Не пришел код? <a href="#" id="resendBtn" class="disabled">Отправить повторно</a>
               <span id="timer"></span>
             </p>
+            
             
             <div class="control-buttons">
                 <input type="button" value="Назад" class="back-to-register-form-button"/>
