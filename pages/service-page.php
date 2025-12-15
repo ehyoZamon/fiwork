@@ -75,26 +75,26 @@ require_once "../modules/base.php";
                 
                 <h1>Логотип рисованный от руки</h1>
                 <div class="services-subcategories-block">
-                    <div class="subcategory-elem" onclick="selectSubcategoryElem(this);">
-                        Винтаж/ретро <img src="/img/icons/white-close-icon.svg" alt="white-close-icon" class="white-close-icon" onclick="closeSubcategoryElem(this,event);"/>
+                    <div class="subcategory-elem">
+                        Винтаж/ретро <img src="/img/icons/white-close-icon.svg" alt="white-close-icon" class="white-close-icon" onclick="closeSubcategoryElem(this);"/>
                     </div>
-                    <div class="subcategory-elem" onclick="selectSubcategoryElem(this);">
-                        3D <img src="/img/icons/white-close-icon.svg" alt="white-close-icon" class="white-close-icon" onclick="closeSubcategoryElem(this,event);"/>
+                    <div class="subcategory-elem">
+                        3D <img src="/img/icons/white-close-icon.svg" alt="white-close-icon" class="white-close-icon" onclick="closeSubcategoryElem(this);"/>
                     </div>
-                    <div class="subcategory-elem" onclick="selectSubcategoryElem(this);">
-                        Плоский <img src="/img/icons/white-close-icon.svg" alt="white-close-icon" class="white-close-icon" onclick="closeSubcategoryElem(this,event);"/>
+                    <div class="subcategory-elem">
+                        Плоский <img src="/img/icons/white-close-icon.svg" alt="white-close-icon" class="white-close-icon" onclick="closeSubcategoryElem(this);"/>
                     </div>
-                    <div class="subcategory-elem" onclick="selectSubcategoryElem(this);">
-                        Шрифтовый <img src="/img/icons/white-close-icon.svg" alt="white-close-icon" class="white-close-icon" onclick="closeSubcategoryElem(this,event);"/>
+                    <div class="subcategory-elem">
+                        Шрифтовый <img src="/img/icons/white-close-icon.svg" alt="white-close-icon" class="white-close-icon" onclick="closeSubcategoryElem(this);"/>
                     </div>
-                    <div class="subcategory-elem" onclick="selectSubcategoryElem(this);">
-                        Геральдический <img src="/img/icons/white-close-icon.svg" alt="white-close-icon" class="white-close-icon" onclick="closeSubcategoryElem(this,event);"/>
+                    <div class="subcategory-elem">
+                        Геральдический <img src="/img/icons/white-close-icon.svg" alt="white-close-icon" class="white-close-icon" onclick="closeSubcategoryElem(this);"/>
                     </div>
-                    <div class="subcategory-elem" onclick="selectSubcategoryElem(this);">
-                        Рисованный от руки <img src="/img/icons/white-close-icon.svg" alt="white-close-icon" class="white-close-icon" onclick="closeSubcategoryElem(this,event);"/>
+                    <div class="subcategory-elem">
+                        Рисованный от руки <img src="/img/icons/white-close-icon.svg" alt="white-close-icon" class="white-close-icon" onclick="closeSubcategoryElem(this);"/>
                     </div>
-                    <div class="subcategory-elem" onclick="selectSubcategoryElem(this);">
-                        Акварельный <img src="/img/icons/white-close-icon.svg" alt="white-close-icon" class="white-close-icon" onclick="closeSubcategoryElem(this,event);"/>
+                    <div class="subcategory-elem">
+                        Акварельный <img src="/img/icons/white-close-icon.svg" alt="white-close-icon" class="white-close-icon" onclick="closeSubcategoryElem(this);"/>
                     </div>
                 </div>
                 
@@ -106,126 +106,108 @@ require_once "../modules/base.php";
                             <span class="plus"><img src="/img/icons/open.svg" class="open-icon" alt="open-icon"></span>
                         </button>
                         <div class="mobile-filter-content">
-                            <div class="rubric-block">
-                                <h3>Рубрики</h3>
-                                <ul class="tree">
-                                  <li class="open">
-                                    <div class="tree-item">Дизайн</div>
-                                    <ul>
-                                      <li>
-                                        <div class="tree-item">Логотип и брендинг</div>
-                                        <ul>
-                                          <li>
-                                            <div class="tree-item">Логотипы</div>
-                                            <ul>
-                                                <li class="last-tree-child"><div class="tree-item">Новый логотип</div></li>
-                                                <li class="last-tree-child"><div class="tree-item">Доработка лого</div></li>
-                                            </ul>
-                                          </li>
-                                          <li>
-                                            <div class="tree-item">Фирменный стиль</div>
-                                            <ul>
-                                                <li class="last-tree-child"><div class="tree-item">Фирменные бланки</div></li>
-                                                <li class="last-tree-child"><div class="tree-item">Брендинг</div></li>
-                                                <li class="last-tree-child"><div class="tree-item">Печати и штаты</div></li>
-                                                <li class="last-tree-child"><div class="tree-item">Коммерч.предложение</div></li>
-                                            </ul>
-                                          </li>
-                                          <li>
-                                            <div class="tree-item">Визитки</div>
-                                            <ul>
-                                                <li class="last-tree-child"><div class="tree-item">Создание новых</div></li>
-                                                <li class="last-tree-child"><div class="tree-item">Готовые шаблоны и макеты</div></li>
-                                            </ul>
-                                          </li>
-                                          
-                                          <li>
-                                            <div class="tree-item">Брендирование и сувенирка</div>
-                                            <ul>
-                                                <li class="last-tree-child"><div class="tree-item">Брендирование авто</div></li>
-                                                <li class="last-tree-child"><div class="tree-item">Канцтовары</div></li>
-                                                <li class="last-tree-child"><div class="tree-item">Сувениры</div></li>
-                                            </ul>
-                                          </li>
-                                        </ul>
-                                      </li>
-                                    </ul>
-                                  </li>
-                                
-                                </ul>
-                            </div>
-                            
-                            <div class="filter-block">
+                            <div class="filter-block filter-by-programming-language-block">
                                 <div class="filter-header">
-                                    Создание логотипа
-                                </div>
-                                <div class="reset-this-filter" onclick="resetThisFilter(this);">
-                                    Сбросить
+                                    Язык разработки
                                 </div>
                                 <div class="filter-params">
                                     <div class="filter-param-container">
-                                        <span>HTML 5</span>
+                                        <input type="checkbox" id="filter-by-html" name="filter-by-programming-language" class="filter-by-programming-language">
+                                        <label for="filter-by-html">HTML 5</label>
                                     </div>
                                     <div class="filter-param-container">
-                                        <span>CSS 3</span>
+                                        <input type="checkbox" id="filter-by-css" name="filter-by-programming-language" class="filter-by-programming-language">
+                                        <label for="filter-by-css">CSS 3</label>
+                                    </div>
+                                    <div class="filter-param-container">
+                                        <input type="checkbox" id="filter-by-react" name="filter-by-programming-language" class="filter-by-programming-language">
+                                        <label for="filter-by-react">React</label>
+                                    </div>
+                                    <div class="filter-param-container">
+                                        <input type="checkbox" id="filter-by-webflow" name="filter-by-programming-language" class="filter-by-programming-language">
+                                        <label for="filter-by-webflow">Webflow</label>
+                                    </div>
+                                    <div class="filter-param-container">
+                                        <input type="checkbox" id="filter-by-nodejs" name="filter-by-programming-language" class="filter-by-programming-language">
+                                        <label for="filter-by-nodejs">Node.js</label>
+                                    </div>
+                                    <div class="filter-param-container">
+                                        <input type="checkbox" id="filter-by-laravel" name="filter-by-programming-language" class="filter-by-programming-language">
+                                        <label for="filter-by-laravel">Laravel</label>
+                                    </div>
+                                    <div class="filter-param-container">
+                                        <input type="checkbox" id="filter-by-saas" name="filter-by-programming-language" class="filter-by-programming-language">
+                                        <label for="filter-by-saas">Saas</label>
+                                    </div>
+                                    
+                                    <div class="filter-param-container">
+                                        <input type="checkbox" id="filter-by-wordpress" name="filter-by-programming-language" class="filter-by-programming-language">
+                                        <label for="filter-by-wordpress">Wordpress</label>
                                     </div>
                                 </div>
                             </div>
                             
-                            <div class="filter-block">
+                            <div class="filter-block filter-by-stars-block">
                                 <div class="filter-header">
-                                    Услуга включает
+                                    Рейтинг
                                 </div>
                                 <div class="filter-params">
                                     <div class="filter-param-container">
-                                        <input type="checkbox" id="filter-by-colors" class="filter-by-price">
-                                        <label for="filter-by-colors">В нескольких цветах</label>
+                                        <input type="checkbox" id="filter-by-5-star" name="filter-by-stars" class="filter-by-stars">
+                                        <label for="filter-by-5-star"><img src="/img/icons/yellow-star.svg">5 звезд</label>
                                     </div>
                                     <div class="filter-param-container">
-                                        <input type="checkbox" id="filter-by-visualization" class="filter-by-price">
-                                        <label for="filter-by-visualization">Визуализация</label>
+                                        <input type="checkbox" id="filter-by-4-star" name="filter-by-stars" class="filter-by-stars">
+                                        <label for="filter-by-4-star"><img src="/img/icons/yellow-star.svg">4 звезды и выше</label>
                                     </div>
-                                    
                                     <div class="filter-param-container">
-                                        <input type="checkbox" id="filter-by-favicon" class="filter-by-price">
-                                        <label for="filter-by-favicon">Фавикон</span>
+                                        <input type="checkbox" id="filter-by-3-star" name="filter-by-stars" class="filter-by-stars">
+                                        <label for="filter-by-3-star"><img src="/img/icons/yellow-star.svg">3 звезды и выше</label>
                                     </div>
-                                    
                                     <div class="filter-param-container">
-                                        <input type="checkbox" id="filter-by-high-pixelization" class="filter-by-price">
-                                        <label for="filter-by-high-pixelization">Высокое разрешение</span>
+                                        <input type="checkbox" id="filter-by-2-star" name="filter-by-stars" class="filter-by-stars">
+                                        <label for="filter-by-2-star"><img src="/img/icons/yellow-star.svg">2 звезды и выше</label>
+                                    </div>
+                                    <div class="filter-param-container">
+                                        <input type="checkbox" id="filter-by-1-star" name="filter-by-stars" class="filter-by-stars">
+                                        <label for="filter-by-1-star"><img src="/img/icons/yellow-star.svg">1 звездa и выше</label>
                                     </div>
                                 </div>
                             </div>
                             
-                            <div class="filter-block one-line">
+                            <div class="filter-block filter-by-activity-block">
                                 <div class="filter-header">
-                                    Количество логотипов 
+                                    Активность
                                 </div>
-                                <input type="number" class="number-of-logos" min="1" inputmode="numeric" max="1000" placeholder="от"/>
+                                <div class="filter-params">
+                                    <div class="filter-param-container">
+                                        <input type="checkbox" id="filter-by-online-activity" name="filter-by-activity" class="filter-by-activity">
+                                        <label for="filter-by-online-activity">Онлайн</label>
+                                    </div>
+                                    <div class="filter-param-container">
+                                        <input type="checkbox" id="filter-by-1day-offline" name="filter-by-activity" class="filter-by-activity">
+                                        <label for="filter-by-1day-offline">Заходил до 1 дн. назад</label>
+                                    </div>
+                                    <div class="filter-param-container">
+                                        <input type="checkbox" id="filter-by-3days-offline" name="filter-by-activity" class="filter-by-activity">
+                                        <label for="filter-by-3days-offline">Заходил до 3 дн. назад</label>
+                                    </div>
+                                    <div class="filter-param-container">
+                                        <input type="checkbox" id="filter-by-1week-offline" name="filter-by-activity" class="filter-by-activity">
+                                        <label for="filter-by-1week-offline">Заходил до 1 нед. назад</label>
+                                    </div>
+                                    <div class="filter-param-container">
+                                        <input type="checkbox" id="filter-by-2week-offline" name="filter-by-activity" class="filter-by-activity">
+                                        <label for="filter-by-2week-offline">Заходил до 2 нед. назад</label>
+                                    </div>
+                                </div>
                             </div>
                             
-                            <div class="filter-block">
+                            <div class="filter-block filter-by-price-block">
                                 <div class="filter-header">
                                     Цена
                                 </div>
-                                <div class="reset-this-filter" onclick="resetThisFilter(this);">
-                                    Сбросить
-                                </div>
                                 <div class="filter-params">
-                                    <div class="filter-param-container">
-                                        <span>500 руб.</span>
-                                    </div>
-                                    <div class="filter-param-container">
-                                        <span>1 000 руб. - 4 000 руб.</span>
-                                    </div>
-                                    <div class="filter-param-container">
-                                        <span>4 500 руб. - 30 000 руб.</span>
-                                    </div>
-                                    <div class="filter-param-container">
-                                        <span>33 000 руб. и выше</span>
-                                    </div>
-                                    
                                     <div class="price-filter-slider-block">
                                         <div class="price-filter">
                                           <div class="slider-container">
@@ -238,212 +220,62 @@ require_once "../modules/base.php";
                                           <div class="inputs">
                                             <div class="input-box">
                                               <p><span  class="currency">₽</span> от</p>
-                                              <input type="number" id="min-price">
+                                              <input type="number" id="min-price" value="20000">
                                             </div>
                                             <div class="input-box">
                                               <p><span class="currency">₽</span> до</p>
-                                              <input type="number" id="max-price">
+                                              <input type="number" id="max-price" value="80000">
                                             </div>
                                           </div>
                                         </div>
                                     </div>
                                     
-                                </div>
-                            </div>
-                           
-                           <div class="filter-block">
-                                <div class="filter-header">
-                                    Уровень продавца 
-                                    <span class="question-and-description tooltip-container">
-                                        <img src="/img/icons/round-question-icon.svg" alt="round-question-icon" class="round-question-icon tooltip-question"/>
-                                        <span class="tooltip-text" style="font-weight: 400;">
-                                            <h4>Заголовок</h4>
-                                            <p>Текст</p>
-                                        </span>
-                                    </span>     
-                                </div>
-                                <div class="reset-this-filter" onclick="resetThisFilter(this);">
-                                    Сбросить
-                                </div>
-                                <div class="filter-params">
                                     <div class="filter-param-container">
-                                        <span>Восходящая звезда и выше</span>
+                                        <input type="checkbox" id="filter-by-500-rubles" name="filter-by-price" class="filter-by-price">
+                                        <label for="filter-by-500-rubles">500 руб.</label>
                                     </div>
                                     <div class="filter-param-container">
-                                        <span>Высший рейтинг и выше</span>
+                                        <input type="checkbox" id="filter-by-1000-rubles" name="filter-by-price" class="filter-by-price">
+                                        <label for="filter-by-1000-rubles">1 000 руб. - 3 500 руб.</label>
                                     </div>
                                     <div class="filter-param-container">
-                                        <span>Высший рейтинг плюс</span>
+                                        <input type="checkbox" id="filter-by-4000-rubles" name="filter-by-price" class="filter-by-price">
+                                        <label for="filter-by-4000-rubles">4 000 руб. - 23 000 руб.</label>
+                                    </div>
+                                    
+                                    <div class="filter-param-container">
+                                        <input type="checkbox" id="filter-by-24000-rubles" name="filter-by-price" class="filter-by-price">
+                                        <label for="filter-by-24000-rubles">24 000 руб. и выше</label>
                                     </div>
                                 </div>
                             </div>
                             
-                            <div class="filter-block">
-                                <div class="filter-header">
-                                    Активность продавцов
-                                </div>
-                                <div class="reset-this-filter" onclick="resetThisFilter(this);">
-                                    Сбросить
-                                </div>
-                                <div class="filter-params">
-                                    <div class="filter-param-container">
-                                        <span>Онлайн</span>
-                                    </div>
-                                    <div class="filter-param-container">
-                                        <span>Заходил до 1 дн. назад</span>
-                                    </div>
-                                    <div class="filter-param-container">
-                                        <span>Заходил до 3 дн. назад</span>
-                                    </div>
-                                    <div class="filter-param-container">
-                                        <span>Заходил до 1 нед. назад</span>
-                                    </div>
-                                    <div class="filter-param-container">
-                                        <span>Заходил до 2 нед. назад</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="filter-block">
-                                <div class="filter-header">
-                                    Положительных отзывов
-                                    <span class="question-and-description tooltip-container">
-                                        <img src="/img/icons/round-question-icon.svg" alt="round-question-icon" class="round-question-icon tooltip-question"/>
-                                        <span class="tooltip-text" style="font-weight: 400;">
-                                            <h4>Заголовок</h4>
-                                            <p>Текст</p>
-                                        </span>
-                                    </span>
-                                </div>
-                                <div class="reset-this-filter" onclick="resetThisFilter(this);">
-                                    Сбросить
-                                </div>
-                                <div class="filter-params">
-                                    <div class="filter-param-container">
-                                        <span>От 1</span>
-                                    </div>
-                                    <div class="filter-param-container">
-                                        <span>От 5</span>
-                                    </div>
-                                    <div class="filter-param-container">
-                                        <span>От 20</span>
-                                    </div>
-                                    <div class="filter-param-container">
-                                        <span>От 100</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="filter-block">
+                            <div class="filter-block filter-by-deadline-block">
                                 <div class="filter-header">
                                     Срок выполнения
-                                    <span class="question-and-description tooltip-container">
-                                        <img src="/img/icons/round-question-icon.svg" alt="round-question-icon" class="round-question-icon tooltip-question"/>
-                                        <span class="tooltip-text" style="font-weight: 400;">
-                                            <h4>Заголовок</h4>
-                                            <p>Текст</p>
-                                        </span>
-                                    </span>
-                                </div>
-                                <div class="reset-this-filter" onclick="resetThisFilter(this);">
-                                    Сбросить
                                 </div>
                                 <div class="filter-params">
                                     <div class="filter-param-container">
-                                        <span>За 24 часа</span>
+                                        <input type="checkbox" id="filter-by-24hour-deadline" name="filter-by-deadline" class="filter-by-deadline">
+                                        <label for="filter-by-24hour-deadline">За 24 часа</label>
                                     </div>
                                     <div class="filter-param-container">
-                                        <span>До 2 дней</span>
+                                        <input type="checkbox" id="filter-by-2day-deadline" name="filter-by-deadline" class="filter-by-deadline">
+                                        <label for="filter-by-2day-deadline">До 2 дней</label>
                                     </div>
                                     <div class="filter-param-container">
-                                        <span>До 3 дней</span>
+                                        <input type="checkbox" id="filter-by-3day-deadline" name="filter-by-deadline" class="filter-by-deadline">
+                                        <label for="filter-by-3day-deadline">До 3 дней</label>
                                     </div>
                                     <div class="filter-param-container">
-                                        <span>До 5 дней</span>
+                                        <input type="checkbox" id="filter-by-5day-deadline" name="filter-by-deadline" class="filter-by-deadline">
+                                        <label for="filter-by-5day-deadline">До 5 дней</label>
                                     </div>
                                     <div class="filter-param-container">
-                                        <span>До 10 дней</span>
+                                        <input type="checkbox" id="filter-by-10day-deadline" name="filter-by-deadline" class="filter-by-deadline">
+                                        <label for="filter-by-10day-deadline">До 10 дней</label>
                                     </div>
                                 </div>
-                            </div>
-                            
-                            <div class="filter-block">
-                                <div class="filter-header">
-                                    Заказов в работе
-                                    <span class="question-and-description tooltip-container">
-                                        <img src="/img/icons/round-question-icon.svg" alt="round-question-icon" class="round-question-icon tooltip-question"/>
-                                        <span class="tooltip-text" style="font-weight: 400;">
-                                            <h4>Заголовок</h4>
-                                            <p>Текст</p>
-                                        </span>
-                                    </span>
-                                </div>
-                                <div class="reset-this-filter" onclick="resetThisFilter(this);">
-                                    Сбросить
-                                </div>
-                                <div class="filter-params">
-                                    <div class="filter-param-container">
-                                        <span>Нет</span>
-                                    </div>
-                                    <div class="filter-param-container">
-                                        <span>До 1</span>
-                                    </div>
-                                    <div class="filter-param-container">
-                                        <span>До 3</span>
-                                    </div>
-                                    <div class="filter-param-container">
-                                        <span>До 5</span>
-                                    </div>
-                                    <div class="filter-param-container">
-                                        <span>До 8</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="filter-block">
-                                <div class="filter-header">
-                                    Просмотренные
-                                </div>
-                                <div class="reset-this-filter" onclick="resetThisFilter(this);">
-                                    Сбросить
-                                </div>
-                                <div class="filter-params">
-                                    <div class="filter-param-container">
-                                        <span>Только не просмотренные</span>
-                                    </div>
-                                    <div class="filter-param-container">
-                                        <span>Только просмотренные</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="filter-block">
-                                <div class="filter-header">
-                                    Заказанные
-                                </div>
-                                <div class="reset-this-filter" onclick="resetThisFilter(this);">
-                                    Сбросить
-                                </div>
-                                <div class="filter-params">
-                                    <div class="filter-param-container">
-                                        <span>Только заказанные</span>
-                                    </div>
-                                    <div class="filter-param-container">
-                                        <span>Только не заказанные</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="more-filter">
-                                Ещё фильтры
-                            </div>
-                        </div>
-                        
-                        <div class="mobile-filter-content">
-                            <div class="add-project-block">
-                                <h3>Нет нужной услуги?</h3>
-                                <p>Исполнитель найдётся&nbsp;сам</p>
-                                <input type="button" value="Добавить проект" class="add-project-button"/>
                             </div>
                         </div>
                     </div>
@@ -582,6 +414,40 @@ require_once "../modules/base.php";
                                         </div>
                                         
                                         <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
+                                    </div>
+                                </div>
+                                    
+                                <div class="service-data-container">
+                                    <div class="service-rating">
+                                        <div class="rating-text">Высший рейтинг</div>
+                                        <div class="rating-stars">
+                                            <img src="/img/icons/yellow-star.svg" class="yellow-star" alt="yellow-star"/>
+                                            <p><span class="yellow-text">5.0</span> (570)</p>
+                                        </div>
+                                    </div>
+                                    <div class="service-price">
+                                        <div class="service-price-text">СТОИМОСТЬ</div>
+                                        <div class="service-price-num">от 10 408 ₽</div>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="ad-container">
+                                <div class="ad-part1">
+                                    <div class="ad-banner">
+                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
+                                        <img src="/img/ads/mobile-design.webp" class="ad-img" alt="ad1"/>
+                                    </div>
+                                    
+                                    <h3>Создам дизайн мобильного приложения</h3>
+                                    
+                                    <div class="freelancer-container">
+                                        <div class="freelancer-avatar">
+                                            <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
+                                            <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                        </div>
+                                        <p class="freelancer-username">cc__creative</p>
+                                        <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
                                     </div>
                                 </div>
                                     
@@ -1340,27 +1206,8 @@ require_once "../modules/base.php";
 <script src="/js/mobile-navigation-menu.js?v=<?= time(); ?>"></script>
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 <script>
-
-    $(".filter-block .filter-params .filter-param-container").on("click", function(){
-        $(this).closest(".filter-block").addClass("active");
-        $(this).closest(".filter-block").find(".filter-param-container").removeClass("selected");
-        $(this).addClass("selected");
-    });
-    
-    function resetThisFilter(elem){
-        console.log("All is ok!");
-        $(elem).closest(".filter-block").removeClass("active");
-        $(elem).closest(".filter-block").find(".filter-param-container").removeClass("selected");
-    }
-  
-  function selectSubcategoryElem(elem){
-      $(".services-subcategories-block .subcategory-elem").removeClass("selected");
-      $(elem).addClass("selected");
-  }
-  
-  function closeSubcategoryElem(elem,e){
-      e.stopPropagation();
-      $(elem).parent().removeClass("selected");
+  function closeSubcategoryElem(elem){
+      $(elem).parent().remove();
   }
   
     function likeThisAd(elem) {
@@ -1448,26 +1295,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-</script>
-<script>
-    $(document).on("click", ".tree-item", function(){
-        var $currentLi = $(this).closest("li");
-        var $parentUl = $currentLi.parent();
-        
-        
-        $parentUl.children("li").each(function(){
-            if (this !== $currentLi[0] && !$(this).hasClass("last-tree-child")) {
-                $(this).removeClass("open").addClass("closed");
-            }
-        });
-
-        $currentLi.addClass("open");
-        $currentLi.addClass("listed").find(".listed").removeClass("listed");
-        $(".tree .selected").removeClass("selected");
-        $currentLi.addClass("selected");
-        $currentLi.find(".closed").removeClass("closed");
-        $currentLi.find("li").removeClass("open");
-        $currentLi.find(">li").addClass("open");
-    });
 </script>
 </html>

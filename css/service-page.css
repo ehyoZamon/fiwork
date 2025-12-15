@@ -131,51 +131,13 @@ input:valid {
 
 .filter-block{
     width: 100%;
+    border: 1px solid #e9eaf0;
     display: flex;
     flex-direction: column;
-    margin-top: 15px;
-}
-
-.filter-block .reset-this-filter{
-    display: none;
-}
-
-.filter-block.active .reset-this-filter{
-    display: block;
-}
-
-.filter-block.one-line{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-}
-
-.filter-block.one-line .number-of-logos{
-    width: 65px;
-    height: 28px;   
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    background: #fff;
-    border: 1px solid #a5a5a5;
-    padding: 4px;
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 13px;
-    color: #757575;
-}
-
-.reset-this-filter{
-    text-decoration: underline;
-    color: #446ee7;
-    cursor: pointer;
-    font-size: 14px;
-    margin-top: 3px;
 }
 
 .filter-header{
+    padding: 20px;
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 14px;
@@ -183,23 +145,18 @@ input:valid {
     text-transform: uppercase;
     color: #1d2026;
     text-align: left;
+    border-bottom: 1px solid #e9eaf0;
     width: 100%;
-    font-family: var(--font-family);
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 144%;
-    color: #111;
 }
 
 .filter-params{
+    padding: 20px;
     text-align: left;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 3px;
-    padding: 3px 0;
-    cursor: pointer;
+    gap: 10px;
 }
 
 
@@ -213,7 +170,7 @@ input:valid {
     display: inline-block;
     position: relative; /* <--- Добавляем позиционирование */
     cursor: pointer;
-    padding-left: 20px; /* Добавляем отступ для "квадрата" */
+    padding-left: 28px; /* Добавляем отступ для "квадрата" */
 }
 
 /* Стилизуем псевдоэлемент-квадрат */
@@ -223,10 +180,9 @@ input:valid {
     left: 0;
     top: 50%;
     transform: translateY(-50%); /* Центрируем по вертикали */
-    width: 12px;
-    height: 12px;
+    width: 18px;
+    height: 18px;
     border: 1px solid #ced1d9;
-    border-radius: 3px;
 }
 
 /* Стилизуем состояние "отмечено" */
@@ -238,32 +194,31 @@ input:valid {
 /* Добавляем иконку (галочку) */
 .filter-param-container input[type="checkbox"]:checked + label::after {
     content: '\2713'; /* Символ галочки */
-    font-size: 14px;
+    font-size: 16px;
     color: #fff;
     position: absolute;
+    left: 4px; /* <--- Подбираем позицию */
     top: 50%;
-    left: 0;
     transform: translateY(-50%); /* Центрируем по вертикали */
 }
 
-
-.filter-param-container label,
-.filter-param-container span{
+.filter-param-container label{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    letter-spacing: -0.01em;
+    color: #4e5566;
     text-align: left;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    gap: 3px;
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 144%;
-    color: #111;
+    gap: 5px;
 }
 
 .filter-param-container input[type='checkbox']:checked + label{
-    font-weight: 600;
+    color: #177de5;
 }
 
 .filter-params-container label img{
@@ -271,21 +226,6 @@ input:valid {
     aspect-ratio: 1/1;
 }
 
-.more-filter{
-    text-align: left;
-    margin-top: 20px;
-    font-family: var(--font-family);
-    font-weight: 600;
-    font-size: 13px;
-    line-height: 138%;
-    color: #177de5;
-    cursor: pointer;
-}
-
-.filter-param-container.selected label,
-.filter-param-container.selected span{
-    font-weight: 600;
-}
 /*Ads block*/
 
 .similar-to-search-block{
@@ -318,13 +258,8 @@ input:valid {
     background: #fff;
     text-decoration: none;
     max-width: 300px !important;
-    border-radius: 8px;
-    overflow: hidden;
 }
 
-.ad-container:hover{
-    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.15);
-}
 
 .ad-container .ad-part1{
     flex: 1;
@@ -361,16 +296,11 @@ input:valid {
     z-index: 100;
     background-color: rgba(0,0,0,0.5);
     border-radius: 50%;
-    display: none; 
 }
 
-.ad-container:hover .ad-banner .white-like-icon{
-    display: inline-block;
-}
-
-/*.ad-container .ad-banner .white-like-icon:hover{
+.ad-container .ad-banner .white-like-icon:hover{
     background-color: red;
-}*/
+}
 
 .ad-container .ad-banner.liked .white-like-icon{
     background-color: red;
@@ -537,7 +467,6 @@ input:valid {
 .price-filter-slider-block .price-filter {
   width: 100%;
   margin: auto;
-  margin-top: 5px;
 }
 
 /* Контейнер ползунков */
@@ -546,7 +475,6 @@ input:valid {
   width: 100%;
   height: 30px;
   margin-bottom: 15px;
-  display: none;
 }
 
 /* Обе линии ползунков */
@@ -691,11 +619,8 @@ input:valid {
 .mobile-filter-content {
     display: flex;
     flex-direction: column;
+    gap: 24px;
     width: 100%;
-    background: #fcfcfc;
-    border: 1px solid #e8e8e8;
-    border-radius: 8px;
-    padding: 12px 15px 14px;
 }
 
 /*services-subcategories-block*/
@@ -724,8 +649,6 @@ input:valid {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    cursor: pointer;
-    margin-top: 10px;
 }
 
 .services-subcategories-block .subcategory-elem .white-close-icon{
@@ -733,7 +656,7 @@ input:valid {
     width: 15px;
 }
 
-.services-subcategories-block .subcategory-elem.selected{
+.services-subcategories-block .subcategory-elem:hover{
     background: #457edb;
     border-radius: 4px;
     padding: 1px 13px;
@@ -750,205 +673,14 @@ input:valid {
     justify-content: center;
 }
 
-.services-subcategories-block .subcategory-elem.selected .white-close-icon{
+.services-subcategories-block .subcategory-elem:hover .white-close-icon{
     display: inline-block;
     width: 15px;
     cursor: pointer;
 }
+
 /*end of services-subcategories-block*/
 
-
-
-/*tooltip-container*/
-.tooltip-container {
-    position: relative; /* Создаем контекст для абсолютного позиционирования подсказки */
-    cursor: help; /* Меняем курсор на знак вопроса */
-    margin-left: 2px;
-}
-
-.tooltip-text {
-    visibility: hidden;
-    opacity: 0; 
-    position: absolute;
-    z-index: 10;
-    top: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 200px; 
-    background-color: #fefefe;
-    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.06);
-    color: #111;
-    text-align: left;
-    padding: 8px 12px;
-    border-radius: 6px;
-    font-size: 14px;
-    white-space: normal;
-    transition: opacity 0.3s, visibility 0.3s;
-}
-
-.tooltip-container:hover .tooltip-text {
-    visibility: visible;
-    opacity: 1;
-}
-
-.tooltip-text h4,
-.tooltip-text p{
-    font-size: 12px !important;
-    margin: 0;
-    padding: 0;
-    text-transform: none !important;
-}
-
-.tooltip-text p{
-    font-size: 10px;
-}
-
-#tooltipGraph {
-    position: absolute;
-    padding: 6px 10px;
-    background: #fff;
-    color: #111;
-    font-size: 12px;
-    border-radius: 4px;
-    pointer-events: none;
-    opacity: 0;
-    transition: 0.15s;
-    z-index: 9999;
-    white-space: nowrap;
-}
-
-.tooltip-container img{
-    width: 14px;
-}
-/*end of tooltip-container*/
-
-/*rubric-block*/
-.rubric-block h3{
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 120%;
-    color: #111;
-    margin-bottom: 5px;
-}
-
-.tree{
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-.tree ul{
-    display:none;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
-.tree li.open > ul{
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-}
-
-.tree li.closed{
-    display: none;
-}
-
-.tree li.last-tree-child{
-    padding-left: 10px; 
-}
-
-.tree li.last-tree-child.closed{
-    display: inline-block;
-}
-
-/*.tree li{
-    padding-left: 5px;
-}*/
-
-.tree-item{
-    cursor:pointer;
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 144%;
-    color: #111;
-}
-
-.tree>li>.tree-item::before{
-    content: "‹";
-    padding-right: 3px;
-    font-size: 20px;
-}
-
-li.listed:not(.last-tree-child) > .tree-item::before {
-  content: "‹";
-  display: inline-block;
-  padding-right: 3px;
-  font-size: 20px;
-}
-
-
-.tree li.selected>.tree-item{
-    font-weight: 600;
-}
-
-/*end of rubric-block*/
-
-/*add-project-block*/
-.add-project-block{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: centers;
-    gap: 15px;
-    width: 100%;
-    padding: 15px;
-}
-
-.add-project-block h3{
-    font-family: var(--second-family);
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 180%;
-    text-align: center;
-    color: #404145;
-    margin: 0;
-    padding: 0;
-}
-
-.add-project-block p{
-    max-width: 150px;
-    font-family: var(--second-family);
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 185%;
-    text-align: center;
-    color: #404145;
-    margin: 0;
-    padding: 0;
-}
-
-.add-project-block .add-project-button{
-    font-family: var(--font18);
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 143%;
-    text-align: center;
-    color: #fff;
-    background: #2196f3;
-    border-radius: 8px;
-    min-width: 163px;
-    min-height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    outline: none;
-    border: none;
-    cursor: pointer;
-}
-/*end of end-project-block*/
 @media (max-width: 1370px){
     .similar-to-search-block{
         grid-template-columns: repeat(3, 1fr);
@@ -1010,6 +742,15 @@ li.listed:not(.last-tree-child) > .tree-item::before {
         display: flex;
     }
 
+    .filter-header {
+        padding: 15px;
+        font-size: 13px;
+    }
+
+    .filter-params {
+        padding: 15px;
+    }
+
     .filter-param-container label {
         font-size: 13px;
     }
@@ -1037,13 +778,7 @@ li.listed:not(.last-tree-child) > .tree-item::before {
     .service-price .service-price-num {
         font-size: 15px;
     }
-    
-    
-    .ad-container .ad-banner .white-like-icon{
-        display: inline-block;
-    }
 }
-
 
 @media (max-width: 480px) {
     .similar-to-search-block {
