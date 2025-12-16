@@ -215,11 +215,10 @@ header{
 .registration-and-login-block .login-button:hover{
     background: #0078D7;
 }
+
 input:hover,
 input:focus,
-input:active,
-input:valid {
-  border: none;
+input:active{
   outline: none;
   box-shadow: none;
 }
