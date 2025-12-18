@@ -449,22 +449,100 @@ require_once "../modules/base.php";
                     </div>
                     <div class="services-elems-container">
                         <div class="similar-to-search-block">
-                            <a href="#" class="ad-container recommended">
+                            
+                            <a href="#" class="ad-container skeleton-block" index="2">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
                                         <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
-                                        <img src="/img/ads/ad1.webp" class="ad-img" alt="ad1"/>
+                                        <img src="https://hintus.lit.link/wp-content/uploads/2022/09/taplinks-eye-catching-image-min-scaled.jpg" class="ad-img" alt="taplink design"/>
+                                        <div class="skeleton-fill"></div>
+                                    </div>
+                                    <h3><span class="skeleton">Создание сайтов Taplink, Дизайн</span></h3>
+                                    <div class="freelancer-wrapper">
+                                        <div class="freelancer-container">
+                                            <div class="freelancer-avatar">
+                                                <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
+                                                <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                                <div class="skeleton-fill"></div>
+                                            </div>
+                                            <p class="freelancer-username skeleton">cc__creative</p>
+                                            <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer"/>
+                                        </div>
+                                        <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
+                                    </div>
+                                </div>
+                                <div class="service-data-container">
+                                    <div class="service-rating">
+                                        <div class="rating-text skeleton">Высший рейтинг</div>
+                                        <div class="rating-stars skeleton">
+                                            <img src="/img/icons/yellow-star.svg" class="yellow-star" alt="yellow-star"/>
+                                            <p><span class="yellow-text">5.0</span> (570)</p>
+                                        </div>
+                                    </div>
+                                    <div class="service-price">
+                                        <div class="service-price-text skeleton">СТОИМОСТЬ</div>
+                                        <div class="service-price-num skeleton">от 10 408 ₽</div>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                            <a href="#" class="ad-container skeleton-block" index="3">
+                                <div class="ad-part1">
+                                    <div class="ad-banner">
+                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
+                                        <img src="https://cdn.dribbble.com/userupload/45678918/file/still-833dae24169994be5637d5b0e8b85576.png" class="ad-img" alt="mobile app design"/>
+                                        <div class="skeleton-fill"></div>
+                                    </div>
+                                    <h3><span class="skeleton">Продуманный Дизайн мобильного приложения</span></h3>
+                                    <div class="freelancer-wrapper">
+                                        <div class="freelancer-container">
+                                            <div class="freelancer-avatar">
+                                                <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
+                                                <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                                <div class="skeleton-fill"></div>
+                                            </div>
+                                            <p class="freelancer-username skeleton">cc__creative</p>
+                                            <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
+                                        </div>
+                                        <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
+                                    </div>
+                                </div>
+                                <div class="service-data-container">
+                                    <div class="service-rating">
+                                        <div class="rating-text skeleton">Высший рейтинг</div>
+                                        <div class="rating-stars skeleton">
+                                            <img src="/img/icons/yellow-star.svg" class="yellow-star" alt="yellow-star"/>
+                                            <p><span class="yellow-text">5.0</span> (570)</p>
+                                        </div>
+                                    </div>
+                                    <div class="service-price">
+                                        <div class="service-price-text skeleton">СТОИМОСТЬ</div>
+                                        <div class="service-price-num skeleton">от 10 408 ₽</div>
+                                    </div>
+                                </div>
+                            </a>
+                            
+                            
+                            <a href="#" class="ad-container recommended skeleton-block" index="5">
+                                <div class="ad-part1">
+                                    <div class="ad-banner">
+                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
+                                        <img src="/img/christmas/image2.jpg" class="ad-img" alt="ad1"/>
+                                        <div class="skeleton-fill">
+                                        </div>
                                     </div>
                                     
-                                    <h3>Создам дизайн мобильного приложения</h3>
+                                    <h3><span class="skeleton">Создам дизайн мобильного приложения</span></h3>
                                     
                                     <div class="freelancer-wrapper">
                                         <div class="freelancer-container">
                                             <div class="freelancer-avatar">
                                                 <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
                                                 <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status"/>
+                                                <div class="skeleton-fill round">
+                                                </div>
                                             </div>
-                                            <p class="freelancer-username">cc__creative</p>
+                                            <p class="freelancer-username skeleton">cc__creative</p>
                                             <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer"/>
                                         </div>
                                         <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
@@ -474,36 +552,39 @@ require_once "../modules/base.php";
                                     
                                 <div class="service-data-container">
                                     <div class="service-rating">
-                                        <div class="rating-text">Высший рейтинг</div>
-                                        <div class="rating-stars">
+                                        <div class="rating-text skeleton">Высший рейтинг</div>
+                                        <div class="rating-stars skeleton">
                                             <img src="/img/icons/yellow-star.svg" class="yellow-star" alt="yellow-star"/>
                                             <p><span class="yellow-text">5.0</span> (570)</p>
                                         </div>
                                     </div>
                                     <div class="service-price">
-                                        <div class="service-price-text">СТОИМОСТЬ</div>
-                                        <div class="service-price-num">от 10 408 ₽</div>
+                                        <div class="service-price-text skeleton">СТОИМОСТЬ</div>
+                                        <div class="service-price-num skeleton">от 10 408 ₽</div>
                                     </div>
                                 </div>
                             </a>
                             
-                            <a href="#" class="ad-container">
+                            <a href="#" class="ad-container skeleton-block" index="6">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
-                                    
                                         <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
-                                        <img src="/img/ads/taplink.webp" class="ad-img" alt="ad1"/>
+                                        <img src="/img/christmas/image3.jpg" class="ad-img" alt="ad1"/>
+                                        <div class="skeleton-fill">
+                                        </div>
                                     </div>
                                     
-                                    <h3>Создание сайтов Taplink, Дизайн</h3>
+                                    <h3><span class="skeleton">Создание сайтов Taplink, Дизайн</span></h3>
                                     
                                     <div class="freelancer-wrapper">
                                         <div class="freelancer-container">
                                             <div class="freelancer-avatar">
                                                 <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
                                                 <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                                <div class="skeleton-fill">
+                                                </div>
                                             </div>
-                                            <p class="freelancer-username">cc__creative</p>
+                                            <p class="freelancer-username skeleton">cc__creative</p>
                                             <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer"/>
                                         </div>
                                         <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
@@ -512,72 +593,39 @@ require_once "../modules/base.php";
                                     
                                 <div class="service-data-container">
                                     <div class="service-rating">
-                                        <div class="rating-text">Высший рейтинг</div>
-                                        <div class="rating-stars">
+                                        <div class="rating-text skeleton">Высший рейтинг</div>
+                                        <div class="rating-stars skeleton">
                                             <img src="/img/icons/yellow-star.svg" class="yellow-star" alt="yellow-star"/>
                                             <p><span class="yellow-text">5.0</span> (570)</p>
                                         </div>
                                     </div>
                                     <div class="service-price">
-                                        <div class="service-price-text">СТОИМОСТЬ</div>
-                                        <div class="service-price-num">от 10 408 ₽</div>
+                                        <div class="service-price-text skeleton">СТОИМОСТЬ</div>
+                                        <div class="service-price-num skeleton">от 10 408 ₽</div>
                                     </div>
                                 </div>
                             </a>
                             
-                            <a href="#" class="ad-container">
-                                <div class="ad-part1">
-                                    <div class="ad-banner">
-                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
-                                        <img src="/img/ads/app-design.webp" class="ad-img" alt="ad1"/>
-                                    </div>
-                                    
-                                    <h3>Продуманный Дизайн мобильного приложения</h3>
-                                    
-                                    <div class="freelancer-wrapper">
-                                        <div class="freelancer-container">
-                                            <div class="freelancer-avatar">
-                                                <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
-                                                <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
-                                            </div>
-                                            <p class="freelancer-username">cc__creative</p>
-                                            <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
-                                        </div>
-                                        <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
-                                    </div>
-                                </div>
-                                    
-                                <div class="service-data-container">
-                                    <div class="service-rating">
-                                        <div class="rating-text">Высший рейтинг</div>
-                                        <div class="rating-stars">
-                                            <img src="/img/icons/yellow-star.svg" class="yellow-star" alt="yellow-star"/>
-                                            <p><span class="yellow-text">5.0</span> (570)</p>
-                                        </div>
-                                    </div>
-                                    <div class="service-price">
-                                        <div class="service-price-text">СТОИМОСТЬ</div>
-                                        <div class="service-price-num">от 10 408 ₽</div>
-                                    </div>
-                                </div>
-                            </a>
-                            
-                            <a href="#" class="ad-container">
+                            <a href="#" class="ad-container skeleton-block">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
                                         <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
                                         <img src="/img/ads/ux-ui-design.webp" class="ad-img" alt="ad1"/>
+                                        <div class="skeleton-fill">
+                                        </div>
                                     </div>
                                     
-                                    <h3>Стильный дизайн мобильных приложений </h3>
+                                    <h3><span class="skeleton">Стильный дизайн мобильных приложений</span></h3>
                                     
                                     <div class="freelancer-wrapper">
                                         <div class="freelancer-container">
                                             <div class="freelancer-avatar">
                                                 <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
                                                 <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                                <div class="skeleton-fill">
+                                                </div>
                                             </div>
-                                            <p class="freelancer-username">cc__creative</p>
+                                            <p class="freelancer-username skeleton">cc__creative</p>
                                             <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
                                         </div>
                                         
@@ -587,35 +635,39 @@ require_once "../modules/base.php";
                                     
                                 <div class="service-data-container">
                                     <div class="service-rating">
-                                        <div class="rating-text">Высший рейтинг</div>
-                                        <div class="rating-stars">
+                                        <div class="rating-text skeleton">Высший рейтинг</div>
+                                        <div class="rating-stars skeleton">
                                             <img src="/img/icons/yellow-star.svg" class="yellow-star" alt="yellow-star"/>
                                             <p><span class="yellow-text">5.0</span> (570)</p>
                                         </div>
                                     </div>
                                     <div class="service-price">
-                                        <div class="service-price-text">СТОИМОСТЬ</div>
-                                        <div class="service-price-num">от 10 408 ₽</div>
+                                        <div class="service-price-text skeleton">СТОИМОСТЬ</div>
+                                        <div class="service-price-num skeleton">от 10 408 ₽</div>
                                     </div>
                                 </div>
                             </a>
                             
-                            <a href="#" class="ad-container">
+                            <a href="#" class="ad-container skeleton-block" index="9">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
                                         <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
                                         <img src="/img/ads/ad1.webp" class="ad-img" alt="ad1"/>
+                                        <div class="skeleton-fill">
+                                        </div>
                                     </div>
                                     
-                                    <h3>Создам дизайн мобильного приложения</h3>
+                                    <h3><span class="skeleton">Создам дизайн мобильного приложения</span></h3>
                                     
                                     <div class="freelancer-wrapper">
                                         <div class="freelancer-container">
                                             <div class="freelancer-avatar">
                                                 <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
                                                 <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status"/>
+                                                <div class="skeleton-fill">
+                                                </div>
                                             </div>
-                                            <p class="freelancer-username">cc__creative</p>
+                                            <p class="freelancer-username skeleton">cc__creative</p>
                                             <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer"/>
                                         </div>
                                         
@@ -625,35 +677,39 @@ require_once "../modules/base.php";
                                     
                                 <div class="service-data-container">
                                     <div class="service-rating">
-                                        <div class="rating-text">Высший рейтинг</div>
-                                        <div class="rating-stars">
+                                        <div class="rating-text skeleton">Высший рейтинг</div>
+                                        <div class="rating-stars skeleton">
                                             <img src="/img/icons/yellow-star.svg" class="yellow-star" alt="yellow-star"/>
                                             <p><span class="yellow-text">5.0</span> (570)</p>
                                         </div>
                                     </div>
                                     <div class="service-price">
-                                        <div class="service-price-text">СТОИМОСТЬ</div>
-                                        <div class="service-price-num">от 10 408 ₽</div>
+                                        <div class="service-price-text skeleton">СТОИМОСТЬ</div>
+                                        <div class="service-price-num skeleton">от 10 408 ₽</div>
                                     </div>
                                 </div>
                             </a>
                             
-                            <a href="#" class="ad-container">
+                            <a href="#" class="ad-container skeleton-block" index="10">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
                                         <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
                                         <img src="/img/ads/taplink.webp" class="ad-img" alt="ad1"/>
+                                        <div class="skeleton-fill">
+                                        </div>
                                     </div>
                                     
-                                    <h3>Создание сайтов Taplink, Дизайн</h3>
+                                    <h3><span class="skeleton">Создание сайтов Taplink, Дизайн</span></h3>
                                     
                                     <div class="freelancer-wrapper">
                                         <div class="freelancer-container">
                                             <div class="freelancer-avatar">
                                                 <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
                                                 <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                                <div class="skeleton-fill">
+                                                </div>
                                             </div>
-                                            <p class="freelancer-username">cc__creative</p>
+                                            <p class="freelancer-username skeleton">cc__creative</p>
                                             <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer"/>
                                         </div>
                                         
@@ -663,264 +719,163 @@ require_once "../modules/base.php";
                                     
                                 <div class="service-data-container">
                                     <div class="service-rating">
-                                        <div class="rating-text">Высший рейтинг</div>
-                                        <div class="rating-stars">
+                                        <div class="rating-text skeleton">Высший рейтинг</div>
+                                        <div class="rating-stars skeleton">
                                             <img src="/img/icons/yellow-star.svg" class="yellow-star" alt="yellow-star"/>
                                             <p><span class="yellow-text">5.0</span> (570)</p>
                                         </div>
                                     </div>
                                     <div class="service-price">
-                                        <div class="service-price-text">СТОИМОСТЬ</div>
-                                        <div class="service-price-num">от 10 408 ₽</div>
+                                        <div class="service-price-text skeleton">СТОИМОСТЬ</div>
+                                        <div class="service-price-num skeleton">от 10 408 ₽</div>
                                     </div>
                                 </div>
                             </a>
                             
-                            <a href="#" class="ad-container">
-                                <div class="ad-part1">
-                                    <div class="ad-banner">
-                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
-                                        <img src="/img/ads/app-design.webp" class="ad-img" alt="ad1"/>
-                                    </div>
-                                    
-                                    <h3>Продуманный Дизайн мобильного приложения</h3>
-                                    
-                                    <div class="freelancer-wrapper">
-                                        <div class="freelancer-container">
-                                            <div class="freelancer-avatar">
-                                                <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
-                                                <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
-                                            </div>
-                                            <p class="freelancer-username">cc__creative</p>
-                                            <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
-                                        </div>
-                                        
-                                        <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
-                                    </div>
-                                </div>
-                                    
-                                <div class="service-data-container">
-                                    <div class="service-rating">
-                                        <div class="rating-text">Высший рейтинг</div>
-                                        <div class="rating-stars">
-                                            <img src="/img/icons/yellow-star.svg" class="yellow-star" alt="yellow-star"/>
-                                            <p><span class="yellow-text">5.0</span> (570)</p>
-                                        </div>
-                                    </div>
-                                    <div class="service-price">
-                                        <div class="service-price-text">СТОИМОСТЬ</div>
-                                        <div class="service-price-num">от 10 408 ₽</div>
-                                    </div>
-                                </div>
-                            </a>
-                            
-                            <a href="#" class="ad-container">
-                                <div class="ad-part1">
-                                    <div class="ad-banner">
-                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
-                                        <img src="/img/ads/ux-ui-design.webp" class="ad-img" alt="ad1"/>
-                                    </div>
-                                    
-                                    <h3>Стильный дизайн мобильных приложений </h3>
-                                    
-                                    <div class="freelancer-wrapper">
-                                        <div class="freelancer-container">
-                                            <div class="freelancer-avatar">
-                                                <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
-                                                <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
-                                            </div>
-                                            <p class="freelancer-username">cc__creative</p>
-                                            <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
-                                        </div>
-                                        
-                                        <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
-                                    </div>
-                                </div>
-                                    
-                                <div class="service-data-container">
-                                    <div class="service-rating">
-                                        <div class="rating-text">Высший рейтинг</div>
-                                        <div class="rating-stars">
-                                            <img src="/img/icons/yellow-star.svg" class="yellow-star" alt="yellow-star"/>
-                                            <p><span class="yellow-text">5.0</span> (570)</p>
-                                        </div>
-                                    </div>
-                                    <div class="service-price">
-                                        <div class="service-price-text">СТОИМОСТЬ</div>
-                                        <div class="service-price-num">от 10 408 ₽</div>
-                                    </div>
-                                </div>
-                            </a>
-                            
-                            <a href="#" class="ad-container">
-                                <div class="ad-part1">
-                                    <div class="ad-banner">
-                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
-                                        <img src="/img/ads/mobile-design.webp" class="ad-img" alt="ad1"/>
-                                    </div>
-                                    
-                                    <h3>Создам дизайн мобильного приложения</h3>
-                                    
-                                    <div class="freelancer-wrapper">
-                                        <div class="freelancer-container">
-                                            <div class="freelancer-avatar">
-                                                <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
-                                                <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
-                                            </div>
-                                            <p class="freelancer-username">cc__creative</p>
-                                            <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
-                                        </div>
-                                        
-                                        <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
-                                    </div>
-                                </div>
-                                    
-                                <div class="service-data-container">
-                                    <div class="service-rating">
-                                        <div class="rating-text">Высший рейтинг</div>
-                                        <div class="rating-stars">
-                                            <img src="/img/icons/yellow-star.svg" class="yellow-star" alt="yellow-star"/>
-                                            <p><span class="yellow-text">5.0</span> (570)</p>
-                                        </div>
-                                    </div>
-                                    <div class="service-price">
-                                        <div class="service-price-text">СТОИМОСТЬ</div>
-                                        <div class="service-price-num">от 10 408 ₽</div>
-                                    </div>
-                                </div>
-                            </a>
-                            
-                            <a href="#" class="ad-container">
+                            <a href="#" class="ad-container recommended skeleton-block" index="11">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
                                         <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
                                         <img src="/img/ads/ad1.webp" class="ad-img" alt="ad1"/>
+                                        <div class="skeleton-fill">
+                                        </div>
                                     </div>
                                     
-                                    <h3>Создам дизайн мобильного приложения</h3>
+                                    <h3><span class="skeleton">Создам дизайн мобильного приложения</span></h3>
                                     
                                     <div class="freelancer-wrapper">
                                         <div class="freelancer-container">
                                             <div class="freelancer-avatar">
                                                 <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
                                                 <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status"/>
+                                                <div class="skeleton-fill round">
+                                                </div>
                                             </div>
-                                            <p class="freelancer-username">cc__creative</p>
+                                            <p class="freelancer-username skeleton">cc__creative</p>
                                             <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer"/>
                                         </div>
-                                        
                                         <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
                                     </div>
+                                    
                                 </div>
                                     
                                 <div class="service-data-container">
                                     <div class="service-rating">
-                                        <div class="rating-text">Высший рейтинг</div>
-                                        <div class="rating-stars">
+                                        <div class="rating-text skeleton">Высший рейтинг</div>
+                                        <div class="rating-stars skeleton">
                                             <img src="/img/icons/yellow-star.svg" class="yellow-star" alt="yellow-star"/>
                                             <p><span class="yellow-text">5.0</span> (570)</p>
                                         </div>
                                     </div>
                                     <div class="service-price">
-                                        <div class="service-price-text">СТОИМОСТЬ</div>
-                                        <div class="service-price-num">от 10 408 ₽</div>
+                                        <div class="service-price-text skeleton">СТОИМОСТЬ</div>
+                                        <div class="service-price-num skeleton">от 10 408 ₽</div>
                                     </div>
                                 </div>
                             </a>
                             
-                            <a href="#" class="ad-container">
+                            <a href="#" class="ad-container skeleton-block" index="12">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
                                         <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
                                         <img src="/img/ads/taplink.webp" class="ad-img" alt="ad1"/>
+                                        <div class="skeleton-fill">
+                                        </div>
                                     </div>
                                     
-                                    <h3>Создание сайтов Taplink, Дизайн</h3>
+                                    <h3><span class="skeleton">Создание сайтов Taplink, Дизайн</span></h3>
                                     
                                     <div class="freelancer-wrapper">
                                         <div class="freelancer-container">
                                             <div class="freelancer-avatar">
                                                 <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
                                                 <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                                <div class="skeleton-fill">
+                                                </div>
                                             </div>
-                                            <p class="freelancer-username">cc__creative</p>
+                                            <p class="freelancer-username skeleton">cc__creative</p>
                                             <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer"/>
                                         </div>
-                                        
                                         <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
                                     </div>
                                 </div>
                                     
                                 <div class="service-data-container">
                                     <div class="service-rating">
-                                        <div class="rating-text">Высший рейтинг</div>
-                                        <div class="rating-stars">
+                                        <div class="rating-text skeleton">Высший рейтинг</div>
+                                        <div class="rating-stars skeleton">
                                             <img src="/img/icons/yellow-star.svg" class="yellow-star" alt="yellow-star"/>
                                             <p><span class="yellow-text">5.0</span> (570)</p>
                                         </div>
                                     </div>
                                     <div class="service-price">
-                                        <div class="service-price-text">СТОИМОСТЬ</div>
-                                        <div class="service-price-num">от 10 408 ₽</div>
+                                        <div class="service-price-text skeleton">СТОИМОСТЬ</div>
+                                        <div class="service-price-num skeleton">от 10 408 ₽</div>
                                     </div>
                                 </div>
                             </a>
                             
-                            <a href="#" class="ad-container">
+                            <a href="#" class="ad-container skeleton-block" index="13">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
                                         <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
                                         <img src="/img/ads/app-design.webp" class="ad-img" alt="ad1"/>
+                                        <div class="skeleton-fill">
+                                        </div>
                                     </div>
                                     
-                                    <h3>Продуманный Дизайн мобильного приложения</h3>
+                                    <h3><span class="skeleton">Продуманный Дизайн мобильного приложения</span></h3>
                                     
                                     <div class="freelancer-wrapper">
                                         <div class="freelancer-container">
                                             <div class="freelancer-avatar">
                                                 <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
                                                 <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                                <div class="skeleton-fill">
+                                                </div>
                                             </div>
-                                            <p class="freelancer-username">cc__creative</p>
+                                            <p class="freelancer-username skeleton">cc__creative</p>
                                             <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
                                         </div>
-                                        
                                         <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
                                     </div>
                                 </div>
-                                
                                     
                                 <div class="service-data-container">
                                     <div class="service-rating">
-                                        <div class="rating-text">Высший рейтинг</div>
-                                        <div class="rating-stars">
+                                        <div class="rating-text skeleton">Высший рейтинг</div>
+                                        <div class="rating-stars skeleton">
                                             <img src="/img/icons/yellow-star.svg" class="yellow-star" alt="yellow-star"/>
                                             <p><span class="yellow-text">5.0</span> (570)</p>
                                         </div>
                                     </div>
                                     <div class="service-price">
-                                        <div class="service-price-text">СТОИМОСТЬ</div>
-                                        <div class="service-price-num">от 10 408 ₽</div>
+                                        <div class="service-price-text skeleton">СТОИМОСТЬ</div>
+                                        <div class="service-price-num skeleton">от 10 408 ₽</div>
                                     </div>
                                 </div>
                             </a>
                             
-                            <a href="#" class="ad-container">
+                            <a href="#" class="ad-container skeleton-block" index="14">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
                                         <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
                                         <img src="/img/ads/ux-ui-design.webp" class="ad-img" alt="ad1"/>
+                                        <div class="skeleton-fill">
+                                        </div>
                                     </div>
                                     
-                                    <h3>Стильный дизайн мобильных приложений </h3>
+                                    <h3><span class="skeleton">Стильный дизайн мобильных приложений</span></h3>
                                     
                                     <div class="freelancer-wrapper">
                                         <div class="freelancer-container">
                                             <div class="freelancer-avatar">
                                                 <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
                                                 <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                                <div class="skeleton-fill">
+                                                </div>
                                             </div>
-                                            <p class="freelancer-username">cc__creative</p>
+                                            <p class="freelancer-username skeleton">cc__creative</p>
                                             <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
                                         </div>
                                         
@@ -930,111 +885,81 @@ require_once "../modules/base.php";
                                     
                                 <div class="service-data-container">
                                     <div class="service-rating">
-                                        <div class="rating-text">Высший рейтинг</div>
-                                        <div class="rating-stars">
+                                        <div class="rating-text skeleton">Высший рейтинг</div>
+                                        <div class="rating-stars skeleton">
                                             <img src="/img/icons/yellow-star.svg" class="yellow-star" alt="yellow-star"/>
                                             <p><span class="yellow-text">5.0</span> (570)</p>
                                         </div>
                                     </div>
                                     <div class="service-price">
-                                        <div class="service-price-text">СТОИМОСТЬ</div>
-                                        <div class="service-price-num">от 10 408 ₽</div>
+                                        <div class="service-price-text skeleton">СТОИМОСТЬ</div>
+                                        <div class="service-price-num skeleton">от 10 408 ₽</div>
                                     </div>
                                 </div>
                             </a>
                             
-                            <a href="#" class="ad-container">
-                                <div class="ad-part1">
-                                    <div class="ad-banner">
-                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
-                                        <img src="/img/ads/mobile-design.webp" class="ad-img" alt="ad1"/>
-                                    </div>
-                                    
-                                    <h3>Создам дизайн мобильного приложения</h3>
-                                    
-                                    <div class="freelancer-wrapper">
-                                        <div class="freelancer-container">
-                                            <div class="freelancer-avatar">
-                                                <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
-                                                <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
-                                            </div>
-                                            <p class="freelancer-username">cc__creative</p>
-                                            <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
-                                        </div>
-                                        
-                                        <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
-                                    </div>
-                                </div>
-                                    
-                                <div class="service-data-container">
-                                    <div class="service-rating">
-                                        <div class="rating-text">Высший рейтинг</div>
-                                        <div class="rating-stars">
-                                            <img src="/img/icons/yellow-star.svg" class="yellow-star" alt="yellow-star"/>
-                                            <p><span class="yellow-text">5.0</span> (570)</p>
-                                        </div>
-                                    </div>
-                                    <div class="service-price">
-                                        <div class="service-price-text">СТОИМОСТЬ</div>
-                                        <div class="service-price-num">от 10 408 ₽</div>
-                                    </div>
-                                </div>
-                            </a>
-                            
-                            <a href="#" class="ad-container">
+                            <a href="#" class="ad-container skeleton-block" index="15">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
                                         <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
                                         <img src="/img/ads/ad1.webp" class="ad-img" alt="ad1"/>
+                                        <div class="skeleton-fill">
+                                        </div>
                                     </div>
                                     
-                                    <h3>Создам дизайн мобильного приложения</h3>
+                                    <h3><span class="skeleton">Создам дизайн мобильного приложения</span></h3>
                                     
                                     <div class="freelancer-wrapper">
                                         <div class="freelancer-container">
                                             <div class="freelancer-avatar">
                                                 <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
                                                 <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status"/>
+                                                <div class="skeleton-fill">
+                                                </div>
                                             </div>
-                                            <p class="freelancer-username">cc__creative</p>
+                                            <p class="freelancer-username skeleton">cc__creative</p>
                                             <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer"/>
-                                        </div
+                                        </div>
                                         
-                                        <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>>
+                                        <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
                                     </div>
                                 </div>
                                     
                                 <div class="service-data-container">
                                     <div class="service-rating">
-                                        <div class="rating-text">Высший рейтинг</div>
-                                        <div class="rating-stars">
+                                        <div class="rating-text skeleton">Высший рейтинг</div>
+                                        <div class="rating-stars skeleton">
                                             <img src="/img/icons/yellow-star.svg" class="yellow-star" alt="yellow-star"/>
                                             <p><span class="yellow-text">5.0</span> (570)</p>
                                         </div>
                                     </div>
                                     <div class="service-price">
-                                        <div class="service-price-text">СТОИМОСТЬ</div>
-                                        <div class="service-price-num">от 10 408 ₽</div>
+                                        <div class="service-price-text skeleton">СТОИМОСТЬ</div>
+                                        <div class="service-price-num skeleton">от 10 408 ₽</div>
                                     </div>
                                 </div>
                             </a>
                             
-                            <a href="#" class="ad-container">
+                            <a href="#" class="ad-container skeleton-block" index="16">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
                                         <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
                                         <img src="/img/ads/taplink.webp" class="ad-img" alt="ad1"/>
+                                        <div class="skeleton-fill">
+                                        </div>
                                     </div>
                                     
-                                    <h3>Создание сайтов Taplink, Дизайн</h3>
+                                    <h3><span class="skeleton">Создание сайтов Taplink, Дизайн</span></h3>
                                     
                                     <div class="freelancer-wrapper">
                                         <div class="freelancer-container">
                                             <div class="freelancer-avatar">
                                                 <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
                                                 <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                                <div class="skeleton-fill">
+                                                </div>
                                             </div>
-                                            <p class="freelancer-username">cc__creative</p>
+                                            <p class="freelancer-username skeleton">cc__creative</p>
                                             <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer"/>
                                         </div>
                                         
@@ -1044,285 +969,103 @@ require_once "../modules/base.php";
                                     
                                 <div class="service-data-container">
                                     <div class="service-rating">
-                                        <div class="rating-text">Высший рейтинг</div>
-                                        <div class="rating-stars">
+                                        <div class="rating-text skeleton">Высший рейтинг</div>
+                                        <div class="rating-stars skeleton">
                                             <img src="/img/icons/yellow-star.svg" class="yellow-star" alt="yellow-star"/>
                                             <p><span class="yellow-text">5.0</span> (570)</p>
                                         </div>
                                     </div>
                                     <div class="service-price">
-                                        <div class="service-price-text">СТОИМОСТЬ</div>
-                                        <div class="service-price-num">от 10 408 ₽</div>
+                                        <div class="service-price-text skeleton">СТОИМОСТЬ</div>
+                                        <div class="service-price-num skeleton">от 10 408 ₽</div>
                                     </div>
                                 </div>
                             </a>
                             
-                            <a href="#" class="ad-container">
-                                <div class="ad-part1">
-                                    <div class="ad-banner">
-                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
-                                        <img src="/img/ads/app-design.webp" class="ad-img" alt="ad1"/>
-                                    </div>
-                                    
-                                    <h3>Продуманный Дизайн мобильного приложения</h3>
-                                    
-                                    <div class="freelancer-wrapper">
-                                        <div class="freelancer-container">
-                                            <div class="freelancer-avatar">
-                                                <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
-                                                <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
-                                            </div>
-                                            <p class="freelancer-username">cc__creative</p>
-                                            <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
-                                        </div>
-                                        
-                                        <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
-                                    </div>
-                                </div>
-                                    
-                                <div class="service-data-container">
-                                    <div class="service-rating">
-                                        <div class="rating-text">Высший рейтинг</div>
-                                        <div class="rating-stars">
-                                            <img src="/img/icons/yellow-star.svg" class="yellow-star" alt="yellow-star"/>
-                                            <p><span class="yellow-text">5.0</span> (570)</p>
-                                        </div>
-                                    </div>
-                                    <div class="service-price">
-                                        <div class="service-price-text">СТОИМОСТЬ</div>
-                                        <div class="service-price-num">от 10 408 ₽</div>
-                                    </div>
-                                </div>
-                            </a>
                             
-                            <a href="#" class="ad-container">
-                                <div class="ad-part1">
-                                    <div class="ad-banner">
-                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
-                                        <img src="/img/ads/ux-ui-design.webp" class="ad-img" alt="ad1"/>
-                                    </div>
-                                    
-                                    <h3>Стильный дизайн мобильных приложений </h3>
-                                    
-                                    <div class="freelancer-wrapper">
-                                        <div class="freelancer-container">
-                                            <div class="freelancer-avatar">
-                                                <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
-                                                <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
-                                            </div>
-                                            <p class="freelancer-username">cc__creative</p>
-                                            <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
-                                        </div>
-                                        
-                                        <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
-                                    </div>
-                                </div>
-                                    
-                                <div class="service-data-container">
-                                    <div class="service-rating">
-                                        <div class="rating-text">Высший рейтинг</div>
-                                        <div class="rating-stars">
-                                            <img src="/img/icons/yellow-star.svg" class="yellow-star" alt="yellow-star"/>
-                                            <p><span class="yellow-text">5.0</span> (570)</p>
-                                        </div>
-                                    </div>
-                                    <div class="service-price">
-                                        <div class="service-price-text">СТОИМОСТЬ</div>
-                                        <div class="service-price-num">от 10 408 ₽</div>
-                                    </div>
-                                </div>
-                            </a>
-                            
-                            <a href="#" class="ad-container">
-                                <div class="ad-part1">
-                                    <div class="ad-banner">
-                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
-                                        <img src="/img/ads/mobile-design.webp" class="ad-img" alt="ad1"/>
-                                    </div>
-                                    
-                                    <h3>Создам дизайн мобильного приложения</h3>
-                                    
-                                    <div class="freelancer-wrapper">
-                                        <div class="freelancer-container">
-                                            <div class="freelancer-avatar">
-                                                <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
-                                                <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
-                                            </div>
-                                            <p class="freelancer-username">cc__creative</p>
-                                            <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
-                                        </div>
-                                        
-                                        <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
-                                    </div>
-                                </div>
-                                    
-                                <div class="service-data-container">
-                                    <div class="service-rating">
-                                        <div class="rating-text">Высший рейтинг</div>
-                                        <div class="rating-stars">
-                                            <img src="/img/icons/yellow-star.svg" class="yellow-star" alt="yellow-star"/>
-                                            <p><span class="yellow-text">5.0</span> (570)</p>
-                                        </div>
-                                    </div>
-                                    <div class="service-price">
-                                        <div class="service-price-text">СТОИМОСТЬ</div>
-                                        <div class="service-price-num">от 10 408 ₽</div>
-                                    </div>
-                                </div>
-                            </a>
-                            
-                            <a href="#" class="ad-container">
+                            <a href="#" class="ad-container recommended skeleton-block" index="17">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
                                         <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
                                         <img src="/img/ads/ad1.webp" class="ad-img" alt="ad1"/>
+                                        <div class="skeleton-fill">
+                                        </div>
                                     </div>
                                     
-                                    <h3>Создам дизайн мобильного приложения</h3>
+                                    <h3><span class="skeleton">Создам дизайн мобильного приложения</span></h3>
                                     
                                     <div class="freelancer-wrapper">
                                         <div class="freelancer-container">
                                             <div class="freelancer-avatar">
                                                 <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
                                                 <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status"/>
+                                                <div class="skeleton-fill round">
+                                                </div>
                                             </div>
-                                            <p class="freelancer-username">cc__creative</p>
+                                            <p class="freelancer-username skeleton">cc__creative</p>
                                             <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer"/>
                                         </div>
-                                        
                                         <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
                                     </div>
+                                    
                                 </div>
                                     
                                 <div class="service-data-container">
                                     <div class="service-rating">
-                                        <div class="rating-text">Высший рейтинг</div>
-                                        <div class="rating-stars">
+                                        <div class="rating-text skeleton">Высший рейтинг</div>
+                                        <div class="rating-stars skeleton">
                                             <img src="/img/icons/yellow-star.svg" class="yellow-star" alt="yellow-star"/>
                                             <p><span class="yellow-text">5.0</span> (570)</p>
                                         </div>
                                     </div>
                                     <div class="service-price">
-                                        <div class="service-price-text">СТОИМОСТЬ</div>
-                                        <div class="service-price-num">от 10 408 ₽</div>
+                                        <div class="service-price-text skeleton">СТОИМОСТЬ</div>
+                                        <div class="service-price-num skeleton">от 10 408 ₽</div>
                                     </div>
                                 </div>
                             </a>
                             
-                            <a href="#" class="ad-container">
+                            <a href="#" class="ad-container skeleton-block" index="18">
                                 <div class="ad-part1">
                                     <div class="ad-banner">
                                         <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
                                         <img src="/img/ads/taplink.webp" class="ad-img" alt="ad1"/>
+                                        <div class="skeleton-fill">
+                                        </div>
                                     </div>
                                     
-                                    <h3>Создание сайтов Taplink, Дизайн</h3>
+                                    <h3><span class="skeleton">Создание сайтов Taplink, Дизайн</span></h3>
                                     
                                     <div class="freelancer-wrapper">
                                         <div class="freelancer-container">
                                             <div class="freelancer-avatar">
                                                 <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
                                                 <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
+                                                <div class="skeleton-fill">
+                                                </div>
                                             </div>
-                                            <p class="freelancer-username">cc__creative</p>
+                                            <p class="freelancer-username skeleton">cc__creative</p>
                                             <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer"/>
                                         </div>
-                                        
                                         <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
                                     </div>
                                 </div>
                                     
                                 <div class="service-data-container">
                                     <div class="service-rating">
-                                        <div class="rating-text">Высший рейтинг</div>
-                                        <div class="rating-stars">
+                                        <div class="rating-text skeleton">Высший рейтинг</div>
+                                        <div class="rating-stars skeleton">
                                             <img src="/img/icons/yellow-star.svg" class="yellow-star" alt="yellow-star"/>
                                             <p><span class="yellow-text">5.0</span> (570)</p>
                                         </div>
                                     </div>
                                     <div class="service-price">
-                                        <div class="service-price-text">СТОИМОСТЬ</div>
-                                        <div class="service-price-num">от 10 408 ₽</div>
+                                        <div class="service-price-text skeleton">СТОИМОСТЬ</div>
+                                        <div class="service-price-num skeleton">от 10 408 ₽</div>
                                     </div>
                                 </div>
                             </a>
                             
-                            <a href="#" class="ad-container">
-                                <div class="ad-part1">
-                                    <div class="ad-banner">
-                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
-                                        <img src="/img/ads/app-design.webp" class="ad-img" alt="ad1"/>
-                                    </div>
-                                    
-                                    <h3>Продуманный Дизайн мобильного приложения</h3>
-                                    
-                                    <div class="freelancer-wrapper">
-                                        <div class="freelancer-container">
-                                            <div class="freelancer-avatar">
-                                                <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
-                                                <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
-                                            </div>
-                                            <p class="freelancer-username">cc__creative</p>
-                                            <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
-                                        </div>
-                                        
-                                        <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
-                                    </div>
-                                </div>
-                                    
-                                <div class="service-data-container">
-                                    <div class="service-rating">
-                                        <div class="rating-text">Высший рейтинг</div>
-                                        <div class="rating-stars">
-                                            <img src="/img/icons/yellow-star.svg" class="yellow-star" alt="yellow-star"/>
-                                            <p><span class="yellow-text">5.0</span> (570)</p>
-                                        </div>
-                                    </div>
-                                    <div class="service-price">
-                                        <div class="service-price-text">СТОИМОСТЬ</div>
-                                        <div class="service-price-num">от 10 408 ₽</div>
-                                    </div>
-                                </div>
-                            </a>
-                            
-                            <a href="#" class="ad-container">
-                                <div class="ad-part1">
-                                    <div class="ad-banner">
-                                        <img src="/img/icons/white-like.svg" alt="white-like" class="white-like-icon" onclick="likeThisAd(this);"/>
-                                        <img src="/img/ads/ux-ui-design.webp" class="ad-img" alt="ad1"/>
-                                    </div>
-                                    
-                                    <h3>Стильный дизайн мобильных приложений </h3>
-                                    
-                                    <div class="freelancer-wrapper">
-                                        <div class="freelancer-container">
-                                            <div class="freelancer-avatar">
-                                                <img src="/img/freelancer-avatars/freelancer1.webp" alt="freelancer" class="freelancer-img"/>
-                                                <img src="/img/icons/status-star.svg" alt="status" class="freelancer-status hidden"/>
-                                            </div>
-                                            <p class="freelancer-username">cc__creative</p>
-                                            <img src="/img/icons/verified.svg" alt="verified-freelancer" class="verified-freelancer hidden"/>
-                                        </div>
-                                        
-                                        <img src="/img/icons/recommended.svg" alt="recommended" class="recommended"/>
-                                    </div>
-                                </div>
-                                    
-                                <div class="service-data-container">
-                                    <div class="service-rating">
-                                        <div class="rating-text">Высший рейтинг</div>
-                                        <div class="rating-stars">
-                                            <img src="/img/icons/yellow-star.svg" class="yellow-star" alt="yellow-star"/>
-                                            <p><span class="yellow-text">5.0</span> (570)</p>
-                                        </div>
-                                    </div>
-                                    <div class="service-price">
-                                        <div class="service-price-text">СТОИМОСТЬ</div>
-                                        <div class="service-price-num">от 10 408 ₽</div>
-                                    </div>
-                                </div>
-                            </a>
-                           
                         </div>
                     </div>
                 </div>
@@ -1339,6 +1082,46 @@ require_once "../modules/base.php";
 <script src="/js/index.js?v=<?= time(); ?>"></script>
 <script src="/js/mobile-navigation-menu.js?v=<?= time(); ?>"></script>
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<script>
+    /*Skeleton Logic*/
+    /* Skeleton Logic — jQuery */
+    console.log("Cкрипт загрузился: "+Date());
+    $('.ad-container.skeleton-block').each(function () {
+        const $card = $(this);
+        const $images = $card.find('img');
+    
+        // Если картинок нет — сразу убираем skeleton
+        if ($images.length === 0) {
+            $card.removeClass('skeleton-block');
+            return;
+        }
+    
+        let loadedCount = 0;
+        const totalImages = $images.length;
+    
+        function checkLoaded() {
+            loadedCount++;
+            if (loadedCount === totalImages) {
+                // Небольшая задержка для плавности
+                setTimeout(function () {
+                    console.log("Контейнер "+$card.attr("index")+" загрузился: "+Date());
+                    $card.removeClass('skeleton-block');
+                }, 100);
+            }
+        }
+    
+        $images.each(function () {
+            // Если картинка уже загружена (кеш)
+            if (this.complete && this.naturalWidth !== 0) {
+                checkLoaded();
+            } else {
+                $(this)
+                    .one('load', checkLoaded)
+                    .one('error', checkLoaded); // ошибка тоже считается
+            }
+        });
+    });
+</script>
 <script>
 
     $(".filter-block .filter-params .filter-param-container").on("click", function(){

@@ -385,6 +385,7 @@ input:valid {
     text-align: left;
     margin: 0;
     padding: 5px 15px;
+    max-width: 100%;
 }
 
 .ad-container .freelancer-container{
@@ -506,6 +507,7 @@ input:valid {
     text-transform: uppercase;
     color: #ffbe5b;
 }
+
 
 .service-price .service-price-text{
     font-family: var(--font-family);
@@ -830,6 +832,7 @@ input:valid {
     line-height: 120%;
     color: #111;
     margin-bottom: 5px;
+    max-width: 100%;
 }
 
 .tree{
@@ -916,6 +919,7 @@ li.listed:not(.last-tree-child) > .tree-item::before {
     color: #404145;
     margin: 0;
     padding: 0;
+    max-width: 100%;
 }
 
 .add-project-block p{
@@ -949,6 +953,135 @@ li.listed:not(.last-tree-child) > .tree-item::before {
     cursor: pointer;
 }
 /*end of end-project-block*/
+
+/* Универсальный класс-скелетон */
+.skeleton-block .skeleton {
+  position: relative;
+  overflow: hidden;
+  background-color: #e2e8f0; /* Базовый цвет */
+  color: transparent !important;
+  border: none !important;
+  cursor: default;
+  user-select: none;
+  border-radius: 20px;
+  white-space: nowrap;
+  text-overflow: clip;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.skeleton-block .freelancer-username.skeleton{ 
+    width: 100px;
+    max-width: 100%; 
+}
+
+
+.skeleton-block .verified-freelancer,
+.skeleton-block .recommended,
+.skeleton-block .freelancer-status,
+.skeleton-block .white-like-icon{
+    display: none !important;
+}
+
+.skeleton-block .rating-text.skeleton{
+    max-width: 100%;
+    width: 51px;
+    height: 14px;
+}
+
+.skeleton-block .service-price-text.skeleton{
+    width: 71px;
+    max-width: 100%; 
+    height: 14px;
+}
+
+.skeleton-block .yellow-star{
+    display: none;
+}
+
+.skeleton-block .freelancer-avatar{
+    border: none !important;
+    overflow: hidden;
+}
+
+.skeleton-block .rating-stars.skeleton{
+    width: 75px;
+    max-width: 100%;
+    height: 14px;
+}
+
+.skeleton-block .rating-stars.skeleton *{
+    color: transparent !important;
+}
+
+.skeleton-block .service-price-num.skeleton{
+    width: 95px;
+    max-width: 100%;
+    height: 17px;
+}
+
+.skeleton-block h3{
+    width: 226px;
+    max-width: 100%;
+}
+
+
+.skeleton-block .service-price,
+.skeleton-block .service-rating{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+
+.skeleton-block .service-rating{
+    align-items: flex-start;
+}
+
+
+.skeleton-block .skeleton-fill{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #e2e8f0; /* Базовый цвет */
+    color: transparent !important;
+    border: none !important;
+    cursor: default;
+    user-select: none;
+    top: 0;
+    left: 0;
+}
+
+.skeleton-block .skeleton-fill.round{
+    border-radius: 50%;
+}
+
+
+/* Эффект блика (shimmer) через псевдоэлемент */
+.skeleton-block .skeleton::after,
+.skeleton-block .skeleton-fill:after{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateX(-100%);
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0,
+    rgba(255, 255, 255, 0.2) 20%,
+    rgba(255, 255, 255, 0.5) 60%,
+    rgba(255, 255, 255, 0)
+  );
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  100% { transform: translateX(100%); }
+}
+
 @media (max-width: 1370px){
     .similar-to-search-block{
         grid-template-columns: repeat(3, 1fr);
