@@ -52,9 +52,6 @@ require_once "../modules/base.php";
     <div class="main-block">
         <div class="main-container">
             <div class="messenger-block">
-                <div class="messenger-header">
-                    Сообщения
-                </div>
                 <div class="messenger-aside">
                     <div class="search-in-message-block">
                         <div class="search-in-message-container">
@@ -79,9 +76,17 @@ require_once "../modules/base.php";
                                                     <img src="/img/icons/empty-star.svg" alt="empty-star" class="empty-star"/></span>
                                     </span>
                                 </div>
-                                <div class="contact-messages">
+                                <div class="contact-messages reply-quickly">
                                     <div class="contact-last-message">
                                         Здравствуйте. Напишите основную тему
+                                    </div>
+                                    
+                                    <div class="respond-in-24-hours">
+                                        Ответьте в течение 24 ч., чтобы
+                                        не снизился рейтинг. 
+                                        <span class="tooltip-container">
+                                            Почему?
+                                        </span>
                                     </div>
                                     <span class="unread-messages">2</span>
                                 </div>
@@ -102,6 +107,10 @@ require_once "../modules/base.php";
                                 <div class="contact-messages">
                                     <div class="contact-last-message">
                                         Здравствуйте. Напишите основную тему
+                                    </div>
+                                    <div class="respond-in-24-hours">
+                                        Ответьте в течение 24 ч., чтобы
+                                        не снизился рейтинг. Почему?
                                     </div>
                                     <span class="unread-messages">4</span>
                                 </div>
@@ -124,6 +133,10 @@ require_once "../modules/base.php";
                                     <div class="contact-last-message">
                                         Здравствуйте. Напишите основную тему
                                     </div>
+                                    <div class="respond-in-24-hours">
+                                        Ответьте в течение 24 ч., чтобы
+                                        не снизился рейтинг. Почему?
+                                    </div>
                                     <span class="unread-messages">1</span>
                                 </div>
                             </div>
@@ -143,6 +156,10 @@ require_once "../modules/base.php";
                                 <div class="contact-messages">
                                     <div class="contact-last-message">
                                         Здравствуйте. Напишите основную тему
+                                    </div>
+                                    <div class="respond-in-24-hours">
+                                        Ответьте в течение 24 ч., чтобы
+                                        не снизился рейтинг. Почему?
                                     </div>
                                     <span class="unread-messages">5</span>
                                 </div>
@@ -165,6 +182,10 @@ require_once "../modules/base.php";
                                     <div class="contact-last-message">
                                         yo man, food dey house?
                                     </div>
+                                    <div class="respond-in-24-hours">
+                                        Ответьте в течение 24 ч., чтобы
+                                        не снизился рейтинг. Почему?
+                                    </div>
                                     <span class="unread-messages">2</span>
                                 </div>
                             </div>
@@ -186,6 +207,10 @@ require_once "../modules/base.php";
                                     <div class="contact-last-message">
                                         yo man, food dey house?
                                     </div>
+                                    <div class="respond-in-24-hours">
+                                        Ответьте в течение 24 ч., чтобы
+                                        не снизился рейтинг. Почему?
+                                    </div>
                                     <span class="unread-messages">2</span>
                                 </div>
                             </div>
@@ -205,6 +230,10 @@ require_once "../modules/base.php";
                                 <div class="contact-messages">
                                     <div class="contact-last-message">
                                         Здравствуйте. Напишите основную тему
+                                    </div>
+                                    <div class="respond-in-24-hours">
+                                        Ответьте в течение 24 ч., чтобы
+                                        не снизился рейтинг. Почему?
                                     </div>
                                     <span class="unread-messages">2</span>
                                 </div>
@@ -226,6 +255,10 @@ require_once "../modules/base.php";
                                 <div class="contact-messages">
                                     <div class="contact-last-message">
                                         Здравствуйте. Напишите основную тему
+                                    </div>
+                                    <div class="respond-in-24-hours">
+                                        Ответьте в течение 24 ч., чтобы
+                                        не снизился рейтинг. Почему?
                                     </div>
                                     <span class="unread-messages">2</span>
                                 </div>
@@ -246,6 +279,10 @@ require_once "../modules/base.php";
                                 <div class="contact-messages">
                                     <div class="contact-last-message">
                                         Здравствуйте. Напишите основную тему
+                                    </div>
+                                    <div class="respond-in-24-hours">
+                                        Ответьте в течение 24 ч., чтобы
+                                        не снизился рейтинг. Почему?
                                     </div>
                                     <span class="unread-messages">2</span>
                                 </div>
@@ -268,6 +305,10 @@ require_once "../modules/base.php";
                                     <div class="contact-last-message">
                                         yo man, food dey house?
                                     </div>
+                                    <div class="respond-in-24-hours">
+                                        Ответьте в течение 24 ч., чтобы
+                                        не снизился рейтинг. Почему?
+                                    </div>
                                     <span class="unread-messages">2</span>
                                 </div>
                             </div>
@@ -277,12 +318,48 @@ require_once "../modules/base.php";
                 </div>
                 <div class="messenger-container">
                     <div class="welcome-screen messenger-screen">
-                        <div class="welcome-modal">
-                            <h3>Выберите сообщение</h3>
-                            <p>
-                                Выберите нужный чат, соблюдайте правила чата и не используйте оскорбления это может привести к блокировке в сервисе.
-                            </p>
-                            <img src="/img/icons/messenger-page/hi-hand-icon.svg" alt="hi-hand" class="hi-hand-icon"/>
+                        <div class="testing-block">
+                            <div class="fiwork-testing-container">
+                                <div class="fiwork-testing-header">
+                                    <img src="/img/icons/messenger-page/icon-mini-test.svg" alt="icon-mini-test" class="icon-mini-test"/>
+                                    <p>
+                                        Перед началом диалога...
+                                    </p>
+                                </div>
+                                
+                                <div class="fiwork-testing-rules">
+                                    <h3>Пожалуйста, ознакомьтесь с правилами общения на платформе Fiwork:</h3>
+                                    <div class="testing-rules-container">
+                                        <div class="testing-rule">
+                                            <img src="/img/icons/messenger-page/green-checkmark.svg" alt="green-checkmark" class="green-checkmark"/>
+                                            Избегайте общения через сторонние мессенджеры и не делитесь платежными данными
+                                        </div>
+                                        <div class="testing-rule">
+                                            <img src="/img/icons/messenger-page/green-checkmark.svg" alt="green-checkmark" class="green-checkmark"/>
+                                            Не переходите по подозрительным ссылкам и игнорируйте запросы о верификации карт    
+                                        </div>
+                                        <div class="testing-rule">
+                                            <img src="/img/icons/messenger-page/green-checkmark.svg" alt="green-checkmark" class="green-checkmark"/>
+                                            Никакого платного бронирования и авансов за работу на платформе не предусмотрено,
+                                            денежные средства резервируются автоматически после принятия заказа    
+                                        </div>
+                                        <p class="security-aim">
+                                            В целях безопасности перед началом общения с покупателями пройдите короткий тест.
+                                        </p>
+                                    </div>
+                                    <div class="testing-button-container">
+                                        <input type="button" class="testing-button open-testing-modal-block" value="Пройти мини-тест"/> 
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="fiwork-care-about-your-security">
+                                <img src="/img/icons/messenger-page/ruble.svg" class="ruble-icon" alt="ruble"/>
+                                <p>
+                                    Fiwork заботится о вашей безопасности и гарантирует защиту денежных средств при работе
+                                    внутри платформы!
+                                </p>
+                            </div>
                         </div>
                     </div>
                     
@@ -426,10 +503,289 @@ require_once "../modules/base.php";
                                         <span class="sent-time">16:45</span>
                                     </div>
                                 </div>
+                                
+                                <div class="custom-message">
+                                    <div class="cm-avatar-container">
+                                        <img src="/img/user-avatars/user-avatar5.jpg" alt="user-avatar" class="cm-user-avatar"/>
+                                    </div>
+                                    
+                                    <div class="cm-username-and-message">
+                                        <h4 class="cm-username">andycodes</h4>
+                                        <div class="cm-message">
+                                            <div class="individual-order-message">
+                                                <div class="individual-order-message-header">
+                                                    <img src="/img/icons/messenger-page/basket.svg" alt="basket-icon" class="backet-icon"/>Предложение индивидуального кворка
+                                                </div> 
+                                                <div class="individual-order-message-content"> 
+                                                    <div class="individual-order-details">
+                                                        <div class="individual-order-details-container">
+                                                            <div class="part1" onclick="toggleOrderMessageDetails(this);">Разработка приложения&nbsp;<img src="/img/icons/messenger-page/blue-chevron-down.svg" class="blue-chevron-down" alt="blue-chevron-down"/></div>
+                                                            <div class="part2">
+                                                                <span class="order-time">3 дня</span>
+                                                                <span class="order-price">400 ₽</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="individual-order-more-details">
+                                                            <div class="individual-order-conditions">Условия заказа</div>
+                                                            <div class="individual-order-description">
+                                                                Сделать 1 экран Splash скрин в приложении
+                                                            </div>
+                                                            <div class="payment-methods-details">
+                                                                Способы оплаты:
+                                                                <div class="payment-links">
+                                                                    <a href=""#">
+                                                                        <img src="/img/icons/messenger-page/payment-sbp.svg" alt="payment-sbp" class="payment-sbp"/>
+                                                                    </a>
+                                                                    <a href="#">
+                                                                        <img src="/img/icons/messenger-page/payment-card.svg" alt="payment-card" class="payment-card"/>
+                                                                    </a> 
+                                                                    <a href="#">
+                                                                        <img src="/img/icons/messenger-page/payment-cashless.svg" alt="payment-cashless" class="payment-cashless"/>
+                                                                    </a>
+                                                                </div>
+                                                            </div> 
+                                                        </div>
+                                                    </div>
+                                                    <div class="individual-order-summary">
+                                                        <span>
+                                                            Итого:
+                                                        </span>
+                                                        <span>
+                                                            3 д.
+                                                        </span>
+                                                        <span>
+                                                            400 ₽
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="individual-order-message-footer">
+                                                    <div class="cancel-order-container">
+                                                        <input type="button" value="Отменить" class="cancel-button"/>
+                                                        <p>
+                                                            Предложение действует до 04.12.2025
+                                                        </p>
+                                                    </div>
+                                                    <div class="repeat-order-container hidden">
+                                                        <input type="button" value="Предложить повторно" class="repeat-order-button"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="cm-time">
+                                        <img src="/img/icons/messenger-page/sent.svg" alt="seen" class="seen-icon svg-icon"/>
+                                        <span class="sent-time">16:45</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="custom-message">
+                                    <div class="cm-avatar-container">
+                                        <img src="/img/user-avatars/user-avatar5.jpg" alt="user-avatar" class="cm-user-avatar"/>
+                                    </div>
+                                    
+                                    <div class="cm-username-and-message">
+                                        <h4 class="cm-username">andycodes</h4>
+                                        <div class="cm-message">
+                                            <div class="individual-order-message">
+                                                <div class="individual-order-message-header">
+                                                    <img src="/img/icons/messenger-page/basket.svg" alt="basket-icon" class="backet-icon"/>Предложение индивидуального кворка
+                                                </div> 
+                                                <div class="individual-order-message-content"> 
+                                                    <div class="individual-order-details">
+                                                        <div class="individual-order-details-container">
+                                                            <div class="part1" onclick="toggleOrderMessageDetails(this);">Разработка приложения&nbsp;<img src="/img/icons/messenger-page/blue-chevron-down.svg" class="blue-chevron-down" alt="blue-chevron-down"/></div>
+                                                            <div class="part2">
+                                                                <span class="order-time">3 дня</span>
+                                                                <span class="order-price">400 ₽</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="individual-order-more-details">
+                                                            <div class="individual-order-conditions">Условия заказа</div>
+                                                            <div class="individual-order-description">
+                                                                Сделать 1 экран Splash скрин в приложении
+                                                            </div>
+                                                            <div class="payment-methods-details">
+                                                                Способы оплаты:
+                                                                <div class="payment-links">
+                                                                    <a href=""#">
+                                                                        <img src="/img/icons/messenger-page/payment-sbp.svg" alt="payment-sbp" class="payment-sbp"/>
+                                                                    </a>
+                                                                    <a href="#">
+                                                                        <img src="/img/icons/messenger-page/payment-card.svg" alt="payment-card" class="payment-card"/>
+                                                                    </a> 
+                                                                    <a href="#">
+                                                                        <img src="/img/icons/messenger-page/payment-cashless.svg" alt="payment-cashless" class="payment-cashless"/>
+                                                                    </a>
+                                                                </div>
+                                                            </div> 
+                                                        </div>
+                                                    </div>
+                                                    <div class="individual-order-summary">
+                                                        <span>
+                                                            Итого:
+                                                        </span>
+                                                        <span>
+                                                            3 д.
+                                                        </span>
+                                                        <span>
+                                                            400 ₽
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="individual-order-message-footer">
+                                                    <div class="cancel-order-container hidden">
+                                                        <input type="button" value="Отменить" class="cancel-button"/>
+                                                        <p>
+                                                            Предложение действует до 04.12.2025
+                                                        </p>
+                                                    </div>
+                                                    <div class="repeat-order-container">
+                                                        <input type="button" value="Предложить повторно" class="repeat-order-button"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="cm-time">
+                                        <img src="/img/icons/messenger-page/sent.svg" alt="seen" class="seen-icon svg-icon"/>
+                                        <span class="sent-time">16:45</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="custom-message">
+                                    <div class="cm-avatar-container">
+                                        <img src="/img/user-avatars/user-avatar5.jpg" alt="user-avatar" class="cm-user-avatar"/>
+                                    </div>
+                                    
+                                    <div class="cm-username-and-message">
+                                        <h4 class="cm-username">andycodes</h4>
+                                        <div class="cm-message">
+                                            <div class="order-message-cancellation">
+                                                <img src="/img/icons/messenger-page/basket-red.svg" alt="red-basket" class="red-basket"/>
+                                                Вы отменили предложение индивидуального кворка
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="cm-time">
+                                        <img src="/img/icons/messenger-page/sent.svg" alt="seen" class="seen-icon svg-icon"/>
+                                        <span class="sent-time">16:45</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="custom-message">
+                                    <div class="cm-avatar-container">
+                                        <img src="/img/user-avatars/user-avatar5.jpg" alt="user-avatar" class="cm-user-avatar"/>
+                                    </div>
+                                    
+                                    <div class="cm-username-and-message">
+                                        <h4 class="cm-username">andycodes</h4>
+                                        <div class="cm-message">
+                                            <div class="individual-order-message">
+                                                <div class="individual-order-message-header">
+                                                    <img src="/img/icons/messenger-page/basket.svg" alt="basket-icon" class="backet-icon"/>Предложение индивидуального кворка
+                                                </div> 
+                                                <div class="individual-order-message-content"> 
+                                                    <div class="individual-order-details">
+                                                        <div class="individual-order-details-container">
+                                                            <div class="part1" onclick="toggleOrderMessageDetails(this);">Разработка приложения&nbsp;<img src="/img/icons/messenger-page/blue-chevron-down.svg" class="blue-chevron-down" alt="blue-chevron-down"/></div>
+                                                            <div class="part2">
+                                                                <span class="order-time">3 дня</span>
+                                                                <span class="order-price">400 ₽</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="individual-order-more-details">
+                                                            <div class="individual-order-conditions">Условия заказа</div>
+                                                            <div class="individual-order-description">
+                                                                Сделать 1 экран Splash скрин в приложении
+                                                            </div>
+                                                            <div class="payment-methods-details">
+                                                                Способы оплаты:
+                                                                <div class="payment-links">
+                                                                    <a href=""#">
+                                                                        <img src="/img/icons/messenger-page/payment-sbp.svg" alt="payment-sbp" class="payment-sbp"/>
+                                                                    </a>
+                                                                    <a href="#">
+                                                                        <img src="/img/icons/messenger-page/payment-card.svg" alt="payment-card" class="payment-card"/>
+                                                                    </a> 
+                                                                    <a href="#">
+                                                                        <img src="/img/icons/messenger-page/payment-cashless.svg" alt="payment-cashless" class="payment-cashless"/>
+                                                                    </a>
+                                                                </div>
+                                                            </div> 
+                                                        </div>
+                                                    </div>
+                                                    <div class="individual-order-summary">
+                                                        <span>
+                                                            Итого:
+                                                        </span>
+                                                        <span>
+                                                            3 д.
+                                                        </span>
+                                                        <span>
+                                                            400 ₽
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="individual-order-message-footer">
+                                                    <div class="no-thanks-container">
+                                                        <input type="button" value="Нет, спасибо" class="no-thanks-button"/>
+                                                        <div class="get-offer-container">
+                                                            <div class="offer-time">
+                                                                Предложение действует
+                                                                до 04.12.2025
+                                                            </div>
+                                                            <input type="button"  value="Купить за 500 ₽" class="buy-for-price-button"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="cm-time">
+                                        <img src="/img/icons/messenger-page/sent.svg" alt="seen" class="seen-icon svg-icon"/>
+                                        <span class="sent-time">16:45</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="custom-message">
+                                    <div class="cm-avatar-container">
+                                        <img src="/img/user-avatars/user-avatar5.jpg" alt="user-avatar" class="cm-user-avatar"/>
+                                    </div>
+                                    
+                                    <div class="cm-username-and-message">
+                                        <h4 class="cm-username">andycodes</h4>
+                                        <div class="cm-message">
+                                            <div class="order-created-message">
+                                                <img src="/img/icons/messenger-page/bag.svg" alt="bag-icon" class="bag-icon"/>
+                                                <div class="order-created-content">
+                                                    <div class="order-created-header">Заказ создан</div>
+                                                    <div class="order-created-description">Номер заказа&nbsp;<a class="order-created-link" href="#">57355109</a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="cm-time">
+                                        <img src="/img/icons/messenger-page/sent.svg" alt="seen" class="seen-icon svg-icon"/>
+                                        <span class="sent-time">16:45</span>
+                                    </div>
+                                </div>
+                                
+                            
                             </div>
                         </div>
                         
                         <div class="control-panel-container">
+                            <div class="have-active-order-container hidden">
+                                <div class="active-order-header">У вас есть активный заказ с этим покупателем</div>
+                                <div class="active-order-description">Переписка будет вестись на странице заказа до его завершения</div>
+                                <input type="button" class="active-order-button" value="Перейти в заказ"/>
+                            </div>
+                            
                             <div class="control-panel">
                                 <div class="attach-container">
                                     <label class="attach-file-label">
@@ -608,23 +964,59 @@ require_once "../modules/base.php";
         <div class="modal-form-inputs">
             <div class="modal-form-input-container">
                 <label for="select-section">Рубрика</label>
-                <select id="select-section">
-                    <option value="" disabled selected>Выберите рубрику</option>
-                    <option value="section1">Рубрика 1</option>
-                    <option value="section2">Рубрика 2</option>
-                    <option value="section3">Рубрика 3</option>
-                </select>
+                <div class="select-container">
+                    <select id="select-section" name="fiwork-section" required="">
+                        <option value="" disabled="" selected="">Выберите рубрику</option>
+                        <option value="design">Дизайн</option>
+                        <option value="it-development">Разработка и ИТ</option>
+                    </select>
+                    
+                    <select id="select-subcategory" name="fiwork-subcategory" class="" required="">
+                        <option value="" disabled="" selected="">Выберите рубрику</option>
+                        <option value="logo-and-branding" class="design select-section-option" style="">Логотип и брендинг</option>
+                        <option value="website-dev" class="it-development select-section-option" style="display: none;">Создание сайта</option>
+                    </select>
+                </div>
             </div>
             <div class="modal-form-input-container">
                 <label for="enter-price">Cтоимость</label>
                 <div id="enter-price" class="input-with-icon-container">
                     <img src="/img/icons/messenger-page/grey-ruble.svg" alt="ruble-icon" class="ruble-icon svg-icon"/>
-                    <input type="text" placeholder="500 - 2 000 000" class="enter-price-input"/>
+                    <input type="number" placeholder="500 - 2 000 000" class="enter-price-input"/>
+                </div>
+                <div class="you-will-receive-description">
+                    Вы получите: <span class="receiving-price">400</span>&nbsp;<span class="price-currency">руб</span>. <a href="#">Подробнее</a>       
+                </div> 
+            </div>
+            
+            <div class="modal-form-input-container">
+                <label for="enter-price">Название заказа 
+                    <span class="question-and-description tooltip-container">
+                        <img src="/img/icons/round-question-icon.svg" alt="round-question-icon" class="round-question-icon "/>
+                        <span class="tooltip-text" style="font-weight: 400;">
+                            <h4>Заголовок подсказки</h4>
+                            <p>Текст подсказки</p>
+                        </span>
+                    </span>
+                </label>
+                <div id="enter-order-name">
+                    <input type="text" placeholder="Название заказа" minlength="3" maxlength="70" class="order-name-input" required/>
+                    <div class="order-name-limit-count">
+                        <span class="order-name-limit-count-text">0</span> из 70 символов
+                    </div>
                 </div>
             </div>
             
             <div class="modal-form-input-container">
-                <label for="completion-time">Срок выполнения <img src="/img/icons/round-question-icon.svg" alt="round-question-icon" class="round-question-icon svg-icon"/></label>
+                <label for="completion-time">Срок выполнения 
+                    <span class="question-and-description tooltip-container">
+                        <img src="/img/icons/round-question-icon.svg" alt="round-question-icon" class="round-question-icon "/>
+                        <span class="tooltip-text" style="font-weight: 400;">
+                            <h4>Заголовок подсказки</h4>
+                            <p>Текст подсказки</p>
+                        </span>
+                    </span>
+                </label>
                 <div id="completion-time" class="input-with-icon-container">
                     <img src="/img/icons/messenger-page/grey-clock.svg" alt="grey-clock-icon" class="grey-clock-icon svg-icon"/>
                     <select id="select-deadline">
@@ -678,6 +1070,102 @@ require_once "../modules/base.php";
     </div>
 </div>
 
+<div class="testing-modal-block hidden"> 
+    <form method="POST" class="testing-modal-container">
+        <div class="testing-modal-header">
+            <h2>Тест: Правила безопасного общения на Fiwork</h2>
+            <img src="/img/icons/x-close.svg" alt="x-close-icon" class="x-close-icon close-testing-modal-block svg-icon"/>
+        </div>
+        <div class="testing-modal-content">
+            <div class="test test1">
+                <div class="test-question">
+                    <b>Вопрос 1.</b> Пользователь предлагает перевести общение в сторонний мессенджер. Стоит ли это
+                    делать?
+                </div>
+                <div class="test-variant-container">
+                    <label class="test-variant">
+                        <input type="radio" name="variant-for-test1" class="test-radio"/>
+                        Нет, не стоит, так меня могут обмануть
+                    </label>
+                    <div class="test-variant-comment correct hidden">
+                        Верно! Пока вы остаетесь на платформе, Fiwork гарантирует вам защиту от мошенников и поможет при
+                        возникновении любых спорных ситуаций.
+                    </div>
+                </div>
+                
+                <div class="test-variant-container">
+                    <label class="test-variant">
+                        <input type="radio" name="variant-for-test1" class="test-radio"/>
+                        Да, в другом мессенджере удобно уточнить детали заказа
+                    </label>
+                    <div class="test-variant-comment incorrect hidden">
+                        При переводе общения в другой мессенджер, Fiwork не сможет гарантировать вам оплату заказа
+                    </div>
+                </div>
+            </div>
+            
+            <div class="test test2">
+                <div class="test-question">
+                    <b>Вопрос 2.</b> Пользователь просит привязать ваши банковские данные, присылает ссылку на
+                    сторонний сайт для верификации или проведения аванса. Ваши действия?
+                </div>
+                <div class="test-variant-container">
+                    <label class="test-variant">
+                        <input type="radio" name="variant-for-test2" class="test-radio"/>
+                        Привяжу способом, который предлагает пользователь
+                    </label>
+                    <div class="test-variant-comment incorrect hidden">
+                        Вы вносите свои банковские данные только в настройках своего профиля. Если пользователь просит по
+                        ссылке привязать карту, провести верификацию, или предлагает получить аванс, следует сразу сообщить в
+                        Службу Поддержки.
+                    </div>
+                </div>
+                <div class="test-variant-container">
+                    <label class="test-variant">
+                        <input type="radio" name="variant-for-test2" class="test-radio"/>
+                        Не буду ничего делать, пожалуюсь в Службу Поддержки
+                    </label>
+                    <div class="test-variant-comment correct hidden">
+                        Верно! Вся оплата проходит внутри Fiwork через безопасную сделку, никаких дополнительных действий не
+                        требуется. Только так мы можем гарантировать вашу защиту от недобросовестных пользователей.
+                    </div>
+                </div> 
+            </div>
+            
+            <div class="test test3">
+                <div class="test-question">
+                    <b>Вопрос 3.</b> Вы получили сообщение с предложением выполнить заказ и запросом на внесение
+                    какой-то предоплаты. Ваши действия?
+                </div>
+                <div class="test-variant-container">
+                    <label class="test-variant">
+                        <input type="radio" name="variant-for-test3" class="test-radio"/>
+                        Всё в порядке. Внесу деньги, и заказ точно никому не уйдет.
+                    </label>
+                    <div class="test-variant-comment incorrect  hidden"> 
+                        Нет. Безопасная сделка на Fiwork работает иначе. Никакого бронирования заказов у нас не предусмотрено.
+                        Как и не требуется никакой предоплаты, или резервирования со стороны продавцов.
+                    </div>
+                </div>
+                <div class="test-variant-container">
+                    <label class="test-variant">
+                        <input type="radio" name="variant-for-test3" class="test-radio"/>
+                        Это явный обман. Проигнорирую сообщение и сообщу об этом в службу поддержки.
+                    </label>
+                    <div class="test-variant-comment correct hidden">
+                        Верно! Все заказы оформляются только на сайте Fiwork, никакой системы платного бронирования или
+                        предоплаты со стороны продавцов не существует.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="finish-test-container">
+                <input type="submit" class="finish-test-button" value="Завершить"/>
+            </div>
+        </div>
+    </form>
+</div>
+
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="/js/jQuery/jquery-3.5.1.min.js"></script>
@@ -685,6 +1173,80 @@ require_once "../modules/base.php";
 <script src="/js/mobile-navigation-menu.js?v=<?= time(); ?>"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 <script>
+    /*orderMessageDetails logic*/
+    function toggleOrderMessageDetails(elem){
+        $orderDetails=$(elem).closest(".individual-order-details");
+        if($orderDetails.hasClass("active")){ 
+            $orderDetails.removeClass("active");
+        }else{
+            $orderDetails.addClass("active"); 
+        }
+    }
+    /*end of orderMessageDetails logic */
+
+    /*select-section and select-subcategory logic*/
+    $(".select-container #select-section").on("change",function(){
+       $(".select-container .select-section-option").hide();
+       $(".select-container").find("."+$(this).val()).show();
+       $(".select-container #select-subcategory").removeClass("hidden");
+       
+       $(".select-container #select-subcategory").val("");
+       
+       if($(this).val()=="design"){
+            closeOthersAndShow('similar-to-selection','none')
+       }else{
+           closeOthersAndShow('none','similar-to-selection');
+       }
+    });
+    
+    /*enter-price-input logic*/
+    $(".enter-price-input").on("input change", function () {
+        let curPrice = parseInt($(this).val(), 10);
+    
+        if (curPrice >= 500) {
+            $(".you-will-receive-description .receiving-price").text(curPrice * 0.8);
+            $(".you-will-receive-description").removeClass("hidden");
+        } else {
+            $(".you-will-receive-description").addClass("hidden");
+        }
+    });
+    /*end of enter-price-input-logic*/
+    
+    /*order-name-input logic*/
+    $(".order-name-input").on("change input",function(){
+        $(".order-name-limit-count-text").text($(this).val().trim().length);
+    });
+    /*end of order-name-input logic*/
+    /*$(".select-container #select-subcategory").on("change",function(){
+        closeOthersAndShow("create-fiwork-step-stage2."+$(this).val(),"create-fiwork-step-stage2");
+    });*/
+    
+    function closeOthersAndShow(openBlock,closeBlock){
+        if(closeBlock!='none'){
+            $("."+closeBlock).addClass("hidden");
+        }
+        
+        if(openBlock!='none'){
+            $("."+openBlock).removeClass("hidden");
+        }
+        
+        const $container = $(`.fiwork-details-form`);
+        // Enable inputs in visible sections (where the hidden class is NOT present)
+        $container.find('.create-fiwork-step-stage:not(.hidden) input, .create-fiwork-step-stage:not(.hidden) select, .create-fiwork-step-stage:not(.hidden) textarea').prop('disabled', false);
+    
+        // Disable inputs in hidden sections
+        $container.find('.create-fiwork-step-stage.hidden input, .create-fiwork-step-stage.hidden select, .create-fiwork-step-stage.hidden textarea').prop('disabled', true);
+        $(".continue-to-next-step.submit-fiwork-details input").show();
+    }
+    /*end of logic*/
+
+    /*testing logic*/ 
+    $(".testing-modal-content .test-variant").on("click",function(){ 
+        $(this).closest(".test").find(".test-variant-comment").addClass('hidden');
+        $(this).parent().find(".test-variant-comment").removeClass("hidden");
+    });
+    /*end of testing logic*/
+
     $(".sound-control .sound-on-icon").on("click",function(){
        $(".sound-control").removeClass("on").addClass("off"); 
     });
@@ -697,6 +1259,7 @@ require_once "../modules/base.php";
         $(".messenger-content").removeClass("hidden");
         $(".control-panel").removeClass("hidden");
         $(".messaging-blocked").addClass("hidden");
+        //$(".have-active-order-container").removeClass('hidden');
         $(".writing-text").addClass("hidden");
         $(".last-seen-text").removeClass("hidden");
        scrollMessageContainerToBottom();
@@ -721,6 +1284,7 @@ require_once "../modules/base.php";
         $(".messenger-content").removeClass("hidden");
         $(".control-panel").addClass("hidden");
         $(".messaging-blocked").removeClass("hidden");
+        //$(".have-active-order-container").addClass("hidden");
         $(".writing-text").removeClass("hidden");
         $(".last-seen-text").addClass("hidden");
         scrollMessageContainerToBottom();
@@ -748,12 +1312,20 @@ require_once "../modules/base.php";
         $(".phone-modal-block").removeClass("hidden");
     }); 
     
+    $(".open-testing-modal-block").on("click",function(){
+        $(".testing-modal-block").removeClass('hidden'); 
+    });
+    
     $(".close-individual-order-suggestion-modal-block").on("click",function(){
         $(".individual-order-suggestion-modal-block").addClass("hidden"); 
     });
     
     $(".close-phone-modal-block").on("click",function(){
         $(".phone-modal-block").addClass("hidden");
+    });
+    
+    $(".close-testing-modal-block").on("click",function(){
+        $(".testing-modal-block").addClass("hidden"); 
     });
     
     function scrollMessageContainerToBottom(){

@@ -467,31 +467,31 @@ require_once "./modules/base.php";
             </div>
             
             <div class="introduce-logos">
-                    <div class="logo-container">
-                    <img src="/img/introduce-page/takie-dela.svg" alt="takie-dela" class="takie-dela"/>
-                    </div>
-                    <div class="logo-container">
-                    <img src="/img/introduce-page/tacc.svg" alt="tacc" class="tacc"/>
-                    </div>
-                    <div class="logo-container">
-                    <img src="/img/introduce-page/forbes.svg" alt="forbes" class="forbes"/>
-                    </div>
-                    <div class="logo-container">
-                    <img src="/img/introduce-page/rbk.svg" alt="rbk" class="rbk"/>
-                    </div>
-                    <div class="logo-container">
-                    <img src="/img/introduce-page/kommersant.svg" alt="kommersant" class="kommersant"/>
-                    </div>
-                    <div class="logo-container">
-                    <img src="/img/introduce-page/ria-novost.svg" alt="ria-novosti" class="ria-novosti"/>
-                    </div>
-                    <div class="logo-container">
-                    <img src="/img/introduce-page/delovoy-peterburg.svg" alt="delovoy-peterburg" class="delovoy-peterburg"/>
-                    </div>
-                    <div class="logo-container">
-                    <img src="/img/introduce-page/vc-ru.svg" alt="vc-ru" class="vc-ru"/>
-                    </div>
+                <div class="logo-container">
+                <img src="/img/introduce-page/takie-dela.svg" alt="takie-dela" class="takie-dela"/>
                 </div>
+                <div class="logo-container">
+                <img src="/img/introduce-page/tacc.svg" alt="tacc" class="tacc"/>
+                </div>
+                <div class="logo-container">
+                <img src="/img/introduce-page/forbes.svg" alt="forbes" class="forbes"/>
+                </div>
+                <div class="logo-container">
+                <img src="/img/introduce-page/rbk.svg" alt="rbk" class="rbk"/>
+                </div>
+                <div class="logo-container">
+                <img src="/img/introduce-page/kommersant.svg" alt="kommersant" class="kommersant"/>
+                </div>
+                <div class="logo-container">
+                <img src="/img/introduce-page/ria-novost.svg" alt="ria-novosti" class="ria-novosti"/>
+                </div>
+                <div class="logo-container">
+                <img src="/img/introduce-page/delovoy-peterburg.svg" alt="delovoy-peterburg" class="delovoy-peterburg"/>
+                </div>
+                <div class="logo-container">
+                <img src="/img/introduce-page/vc-ru.svg" alt="vc-ru" class="vc-ru"/>
+                </div>
+            </div>
             
             <div class="mobile-categories-block mobile">
                 <div class="mobile-categories-header">
