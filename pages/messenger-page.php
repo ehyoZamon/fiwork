@@ -67,6 +67,35 @@ require_once "../modules/base.php";
                     <div class="contacts-block">
                         <div class="contact-container egorov5-messages">
                             <div class="avatar-container">
+                                <img src="/img/icons/messenger-page/fiwork512.png" alt="user-avatar" class="user-avatar"/>
+                            </div>
+                            <div class="contact-info">
+                                <div class="contact-name-last-date">
+                                    <h4>Служба поддержки</h4>
+                                    <span>12:36 PM <span class="star-container hidden"><img src="/img/icons/yellow-star.svg" alt="yellow-star" class="yellow-star"/> 
+                                                    <img src="/img/icons/empty-star.svg" alt="empty-star" class="empty-star"/></span>
+                                    </span>
+                                </div>
+                                <div class="contact-messages">
+                                    <div class="contact-last-message">
+                                        Здравствуйте. Напишите основную тему
+                                    </div>
+                                    
+                                    <div class="respond-in-24-hours">
+                                        Ответьте в течение 24 ч., чтобы
+                                        не снизился рейтинг. 
+                                        <span class="tooltip-container">
+                                            Почему?
+                                        </span>
+                                    </div>
+                                    <span class="unread-messages hidden">0</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="contact-container egorov5-messages">
+                            <div class="avatar-container">
                                 <img src="/img/user-avatars/user-avatar6.webp" alt="user-avatar" class="user-avatar"/>
                             </div>
                             <div class="contact-info">
@@ -775,7 +804,125 @@ require_once "../modules/base.php";
                                     </div>
                                 </div>
                                 
+                                <div class="custom-message">
+                                    <div class="cm-avatar-container">
+                                        <img src="/img/user-avatars/user-avatar5.jpg" alt="user-avatar" class="cm-user-avatar"/>
+                                    </div>
+                                    
+                                    <div class="cm-username-and-message">
+                                        <div class="cm-message-header"> 
+                                            <h4 class="cm-username">andycodes</h4>
+                                            <div class="controls-container">
+                                                <img src="/img/icons/messenger-page/resend-icon.svg" class="resend-icon" alt="resend-icon"/>
+                                                <img src="/img/icons/messenger-page/fix-message-icon.svg" class="fix-message-icon" alt="fix-message-icon"/>
+                                                <img src="/img/icons/messenger-page/delete-icon.svg" class="delete-message-icon" alt="delete-icon"/>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="cm-message">
+                                            <div class="file-message">
+                                                <div class="img-files-container">
+                                                    <div class="img-container">
+                                                        <img src="/img/examples/img1.png" class="img" alt="img1"/>
+                                                    </div>
+                                                    <div class="img-container">
+                                                        <img src="/img/examples/img2.png" class="img" alt="img2"/>
+                                                    </div>
+                                                </div>
+                                                <div class="doc-files-container">
+                                                    <div class="file-container zip-file-container">
+                                                        <img src="/img/icons/messenger-page/zip-file-icon.svg" alt="zip-file-icon" class="zip-file-icon"/>
+                                                        <div class="file-description-container">
+                                                            <div class="file-name">
+                                                                filemgr.qzJd0Y.2025-12-21_14_35_57.zip
+                                                            </div>
+                                                            <div class="file-size">
+                                                                1 Кб
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> 
+                                                
+                                                <div class="archive-download-container">
+                                                    <a href="#" class="archive-download-link">
+                                                        <img src="/img/icons/messenger-page/cloud-download-icon.svg" alt="cloud-download-icon" class="cloud-download-icon"/>
+                                                        Скачать одним архивом
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="cm-time">
+                                        <img src="/img/icons/messenger-page/sent.svg" alt="seen" class="seen-icon svg-icon"/>
+                                        <span class="sent-time">16:50</span>
+                                    </div>
+                                </div>
                             
+                                <div class="custom-message">
+                                    <div class="cm-avatar-container">
+                                        <img src="/img/icons/messenger-page/fiwork512.png" alt="user-avatar" class="cm-user-avatar"/>
+                                    </div>
+                                    
+                                    <div class="cm-username-and-message">
+                                        <h4 class="cm-username">Cлужба поддержки</h4>
+                                        <div class="cm-message">
+                                            <div class="inner-message">
+                                                Добрый день. К нам обратился владелец фото, которое у вас используется для аватара.
+                                            </div>
+                                            <div class="inner-message">
+                                                Вам нужно заменить его.
+                                            </div>
+                                            <div class="inner-message">
+                                                Если же, фото принадлежит вам, то пришлите нам исходник и еще фото из этой серии, пожалуйста.
+                                            </div>
+                                            <div class="inner-message">
+                                                Реакции ждем в течение 24 часов.
+                                            </div>
+                                            
+                                            <div class="mark-specialist-work">
+                                                <div class="mark-specialist-work-container">
+                                                    Оцените работу специалиста:
+                                                    <div class="stars-container four-stars">
+                                                        <svg width="14" height="14" viewBox="0 0 14 14" target="one-star"  xmlns="http://www.w3.org/2000/svg">
+                                                          <path d="M7 0L9.275 4.446L14 5.348L10.682 8.998L11.326 14.001L7 11.8L2.674 14L3.318 8.997L0 5.348L4.725 4.446L7 0Z" fill="#DEDFE4" />
+                                                        </svg>
+                                                        <svg width="14" height="14" viewBox="0 0 14 14" target="two-stars" xmlns="http://www.w3.org/2000/svg">
+                                                          <path d="M7 0L9.275 4.446L14 5.348L10.682 8.998L11.326 14.001L7 11.8L2.674 14L3.318 8.997L0 5.348L4.725 4.446L7 0Z" fill="#DEDFE4" />
+                                                        </svg>
+                                                        <svg width="14" height="14" viewBox="0 0 14 14" target="three-stars" xmlns="http://www.w3.org/2000/svg">
+                                                          <path d="M7 0L9.275 4.446L14 5.348L10.682 8.998L11.326 14.001L7 11.8L2.674 14L3.318 8.997L0 5.348L4.725 4.446L7 0Z" fill="#DEDFE4" />
+                                                        </svg>
+                                                        <svg width="14" height="14" viewBox="0 0 14 14" target="four-stars" xmlns="http://www.w3.org/2000/svg">
+                                                          <path d="M7 0L9.275 4.446L14 5.348L10.682 8.998L11.326 14.001L7 11.8L2.674 14L3.318 8.997L0 5.348L4.725 4.446L7 0Z" fill="#DEDFE4" />
+                                                        </svg>
+                                                        <svg width="14" height="14" viewBox="0 0 14 14" target="five-stars" xmlns="http://www.w3.org/2000/svg">
+                                                          <path d="M7 0L9.275 4.446L14 5.348L10.682 8.998L11.326 14.001L7 11.8L2.674 14L3.318 8.997L0 5.348L4.725 4.446L7 0Z" fill="#DEDFE4" />
+                                                        </svg>
+                                                    </div>
+                                                </div> 
+                                                <div class="who-will-see-container"> 
+                                                    Кто увидит оценку:
+                                                    <label> 
+                                                        <input type="checkbox" class="checkbox"/>
+                                                        Администрация
+                                                    </label>
+                                                    <label>
+                                                        <input type="checkbox" class="checkbox"/>
+                                                        Специалист Службы поддержки
+                                                    </label>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div class="cm-time">
+                                        <img src="/img/icons/messenger-page/sent.svg" alt="seen" class="seen-icon svg-icon"/>
+                                        <span class="sent-time">16:45</span>
+                                    </div>
+                                </div>
+                                
                             </div>
                         </div>
                         
@@ -784,6 +931,20 @@ require_once "../modules/base.php";
                                 <div class="active-order-header">У вас есть активный заказ с этим покупателем</div>
                                 <div class="active-order-description">Переписка будет вестись на странице заказа до его завершения</div>
                                 <input type="button" class="active-order-button" value="Перейти в заказ"/>
+                            </div>
+                            
+                            <div class="upload-zone">
+                                <div id="preview-container" class="preview-list"></div>
+                            </div>
+                            
+                            <div class="ticket-closed hidden">
+                                <div class="ticket-closed-header">
+                                    Обращение закрыто
+                                </div>
+                                <div class="ticket-closed-description">
+                                    Для получения помощи обратитесь в раздел Службы поддержки
+                                </div>
+                                <input type="button" value="Создать новое обращение" class="create-new-ticket-button"/>
                             </div>
                             
                             <div class="control-panel">
@@ -1173,6 +1334,12 @@ require_once "../modules/base.php";
 <script src="/js/mobile-navigation-menu.js?v=<?= time(); ?>"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 <script>
+    /*Stars-mark logic*/
+    $(".stars-container svg").on("click",function(){
+        $(this).closest(".stars-container").removeClass("one-star two-stars three-stars four-stars five-stars");
+        $(this).closest(".stars-container").addClass($(this).attr("target"));
+    });
+    /*end of stars-mark logic*/
     /*orderMessageDetails logic*/
     function toggleOrderMessageDetails(elem){
         $orderDetails=$(elem).closest(".individual-order-details");
@@ -1870,7 +2037,10 @@ buttons.forEach(btn => {
 // Старт — сразу показываем случайную кнопку
 showRandomButton();
 </script>
+
 <script>
+/*
+*************************************Преждняя версия прикрепления файлов на чат************************************************************************
 document.addEventListener("DOMContentLoaded", function () {
     const chatFileInput = document.getElementById('chat-file-input');
     const chatAttachmentsList = document.getElementById('chat-attachments-list');
@@ -2098,7 +2268,102 @@ document.addEventListener("DOMContentLoaded", function () {
     
     // Следим за изменениями в текстовом поле
     textarea.addEventListener("input", updateSendButton);
-});
+});*/
+
+/* **************************Новая версия прикрепления файла************************************************ */
+    const targetContainer = $('#preview-container');
+
+    function getFileIcon(file) {
+        const name = file.name.toLowerCase();
+        if (name.endsWith('.pdf')) {
+            return '<img src="/img/icons/messenger-page/file-pdf-icon.svg" alt="pdf-icon" class="file-load-icon" style="width: 18px;"/>';
+        }
+        
+        if (name.endsWith('.doc') || name.endsWith('.docx')) {
+            return '<img src="/img/icons/messenger-page/file-word-icon.svg" alt="word-icon" class="file-load-icon" style="width: 18px;"/>';
+        }
+        
+        if (name.endsWith('.xls') || name.endsWith('.xlsx')) {
+            return '<img src="/img/icons/messenger-page/file-xls-icon.svg" alt="xls-icon" class="file-load-icon" style="width: 18px;"/>';
+        }
+        
+        if (name.endsWith('.csv')) {
+            return '<img src="/img/icons/messenger-page/file-csv-icon.svg" alt="csv-icon" class="file-load-icon" style="width: 18px;"/>';
+        }
+        
+        return '<img src="/img/icons/messenger-page/file-icon.svg" alt="file-icon" class="file-load-icon" style="width: 18px;"/>';
+    }
+
+    $('#chat-file-input').on('change', function(e) {
+        const files = e.target.files;
+        
+        $.each(files, function(i, file) {
+            // 1. Создаем визуальную карточку сразу
+            let cardClass = file.type.match('image.*') ? 'type-image' : 'type-file';
+            let content = '';
+            
+            if (cardClass === 'type-image') {
+                content = `<img src="${URL.createObjectURL(file)}">`;
+            } else {
+                content = `<div class="file-info"><span style="font-size:24px">${getFileIcon(file)}</span><div class="file-name">${file.name}</div></div>`;
+            }
+
+            const $card = $(`
+                <div class="file-card ${cardClass}">
+                    <div class="btn-remove"><img src="/img/icons/messenger-page/dismiss.svg" alt="dismiss-icon" class="dismiss-icon"/></div>
+                    <div class="content-container">
+                        ${content}
+                        <div class="progress-bar striped"></div>
+                    </div>
+                    
+                </div>
+            `).appendTo(targetContainer);
+
+            // 2. ПОДГОТОВКА К РЕАЛЬНОЙ ОТПРАВКЕ
+            const formData = new FormData();
+            formData.append('file', file); // Ключ 'file' будет виден на сервере
+
+            /* --- ЗАКОММЕНТИРОВАННЫЙ БЛОК РЕАЛЬНОЙ ОТПРАВКИ ---
+            $.ajax({
+                url: '/upload-handler.php', // Путь к вашему скрипту на сервере
+                type: 'POST',
+                data: formData,
+                contentType: false, // Важно для FormData
+                processData: false, // Важно для FormData
+                xhr: function() {
+                    const xhr = new window.XMLHttpRequest();
+                    // Отслеживание реального прогресса загрузки
+                    xhr.upload.addEventListener("progress", function(evt) {
+                        if (evt.lengthComputable) {
+                            const percentComplete = (evt.loaded / evt.total) * 100;
+                            $card.find('.progress-bar').css('width', percentComplete + '%');
+                        }
+                    }, false);
+                    return xhr;
+                },
+                success: function(response) {
+                    console.log('Загружено:', response);
+                    // Плавно скрываем полоску после успеха
+                    $card.find('.progress-bar').addClass('loaded');
+                },
+                error: function() {
+                    $card.css('border-color', 'red');
+                    alert('Ошибка при загрузке файла: ' + file.name);
+                }
+            });
+            ------------------------------------------------- */
+
+            // Для демонстрации (пока закомментирован AJAX) оставляем авто-скрытие:
+            setTimeout(() => { $card.find('.progress-bar').addClass('loaded'); }, 2000);
+        });
+
+        $(this).val(''); // Сброс инпута
+    });
+
+    $(document).on('click', '.btn-remove', function() {
+        $(this).closest('.file-card').fadeOut(200, function() { $(this).remove(); });
+    });
+    
 </script>
 <script>
 document.addEventListener("DOMContentLoaded", function () {

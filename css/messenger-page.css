@@ -343,6 +343,10 @@ input:valid {
     justify-content: center;
 }
 
+.contact-container .contact-name-last-date .star-container.hidden{
+    display: none;
+}
+
 .contact-container .contact-name-last-date .star-container .yellow-star{
     display: none;
 }
@@ -436,6 +440,10 @@ input:valid {
 
 .contact-container .contact-messages.reply-quickly .unread-messages{
     background: #f15b5b;
+}
+
+.contact-container .contact-messages .unread-messages.hidden{
+    display: none; 
 }
 /*end of aside-container-content*/
 
@@ -817,7 +825,6 @@ input:valid {
 
 .messenger-content .control-panel-container{
     flex-shrink: 0;
-    border-top: 1px solid #f6f6f6;
     background: #fff;
     width: 100%;
     display: flex;
@@ -924,9 +931,64 @@ input:valid {
     height: 70px;
     padding: 10px 10px;
     position: relative;
+    border-top: 1px solid #f6f6f6;
+}
+
+.messenger-content .ticket-closed{ 
+    background: #fafafa;
+    border-top: 1px solid rgba(222, 223, 228, 0.5);
+    border-radius: 0 0 8px 0;
+    padding: 18px 16px 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.messenger-content .ticket-closed-header{
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: #333;
+}
+
+.messenger-content .ticket-closed-description{
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    text-align: center;
+    color: #333;
+}
+
+.messenger-content .ticket-closed .create-new-ticket-button{
+    background: #23c366;
+    border: 1px solid #23c366;
+    border-radius: 6px;
+    padding: 8px 15px;
+    min-width: 220px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 157%;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
 }
 
 .messenger-content .control-panel.hidden{
+    display: none;
+}
+
+.messenger-content .ticket-closed.hidden{
     display: none;
 }
 
@@ -1096,6 +1158,27 @@ input:valid {
     color: #333;
 }
 
+.custom-message .cm-username-and-message .cm-message-header{
+    width: 100%; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+.custom-message .cm-message-header .controls-container{ 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px; 
+}
+
+.custom-message .cm-message-header .controls-container img{
+    width: 20px;
+    cursor: pointer;
+}
+
 .custom-message .cm-username-and-message .cm-message{
     font-family: var(--font-family);
     font-weight: 400;
@@ -1106,6 +1189,200 @@ input:valid {
     padding: 0;
 }
 
+
+.custom-message .cm-username-and-message .cm-message .inner-message{
+    margin-top: 8px;
+}
+
+.custom-message .mark-specialist-work{
+    padding: 16px 11px 21px 44px;
+    border: 1px solid #dedfe4;
+    border-radius: 4px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 14px;
+}
+
+.custom-message .mark-specialist-work-container{
+    width: 100%; 
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 143%;
+    color: #333;
+}
+
+.custom-message .mark-specialist-work-container .stars-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3px;
+}
+
+
+.custom-message .mark-specialist-work-container .stars-container svg{
+    cursor: pointer;
+}
+
+.stars-container.five-stars svg:nth-child(n):nth-child(-n+5) path{
+    fill: #ffb73e;
+}
+
+.stars-container.four-stars svg:nth-child(n):nth-child(-n+4) path{
+    fill: #ffb73e;
+}
+
+.stars-container.three-stars svg:nth-child(n):nth-child(-n+3) path{
+    fill: #ffb73e;
+}
+
+.stars-container.two-stars svg:nth-child(n):nth-child(-n+2) path{
+    fill: #ffb73e;
+}
+
+.stars-container.one-star svg:nth-child(n):nth-child(-n+1) path{
+    fill: #ffb73e;
+}
+
+
+.custom-message .who-will-see-container{ 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 143%;
+    color: #333;
+    margin-top: 15px;
+}
+
+.custom-message .who-will-see-container label{
+    font-weight: 400; 
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+
+.custom-message .cm-message .file-message{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.custom-message .file-message .img-files-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 12px;
+    padding: 6px; 
+}
+
+.custom-message .file-message .img-files-container .img-container{
+    width: 100%;
+    aspect-ratio: 3.5/2.4;
+    border: 1px solid #e4e4e4;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    overflow: hidden; 
+}
+
+.custom-message .file-message .img-files-container .img-container img{ 
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    position: relative; 
+    object-fit: cover;
+}
+
+.custom-message .file-message .archive-download-container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.custom-message .file-message .archive-download-link{ 
+    cursor: pointer;
+    display: flex; 
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start; 
+    gap: 8px; 
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 136%;
+    letter-spacing: 0.02em;
+    color: #007bfb;
+    text-decoration: none;
+}
+
+.custom-message .doc-files-container{ 
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr); 
+    gap: 12px;
+    padding: 6px;
+}
+
+.custom-message .doc-files-container .file-container{
+    width: 100%;
+    padding: 7px;
+    border: 1px solid #dedfe4;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start; 
+    gap: 8px;
+}
+
+.custom-message .doc-files-container .file-container .file-name{
+    font-family: var(--second-family);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 114%;
+    color: #333;
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;    
+}
+
+.custom-message .doc-files-container .file-container .file-size{
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    color: #8a8a8a;
+    margin-top: 3px;
+}
+
+.custom-message .doc-files-container .file-container img{
+    padding: 3px 8px; 
+    width: 48px;
+}
+
+
 .individual-order-message {
     display: flex;
     flex-direction: column;
@@ -1114,7 +1391,7 @@ input:valid {
     background: #fff;
     border: 1px solid #e2e2e2;
     border-radius: 6px;
-    width: 742px;
+    width: 100%;
     max-width: 100%;
     overflow: hidden;
 }
@@ -1381,7 +1658,7 @@ input:valid {
 .order-message-cancellation{ 
     background: rgba(241, 91, 91, 0.06);
     border-radius: 6px;
-    width: 742px;
+    width: 100%;
     max-width: 100%;
     min-height: 48px;
     display: flex;
@@ -1470,12 +1747,11 @@ input:valid {
 }
 
 .order-created-message{
-    width: 742px;
+    width: 100%;
     max-width: 100%;
     border: 1px solid #e2e2e2;
     border-radius: 6px;
     padding: 5px 1px 21px;
-    width: 742px;
     height: 90px;
     background: #fff;
     display: flex;
@@ -2678,6 +2954,146 @@ select:focus{
     font-size: 12px;
     margin-bottom: 5px;
     z-index: 1000;
+}
+
+.upload-zone {
+    background: #fafafa;
+    width: 100%;
+    border-top: 1px solid #ecedef;
+}
+
+.upload-zone .preview-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Общий стиль карточки */
+.upload-zone .file-card {
+    position: relative;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.2s;
+    margin: 7px;
+}
+
+.upload-zone .file-card .content-container{ 
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Размеры для Изображений */
+.upload-zone .file-card.type-image {
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
+}
+
+/* Размеры для Файлов */
+.upload-zone .file-card.type-file {
+    width: 152px;
+    height: 64px;
+    min-width: 152px;
+}
+
+/* Превью изображения */
+.upload-zone .file-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Стили для документов */
+.upload-zone .file-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 10px;
+    width: 100%;
+}
+
+.upload-zone .file-name {
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 133%;
+    color: #333;
+}
+
+/* Кнопка удаления (появляется при наведении) */
+.upload-zone .btn-remove {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 24px;
+    height: 24px;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 18px;
+    cursor: pointer;
+    font-size: 14px;
+    z-index: 10;
+    opacity: 0; /* Скрыта по умолчанию */
+    transition: opacity 0.2s ease;
+}
+
+.upload-zone .btn-remove img{
+    width: 100%;
+} 
+
+.upload-zone .file-card:hover .btn-remove {
+    opacity: 1; /* Показ при наведении */
+}
+
+/* Полоса загрузки */
+.upload-zone .progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px; /* Увеличил высоту, чтобы полоски были лучше видны как на фото */
+    background: repeating-linear-gradient(
+        -45deg,          /* Наклон как на скриншоте */
+        #19b219,         /* Зеленый старт */
+        #19b219 10px,    /* Зеленый до 10px */
+        #ffffff 10px,    /* Резкий переход в белый */
+        #ffffff 20px     /* Белый до 20px, затем повтор */
+    );
+    background-size: 28px 28px; /* Важно для плавной анимации */
+    animation: move-stripes 2s linear infinite; /* Ускорил для эффекта загрузки */
+    transition: opacity 0.3s ease;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+@keyframes move-stripes {
+    from { background-position: 0 0; }
+    to { background-position: 28px 0; } /* Смещение должно соответствовать размеру градиента */
+}
+.upload-zone .progress-bar.loaded {
+    opacity: 0;
+    pointer-events: none;
+}
+
+@keyframes move-stripes {
+    from { background-position: 0 0; }
+    to { background-position: 40px 0; }
 }
 
 /* Анимация появления файлов */
