@@ -45,12 +45,16 @@ require_once "../modules/base.php";
 </head>
 <body>
     <?=$userHeader;?>
+    <div class="header-note">
+        Заказ не будет начат, пока вы не предоставите необходимую информацию
+        <input type="button" value="Предоставить данные" class="header-note-button"/>
+    </div>
     
     <div class="main-block">
         <div class="main-container">
             <div class="order-track-block">
                 <div class="order-track-content">
-                    <div class="order-status-info-block">
+                    <div class="order-status-info-block hidden">
                         <div class="order-status-info-content">
                             <div class="vertical-line">
                             </div>
@@ -67,9 +71,9 @@ require_once "../modules/base.php";
                     <div class="orders-table-block">
                         <div class="order-header">
                             <div class="order-img-container">
-                                <img src="/img/icons/order-track/pagespeed.png" class="order-img"/>
+                                <img src="/img/icons/order-track/mobile-app.png" class="order-img"/>
                             </div>
-                            <h2>Ускорение WordPress по PageSpeed</h2>
+                            <h2>Разработка мобильного приложения</h2>
                         </div>
                         <div class="my-orders">
                             <div class="my-orders-breadcrumbs">
@@ -88,7 +92,14 @@ require_once "../modules/base.php";
                                     Услуги
                                 </div>
                                 <div class="period-cell"> 
-                                    Срок <img src="/img/icons/round-question-icon.svg" class="round-question-icon"/>
+                                    Срок 
+                                    <span class="question-and-description tooltip-container">
+                                        <img src="/img/icons/round-question-icon.svg" alt="round-question-icon" class="round-question-icon tooltip-question"/>
+                                        <span class="tooltip-text" style="font-weight: 400;">
+                                            <h4>Заголовок</h4>
+                                            <p>Текст</p>
+                                        </span>
+                                    </span>     
                                 </div> 
                                 <div class="price-cell">
                                     Стоимость
@@ -96,8 +107,8 @@ require_once "../modules/base.php";
                             </div>
                             <div class="orders-table-row">
                                 <div class="services-cell">
-                                    <div class="econom-variant">
-                                        Вариант кворка "Эконом" <img src="/img/icons/order-track/arrow-down-blue.svg" alt="arrow-down-blue" class="arrow-down-blue"/>
+                                    <div class="table-cell-order-name">
+                                        <span>Разработка мобильного приложения</span><img src="/img/icons/order-track/arrow-down-blue.svg" alt="arrow-down-blue" class="arrow-down-blue"/>
                                     </div>
                                 </div>
                                 <div class="period-cell"> 
@@ -109,7 +120,68 @@ require_once "../modules/base.php";
                             </div>
                             
                         </div>
+
+                        <div class="regular-basis-offer">
+                            <div class="regular-basis-offer-string">
+                                <img src="/img/icons/order-track/info-orange.svg" alt="info-orange" class="info-orange"/>
+                                <div>
+                                    <div class="regular-basis-question">Хотите докупить услуги продавца или работать с ним на регулярной основе?</div>
+                                    <div class="regular-basis-step">Добавьте задачи в заказ 
+                                        <span class="question-and-description tooltip-container">
+                                            <img src="/img/icons/round-question-icon.svg" alt="round-question-icon" class="round-question-icon tooltip-question"/>
+                                            <span class="tooltip-text" style="font-weight: 400;">
+                                                <h4>Заголовок</h4>
+                                                <p>Текст</p>
+                                            </span>
+                                        </span> 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="add-task-button">
+                                <img src="/img/icons/round-green-plus.svg" alt="round-green-plus" class="round-green-plus-icon"/> Добавить задачу
+                            </div>
+                        </div>
                     </div>
+
+                    <div class="order-chat closed">
+                        <div class="order-chat-header">
+                            Переписка которая может относиться к заказу <img src="/img/icons/order-track/arrow-down-blue.svg" alt="arrow-down" class="arrow-down-blue"/>
+                        </div>
+                        <div class="date-chat-block">
+                            <div class="date-chat">
+                                <div class="date-chat-value">
+                                    20 ноября
+                                </div> 
+                                <hr class="horizontal-line">
+                            </div>
+                            <div class="order-message order-created">
+                                <img src="/img/icons/order-track/order-created.svg" alt="order-created" class="order-created-icon"/>
+                                <div class="order-message-text order-created-text">
+                                    <div class="order-message-header order-created-header">
+                                        Создан новый заказ <span class="order-created-time">06:51 </span>
+                                    </div>
+                                    <p> 
+                                        Вы создали заказ. Ознакомьтесь с <a href="#">программой защиты покупателей</a> Kwork.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="give-info-block"> 
+                                <div class="order-message"> 
+                                    <img src="/img/icons/order-track/give-info.svg" alt="give-info-icon" class="give-info-icon"/>
+                                    <div class="order-messag-text">
+                                        <div class="order-message-header">
+                                            Предоставьте информацию по заказу 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="give-info-section">
+                                    <input type="button" value="Отправить информацию продавцу" class="give-info-button"/>
+                                    <p>Возможность переписки появится сразу после отправки информации</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="cancel-order">
                         <div class="cancel-order-button">Отменить заказ</div>
                     </div>
@@ -271,22 +343,22 @@ require_once "../modules/base.php";
     const steps = document.querySelectorAll('.step');
 
     function setStep(index) {
-    steps.forEach((step, i) => {
-        step.classList.remove('completed', 'active');
-        if (i < index) {
-        step.classList.add('completed');
-        step.querySelector('.step-icon').textContent = '✔';
-        } else if (i === index) {
-        step.classList.add('active');
-        step.querySelector('.step-icon').textContent = '';
-        } else {
-        step.querySelector('.step-icon').textContent = '';
-        }
-    });
+        steps.forEach((step, i) => {
+            step.classList.remove('completed', 'active');
+            if (i < index) {
+            step.classList.add('completed');
+            step.querySelector('.step-icon').textContent = '✔';
+            } else if (i === index) {
+            step.classList.add('active');
+            step.querySelector('.step-icon').textContent = '';
+            } else {
+            step.querySelector('.step-icon').textContent = '';
+            }
+        });
     }
 
     // Вызов функции для переключения на 3-й шаг (индекс 2)
-    // setStep(2);
+    setStep(2);
 
     $(".order-help-block .help-header").on("click",function(e){
         e.stopPropagation(); 
@@ -298,10 +370,17 @@ require_once "../modules/base.php";
         $(".order-note-block").toggleClass('closed');
     });
 
+    $(".order-chat .order-chat-header").on('click',function(e){
+        e.stopPropagation(0);
+        $(".order-chat").toggleClass("closed");
+    });
+
     $(".order-note-block textarea").on("input", function() {
         let textLength = $(this).val().length;
         
         $(".order-note-block .min-max-count .count").text(textLength);
     });
+
+    
 </script>
 </html>

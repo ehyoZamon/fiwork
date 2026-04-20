@@ -573,6 +573,10 @@ input:valid {
     gap: 20px;
 }
 
+.order-track-content .order-status-info-block.hidden{
+    display: none;
+}
+
 .order-track-content .order-status-info-content{
     display: flex;
     flex-direction: row;
@@ -651,7 +655,6 @@ input:valid {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 20px;
     background: #fff; 
 }
 
@@ -689,6 +692,8 @@ input:valid {
     justify-content: space-between;
     gap: 20px; 
     width: 100%;
+    margin-top: 15px; 
+    margin-bottom: 30px; 
 }
 
 .orders-table-block .order-time{
@@ -782,7 +787,7 @@ input:valid {
     justify-content: center;
 }
 
-.orders-table-row .services-cell .econom-variant{
+.orders-table-row .services-cell .table-cell-order-name{
     display: flex; 
     flex-direction: row;
     align-items: center;
@@ -814,7 +819,365 @@ input:valid {
     padding: 0 20px;
 }
 
+.cancel-order.hidden{
+    display: none;
+}
+
 .cancel-order-button{
     cursor: pointer; 
 }
+
+.regular-basis-offer{
+    width: 100%;
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; 
+    gap: 10px;
+    padding: 11px 0px 10px;
+    border-top: 1px solid #ececec; 
+}
+
+.regular-basis-offer-string{ 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    max-width: 500px;
+}
+
+.regular-basis-offer .add-task-button{
+    width: 180px;
+    min-height: 40px;
+    padding: 10px;
+    border: 2px solid #04b70a;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 71%;
+    text-align: center;
+    color: #04b70a;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.regular-basis-offer .add-task-button:hover{
+   background-color: var(--color-light-green);
+}
+
+.regular-basis-offer-string .regular-basis-question,
+.regular-basis-offer-string .regular-basis-step{
+    display: inline;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 154%;
+    color: #111;
+}
+
+.regular-basis-offer-string .regular-basis-question{
+    font-weight: 700;
+}
+
+.regular-basis-offer-string .regular-basis-step{ 
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center; 
+    justify-content: flex-start;
+    gap: 5px; 
+}
+
+/*order-chat*/
+.order-chat{ 
+    border: 1px solid #e8e8e8;
+    background: #fff;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.order-chat.closed .order-chat-header img{
+    transition-property: all;
+    transition-duration: 0.5s;
+    transform: rotate(180deg);
+}
+
+.order-chat .order-chat-header img{
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+
+.order-chat .order-chat-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 157%;
+    text-align: center;
+    color: #177de5;
+    padding: 20px;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.order-chat.closed .date-chat-block{
+    display: none;
+}
+
+.date-chat-block{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+.date-chat{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.date-chat .date-chat-value{
+    background: #f2f2f2;
+    border-radius: 0 18px 18px 0;
+    padding: 4px 15px 4px 20px;
+    width: 124px;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 157%;
+    color: #8a8a8a;
+    flex-shrink: 0;
+}
+
+.date-chat .horizontal-line{ 
+    flex: 1;
+    border: 0; 
+    background: none;
+    border-top: 1px solid #ddd;
+}
+
+.order-message{
+    padding: 10px 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 30px; 
+}
+
+.order-message .order-message-text{ 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.order-message .order-message-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 153%;
+    color: #000;
+    gap: 3px;
+}
+
+.order-message .order-message-time{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 192%;
+    color: #8a8a8a;
+}
+
+.order-message p{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 153%;
+    color: #111;
+    text-align: left;
+    margin: 0; 
+}
+
+.order-message p a{
+    text-decoration: none;
+    font-weight: 600;
+    color: #177de5;
+}
+
+.give-info-block{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.give-info-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.give-info-section .give-info-button{
+    border: 1px solid #04b70a;
+    border-radius: 6px;
+    padding: 19px 32px;
+    min-height: 48px;
+    background: #04b70a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 71%;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.give-info-section .give-info-button:hover{
+    opacity: 1;
+}
+
+.give-info-section p{
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    text-align: center;
+    color: #8a8a8a;
+}
+
+.header-note{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 24px; 
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 157%;
+    text-align: center;
+    color: #fff;
+    padding: 11px; 
+    min-height: 54px;
+    background: #ffa800; 
+}
+
+.header-note .header-note-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 114%;
+    text-align: center;
+    color: #ffa800;
+    border-radius: 4px;
+    padding: 8px 16px;
+    min-height: 32px;
+    background: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+/*end of order-chat*/
 /*end of order-track-content*/
+
+/*tooltip-container*/
+.tooltip-container {
+    position: relative; /* Создаем контекст для абсолютного позиционирования подсказки */
+    cursor: help; /* Меняем курсор на знак вопроса */
+    margin-left: 2px;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    opacity: 0; 
+    position: absolute;
+    z-index: 10;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px; 
+    background-color: #fefefe;
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.06);
+    color: #111;
+    text-align: left;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    white-space: normal;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip-text h4,
+.tooltip-text p{
+    font-size: 12px !important;
+    margin: 0;
+    padding: 0;
+    text-transform: none !important;
+}
+
+.tooltip-text p{
+    font-size: 10px;
+}
+
+#tooltipGraph {
+    position: absolute;
+    padding: 6px 10px;
+    background: #fff;
+    color: #111;
+    font-size: 12px;
+    border-radius: 4px;
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.15s;
+    z-index: 9999;
+    white-space: nowrap;
+}
+
+/*end of tooltip-container*/
