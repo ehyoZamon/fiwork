@@ -108,7 +108,8 @@ input:valid {
 }
 
 .order-status-details .order-status,
-.order-status-details .order-price{
+.order-status-details .order-price,
+.order-status-details .order-auto-rejection{
     display: flex; 
     flex-direction: row;
     align-items: center; 
@@ -131,17 +132,30 @@ input:valid {
     background: #f15b5b;
     border-radius: 4px;
     padding: 1px 5px;
-    width: 131px;
     height: 21px;
     max-width: 139px;
 }
 
-.order-status-details .order-price-value{
+.order-status-details .order-status-value.hidden{
+    display: none;
+}
+
+.order-status-details .order-status-value.order-created{
+    background: #66b3fb;
+}
+
+.order-status-details .order-price-value,
+.order-status-details .order-rejection-time-value{
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 14px;
     line-height: 157%;
     color: #111;
+}
+
+
+.order-status-details .order-rejection-time-value{
+    color: #04b70a;
 }
 
 .order-seller-details{
@@ -986,6 +1000,10 @@ input:valid {
     gap: 30px; 
 }
 
+.order-message.hidden{
+    display: none;
+}
+
 .order-message .order-message-text{ 
     display: flex;
     flex-direction: column;
@@ -1039,6 +1057,10 @@ input:valid {
     justify-content: flex-start;
 }
 
+.give-info-block.hidden{
+    display: none;
+}
+
 .give-info-section{
     width: 100%;
     display: flex;
@@ -1081,6 +1103,91 @@ input:valid {
     line-height: 133%;
     text-align: center;
     color: #8a8a8a;
+}
+
+.react-to-new-order{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.react-to-new-order-section{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px;
+    padding-bottom: 0;
+    gap: 20px;
+}
+
+.react-to-new-order-section p{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    color: #666;
+    max-width: 600px;
+    margin: 0;
+}
+
+.react-to-new-order-section .control-buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.react-to-new-order-section .write-a-message{
+    background: #fafafa;
+    border: 1px solid #a5a5a5;
+    border-radius: 4px;
+    padding: 8px 16px;
+    min-width: 184px;
+    min-height: 32px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 114%;
+    text-align: center;
+    color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none; 
+}
+
+.react-to-new-order-section .write-a-message:hover{
+    color: #fff;
+    background: #a5a5a5;
+}
+
+.react-to-new-order-section .starting-work{
+    background: #04b70a;
+    border: 1px solid #04b70a;
+    border-radius: 4px;
+    padding: 8px 16px;
+    min-width: 176px;
+    min-height: 32px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 114%;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.react-to-new-order-section .starting-work:hover{
+    opacity: 1;
 }
 
 .header-note{
@@ -1796,3 +1903,220 @@ input:valid {
     opacity: 1;
 }
 /*end of modal-windows*/
+
+/*countdown*/
+.countdown-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    padding: 12px 20px 18px;
+}
+
+.countdown-container label{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 157%;
+    text-align: center;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.countdown *{
+    transition-property: none;
+    transition-duration: none;
+}
+
+.wrap {
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #1a1a1a;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h1 strong {
+  font-weight: 400;
+  color: #ea4c4c;
+}
+
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h2 strong {
+  font-weight: 400;
+}
+
+.countdown {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.divider{
+    padding: 3px;
+    font-family: var(--font4);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    text-align: center;
+    color: #a5a5a5;
+    padding-bottom: 13px;
+}
+
+.countdown .bloc-time {
+  float: left;
+  text-align: center;
+}
+.countdown .bloc-time:last-child {
+  margin-right: 0;
+}
+
+.countdown .count-title {
+    display: block;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    text-transform: capitalize;
+    text-align: center;
+    color: #8a8a8a;
+}
+
+.countdown .figure {
+  position: relative;
+  float: left;
+  height: 42px;
+  width: 30px;
+  background-color: #fff;
+  border-radius: 2px;
+  -moz-box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), inset 2px 4px 0 0 rgba(255, 255, 255, 0.08);
+  -webkit-box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), inset 2px 4px 0 0 rgba(255, 255, 255, 0.08);
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), inset 2px 4px 0 0 rgba(255, 255, 255, 0.08);
+}
+
+.countdown .figure:last-child {
+  margin-right: 0;
+}
+.countdown .figure > span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-family: var(--font4);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    text-align: center;
+    color: #111;
+}
+
+.countdown .figure .top:after,
+.countdown .figure .bottom-back:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.countdown .figure .top {
+  z-index: 3;
+  background-color: #f7f7f7;
+  transform-origin: 50% 100%;
+  -webkit-transform-origin: 50% 100%;
+  -moz-border-radius-topleft: 10px;
+  -webkit-border-top-left-radius: 10px;
+  border-top-left-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  -webkit-border-top-right-radius: 10px;
+  border-top-right-radius: 10px;
+  -moz-transform: perspective(200px);
+  -ms-transform: perspective(200px);
+  -webkit-transform: perspective(200px);
+  transform: perspective(200px);
+}
+.countdown .figure .bottom {
+  z-index: 1;
+}
+.countdown .figure .bottom:before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+.countdown .figure .bottom-back {
+  z-index: 2;
+  top: 0;
+  height: 50%;
+  overflow: hidden;
+  background-color: #f7f7f7;
+  -moz-border-radius-topleft: 10px;
+  -webkit-border-top-left-radius: 10px;
+  border-top-left-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  -webkit-border-top-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.countdown .figure .bottom-back span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.countdown .figure .top,
+.countdown .figure .top-back {
+  height: 50%;
+  overflow: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.countdown .figure .top-back {
+  z-index: 4;
+  bottom: 0;
+  background-color: #fff;
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -moz-transform: perspective(200px) rotateX(180deg);
+  -ms-transform: perspective(200px) rotateX(180deg);
+  -webkit-transform: perspective(200px) rotateX(180deg);
+  transform: perspective(200px) rotateX(180deg);
+  -moz-border-radius-bottomleft: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  -moz-border-radius-bottomright: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.countdown .figure .top-back span {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+/*end of countdown*/ 
