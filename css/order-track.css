@@ -1183,7 +1183,8 @@ input:valid {
 
 
 /*modal-windows*/
-.add-task-modal-window-container{
+.add-task-modal-window-container,
+.cancel-order-modal-window-container{
     position: fixed;
     left: 0;
     top: 0;
@@ -1196,11 +1197,13 @@ input:valid {
     background: rgba(0, 0, 0, 0.3);
 }
 
-.add-task-modal-window-container.hidden{
+.add-task-modal-window-container.hidden,
+.cancel-order-modal-window-container.hidden{
     display: none;
 }
 
-.add-task-modal-window{
+.add-task-modal-window,
+.cancel-order-modal-window{
     width: 720px;
     max-width: 90%;
     display: flex;
@@ -1214,7 +1217,8 @@ input:valid {
     overflow: hidden;
 }
 
-.add-task-modal-window .add-task-modal-header{
+.add-task-modal-window .add-task-modal-header,
+.cancel-order-modal-window .cancel-order-modal-header{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1226,7 +1230,8 @@ input:valid {
     width: 100%;
 }
 
-.add-task-modal-window .add-task-modal-header h2{
+.add-task-modal-window .add-task-modal-header h2,
+.cancel-order-modal-window .cancel-order-modal-header h2{
     font-family: var(--font-family);
     font-weight: 600;
     font-size: 22px;
@@ -1235,13 +1240,15 @@ input:valid {
     margin: 0;
 }
 
-.add-task-modal-window .add-task-modal-header .close-add-task-modal-window{
+.add-task-modal-window .add-task-modal-header .close-add-task-modal-window,
+.cancel-order-modal-window .cancel-order-modal-header .close-cancel-order-modal-window{
     width: 40px;
     height: 40px;
     cursor: pointer;
 }
 
-.add-task-modal-window-content{
+.add-task-modal-window-content,
+.cancel-order-modal-window-content{
     padding: 16px 24px;
     width: 100%;
     background: #fff;
@@ -1250,6 +1257,11 @@ input:valid {
     align-items: flex-start;
     justify-content: flex-start;
     gap: 12px;
+}
+
+
+.cancel-order-modal-window-content{
+    gap: 5px;
 }
 
 .add-task-modal-window-content .attention-container{
@@ -1664,5 +1676,123 @@ input:valid {
 
 .add-task-modal-window-footer .add-and-pay-button:hover{
     opacity: 1; 
+}
+
+.cancel-order-modal-window-content .text-to-seller-header{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 157%;
+    color: #111;
+    text-align: left;
+}
+
+.cancel-order-modal-window-content .text-to-seller{
+    border: 1px solid #a5a5a5;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    height: 106px;
+    background: #fff;
+    resize: none;
+    outline: none;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 171%;
+    color: #999;
+}
+
+.cancel-order-modal-window-content .cancel-order-text-length{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    color: #8a8a8a;
+}
+
+.cancel-order-modal-window-content .hide-seller-kworks{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    color: #333;
+    cursor: pointer;
+}
+
+.cancel-order-modal-window-content .hide-seller-kworks label{
+    cursor: pointer;
+}
+
+.cancel-order-modal-footer{
+    width: 100%;
+    background: #fff;
+    border-radius: 0 0 16px 16px;
+    padding: 0px 20px 24px;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #a5a5a5;
+}
+
+.cancel-order-modal-footer .cancel-button{
+    border: 1px solid #a5a5a5;
+    border-radius: 6px;
+    padding: 19px 32px;
+    min-height: 48px;
+    min-width: 160px;
+    background: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 71%;
+    text-align: center;
+    color: #111;
+}
+
+.cancel-order-modal-footer .cancel-button:hover{
+    background: #a5a5a5;
+    color: white;
+}
+
+.cancel-order-modal-footer .submit-cancel-button{
+    background: #f15b5b;
+    opacity: 0.5;
+    border: 1px solid #f15b5b;
+    border-radius: 6px;
+    padding: 19px 32px;
+    min-height: 48px;
+    min-width: 160px;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 71%;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.cancel-order-modal-footer .submit-cancel-button:hover{
+    opacity: 1;
 }
 /*end of modal-windows*/

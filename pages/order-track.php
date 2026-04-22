@@ -183,7 +183,7 @@ require_once "../modules/base.php";
                     </div>
                     
                     <div class="cancel-order">
-                        <div class="cancel-order-button">Отменить заказ</div>
+                        <div class="cancel-order-button" onclick="showBlock('cancel-order-modal-window-container');">Отменить заказ</div>
                     </div>
                 </div>
 
@@ -413,6 +413,35 @@ require_once "../modules/base.php";
             </div>
         </form>
     </div>
+
+    <div class="cancel-order-modal-window-container hidden">
+        <form class="cancel-order-modal-window">
+            <div class="cancel-order-modal-header">
+                <h2>Отмена заказа</h2>
+                <img src="/img/icons/close-modal-grey-icon.svg" onclick="closeBlock('cancel-order-modal-window-container');" class="close-cancel-order-modal-window"/>
+            </div>
+            <div class="cancel-order-modal-window-content">
+                <label class="text-to-seller-header" for="text-to-seller">Напишите продавцу, почему вы хотите отменить заказ</label>
+                <textarea maxlength="4000" minlength="5" name="text-to-seller" id="text-to-seller" class="text-to-seller" placeholder="Комментарий"></textarea>
+                <div class="cancel-order-text-length"><span class="cancel-order-text-length-value">0</span>&nbsp;из 4000 символов (минимум 5)</div>
+                <div class="hide-seller-kworks">
+                    <input type="checkbox" id="hide-seller-kworks-checkbox" name="hide-seller-kworks-checkbox" class="hide-seller-kworks-checkbox">
+                    <label for="hide-seller-kworks-checkbox">Скрывать кворки продавца</label>
+                    <span class="question-and-description tooltip-container">
+                        <img src="/img/icons/round-question-icon.svg" alt="round-question-icon" class="round-question-icon tooltip-question"/>
+                        <span class="tooltip-text" style="font-weight: 400;">
+                            <h4>Заголовок</h4>
+                            <p>Текст</p>
+                        </span>
+                    </span>     
+                </div>
+            </div>
+            <div class="cancel-order-modal-footer">
+                <input type="button" value="Пока не отменять" onclick="closeBlock('cancel-order-modal-window-container');" class="cancel-button"/>
+                <input type="submit" value="Отменить" class="submit-cancel-button"/>
+            </div>
+        </form>
+    </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="/js/jQuery/jquery-3.5.1.min.js"></script>
@@ -463,7 +492,7 @@ require_once "../modules/base.php";
 
     function closeBlock(blockClassName){
         $("."+blockClassName).addClass('hidden');
-        $("."+blockClassName).find("form")[0].reset();
+        /*$("."+blockClassName).find("form")[0].reset();*/
         $("."+blockClassName).find("form").find("input").trigger("input");
     }
 
@@ -492,9 +521,21 @@ require_once "../modules/base.php";
         $(".add-task-modal-window").find("input").trigger("input");
     });
 
+    $(".cancel-order-modal-window").on("submit",function(e){
+        e.preventDefault();
+        $(".cancel-order-modal-window-container").addClass("hidden");
+        $(".cancel-order-modal-window")[0].reset();
+        $(".cancel-order-modal-window-container .cancel-order-text-length-value").text(0);
+    });
+
     $(".add-task-modal-window-container .task-name-input").on("input",function(){
         let textLength = $(this).val().length;
         $(this).parent().parent().find(".task-name-input-length-value").html(textLength); 
+    });
+
+    $(".cancel-order-modal-window-container .text-to-seller").on("input",function(){
+        let textLength = $(this).val().length;
+        $(".cancel-order-modal-window-container .cancel-order-text-length-value").text(textLength);
     });
 
     /*Логика add-task-button*/
