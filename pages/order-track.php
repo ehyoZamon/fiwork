@@ -181,7 +181,7 @@ require_once "../modules/base.php";
                                     </div>
                                 </div>
                                 
-                                <div class="react-to-new-order-section">
+                                <div class="react-to-new-order-section hidden">
                                     <div class="control-buttons">
                                         <input type="button" value="Написать сообщение" class="write-a-message"/>
                                         <input type="button" value="Приступаю к работе" class="starting-work"/>
@@ -190,6 +190,32 @@ require_once "../modules/base.php";
                                     ответственности и негативно сказывается на продажах. Ваш профиль перейдет в статус "Занят", кворки будут
                                     скрыты из каталога, а отклики удалены.</p>
                                 </div>
+                            </div>
+
+                            <div class="in-process-order">
+                                <div class="order-message order-created">
+                                    <img src="/img/icons/order-track/lorry.svg" alt="lorry-icon" class="lorry-icon"/>
+                                    <div class="order-message-text order-created-text">
+                                        <div class="order-message-header order-created-header">
+                                            В работе <span class="order-created-time">05:05</span>
+                                        </div>
+                                        <p> 
+                                            Вы приступили к работе над заказом.
+                                        </p>
+                                        <div class="in-process-order-section closed" onclick="triggerBlock(this);">
+                                            <div class="in-process-order-header">
+                                                <img src="/img/icons/order-track/round-alert.svg" alt="round-alert-icon" class="round-alert-icon"/>
+                                                <p>Покупатель требует больше, чем описано в кворке?</p>
+                                                <img src="/img/icons/order-track/arrow-down-gray.svg" alt="arrow-down-gray" class="arrow-down-gray"/>
+                                            </div>
+                                            <div class="in-process-order-description">
+                                                Если запросы покупателя выходят за рамки изначально оплаченного объема работ, вы можете вежливо разъяснить это и предложить оформить дополнительную опцию к заказу. В случае возникновения спорных ситуаций, не приступайте к выполнению сверхзадач до их оплаты и обратитесь в службу поддержки для консультации.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                
                             </div>
 
                             <div class="give-info-block hidden"> 
@@ -209,6 +235,21 @@ require_once "../modules/base.php";
                         </div>
                     </div>
                     
+                    <div class="message-to-customer">
+                        <div class="message-to-customer-input-container">
+                            <img src="/img/icons/order-track/attach-file.svg" alt="attach-file-icon" class="attach-file-icon"/>
+                            <img src="/img/icons/order-track/smile.svg" alt="smile-icon" class="smile-icon"/>
+                            <input type="text" placeholder="Сообщение покупателю" class="message-to-customer-input"/>   
+                        </div>
+                        <div class="submit-the-work">
+                            <input type="button" value="Сдать выполненную работу" class="submit-the-work-button"/>
+                            <div class="offer-options-button">
+                                <img src="/img/icons/order-track/plus-icon.svg" alt="plus-icon" class="plus-icon"/>
+                                Предложить опции
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="cancel-order">
                         <div class="cancel-order-button" onclick="showBlock('cancel-order-modal-window-container');">Отменить заказ</div>
                     </div>
@@ -613,6 +654,10 @@ require_once "../modules/base.php";
         
         $(".order-note-block .min-max-count .count").text(textLength);
     });
+
+    function triggerBlock(elem){
+        $(elem).toggleClass("closed");
+    }
 
     function closeBlock(blockClassName){
         $("."+blockClassName).addClass('hidden');

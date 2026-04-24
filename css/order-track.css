@@ -569,7 +569,6 @@ input:valid {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 20px;
 }
 
 /*order-status-info-block*/
@@ -831,6 +830,7 @@ input:valid {
     line-height: 157%;
     color: #177de5;
     padding: 0 20px;
+    margin-top: 20px;
 }
 
 .cancel-order.hidden{
@@ -916,6 +916,7 @@ input:valid {
     align-items: center;
     justify-content: center;
     width: 100%;
+    margin-top: 20px;
 }
 
 .order-chat.closed .order-chat-header img{
@@ -997,7 +998,8 @@ input:valid {
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 30px; 
+    gap: 30px;
+    max-width: 620px; 
 }
 
 .order-message.hidden{
@@ -1010,6 +1012,7 @@ input:valid {
     align-items: flex-start;
     justify-content: flex-start;
     gap: 8px;
+    width: 100%;
 }
 
 .order-message .order-message-header{
@@ -1105,7 +1108,8 @@ input:valid {
     color: #8a8a8a;
 }
 
-.react-to-new-order{
+.react-to-new-order,
+.in-process-order{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1121,6 +1125,10 @@ input:valid {
     padding: 20px;
     padding-bottom: 0;
     gap: 20px;
+}
+
+.react-to-new-order-section.hidden{
+    display: none;
 }
 
 .react-to-new-order-section p{
@@ -1188,6 +1196,70 @@ input:valid {
 
 .react-to-new-order-section .starting-work:hover{
     opacity: 1;
+}
+
+
+.in-process-order-section{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 620px;
+    border: 1px solid #eee;
+    padding: 10px;
+    width: 100%;
+}
+
+.in-process-order-section.closed .arrow-down-gray{
+    transition-property: all;
+    transform: rotateX(180deg);
+}
+
+.in-process-order-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+    min-height: 57px;
+    cursor: pointer;
+}
+
+
+.in-process-order-description{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 169%;
+    color: #111;
+    width: 100%;
+}
+
+.in-process-order-section.closed .in-process-order-description{
+    display: none;
+}
+
+.in-process-order-section .round-alert-icon{
+    width: 40px;
+    aspect-ratio: 1/1;
+    flex-shrink: 0;
+}
+
+.in-process-order-section p{
+    flex: 1;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 177%;
+    color: #111;
+    margin: 0;
+    padding: 0;
+} 
+
+.in-process-order-section .arrow-down-gray{
+    flex-shrink: 0;
 }
 
 .header-note{
@@ -2120,3 +2192,83 @@ h2 strong {
 }
 
 /*end of countdown*/ 
+
+/*message-to-customer*/
+.message-to-customer{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    border: 1px solid #e8e8e8;
+}
+
+.message-to-customer .message-to-customer-input-container{
+    width: 100%; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 5px;
+    background: #fff;
+    border: 1px solid #a5a5a5;
+    border-radius: 3px;
+    min-height: 43px;
+}
+
+.message-to-customer .message-to-customer-input-container>img{
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.message-to-customer-input-container .message-to-customer-input{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+    color: #999;
+    flex: 1;
+}
+
+.message-to-customer .submit-the-work{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.message-to-customer .submit-the-work-button{
+    border: 1px solid #ffa800;
+    border-radius: 4px;
+    padding: 8px 16px;
+    min-width: 230px;
+    min-height: 32px;
+    background: #ffa800;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 114%;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+
+.message-to-customer .offer-options-button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 129%;
+    color: #111;
+}
+
+/*end of message-to-customer*/
