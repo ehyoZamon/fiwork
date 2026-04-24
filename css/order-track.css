@@ -473,7 +473,8 @@ input:valid {
     gap: 10px;
 }
 
-.order-note-block textarea{ 
+.order-note-block textarea,
+.send-order-info-modal-window-content .window-content textarea{ 
     height: 120px;
     width: 100%;
     border: 1px solid #a5a5a5;
@@ -1210,6 +1211,10 @@ input:valid {
     width: 100%;
 }
 
+.in-process-order-section.hidden{
+    display: none;
+}
+
 .in-process-order-section.closed .arrow-down-gray{
     transition-property: all;
     transform: rotateX(180deg);
@@ -1363,7 +1368,8 @@ input:valid {
 
 /*modal-windows*/
 .add-task-modal-window-container,
-.cancel-order-modal-window-container{
+.cancel-order-modal-window-container,
+.send-order-info-modal-window-container{
     position: fixed;
     left: 0;
     top: 0;
@@ -1377,12 +1383,14 @@ input:valid {
 }
 
 .add-task-modal-window-container.hidden,
-.cancel-order-modal-window-container.hidden{
+.cancel-order-modal-window-container.hidden,
+.send-order-info-modal-window-container.hidden{
     display: none;
 }
 
 .add-task-modal-window,
-.cancel-order-modal-window{
+.cancel-order-modal-window,
+.send-order-info-modal-window{
     width: 720px;
     max-width: 90%;
     display: flex;
@@ -1397,7 +1405,8 @@ input:valid {
 }
 
 .add-task-modal-window .add-task-modal-header,
-.cancel-order-modal-window .cancel-order-modal-header{
+.cancel-order-modal-window .cancel-order-modal-header,
+.send-order-info-modal-window .send-order-info-modal-header{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1410,7 +1419,8 @@ input:valid {
 }
 
 .add-task-modal-window .add-task-modal-header h2,
-.cancel-order-modal-window .cancel-order-modal-header h2{
+.cancel-order-modal-window .cancel-order-modal-header h2,
+.send-order-info-modal-window .send-order-info-modal-header h2{
     font-family: var(--font-family);
     font-weight: 600;
     font-size: 22px;
@@ -1420,14 +1430,16 @@ input:valid {
 }
 
 .add-task-modal-window .add-task-modal-header .close-add-task-modal-window,
-.cancel-order-modal-window .cancel-order-modal-header .close-cancel-order-modal-window{
+.cancel-order-modal-window .cancel-order-modal-header .close-cancel-order-modal-window,
+.send-order-info-modal-window .send-order-info-modal-header .close-send-order-info-modal-window{
     width: 40px;
     height: 40px;
     cursor: pointer;
 }
 
 .add-task-modal-window-content,
-.cancel-order-modal-window-content{
+.cancel-order-modal-window-content,
+.send-order-info-modal-window-content{
     padding: 16px 24px;
     width: 100%;
     background: #fff;
@@ -1438,6 +1450,70 @@ input:valid {
     gap: 12px;
 }
 
+.send-order-info-modal-window-content .window-tip{
+    background: #f0fbf0;
+    border-radius: 8px;
+    padding: 16px;
+    width: 100%;
+    min-height: 76px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.send-order-info-modal-window-content .window-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 10px 0;
+    width: 100%;
+    gap: 5px;
+}
+
+.send-order-info-modal-window-content .window-content label{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 157%;
+    color: #111;
+}
+
+
+.send-order-info-modal-window-content .window-content .attach-file{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.send-order-info-modal-window-content .window-content .attach-file-text{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    color: #8a8a8a;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.send-order-info-modal-window-content .window-content .attach-file-string{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 157%;
+    color: #177de5;
+}
 
 .cancel-order-modal-window-content{
     gap: 5px;
@@ -1882,7 +1958,8 @@ input:valid {
     color: #999;
 }
 
-.cancel-order-modal-window-content .cancel-order-text-length{
+.cancel-order-modal-window-content .cancel-order-text-length,
+.send-order-info-modal-window-content .send-order-info-text-length{
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -1925,6 +2002,17 @@ input:valid {
     gap: 10px;
     padding-top: 10px;
     border-top: 1px solid #a5a5a5;
+}
+
+.send-order-info-modal-footer{
+    background: #fff;
+    border-radius: 0 0 16px 16px;
+    padding: 8px 20px 24px;
+    width: 100%;
+    max-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .cancel-order-modal-footer .cancel-button{
@@ -1971,6 +2059,25 @@ input:valid {
     cursor: pointer;
 }
 
+.send-order-info-modal-footer .submit-button{
+    cursor: pointer;
+    background: #04b70a;
+    border: 1px solid #04b70a;
+    border-radius: 6px;
+    padding: 19px 32px;
+    min-height: 48px;
+    min-width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 71%;
+    text-align: center;
+    color: #fff;
+}
+
 .cancel-order-modal-footer .submit-cancel-button:hover{
     opacity: 1;
 }
@@ -2006,27 +2113,27 @@ input:valid {
   margin: auto;
 }
 
-a {
+.countdown a {
   text-decoration: none;
   color: #1a1a1a;
 }
 
-h1 {
+.countdown h1 {
   text-align: center;
   text-transform: uppercase;
 }
 
-h1 strong {
+.countdown h1 strong {
   font-weight: 400;
   color: #ea4c4c;
 }
 
-h2 {
+.countdown h2 {
   text-align: center;
   text-transform: uppercase;
 }
 
-h2 strong {
+.countdown h2 strong {
   font-weight: 400;
 }
 
@@ -2039,7 +2146,7 @@ h2 strong {
     justify-content: center;
 }
 
-.divider{
+.countdown .divider{
     padding: 3px;
     font-family: var(--font4);
     font-weight: 400;
@@ -2203,6 +2310,10 @@ h2 strong {
     justify-content: flex-start;
     gap: 20px;
     border: 1px solid #e8e8e8;
+}
+
+.message-to-customer.hidden{
+    display: none;    
 }
 
 .message-to-customer .message-to-customer-input-container{

@@ -202,7 +202,7 @@ require_once "../modules/base.php";
                                         <p> 
                                             Вы приступили к работе над заказом.
                                         </p>
-                                        <div class="in-process-order-section closed" onclick="triggerBlock(this);">
+                                        <div class="in-process-order-section hidden closed" onclick="triggerBlock(this);">
                                             <div class="in-process-order-header">
                                                 <img src="/img/icons/order-track/round-alert.svg" alt="round-alert-icon" class="round-alert-icon"/>
                                                 <p>Покупатель требует больше, чем описано в кворке?</p>
@@ -218,7 +218,7 @@ require_once "../modules/base.php";
                                 
                             </div>
 
-                            <div class="give-info-block hidden"> 
+                            <div class="give-info-block"> 
                                 <div class="order-message"> 
                                     <img src="/img/icons/order-track/give-info.svg" alt="give-info-icon" class="give-info-icon"/>
                                     <div class="order-messag-text">
@@ -228,14 +228,14 @@ require_once "../modules/base.php";
                                     </div>
                                 </div>
                                 <div class="give-info-section">
-                                    <input type="button" value="Отправить информацию продавцу" class="give-info-button"/>
+                                    <input type="button" value="Отправить информацию продавцу" onclick="showBlock('send-order-info-modal-window-container');" class="give-info-button"/>
                                     <p>Возможность переписки появится сразу после отправки информации</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="message-to-customer">
+                    <div class="message-to-customer hidden">
                         <div class="message-to-customer-input-container">
                             <img src="/img/icons/order-track/attach-file.svg" alt="attach-file-icon" class="attach-file-icon"/>
                             <img src="/img/icons/order-track/smile.svg" alt="smile-icon" class="smile-icon"/>
@@ -606,6 +606,40 @@ require_once "../modules/base.php";
             </div>
         </form>
     </div>
+
+    <div class="send-order-info-modal-window-container hidden">
+        <form class="send-order-info-modal-window">
+            <div class="send-order-info-modal-header">
+                <h2>Отправьте информацию по заказу</h2>
+                <img src="/img/icons/close-modal-grey-icon.svg" onclick="closeBlock('send-order-info-modal-window-container');" class="close-send-order-info-modal-window"/>
+            </div>
+
+            <div class="send-order-info-modal-window-content">
+                <div class="window-tip">
+                    Предоставьте продавцу дополнительную информацию, которая позволит лучше понять
+                    задачу и быстрее приступить к работе.
+                </div>
+                <div class="window-content">
+                    <label>Введите данные</label>
+                    <textarea maxlength="4000" minlength="5" placeholder="Введите информацию по заказу" class="send-order-info-textarea" required></textarea>
+                    <div class="send-order-info-text-length"><span class="send-order-info-text-length-value">0</span>&nbsp;из 4000 символов</div>
+                    <div class="attach-file">
+                        <img src="/img/icons/order-track/blue-attach-file-icon.svg" alt="blue-attach-file-icon" class="blue-attach-file-icon"/>
+                        <div class="attach-file-text">
+                            <div class="attach-file-string">
+                                Прикрепить файл
+                            </div>
+                            <span>до 25 файлов не более 100 Мб</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="send-order-info-modal-footer">
+                <input type="submit" value="Отправить информацию" class="submit-button"/>
+            </div>
+        </form>
+    </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="/js/jQuery/jquery-3.5.1.min.js"></script>
@@ -697,6 +731,13 @@ require_once "../modules/base.php";
         $(".cancel-order-modal-window-container .cancel-order-text-length-value").text(0);
     });
 
+    $(".send-order-info-modal-window").on("submit",function(e){
+        e.preventDefault();
+        $(".send-order-info-modal-window-container").addClass("hidden");
+        $(".send-order-info-modal-window")[0].reset();
+        $(".send-order-info-modal-window-container .send-order-info-text-length-value").text(0);    
+    });
+
     $(".add-task-modal-window-container .task-name-input").on("input",function(){
         let textLength = $(this).val().length;
         $(this).parent().parent().find(".task-name-input-length-value").html(textLength); 
@@ -705,6 +746,11 @@ require_once "../modules/base.php";
     $(".cancel-order-modal-window-container .text-to-seller").on("input",function(){
         let textLength = $(this).val().length;
         $(".cancel-order-modal-window-container .cancel-order-text-length-value").text(textLength);
+    });
+
+    $(".send-order-info-modal-window-container .send-order-info-textarea").on("input",function(){
+        let textLength = $(this).val().length;
+        $(".send-order-info-modal-window-container .send-order-info-text-length-value").text(textLength);
     });
 
     /*Логика add-task-button*/
