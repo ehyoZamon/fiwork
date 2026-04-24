@@ -47,7 +47,7 @@ require_once "../modules/base.php";
     <?=$userHeader;?>
     <div class="header-note">
         Заказ не будет начат, пока вы не предоставите необходимую информацию
-        <input type="button" value="Предоставить данные" class="header-note-button"/>
+        <input type="button" value="Предоставить данные" onclick="showBlock('send-order-info-modal-window-container');" class="header-note-button"/>
     </div>
     
     <div class="main-block">
@@ -192,9 +192,9 @@ require_once "../modules/base.php";
                                 </div>
                             </div>
 
-                            <div class="in-process-order">
+                            <div class="in-process-order hidden">
                                 <div class="order-message order-created">
-                                    <img src="/img/icons/order-track/lorry.svg" alt="lorry-icon" class="lorry-icon"/>
+                                    <img src="/img/icons/order-track/order-created.svg" alt="order-created" class="order-created-icon"/>
                                     <div class="order-message-text order-created-text">
                                         <div class="order-message-header order-created-header">
                                             В работе <span class="order-created-time">05:05</span>
@@ -202,23 +202,64 @@ require_once "../modules/base.php";
                                         <p> 
                                             Вы приступили к работе над заказом.
                                         </p>
-                                        <div class="in-process-order-section hidden closed" onclick="triggerBlock(this);">
-                                            <div class="in-process-order-header">
+                                        <div class="in-process-order-section process-info-section hidden closed" onclick="triggerBlock(this);">
+                                            <div class="in-process-order-header process-info-header">
                                                 <img src="/img/icons/order-track/round-alert.svg" alt="round-alert-icon" class="round-alert-icon"/>
                                                 <p>Покупатель требует больше, чем описано в кворке?</p>
                                                 <img src="/img/icons/order-track/arrow-down-gray.svg" alt="arrow-down-gray" class="arrow-down-gray"/>
                                             </div>
-                                            <div class="in-process-order-description">
+                                            <div class="in-process-order-description process-info-description">
                                                 Если запросы покупателя выходят за рамки изначально оплаченного объема работ, вы можете вежливо разъяснить это и предложить оформить дополнительную опцию к заказу. В случае возникновения спорных ситуаций, не приступайте к выполнению сверхзадач до их оплаты и обратитесь в службу поддержки для консультации.
                                             </div>
                                         </div>
-                                    </div>
-                                    
+                                    </div>                                    
                                 </div>
-                                
                             </div>
 
-                            <div class="give-info-block"> 
+                            <div class="in-process-order">
+                                <div class="order-message order-created">
+                                    <img src="/img/icons/order-track/lorry.svg" alt="lorry-icon" class="lorry-icon"/>
+                                    <div class="order-message-text order-created-text">
+                                        <div class="order-message-header order-created-header">
+                                            В работе <span class="order-created-time">07:05</span>
+                                        </div>
+                                        <p> 
+                                            Продавец приступил к работе над заказом.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="in-process-order">
+                                <div class="order-message order-created">
+                                    <img src="/img/icons/order-track/order-created.svg" alt="order-created" class="order-created-icon"/>
+                                    <div class="order-message-text order-created-text">
+                                        <div class="table-structured-info">
+                                            <div class="table-structured-header">
+                                                <h3>Вы предоставили нужные данные</h3>
+                                                <div class="time">07:06</div>
+                                            </div>
+                                            <div class="table-structured-content">
+                                                <label class="username">geek434</label>
+                                                <p class="text">Синий Splash скрин с надписью SpacesShip в формате .dart</p>
+                                            </div>
+                                        </div>
+                                        <div class="in-process-order-section process-info-section closed" onclick="triggerBlock(this);">
+                                            <div class="in-process-order-header process-info-header">
+                                                <img src="/img/icons/order-track/round-alert.svg" alt="round-alert-icon" class="round-alert-icon"/>
+                                                <p>Хотите, чтобы продавец сделал больше работы?</p>
+                                                <img src="/img/icons/order-track/arrow-down-gray.svg" alt="arrow-down-gray" class="arrow-down-gray"/>
+                                            </div>
+                                            <div class="in-process-order-description process-info-description">
+                                                Если в процессе работы возникли новые идеи или объем проекта увеличился, вы можете добавить дополнительные задачи к текущему заказу. Для этого воспользуйтесь кнопкой "Добавить задачу". Это позволит официально зафиксировать новые требования, увеличить бюджет и, если необходимо, продлить срок выполнения заказа.
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </div>
+
+
+                            <div class="give-info-block hidden"> 
                                 <div class="order-message"> 
                                     <img src="/img/icons/order-track/give-info.svg" alt="give-info-icon" class="give-info-icon"/>
                                     <div class="order-messag-text">
@@ -235,7 +276,7 @@ require_once "../modules/base.php";
                         </div>
                     </div>
                     
-                    <div class="message-to-customer hidden">
+                    <div class="message-to-customer">
                         <div class="message-to-customer-input-container">
                             <img src="/img/icons/order-track/attach-file.svg" alt="attach-file-icon" class="attach-file-icon"/>
                             <img src="/img/icons/order-track/smile.svg" alt="smile-icon" class="smile-icon"/>
