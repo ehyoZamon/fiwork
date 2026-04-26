@@ -1014,6 +1014,8 @@ input:valid {
     justify-content: flex-start;
     gap: 8px;
     width: 100%;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
 }
 
 .order-message .order-message-header{
@@ -1027,6 +1029,13 @@ input:valid {
     line-height: 153%;
     color: #000;
     gap: 3px;
+}
+
+.order-message .order-message-header .user-status{
+    width: 8px;
+    aspect-ratio: 1/1;
+    background-color: #00DB0A;
+    border-radius: 50%;
 }
 
 .order-message .order-message-time{
@@ -1051,6 +1060,35 @@ input:valid {
     text-decoration: none;
     font-weight: 600;
     color: #177de5;
+}
+
+.order-message .message-text{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.order-message .message-text .message-text-container{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.order-message .message-text .send-status{
+    flex-shrink: 0;
+}
+
+.order-message .user-satisfied{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start; 
+    gap: 5px;
 }
 
 .give-info-block{
@@ -1110,7 +1148,8 @@ input:valid {
 }
 
 .react-to-new-order,
-.in-process-order{
+.in-process-order,
+.simple-message-container{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -1375,6 +1414,92 @@ input:valid {
     color: #333;
 }
 
+.file-section{
+    width: 100%;
+    padding: 7px 8px 8px;
+    border: 1px solid #e2e2e2;
+    border-radius: 8px;
+    min-height: 80px;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.order-message .file-container,
+.file-section .file-container{
+    padding: 7px;
+    border: 1px solid #e2e2e2;
+    border-radius: 4px;
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;        
+    min-width: 152px;
+}
+
+.file-section .file-container{
+    min-height: 62px;
+}
+
+.order-message .file-container .img-container,
+.file-section .file-container .img-container{
+    width: 48px;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.file-section .file-container .img-container{
+    width: 32px;
+    padding: 5px;
+}
+
+.order-message .file-container .img-container img,
+.file-section .file-container .img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: inline-block;
+    position: relative;
+}
+
+.order-message .file-container .file-details,
+.file-section .file-container .file-details{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.file-section .file-container .file-details{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;;
+    justify-content: center;
+}
+
+.order-message .file-container .file-name{
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 114%;
+    color: #333;
+}
+
+.order-message .file-container .file-size{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 133%;
+    color: #8a8a8a;
+}
 /*end of order-track-content*/
 
 /*tooltip-container*/

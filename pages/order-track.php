@@ -273,6 +273,108 @@ require_once "../modules/base.php";
                                     <p>Возможность переписки появится сразу после отправки информации</p>
                                 </div>
                             </div>
+                            
+                            <div class="simple-message-container">
+                                <div class="order-message">
+                                    <img src="/img/icons/order-track/artem-code.png" alt="user-avatar" class="user-avatar-icon"/>
+                                    <div class="order-message-text">
+                                        <div class="order-message-header">
+                                            <div class="user-status"></div> artem_code <span class="order-message-time">07:08</span>
+                                        </div>
+                                        <div class="message-text">
+                                            <div class="message-text-container">
+                                                <p> 
+                                                    В течении часа постараюсь сделать и сдать вам
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="simple-message-container">
+                                <div class="order-message">
+                                    <img src="/img/icons/order-track/geek434.png" alt="user-avatar" class="user-avatar-icon"/>
+                                    <div class="order-message-text">
+                                        <div class="order-message-header">
+                                            <div class="user-status"></div> geek434 <span class="order-message-time">07:08</span>
+                                        </div>
+                                        <div class="message-text">
+                                            <div class="message-text-container">
+                                                <p> 
+                                                    Окей
+                                                </p>
+                                            </div>
+                                            <div class="send-status">
+                                                <img src="/img/icons/order-track/green-double-check.svg" alt="green-double-check" class="green-double-check"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="simple-message-container">
+                                <div class="order-message">
+                                    <img src="/img/icons/order-track/artem-code.png" alt="user-avatar" class="user-avatar-icon"/>
+                                    <div class="order-message-text">
+                                        <div class="order-message-header">
+                                            <div class="user-status"></div> artem_code <span class="order-message-time">07:27</span>
+                                        </div>
+                                        <div class="message-text">
+                                            <div class="message-text-container">
+                                                <p> 
+                                                    Посмотрите вот так нормально?
+                                                </p>
+                                                <div class="file-container">
+                                                    <div class="img-container">
+                                                        <img src="/img/icons/order-track/file-code.svg" alt="file-icon" class="file-icon"/>
+                                                    </div>
+                                                    <div class="file-details">
+                                                        <div class="file-name">index.php</div>
+                                                        <div class="file-size">99 Кб</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="simple-message-container">
+                                <div class="order-message">
+                                    <img src="/img/icons/order-track/geek434.png" alt="user-avatar" class="user-avatar-icon"/>
+                                    <div class="order-message-text">
+                                        <div class="order-message-header">
+                                            <div class="user-status"></div> geek434 <span class="order-message-time">07:08</span>
+                                        </div>
+                                        <div class="message-text">
+                                            <div class="message-text-container">
+                                                <p> 
+                                                    Да
+                                                </p>
+                                                <div class="in-process-order-section process-info-section closed" onclick="triggerBlock(this);">
+                                                    <div class="in-process-order-header process-info-header">
+                                                        <div class="user-satisfied">
+                                                            <img src="/img/icons/order-track/perfect.svg" alt="perfect-satisfaction" class="perfect-satisfaction-icon"/>
+                                                            <img src="/img/icons/order-track/arrow-right.svg" alt="arrow-right" class="arrow-right-icon"/>
+                                                            <img src="/img/icons/order-track/normal.svg" alt="normal-satisfaction" class="normal-satisfaction-icon"/>
+                                                            <img src="/img/icons/order-track/arrow-right.svg" alt="arrow-right" class="arrow-right-icon"/>
+                                                            <img src="/img/icons/order-track/bad.svg" alt="bad-satisfaction" class="bad-satisfaction-icon"/>
+                                                        </div>
+                                                        <p>Возможно снижение лояльности покупателя</p>
+                                                        <img src="/img/icons/order-track/arrow-down-gray.svg" alt="arrow-down-gray" class="arrow-down-gray"/>
+                                                    </div>
+                                                    <div class="in-process-order-description process-info-description">
+                                                        Текст блока
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="send-status">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
@@ -281,6 +383,16 @@ require_once "../modules/base.php";
                             <img src="/img/icons/order-track/attach-file.svg" alt="attach-file-icon" class="attach-file-icon"/>
                             <img src="/img/icons/order-track/smile.svg" alt="smile-icon" class="smile-icon"/>
                             <input type="text" placeholder="Сообщение покупателю" class="message-to-customer-input"/>   
+                        </div>
+                        <div class="file-section">
+                            <div class="file-container">
+                                <div class="img-container">
+                                    <img src="/img/icons/order-track/file-code.svg" alt="file-icon" class="file-icon"/>
+                                </div>
+                                <div class="file-details">
+                                    <div class="file-name">index.php</div>
+                                </div>
+                            </div>
                         </div>
                         <div class="submit-the-work">
                             <input type="button" value="Сдать выполненную работу" class="submit-the-work-button"/>
