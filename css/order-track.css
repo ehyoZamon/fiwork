@@ -745,12 +745,14 @@ input:valid {
 /*end of orders-table-block*/
 
 /*orders-table*/
-.orders-table{
+.orders-table,
+.options-table{
     width: 100%; 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    border: 1px solid #f0f0f0;
 }
 
 .orders-table .orders-table-header,
@@ -759,6 +761,45 @@ input:valid {
     grid-template-columns: 1fr 140px 140px;
     padding-right: 50px;
     width: 100%; 
+}
+
+.options-table .options-table-header,
+.options-table .options-table-row{
+    display: grid;
+    grid-template-columns: 1fr 80px 80px 100px;
+    width: 100%;
+}
+
+.options-table .services-cell,
+.options-table .count-cell,
+.options-table .price-cell,
+.options-table .period-cell{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.options-table .services-cell{
+    justify-content: flex-start;
+}
+
+.options-table .options-table-header{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 157%;
+    color: #111;
+    background: #f0f0f0;
+}
+
+.options-table .options-table-row{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    color: #111;
 }
 
 .orders-table .services-cell{
@@ -833,6 +874,7 @@ input:valid {
     padding: 0 20px;
     margin-top: 20px;
 }
+
 
 .cancel-order.hidden{
     display: none;
@@ -1016,6 +1058,35 @@ input:valid {
     width: 100%;
     border-bottom: 1px solid #ddd;
     padding-bottom: 10px;
+}
+
+
+.order-message .order-message-text .cancel-offer-container{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.order-message .order-message-text .cancel-offer-container .cancel-offer-button{
+    border: 1px solid #a5a5a5;
+    border-radius: 4px;
+    padding: 8px 16px;
+    width: 205px;
+    height: 32px;
+    background: #fafafa;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 114%;
+    text-align: center;
+    color: #111;
+    cursor: pointer;
+}
+
+
+.order-message .order-message-text .cancel-offer-container .cancel-offer-button:hover{
+    background: #e4e4e4;
 }
 
 .order-message .order-message-header{
@@ -1438,6 +1509,10 @@ input:valid {
     justify-content: flex-start;
 }
 
+.file-section.hidden{
+    display: none;
+}
+
 .order-message .file-container,
 .file-section .file-container{
     padding: 7px;
@@ -1519,6 +1594,10 @@ input:valid {
     align-items: flex-start;
     justify-content: flex-start;
     gap: 20px;
+}
+
+.offer-additional-services.hidden{
+    display: none;
 }
 
 .offer-additional-services-container{
@@ -2739,6 +2818,11 @@ input:valid {
     text-align: center;
     color: #fff;
     cursor: pointer;
+    opacity: 0.8;
+}
+
+.message-to-customer .submit-the-work-button:hover{
+    opacity: 1;
 }
 
 .message-to-customer .offer-options-button{

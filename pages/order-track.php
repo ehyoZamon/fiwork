@@ -158,7 +158,7 @@ require_once "../modules/base.php";
                                 <img src="/img/icons/order-track/order-created.svg" alt="order-created" class="order-created-icon"/>
                                 <div class="order-message-text order-created-text">
                                     <div class="order-message-header order-created-header">
-                                        Создан новый заказ <span class="order-created-time">06:51 </span>
+                                        Создан новый заказ <span class="order-message-time">06:51 </span>
                                     </div>
                                     <p> 
                                         Вы создали заказ. Ознакомьтесь с <a href="#">программой защиты покупателей</a> Kwork.
@@ -171,7 +171,7 @@ require_once "../modules/base.php";
                                     <img src="/img/icons/order-track/order-created.svg" alt="order-created" class="order-created-icon"/>
                                     <div class="order-message-text order-created-text">
                                         <div class="order-message-header order-created-header">
-                                            Создан новый заказ <span class="order-created-time">06:51 </span>
+                                            Создан новый заказ <span class="order-message-time">06:51 </span>
                                         </div>
                                         <p> 
                                             Покупатель создал заказ.<br>
@@ -197,7 +197,7 @@ require_once "../modules/base.php";
                                     <img src="/img/icons/order-track/order-created.svg" alt="order-created" class="order-created-icon"/>
                                     <div class="order-message-text order-created-text">
                                         <div class="order-message-header order-created-header">
-                                            В работе <span class="order-created-time">05:05</span>
+                                            В работе <span class="order-message-time">05:05</span>
                                         </div>
                                         <p> 
                                             Вы приступили к работе над заказом.
@@ -221,7 +221,7 @@ require_once "../modules/base.php";
                                     <img src="/img/icons/order-track/lorry.svg" alt="lorry-icon" class="lorry-icon"/>
                                     <div class="order-message-text order-created-text">
                                         <div class="order-message-header order-created-header">
-                                            В работе <span class="order-created-time">07:05</span>
+                                            В работе <span class="order-message-time">07:05</span>
                                         </div>
                                         <p> 
                                             Продавец приступил к работе над заказом.
@@ -386,6 +386,53 @@ require_once "../modules/base.php";
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="in-process-order">
+                                <div class="order-message">
+                                    <img src="/img/icons/order-track/new-options.svg" alt="new-options" class="new-options-icon"/>
+                                    <div class="order-message-text">
+                                        <div class="order-message-header">
+                                            В работе <span class="order-message-time">05:05</span>
+                                        </div>
+
+                                        <div class="options-table"> 
+                                            <div class="options-table-header">
+                                                <div class="services-cell">
+                                                    Опция
+                                                </div>
+                                                <div class="count-cell"> 
+                                                    Кол-во  
+                                                </div> 
+                                                <div class="period-cell">
+                                                    Срок
+                                                </div>
+                                                <div class="price-cell">
+                                                    Стоимость
+                                                </div>
+                                            </div>
+                                            <div class="options-table-row">
+                                                <div class="services-cell">
+                                                    Доработать код
+                                                </div>
+                                                <div class="count-cell"> 
+                                                    1 
+                                                </div> 
+                                                <div class="period-cell">
+                                                    0 дней
+                                                </div>
+                                                <div class="price-cell">
+                                                    80 ₽
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="cancel-offer-container">
+                                            <input type="button" value="Отменить предложение" class="cancel-offer-button"/>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                     
@@ -395,7 +442,7 @@ require_once "../modules/base.php";
                             <img src="/img/icons/order-track/smile.svg" alt="smile-icon" class="smile-icon"/>
                             <input type="text" placeholder="Сообщение покупателю" class="message-to-customer-input"/>   
                         </div>
-                        <div class="file-section">
+                        <div class="file-section hidden">
                             <div class="file-container">
                                 <div class="img-container">
                                     <img src="/img/icons/order-track/file-code.svg" alt="file-icon" class="file-icon"/>
@@ -412,7 +459,7 @@ require_once "../modules/base.php";
                                 Предложить опции
                             </div>
                         </div>
-                        <div class="offer-additional-services">
+                        <div class="offer-additional-services hidden">
                             <div class="offer-additional-services-container">
                                 <div class="offer-additional-services-section">
                                     <div class="offer-additional-services-inputs">
