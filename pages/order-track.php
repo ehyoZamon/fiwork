@@ -365,7 +365,18 @@ require_once "../modules/base.php";
                                                         <img src="/img/icons/order-track/arrow-down-gray.svg" alt="arrow-down-gray" class="arrow-down-gray"/>
                                                     </div>
                                                     <div class="in-process-order-description process-info-description">
-                                                        Текст блока
+                                                        <p>После оплаты заказа покупатель в идеале хочет получить заказ без нудной переписки.
+                                                        Чем чаще покупателю приходится вновь и вновь что-то комментировать, тем, как
+                                                        правило, хуже удовлетворенность покупателя, которая может повлиять на:</p>
+                                                        <ul>
+                                                            <li>Отзыв и рейтинг</li>
+                                                            <li>Повторные заказы</li>
+                                                        </ul>
+                                                        <p><b>Что делать?</b> Заранее подумайте, какие вопросы хотите задать покупателю. Не нужно
+                                                        писать много сообщений, запишите вопросы в одном сообщении. Если вопрос не
+                                                        принципиален, то отложите его. Полно и ясно отвечайте на встречные вопросы
+                                                        покупателя, чтобы ему не приходилось повторять или уточнять их. Общайтесь вежливо и
+                                                        с оптимизмом, чтобы общение с вами было приятным.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -399,6 +410,49 @@ require_once "../modules/base.php";
                             <div class="offer-options-button">
                                 <img src="/img/icons/order-track/plus-icon.svg" alt="plus-icon" class="plus-icon"/>
                                 Предложить опции
+                            </div>
+                        </div>
+                        <div class="offer-additional-services">
+                            <div class="offer-additional-services-container">
+                                <div class="offer-additional-services-section">
+                                    <div class="offer-additional-services-inputs">
+                                        <input type="text" placeholder="Доработать код" class="additional-service-name"/>
+                                        <select class="select-additional-service-price" placeholder="80 ₽">
+                                            <option value="80">80 ₽</option>
+                                            <option value="200">200 ₽</option>
+                                            <option value="400">400 ₽</option>
+                                            <option value="800">800 ₽</option>
+                                            <option value="2000">2000 ₽</option>
+                                            <option value="4000">4000 ₽</option>
+                                            <option value="8000">8000 ₽</option>
+                                        </select>
+                                        <select class="select-additional-service-period" placeholder="0 дней">
+                                            <option value="0">0 дней</option>
+                                            <option value="1">1 день</option>
+                                            <option value="2">2 дня</option>
+                                            <option value="3">3 дня</option>
+                                            <option value="7">7 дней</option>
+                                            <option value="14">2 недели</option>
+                                            <option value="28">4 недели</option>
+                                        </select>
+                                        <img src="/img/icons/order-track/close-icon.svg" alt="gray-close-icon" class="gray-close-icon"/>
+                                    </div>
+                                </div>
+                                <p class="summary">
+                                    Общая цена всех доп. опций - до 66 440 руб. Сейчас 80 руб.
+                                </p>
+                                <input type="button" class="add-additional-service-button" value="Добавить еще опцию"/>
+                            </div>
+                            <div class="additional-offers-summary">
+                                <div class="additional-offers-summary-description">
+                                    Покупатель заплатит с комиссией: 100 руб. 
+                                </div>
+                                <div class="additional-offers-summary-price">
+                                    Ваша цена: 80 руб.
+                                </div>
+                            </div>
+                            <div class="submit-button-container">
+                                <div class="offer-submit-button">Предложить услуги на 80 руб.</div>
                             </div>
                         </div>
                     </div>
@@ -994,6 +1048,92 @@ require_once "../modules/base.php";
         toggleAddButton();
     }
     /*Конец логики add-task-button*/
+
+        // ---------- НОВАЯ ЛОГИКА ДЛЯ БЛОКА offer-additional-services ----------
+    $(document).ready(function() {
+        // Функция для обновления суммы в блоке summary и в additional-offers-summary
+        function updateTotalPrice() {
+            let total = 0;
+            // Проходим по каждому блоку с опцией
+            $('.offer-additional-services-inputs').each(function() {
+                let price = parseInt($(this).find('.select-additional-service-price').val());
+                if (!isNaN(price)) {
+                    total += price;
+                }
+            });
+            
+            // Рассчитываем сумму с комиссией (например, комиссия 20%)
+            let commissionRate = 0.2; // 20%
+            let totalWithCommission = Math.ceil(total * (1 + commissionRate));
+            
+            // Обновляем текст в summary (первый абзац внутри offer-additional-services-container)
+            $('.offer-additional-services-container .summary').text(
+                'Общая цена всех доп. опций - до 66 440 руб. Сейчас ' + total + ' руб.'
+            );
+            
+            // Обновляем блок additional-offers-summary
+            $('.additional-offers-summary-description').text(
+                'Покупатель заплатит с комиссией: ' + totalWithCommission + ' руб.'
+            );
+            $('.additional-offers-summary-price').text(
+                'Ваша цена: ' + total + ' руб.'
+            );
+            
+            // Обновляем текст на кнопке предложения
+            $('.offer-submit-button').text('Предложить услуги на ' + total + ' руб.');
+        }
+        
+        // Проверка, что все поля в текущем блоке заполнены
+        function isCurrentBlockValid(block) {
+            let nameVal = block.find('.additional-service-name').val().trim();
+            // select всегда имеет значение, поэтому проверяем только название
+            return nameVal !== '';
+        }
+        
+        // Добавление новой опции
+        function addNewOption() {
+            let lastBlock = $('.offer-additional-services-inputs').last();
+            // Проверяем, что последний блок заполнен (если он существует и не является единственным пустым)
+            if (lastBlock.length === 0 || isCurrentBlockValid(lastBlock)) {
+                let newBlock = lastBlock.clone();
+                // Очищаем значения в новом блоке
+                newBlock.find('.additional-service-name').val('');
+                newBlock.find('.select-additional-service-price').prop('selectedIndex', 0);
+                newBlock.find('.select-additional-service-period').prop('selectedIndex', 0);
+                // Вставляем после последнего блока
+                $('.offer-additional-services-section').append(newBlock);
+                updateTotalPrice();
+            }
+        }
+        
+        // Удаление опции
+        function removeOption(block) {
+            if ($('.offer-additional-services-section .offer-additional-services-inputs').length > 1) {
+                block.remove();
+                updateTotalPrice();
+            }
+        }
+        
+        // Обработчик клика на кнопку "Добавить еще опцию"
+        $(document).on('click', '.add-additional-service-button', function() {
+            addNewOption();
+        });
+        
+        // Обработчик клика на иконку закрытия (gray-close-icon)
+        $(document).on('click', '.offer-additional-services-inputs .gray-close-icon', function() {
+            let block = $(this).closest('.offer-additional-services-inputs');
+            removeOption(block);
+        });
+        
+        // Обработчик изменения значений в полях (для обновления суммы)
+        $(document).on('input change', '.offer-additional-services-inputs select, .offer-additional-services-inputs input', function() {
+            updateTotalPrice();
+        });
+        
+        // Инициализация суммы при загрузке страницы
+        updateTotalPrice();
+    });
+    // ---------- КОНЕЦ НОВОЙ ЛОГИКИ ----------
 </script>
 <script>
 // Create Countdown

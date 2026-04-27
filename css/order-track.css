@@ -1285,6 +1285,17 @@ input:valid {
     width: 100%;
 }
 
+.process-info-description p{
+    margin: 0;
+    text-align: left;
+    font-weight: 400 !important;
+}
+
+.process-info-description ul li::marker {
+    display: inline-block;
+    transform: scale(0.4); 
+}
+
 .process-info-section.closed .process-info-description{
     display: none;
 }
@@ -1499,6 +1510,171 @@ input:valid {
     font-size: 12px;
     line-height: 133%;
     color: #8a8a8a;
+}
+
+.offer-additional-services{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.offer-additional-services-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    border: 1px solid #f0f0f0;
+    background: #fafafa;
+    padding: 10px;
+}
+
+.offer-additional-services-inputs{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 100%;
+}
+
+
+.offer-additional-services-inputs .additional-service-name,
+.offer-additional-services-inputs .select-additional-service-price,
+.offer-additional-services-inputs .select-additional-service-period{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    color: #111;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    outline: none;
+    padding: 5px;
+}
+
+.offer-additional-services-inputs .additional-service-name{
+    flex: 1;
+    background: #fff;
+    border: 1px solid #a5a5a5;
+    border-radius: 4px;
+    height: 40px;
+}
+
+.offer-additional-services-inputs .select-additional-service-price{
+    border: 1px solid #a5a5a5;
+    border-radius: 4px;
+    width: 100px;
+    height: 40px;
+    background: #fff;
+    flex-shrink: 0;
+}
+
+.offer-additional-services-inputs .select-additional-service-period{
+    border: 1px solid #a5a5a5;
+    border-radius: 4px;
+    width: 95px;
+    height: 40px;
+    background: #fff;
+    flex-shrink: 0;
+}
+
+.offer-additional-services-inputs .gray-close-icon{
+    cursor: pointer;
+}
+
+.offer-additional-services-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.offer-additional-services-container .summary{
+    width: 100%;
+    max-width: 650px;
+    text-align: right;
+    font-family: var(--font-family);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 183%;
+    text-align: right;
+    color: #8a8a8a;
+    margin: 0; 
+}
+
+.offer-additional-services-container .add-additional-service-button{
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    color: #177de5;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.offer-additional-services .additional-offers-summary{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.offer-additional-services .additional-offers-summary-description{
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 157%;
+    text-align: right;
+    color: #111;
+}
+
+.offer-additional-services .additional-offers-summary-price{
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 157%;
+    text-align: right;
+    color: #04b70a;
+}
+
+.offer-additional-services .submit-button-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.offer-additional-services .submit-button-container .offer-submit-button{
+    border: 1px solid #04b70a;
+    border-radius: 6px;
+    padding: 19px 32px;
+    min-width: 276px;
+    min-height: 48px;
+    background: #04b70a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 71%;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
 }
 /*end of order-track-content*/
 
