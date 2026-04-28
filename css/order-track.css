@@ -1045,6 +1045,10 @@ input:valid {
     max-width: 620px; 
 }
 
+.order-message>img.hidden{
+    display: none;
+}
+
 .order-message.hidden{
     display: none;
 }
@@ -1066,13 +1070,19 @@ input:valid {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
+    gap: 10px;
+}
+
+
+.order-message .order-message-text .cancel-offer-container.hidden{
+    display: none;
 }
 
 .order-message .order-message-text .cancel-offer-container .cancel-offer-button{
     border: 1px solid #a5a5a5;
     border-radius: 4px;
     padding: 8px 16px;
-    width: 205px;
+    min-width: 205px;
     height: 32px;
     background: #fafafa;
     font-family: var(--font-family);
@@ -1085,8 +1095,39 @@ input:valid {
 }
 
 
+.order-message .order-message-text .cancel-offer-container .cancel-offer-button.hidden{
+    display: none;
+}
+
+.order-message .order-message-text .cancel-offer-container .buy-this-offer-button{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 114%;
+    text-align: center;
+    color: #fff;
+    border: 1px solid #04b70a;
+    border-radius: 4px;
+    padding: 6px 16px;
+    min-width: 143px;
+    height: 32px;
+    background: #04b70a;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.order-message .order-message-text .cancel-offer-container .buy-this-offer-button:hover{
+    opacity: 1;
+}
+
+
 .order-message .order-message-text .cancel-offer-container .cancel-offer-button:hover{
     background: #e4e4e4;
+}
+
+
+.order-message .order-message-text .cancel-offer-container .cancel-offer-button.hidden{
+    display: none;
 }
 
 .order-message .order-message-header{
@@ -1100,6 +1141,11 @@ input:valid {
     line-height: 153%;
     color: #000;
     gap: 3px;
+}
+
+
+.order-message .order-message-header span.hidden{
+    display: none;
 }
 
 .order-message .order-message-header .user-status{
@@ -1820,7 +1866,8 @@ input:valid {
 /*modal-windows*/
 .add-task-modal-window-container,
 .cancel-order-modal-window-container,
-.send-order-info-modal-window-container{
+.send-order-info-modal-window-container,
+.work-done-modal-window-container{
     position: fixed;
     left: 0;
     top: 0;
@@ -1835,13 +1882,15 @@ input:valid {
 
 .add-task-modal-window-container.hidden,
 .cancel-order-modal-window-container.hidden,
-.send-order-info-modal-window-container.hidden{
+.send-order-info-modal-window-container.hidden,
+.work-done-modal-window-container.hidden{
     display: none;
 }
 
 .add-task-modal-window,
 .cancel-order-modal-window,
-.send-order-info-modal-window{
+.send-order-info-modal-window,
+.work-done-modal-window{
     width: 720px;
     max-width: 90%;
     display: flex;
@@ -1853,6 +1902,117 @@ input:valid {
     background: #fff;
     border-radius: 16px;
     overflow: hidden;
+}
+
+.work-done-modal-window{
+    padding-bottom: 40px;
+    flex-direction: row;
+    position: relative;
+    padding-right: 20px;
+    padding-top: 30px;
+    padding-left: 30px;
+    gap: 20px;
+}
+
+.work-done-modal-text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.work-done-modal-text p{
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 139%;
+    color: #111;
+    margin: 10px 0;
+}
+
+.work-done-checklist{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 129%;
+    color: rgba(0, 0, 0, 0.6);
+    margin-top: 10px;
+}
+
+
+.close-work-done-modal-window{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.work-done-modal-window .control-buttons{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    margin-top: 20px;
+}
+
+
+.work-done-modal-window .control-buttons .cancel-button{
+    border: 1px solid #ffa800;
+    border-radius: 8px;
+    padding: 13px 49px 12px;
+    width: 186px;
+    height: 51px;
+    min-width: 186px;
+    background: #fff;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 150%;
+    text-align: center;
+    color: #ffa800;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.work-done-modal-window .control-buttons .cancel-button:hover{
+    background: #ffa800;
+    opacity: 0.8;
+    color: #fff;
+}
+
+.work-done-modal-window .control-buttons .submit-button{
+    border: 1px solid #090;
+    border-radius: 8px;
+    padding: 13px 36px 12px;
+    width: 186px;
+    height: 51px;
+    min-width: 186px;
+    background: #090;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 150%;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+
+.work-done-modal-window .control-buttons .submit-button:hover{
+    opacity: 1;
 }
 
 .add-task-modal-window .add-task-modal-header,
@@ -1871,7 +2031,8 @@ input:valid {
 
 .add-task-modal-window .add-task-modal-header h2,
 .cancel-order-modal-window .cancel-order-modal-header h2,
-.send-order-info-modal-window .send-order-info-modal-header h2{
+.send-order-info-modal-window .send-order-info-modal-header h2,
+.work-done-modal-header{
     font-family: var(--font-family);
     font-weight: 600;
     font-size: 22px;

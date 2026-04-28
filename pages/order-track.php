@@ -387,12 +387,16 @@ require_once "../modules/base.php";
                                 </div>
                             </div>
 
+                            
                             <div class="in-process-order">
                                 <div class="order-message">
-                                    <img src="/img/icons/order-track/new-options.svg" alt="new-options" class="new-options-icon"/>
+                                    <img src="/img/icons/order-track/new-options.svg" alt="new-options" class="new-options-icon hidden"/>
+                                    <img src="/img/icons/order-track/option-rejected.svg" alt="option-rejected"class="option-rejected-icon"/>
                                     <div class="order-message-text">
                                         <div class="order-message-header">
-                                            В работе <span class="order-message-time">05:05</span>
+                                            <span class="hidden">Продавец предложил опции</span>
+                                            <span class="hidden">Вы предложили</span>
+                                            <span>Вы отказались от опции</span> <span class="order-message-time">07:31</span>
                                         </div>
 
                                         <div class="options-table"> 
@@ -426,8 +430,10 @@ require_once "../modules/base.php";
                                             </div>
                                         </div>
 
-                                        <div class="cancel-offer-container">
-                                            <input type="button" value="Отменить предложение" class="cancel-offer-button"/>
+                                        <div class="cancel-offer-container hidden">
+                                            <input type="button" value="Отменить предложение" class="cancel-offer-button hidden"/>
+                                            <input type="button" value="Не нужно, спасибо" class="cancel-offer-button"/>
+                                            <input type="button" value="Купить за 100 ₽" class="buy-this-offer-button"/>
                                         </div>
                                     </div>                                    
                                 </div>
@@ -894,6 +900,34 @@ require_once "../modules/base.php";
             </div>
         </form>
     </div>
+
+    <div class="work-done-modal-window-container hidden">
+        <form class="work-done-modal-window">
+            <img src="/img/icons/order-track/all-is-done.svg"/>
+            <img src="/img/icons/order-track/black-close-icon.svg" onclick="closeBlock('work-done-modal-window-container');" class="close-work-done-modal-window"/>
+            <div class="work-done-modal-window-content">
+                <h2 class="work-done-modal-header">
+                    Работа завершена
+                </h2>
+                <div class="work-done-modal-text">
+                    <p>Подтверждаю, что:</p>
+                    <div class="work-done-checklist">
+                        <img src="/img/icons/order-track/green-check.svg"/>
+                        Работа выполнена на 100%
+                    </div>
+                    <div class="work-done-checklist">
+                        <img src="/img/icons/order-track/green-check.svg"/>
+                        Все результаты работы переданы покупателю
+                        в чате
+                    </div>
+                </div>
+                <div class="control-buttons">
+                    <input type="button" value="Отмена" class="cancel-button" onclick="closeBlock('work-done-modal-window-container');"/>
+                    <input type="submit" value="Подтвердить" class="submit-button"/>
+                </div>
+            </div>
+        </form>
+    </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="/js/jQuery/jquery-3.5.1.min.js"></script>
@@ -991,6 +1025,13 @@ require_once "../modules/base.php";
         $(".send-order-info-modal-window")[0].reset();
         $(".send-order-info-modal-window-container .send-order-info-text-length-value").text(0);    
     });
+        
+    $(".work-done-modal-window").on("submit",function(e){
+        e.preventDefault();
+        $(".work-done-modal-window-container").addClass("hidden");
+        $(".work-done-modal-window")[0].reset();    
+    });
+
 
     $(".add-task-modal-window-container .task-name-input").on("input",function(){
         let textLength = $(this).val().length;
