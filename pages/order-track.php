@@ -439,6 +439,27 @@ require_once "../modules/base.php";
                                 </div>
                             </div>
 
+                            <div class="in-process-order">
+                                <div class="order-message">
+                                    <img src="/img/icons/order-track/open-box.svg" alt="open-box" class="open-box-icon"/>
+                                    <div class="order-message-text">
+                                        <div class="order-message-text-table">
+                                            <div class="order-message-text-header">
+                                                Вы сдали заказ на проверку
+                                                <div class="order-message-text-time">
+                                                    05:32
+                                                </div>
+                                            </div>    
+                                            <div class="order-message-text-content">
+                                                Если в течение 3 суток (4, если больше суток приходится на выходные или праздники)
+                                                покупатель не примет решение, заказ будет принят автоматически. Осталось 4 д. до
+                                                <b>автопринятия.</b>
+                                            </div>
+                                        </div>
+                                    </div>                        
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                     
@@ -459,7 +480,7 @@ require_once "../modules/base.php";
                             </div>
                         </div>
                         <div class="submit-the-work">
-                            <input type="button" value="Сдать выполненную работу" class="submit-the-work-button"/>
+                            <input type="button" value="Сдать выполненную работу" onclick="showBlock('work-done-modal-window-container');"  class="submit-the-work-button"/>
                             <div class="offer-options-button">
                                 <img src="/img/icons/order-track/plus-icon.svg" alt="plus-icon" class="plus-icon"/>
                                 Предложить опции
@@ -903,7 +924,7 @@ require_once "../modules/base.php";
 
     <div class="work-done-modal-window-container hidden">
         <form class="work-done-modal-window">
-            <img src="/img/icons/order-track/all-is-done.svg"/>
+            <img src="/img/icons/order-track/all-is-done.svg" class="all-is-done" alt="all-is-done"/>
             <img src="/img/icons/order-track/black-close-icon.svg" onclick="closeBlock('work-done-modal-window-container');" class="close-work-done-modal-window"/>
             <div class="work-done-modal-window-content">
                 <h2 class="work-done-modal-header">
